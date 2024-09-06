@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  6 SEP 2024 16:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  6 SEP 2024 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**1.1.tex
-(./1.1.tex
+**1.tex
+(./1.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
 (./header.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -837,6 +837,39 @@ Local configuration file tkz-euclide.cfg found and used
 \WF@box=\box82
 \WF@everypar=\toks53
 Package: wrapfig 2003/01/31  v 3.6
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/yhmath/yhmath.sty
+Package: yhmath 2020/03/17 v1.6
+\symyhlargesymbols=\mathgroup9
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 29.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 49.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 50.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 51.
+LaTeX Font Info:    Redeclaring math delimiter \lmoustache on input line 53.
+LaTeX Font Info:    Redeclaring math delimiter \rmoustache on input line 55.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 57.
+LaTeX Font Info:    Redeclaring math delimiter \Arrowvert on input line 59.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 61.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 63.
+LaTeX Font Info:    Redeclaring math delimiter \uparrow on input line 65.
+LaTeX Font Info:    Redeclaring math delimiter \downarrow on input line 67.
+LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 69.
+LaTeX Font Info:    Redeclaring math delimiter \Uparrow on input line 71.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 73.
+LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 75.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 79.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 81.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 83.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 85.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 87.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 89.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 91.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 93.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 95.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 97.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 99.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 101.
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
@@ -845,8 +878,8 @@ File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
 \c@nthm=\count363
-) (./1.1.aux)
-\openout1 = `1.1.aux'.
+) (./1.aux)
+\openout1 = `1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -873,7 +906,7 @@ Package fontspec Info:
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
-\symlegacymaths=\mathgroup9
+\symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
 (Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 13.
 LaTeX Font Info:    Redeclaring math accent \acute on input line 13.
@@ -926,9 +959,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 13.
 Package hyperref Info: Link coloring OFF on input line 13.
- (./1.1.out) (./1.1.out)
+ (./1.out) (./1.out)
 \@outlinefile=\write4
-\openout4 = `1.1.out'.
+\openout4 = `1.out'.
 
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.12).
@@ -940,9 +973,14 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./1.1.toc)
+)
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 15.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/yhmath/OMXyhex.fd
+File: OMXyhex.fd 
+File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
+) (./1.toc)
 \tf@toc=\write5
-\openout5 = `1.1.toc'.
+\openout5 = `1.toc'.
 
 
 
@@ -952,21 +990,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [2]
 
-[3] (./1.1.aux)
+[3] (./1.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `1.1.out' has not changed.
-(rerunfilecheck)             Checksum: FCCBAD45CA736ED944CB1FA4DA6D6E6D;301.
+Package rerunfilecheck Info: File `1.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41519 strings out of 475619
- 1047567 string characters out of 5770090
- 1935557 words of memory out of 5000000
- 63327 multiletter control sequences out of 15000+600000
- 573024 words of font info for 109 fonts, out of 8000000 for 9000
+ 41637 strings out of 475619
+ 1046805 string characters out of 5770090
+ 1931557 words of memory out of 5000000
+ 63439 multiletter control sequences out of 15000+600000
+ 575390 words of font info for 113 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
- 108i,7n,115p,1187b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,7n,115p,1185b,974s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 1.1.xdv (3 pages, 35320 bytes).
+Output written on 1.xdv (3 pages, 23088 bytes).

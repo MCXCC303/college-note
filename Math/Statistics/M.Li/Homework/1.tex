@@ -1,0 +1,127 @@
+%─────────────────%
+% Header Settings %
+%─────────────────%
+\def\lecturer{李漫漫}
+\def\noter{THF}
+\def\className{className}
+\def\term{term}
+\input{header}
+
+%──────────%
+% Document %
+%──────────%
+\begin{document}
+\maketitle
+\tableofcontents
+\section*{1-A}%
+\label{sec:1-A}
+\subsection*{7.}%
+\label{sub:7.}
+
+
+
+\subsection*{8.}%
+\label{sub:8.}
+构成三角形的条件：$a+b+c=L$， $a+b>c$（设c为最大边）
+ 
+$c=L-\left( a+b \right)$，$\left( a+b \right) =L-c$
+
+即$L-c>c$，$c<\frac{L}{2}$
+
+即\[
+    l\left( A \right) =\frac{L}{2}
+.\]
+\[
+    l\left( \Omega \right) =L
+.\] 
+\[
+    P\left( A \right) =\frac{l\left( A \right) }{l\left( \Omega \right) }=\frac{1}{2}
+.\] 
+\section*{1-B}%
+\label{sec:1-B}
+\subsection*{2.}%
+\label{sub:2.}
+六次摸球中第四次是黑球：前5次中有3次是黑球，2次是白球
+
+目标事件数：\[
+    N\left( A \right) =5\cdot \left( 2^4\cdot 3^2 \right) 
+.\]
+
+基本事件总数：$N\left( \Omega \right) =5^6$
+
+事件概率：\[
+    P\left( A \right) =\frac{N\left( A \right) }{N\left( \Omega \right) }=\frac{5\cdot \left( 2^4\cdot 3^2 \right) }{5^6} = \frac{144}{3125}
+.\] 
+\subsection*{3.}%
+\label{sub:3.}
+画单位圆：
+\begin{center}
+    \begin{tikzpicture}
+        \draw [] (0,0) circle [radius=2] node at(-1,1) {$O$};
+        \draw [->] (-3,0)--(3,0) node at(3,-0.5) {$x$};
+        \draw [->] (0,-3)--(0,3) node at(0.5,3) {$y$};
+        \draw [dashed] (-2,0)--(1.42,-1.42)--(1,1.73)--(-2,0);
+        \node[] (A) at (-2.5,0.5) {$A$};
+        \node[] (B) at (1.7,-1.7) {$B$};
+        \node[] (C) at (1.5,2) {$C$};
+    \end{tikzpicture}
+\end{center}
+设$x=\wideparen{AB}$，$y=\wideparen{BC}$ ，$\wideparen{AC}=2\pi-x-y$
+
+$\Delta_{ABC}$ 是锐角三角形的条件：\[
+    \begin{cases}
+        x>0\\
+        y>0\\
+        2\pi-\left( x+y \right) >0\\
+        x<\pi\\
+        y<\pi\\
+        2\pi-\left( x+y \right) <\pi
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        x\in \left( 0,\pi \right) \\
+        y\in \left( 0,\pi \right)\\
+        x+y>\pi\\
+        x+y<2\pi
+    \end{cases}
+.\] 
+绘制样本空间：
+\begin{center}
+    \begin{tikzpicture}
+        \draw [->] (0,0)--(3,0);
+        \node[] (x) at (3,-0.5) {$x$};
+        \draw [->] (0,0)--(0,3);
+        \node[] (y) at (0.5,3) {$y$};
+        \draw [] (2.5,0)--(0,2.5);
+        \node[] (2pi) at (2.5,-0.5) {$2\pi$};
+        \node[] (2pi) at (-0.5,2.5) {$2\pi$};
+        \draw [dashed] (1.25,0)--(1.25,1.25)--(0,1.25)--(1.25,0);
+        
+    \end{tikzpicture}
+\end{center}
+由图可得：\[
+    S\left( A \right) =\frac{3}{4}S
+.\] （$\Delta_{ABC}$为钝角三角形）
+\[
+    S\left( \Omega \right) =S
+.\] 
+\[
+    P\left( A \right) =\frac{S\left( A \right) }{S\left( \Omega \right) }=\frac{3}{4}
+.\] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
