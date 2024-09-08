@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  8 SEP 2024 18:37
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  8 SEP 2024 23:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -986,31 +986,21 @@ File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 
 [1
 
-]
-
-[2]
-
-[3]
-
-[4]
-
-[5]
-
-[6] (./1.aux)
+] (./1.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `1.out' has not changed.
-(rerunfilecheck)             Checksum: 34E05B15D100199022B21B0BE23CD1A0;743.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41670 strings out of 475619
- 1047151 string characters out of 5770090
- 1931557 words of memory out of 5000000
- 63472 multiletter control sequences out of 15000+600000
- 575390 words of font info for 113 fonts, out of 8000000 for 9000
+ 41394 strings out of 475619
+ 1039245 string characters out of 5770090
+ 1925557 words of memory out of 5000000
+ 63211 multiletter control sequences out of 15000+600000
+ 566758 words of font info for 79 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
- 108i,7n,115p,1185b,971s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,6n,115p,1185b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 1.xdv (6 pages, 44652 bytes).
+Output written on 1.xdv (1 page, 9944 bytes).

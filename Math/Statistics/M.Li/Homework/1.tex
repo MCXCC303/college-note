@@ -13,14 +13,57 @@
 \begin{document}
 \maketitle
 \tableofcontents
-\section*{1-A}%
+\section{1-A}%
 \label{sec:1-A}
-\subsection*{7.}%
+\subsection{7.}%
 \label{sub:7.}
+设事件$A$为一条船卸货时另一条船等待，$x$ 为船甲到达的时间，$y$ 为船乙到达的时间，$A$ 可能以如下方式发生：
 
+1. 甲先到，乙后到，且乙不在甲到达后3小时后才到达，即：$x<y$， $y<x+3$，即：\[
+    x\in \left( y-3,y \right) 
+.\] 
 
+2. 乙先到，甲后到，且甲不在乙到达后4小时后才到达，即：$y<x$， $x<y+4$，即：\[
+    y\in \left( x-4,x \right) 
+.\] 
 
-\subsection*{8.}%
+合并后：\[
+    \begin{cases}
+        y<x+3\\
+        y>x-4
+    \end{cases}
+.\] 
+绘制样本空间如下：
+\begin{center}
+    \begin{tikzpicture}
+        \draw [->] (0,0)--(0,7);
+        \draw [->] (0,0)--(7,0);
+        \node[] (x) at (7,0.5) {$x$};
+        \node[] (y) at (0.5,7) {$y$};
+        \draw [] (0,6) rectangle (6,0) node at(3,5) {$\Omega$};
+        \draw [] (1,0)--(6,5);
+        \draw [] (0,0.75)--(5.25,6);
+        \node[] (A) at (5,5) {$A$};
+        \node[] (4) at (1,-0.5) {$4$};
+        \node[] (3) at (-0.5,0.75) {$3$};
+        \node[] (24) at (6,-0.5) {$24$};
+        \node[] (24) at (-0.5,6) {$24$};
+    \end{tikzpicture}
+\end{center}
+\[
+    P\left( A \right) =\frac{S\left( A \right) }{S\left( \Omega \right) }
+.\] 
+\[
+    S\left( \Omega \right) =24\cdot 24=576
+.\] 
+\[
+    S\left( A \right) =S\left( \Omega \right) -\frac{1}{2}\cdot 20^2-\frac{1}{2}\cdot 21^2=155.5
+.\] 
+\[
+    P\left( A \right) =\frac{311}{1152}
+.\] 
+
+\subsection{8.}%
 \label{sub:8.}
 构成三角形的条件：$a+b+c=L$， $a+b>c$（设c为最大边）
  
@@ -37,9 +80,9 @@ $c=L-\left( a+b \right)$，$\left( a+b \right) =L-c$
 \[
     P\left( A \right) =\frac{l\left( A \right) }{l\left( \Omega \right) }=\frac{1}{2}
 .\] 
-\section*{1-B}%
+\section{1-B}%
 \label{sec:1-B}
-\subsection*{2.}%
+\subsection{2.}%
 \label{sub:2.}
 六次摸球中第四次是黑球：前5次中有3次是黑球，2次是白球
 
@@ -52,7 +95,7 @@ $c=L-\left( a+b \right)$，$\left( a+b \right) =L-c$
 事件概率：\[
     P\left( A \right) =\frac{N\left( A \right) }{N\left( \Omega \right) }=\frac{5\cdot \left( 2^4\cdot 3^2 \right) }{5^6} = \frac{144}{3125}
 .\] 
-\subsection*{3.}%
+\subsection{3.}%
 \label{sub:3.}
 画单位圆：
 \begin{center}
@@ -109,12 +152,43 @@ $\Delta_{ABC}$ 是锐角三角形的条件：\[
     P\left( A \right) =\frac{S\left( A \right) }{S\left( \Omega \right) }=\frac{3}{4}
 .\] 
 
+\section{1.}%
+\label{sec:1.}
+基本事件总数：$N\left( \Omega \right) =P_{5}^{5}=5\cdot 4\cdot 3\cdot 2\cdot 1=5\cdot P_{4}^{4}$
 
+目标事件：第一封信有4个选择，第一封信选择的信箱对应的信有3个选择，第二封信选择的信箱对应的信有2个选择，以此类推，即：$N\left( A \right) =P_{4}^{4}$
 
+概率：\[
+    P\left( A \right) =\frac{N\left( A \right) }{N\left( \Omega \right) }=\frac{1}{5}
+.\] 
 
+\section{2.}%
+\label{sec:2.}
+\[
+    P\left( A \right) =\frac{C_{4}^{1}}{C_{5}^{2}}=\frac{2}{5}
+.\] 
+求B事件的逆事件：两台电机均来自于供应商I：
+\[
+    P\left( \bar{B} \right) =\frac{C_{2}^{2}}{C_{5}^{2}}=\frac{1}{10}
+.\] 
+\[
+    P\left( B \right) =1-P\left( \bar{B} \right) =\frac{9}{10}
+.\] 
 
-
-
+\section{3.}%
+\label{sec:3.}
+\[
+    P\left( A \right) =\frac{C_{4}^{4}}{C_{54}^{4}}=\frac{1}{316251}
+.\] 
+\section{4.}%
+\label{sec:4.}
+\subsection{4.1}%
+\label{sub:1}
+\[
+    \Omega=\left\{ \left( x,y,z \right) |x,y,z=0,1 \right\} 
+.\] 
+\subsection{4.2}%
+\label{sub:2}
 
 
 
