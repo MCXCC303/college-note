@@ -3,16 +3,16 @@
 %─────────────────%
 \def\lecturer{李漫漫}
 \def\noter{THF}
-\def\className{className}
-\def\term{term}
+\def\className{Math Homework}
+\def\term{III-B}
 \input{header}
 
 %──────────%
 % Document %
 %──────────%
 \begin{document}
-\maketitle
-\tableofcontents
+%\maketitle
+%\tableofcontents
 \section{1-A}%
 \label{sec:1-A}
 \subsection{7.}%
@@ -156,10 +156,10 @@ $\Delta_{ABC}$ 是锐角三角形的条件：\[
 \label{sec:1.}
 基本事件总数：$N\left( \Omega \right) =P_{5}^{5}=5\cdot 4\cdot 3\cdot 2\cdot 1=5\cdot P_{4}^{4}$
 
-目标事件：第一封信有4个选择，第一封信选择的信箱对应的信有3个选择，第二封信选择的信箱对应的信有2个选择，以此类推，即：$N\left( A \right) =P_{4}^{4}$
+目标事件：五封信错排的事件数$N\left( A \right) =44$
 
 概率：\[
-    P\left( A \right) =\frac{N\left( A \right) }{N\left( \Omega \right) }=\frac{1}{5}
+    P\left( A \right) =\frac{N\left( A \right) }{N\left( \Omega \right) }=\frac{11}{30}
 .\] 
 
 \section{2.}%
@@ -189,8 +189,32 @@ $\Delta_{ABC}$ 是锐角三角形的条件：\[
 .\] 
 \subsection{4.2}%
 \label{sub:2}
+X可以取到的值有0,1,2,3
 
-
+令$P\left( X=X_{i} \right) =p_i$：\[
+    \begin{cases}
+        p_0=\frac{1}{2^3}\\
+        p_1=\frac{3}{2^3}\\
+        p_2=p_1\\
+        p_3=p_0
+    \end{cases}
+.\] 
+\[
+    F_X\left( X \right) =\sum_{X_i\le X} p_i
+.\] 
+\subsection{4.3}%
+\label{sub:4.3}
+ \[
+    F_X\left( 2.5 \right) =p_0+p_1+p_2=\frac{7}{8}
+.\]
+\section{5.}%
+\label{sec:5.}
+\subsection{5.1}%
+\label{sub:5.1}
+\subsection{5.2}%
+\label{sub:5.2}
+\subsection{5.3}%
+\label{sub:5.3}
 
 
 
