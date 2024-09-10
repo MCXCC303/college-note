@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1725948889.55193 "1.xdv" "1.pdf" "1" 1725948889.71464 0
-  "1.xdv" 1725948889.48147 64476 ba8035a6bdb32e76b00256d4f1fa203d "xelatex"
+["xdvipdfmx"] 1725962713.21762 "1.xdv" "1.pdf" "1" 1725962715.03119 0
+  "1.xdv" 1725962712.43501 94800 c141d7c81413a2d1d9246287c13b4f6f "xelatex"
   (generated)
   "1.pdf"
   (rewritten before read)
-["xelatex"] 1725948888.62364 "1.tex" "1.xdv" "1" 1725948889.71158 0
+["xelatex"] 1725962702.2956 "1.tex" "1.xdv" "1" 1725962715.00046 0
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -33,6 +33,9 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1229303445 688 37338d6ab346c2f1466b29e195316aa4 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1229303445 684 3a51bd4fd9600428d5264cf25f04bb9a ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -217,6 +220,8 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty" 1705871765 11026 182c63f139a71afd30a28e5f1ed2cd1c ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def" 1720644236 14249 4eb911d2c8c7a7c4cb846c83cb2cc309 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def" 1720644236 117112 df92f59263f7368ce05087964c585de5 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty" 1137110241 300 12fa6f636b617656f2810ee82cb05015 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd" 1137110241 548 cc4e3557704bfed27c7002773fad6c90 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1655478651 22555 6d8e155cfef6d82c3d5c742fea7c992e ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty" 1665067230 13815 760b0c02f691ea230f5359c4e1de23a7 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xetex.def" 1716410060 31593 96a7f07a08af85a2bbfee2e0a9cdbb50 ""
@@ -291,11 +296,11 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719785820 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1721973222 9836347 80ab924a85bfc2cf0a4064b97183bc97 ""
   "/usr/local/texlive/2024/texmf.cnf" 1721973129.91209 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "1.aux" 1725948889.48147 2340 a0b61d62e8472f7ab9ced46e87be67d0 "xelatex"
-  "1.out" 1725948889.48147 929 0e471cea075277376c634147d170fa42 "xelatex"
-  "1.tex" 1725948844.24193 9079 42939018cedd3cf8b50984bf3b180e2e ""
-  "1.toc" 1725948889.48147 827 51ded69dcaa3bf971f773ccfaa995362 "xelatex"
-  "header.tex" 1725948816.05736 4318 443190e57e516dbeda2867bfa75cc5c1 ""
+  "1.aux" 1725962712.42168 3157 716e313e773813aa1b96673a4c12f00d "xelatex"
+  "1.out" 1725962712.43168 1337 9dec903c2e4f7261321af7718beb4c44 "xelatex"
+  "1.tex" 1725962700.66779 15771 6de7396adc4690116b3b00a6d6a66320 ""
+  "1.toc" 1725962712.43501 1160 c87b59ef4059c7f70cf513212de32d4b "xelatex"
+  "header.tex" 1725958140.73087 4289 d7c799b0a1b1e9b54248148dbbeb596e ""
   (generated)
   "1.aux"
   "1.log"

@@ -1,3 +1,4 @@
 \contentsline {section}{\numberline {1}导论}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}什么是马克思主义}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}马克思主义的创立}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}马克思主义的发展}{4}{subsection.1.3}%

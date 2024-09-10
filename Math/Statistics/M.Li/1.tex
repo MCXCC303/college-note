@@ -204,12 +204,15 @@ MOOC：爱课程，Coursera，Edx，网易公开课等
 \end{defi}
 
 \begin{defi}
-    完备事件组：$A_1,A_2,\ldots,A_n$两两互斥，且$ P\left( \sum_{i=1}^{n} A_i \right) =1$或$\sum_{i=1}^{n} A_i=\Omega$，则称$A_1\to A_n$ 为完备事件组（不重不漏）
+    完备事件组：$A_1,A_2,\ldots,A_n$两两互斥，且\[
+        P\left( \sum_{i=1}^{n} A_i \right) =1
+    .\] 或\[
+        \sum_{i=1}^{n} A_i=\Omega
+    .\] 则称$A_1\to A_n$ 为完备事件组（不重不漏）
 \end{defi}
 \begin{eg}
     $A,\bar{A}$ 是完备事件组
 \end{eg}
-
 \subsubsection{古典概型}%
 \label{subsub:古典概型}
 古典概型特点：有限等可能性（基本事件数有限，基本事件发生的可能性相等）
@@ -286,5 +289,214 @@ MOOC：爱课程，Coursera，Edx，网易公开课等
     \end{tikzpicture}
 \end{center}
 课后习题：A组8题，B组3题
+\begin{eg}
+    两人相约8-9点间在某地相见，先到的人等待20分钟后离去，求二人会面的概率
+
+    设$\left( x,y \right) $ 分别表示两人到达的时刻
+
+    设G为样本空间，绘制样本空间：
+    \begin{center}
+        \begin{tikzpicture}
+            \draw [->] (0,0)--(0,7);
+            \draw [->] (0,0)--(7,0);
+            \draw [] (0,0) rectangle (6,6) node at(5,5) {$G$};
+            
+        \end{tikzpicture}
+    \end{center}
+
+    由题：两人到达的时间之差的绝对值小于20分钟（$\frac{1}{3}$ 小时），即：\[
+        |x-y|\le \frac{1}{3}
+    .\] 
+    将事件绘制：
+    \begin{center}
+        \begin{tikzpicture}
+            \draw [->] (0,0)--(0,7);
+            \draw [->] (0,0)--(7,0);
+            \draw [] (0,0) rectangle (6,6) node at(5,1) {$G$};
+            \draw [dashed] (2,0)--(6,4);
+            \draw [dashed] (0,2)--(4,6);
+            \node[] (g) at (3,3) {$g$};
+            
+        \end{tikzpicture}
+    \end{center}
+    \[
+        P\left( g \right) =\frac{m\left( g \right) }{m\left( G \right) }=\frac{S\left( g \right) }{S\left( G \right) }=\frac{1-\left( \frac{2}{3} \right) ^2}{1}=\frac{4}{9}
+    .\] 
+\end{eg}
+\begin{notation}
+    几何概型的特点：
+
+    1. 非负性：\[
+        P\left( A \right) \in \left[ 0,1 \right] 
+    .\] 
+
+    2. 规范性：\[
+        P\left( \Omega \right) =1
+    .\] 
+
+    3. 可列可加性： \[
+        P\left( \sum_{i=1}^{n} A_i \right) =\sum_{i=1}^{n} P\left( A_i \right) 
+    .\] 
+\end{notation}
+
+\subsection{公理化}%
+\label{sub:公理化}
+\[
+    \left( \Omega,\mathscr{F},p \right) 
+.\] 
+\begin{defi}
+    $\Omega$：随机试验所产生的所有样本点的集合
+
+    $\mathscr{F}$：集合内所有子集为元素的集合
+
+    $P\left( X \right) $：概率函数
+\end{defi}
+
+\begin{axiom}
+    非负性：\[
+        P\left( A \right) \ge 0,A\in \mathscr{F}
+    .\] 
+\end{axiom}
+\begin{axiom}
+    规范性：\[
+        P\left( \Omega \right) =1
+    .\] 
+\end{axiom}
+\begin{axiom}
+    可列可加性：对两两互斥的事件$A_1,A_2,\ldots$，\[
+        P\left( \sum_{i=1}^{+\infty} A_i \right) =\sum_{i=1}^{+\infty} P\left( A_i \right) 
+    .\] 
+\end{axiom}
+从三条公理得出的性质：
+\begin{notation}
+    1. $P\left( \varnothing \right) =0$ 
+
+    2. 有限可加性： \[
+        \sum_{i=1}^{n} P\left( A_i \right) =P\left( \sum_{i=1}^{n} A_i \right) 
+    .\] 
+
+    3. $P\left( \bar{A} \right) =1-P\left( A \right) $
+
+    4. $A\subset B\implies P\left( B-A \right) =P\left( B \right) -P\left( A \right) $
+
+    5. $A\subset B\implies P\left( A \right) \le P\left( B \right) $
+
+    6. $P\left( A\cup B \right) =P\left( A \right) +P\left( B \right) -P\left( AB \right) $
+
+
+\end{notation}
+\begin{notation}
+    6.1. \[
+    P\left( A\cup B\cup C \right) =P\left( A \right) +P\left( B \right) +P\left( C \right) -P\left( AB \right) -P\left( BC \right) 
+    \]
+    \[
+    -P\left( AC \right) +P\left( ABC \right) 
+    .\] 
+    6.2. \[
+        P\left( \bigcup_{i=1}^{n}A_i \right) =\sum_{i=1}^{n} P\left( A_i \right) -\sum_{i=1}^{n-1} \sum_{j=i+1}^{n} P\left( A_{i}A_{j} \right)+\sum_{i=1}^{n-2} \sum_{j=i+i}^{n-1} \sum_{k=j+1}^{n} P\left( A_{i}A_{j}A_{k} \right) 
+    \]
+    \[
+        \ldots+\left( -1 \right) ^{n-1}P\left( \prod_{i=1}^{n} A_{i}\right)  
+    .\] 
+\end{notation}
+
+\begin{eg}
+    从有号码1,2,...,n的n个球中有放回地取出m个球，求取出的m个球中最大号码为k的概率
+
+    \[
+        P\left\{ k=1 \right\} =\left( \frac{1}{n} \right) ^m
+    .\]  
+
+    逐个列举计算较复杂，记事件$B_k$ 为取出的m个球最大号码不超过k，只需保证每次摸出的球都不超过k即可：
+    \[
+        P\left( B_{k} \right) =\frac{k^m}{n^m}
+    .\] 
+
+    又有$P\left( A_{k} \right) =P\left( B_{k} \right) -P\left( B_{k-1} \right) $，且$B_{k-1}\subset B_{k}$ 
+
+    所以：\[
+        P\left( A_k \right) =\frac{k^m}{n^m}-\frac{\left( k-1 \right) ^m}{n^m}
+    .\] 
+\end{eg}
+ 
+\begin{eg}
+    匹配问题：n个学生各带有一个礼品，随机分配礼品，设第i个人抽到自己的礼品称为一个配对，求至少有一个配对的概率
+
+    设$A_{i}$ 是第i个人抽到自己的礼品，A为目标事件，则： \[
+        A=\bigcup_{i=1}^{n}A_{i}
+    .\] 
+    \[
+        P\left( A_{i} \right) =\frac{\left( n-1 \right) !}{n!}=\frac{1}{n}
+    .\] 
+    \[
+        P\left( A_iA_j \right) =\frac{\left( n-2 \right) !}{n!}=\frac{1}{P_{n}^{2}}
+    .\] 
+    \[
+        P\left( A_iA_jA_k \right) =\frac{1}{P_{n}^{3}}
+    .\] 
+    \[
+        \ldots\ldots\ldots
+    .\] 
+    \[
+        P\left( \prod_{i=1}^{n} A_i  \right) =\frac{1}{n!}
+    .\] 
+    \[
+        P\left( A \right) =P\left( \sum_{i=1}^{n} A_{i} \right) = \sum_{i=1}^{n} P\left( A_{i} \right) -\sum_{i=1}^{n-1} \sum_{j=i+1}^{n} P\left( A_iA_j \right) +\ldots
+    .\] 
+\end{eg}
+
+
+\subsection{条件概率与乘法公式}%
+\label{sub:条件概率与乘法公式}
+\begin{defi}
+    \[
+        P\left( A \right) >0,P\left( B | A \right) =\frac{P\left( AB \right) }{P\left( A \right) }
+    .\] 
+    即：在\textbf{A发生的条件下}，B发生的概率
+\end{defi}
+\begin{defi}
+    乘法公式：\[
+        P\left( AB \right) =P\left( A \right) P\left( B|A \right) =P\left( B \right) P\left( A|B \right) 
+    .\] 
+\end{defi}
+\begin{notation}
+    A与B独立：$P\left( AB \right) =P\left( A \right) P\left( B \right) $
+
+    结合乘法公式：\[
+        P\left( B \right) =P\left( B|A \right) 
+    .\] 
+    \[
+        P\left( A \right) =P\left( A|B \right) 
+    .\] 
+\end{notation}
+\subsection{全概率公式}%
+\label{sub:全概率公式}
+\begin{cor}
+    事件$A_1,A_2,\ldots,A_n$为完备事件组，事件$B\subset \Omega=\bigcup_{i=1}^{n}A_i$，则：\[
+        P\left( B \right) =\sum_{i=1}^{n} P\left( A_i \right) P\left( B|A_i \right) 
+    .\] 
+\end{cor}
+\begin{notation}
+    此时完备事件组的情况应该已知，通过完备事件组A的辅助可以求得较复杂事件B的概率
+\end{notation}
+
+
+\subsection{贝叶斯公式}%
+\label{sub:贝叶斯公式}
+\begin{cor}
+    \[
+        P\left( A_{k}|B \right) =\frac{P\left( A_{k}B \right) }{P\left( B \right) }=\frac{P\left( A_{k} \right) P\left( B|A_k \right) }{\sum_{i=1}^{n} P\left( A_i \right) P\left( B|A_i \right)}
+    .\] 
+\end{cor}
+贝叶斯公式被称为“逆概率公式”，其中事件B更可能是事件的结果，将事件组A看作结果出现的原因，则贝叶斯公式是一个从“结果”推“原因”的可能性的公式
+
+\begin{notation}
+    对比一般公式：事件A导致B，求B发生的概率
+
+    贝叶斯公式：事件A导致B，A中的一个事件$A_i$ 导致B发生的概率
+\end{notation}
+
+
+
 
 \end{document}
