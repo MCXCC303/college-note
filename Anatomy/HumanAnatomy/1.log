@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  10 SEP 2024 14:20
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  12 SEP 2024 20:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1008,21 +1008,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [4]
 
-[5] (./1.aux)
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11] (./1.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `1.out' has not changed.
-(rerunfilecheck)             Checksum: 9AF1860DDD7123EEFE8823291E7801D0;635.
+(rerunfilecheck)             Checksum: 1CB793E3869F094DCCF3E3C9E89C7BC5;1125.
  ) 
 Here is how much of TeX's memory you used:
- 41985 strings out of 475619
- 1052736 string characters out of 5770090
+ 42023 strings out of 475619
+ 1054656 string characters out of 5770090
  1935557 words of memory out of 5000000
- 63786 multiletter control sequences out of 15000+600000
+ 63824 multiletter control sequences out of 15000+600000
  573024 words of font info for 109 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
- 108i,7n,115p,1185b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,19n,115p,1185b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 1.xdv (5 pages, 40836 bytes).
+Output written on 1.xdv (11 pages, 80236 bytes).
