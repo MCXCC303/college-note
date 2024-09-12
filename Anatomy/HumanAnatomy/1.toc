@@ -10,4 +10,5 @@
 \contentsline {subsubsection}{\numberline {2.1.1}总论}{6}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}躯干骨}{8}{subsubsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.2}颅骨}{10}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}面颅骨}{11}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1}脑颅骨}{10}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}面颅骨}{11}{subsubsection.2.2.2}%

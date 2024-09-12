@@ -1,32 +1,35 @@
 %───────────────────%
 % Document Settings %
 %───────────────────%
-
 \documentclass[12pt,a4paper]{article}
 
 %─────────────────%
 % Package Imports %
 %─────────────────%
-
 \usepackage[]{amssymb}
 \usepackage[]{amsthm}
 \usepackage[]{amsmath}
 \usepackage[]{array}
 \usepackage[]{bm}
+\usepackage[]{booktabs}
 \usepackage[UTF8]{ctex}
 \usepackage[]{geometry}
 \usepackage[]{hyperref}
+\usepackage[]{import}
+\usepackage[]{mathrsfs}
 \usepackage[]{multirow}
+\usepackage[]{pdfpages}
 \usepackage[]{pgfplots}
 \usepackage[]{tabu}
 \usepackage[]{tikz}
 \usepackage[]{tkz-euclide}
 \usepackage[]{wrapfig}
+\usepackage[]{xifthen}
+\usepackage[]{yhmath}
 
 %──────────────────%
 % pgfplot Settings %
 %──────────────────%
-
 \usepgfplotslibrary{external}
 \pgfarrowsdeclarecombine{twolatex'}{twolatex'}{latex'}{latex'}{latex'}{latex'}
 \pgfplotsset{compat=1.12}
@@ -34,7 +37,6 @@
 %───────────────%
 % Tikz Settings %
 %───────────────%
-
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{decorations.pathmorphing}
@@ -58,10 +60,17 @@
 \tikzset{eqpic/.style={baseline={([yshift=-.5ex]current bounding box.center)}}}
 \tikzset{commutative diagrams/.cd,cdmap/.style={/tikz/column 1/.append style={anchor=base east},/tikz/column 2/.append style={anchor=base west},row sep=tiny}}
 
+%───────────────────%
+% Inkscape Settings %
+%───────────────────%
+% \newcommand{\incfig}[1]{%
+%     \def\svgwidth{\columnwidth}
+%     \import{./fig/}{#1.pdf_tex}
+% }
+
 %──────────────────────%
 % Theorem Environments %
 %──────────────────────%
-
 \theoremstyle{definition}
 \newtheorem*{aim}{Aim}
 \newtheorem*{axiom}{Axiom}
@@ -91,11 +100,12 @@
 %────────────%
 % Beginnings %
 %────────────%
-
 \title{\textbf{Part III-B: \className}}
 \author{Lecture by \lecturer\\Note by \noter}
 
 %───────────────%
 % Page Settings %
 %───────────────%
-
+% \addtolength{\parskip}{-1mm}
+% \addtolength{\parindent}{-2mm}
+% \geometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm}
