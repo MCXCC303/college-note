@@ -12,3 +12,4 @@
 \contentsline {subsection}{\numberline {1.5}条件概率与乘法公式}{12}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}全概率公式}{12}{subsection.1.6}%
 \contentsline {subsection}{\numberline {1.7}贝叶斯公式}{12}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}独立性}{14}{subsection.1.8}%
