@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  13 SEP 2024 01:36
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.26)  13 SEP 2024 15:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1089,19 +1089,19 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ))
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.12).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 20.
+LaTeX Font Info:    Trying to load font information for OMX+yhex on input line 18.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 File: OMXyhex.fd 
 File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
@@ -1115,15 +1115,15 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `2.out' has not changed.
-(rerunfilecheck)             Checksum: 45190205F0DD969B4A5FC93E313387D2;61.
+(rerunfilecheck)             Checksum: 90713B2F4AA91661A871018D364E264C;125.
  ) 
 Here is how much of TeX's memory you used:
- 42952 strings out of 475619
- 1065947 string characters out of 5770090
- 1926557 words of memory out of 5000000
- 64706 multiletter control sequences out of 15000+600000
- 569277 words of font info for 86 fonts, out of 8000000 for 9000
+ 42999 strings out of 475619
+ 1069277 string characters out of 5770090
+ 1927557 words of memory out of 5000000
+ 64751 multiletter control sequences out of 15000+600000
+ 569293 words of font info for 88 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
- 108i,8n,115p,1196b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,5n,115p,1196b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 2.xdv (1 page, 9532 bytes).
+Output written on 2.xdv (1 page, 10560 bytes).

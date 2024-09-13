@@ -11,20 +11,18 @@
 % Document %
 %──────────%
 \begin{document}
-\section{1. }%
-\label{sec:1. }
-\begin{table}[htpb]
-    \centering
-    \caption{caption}
-    \label{tab:table}
-    \begin{tabular}{ccc}
-    \toprule
-    A & B & C\\
-    \midrule
-    a & b & c\\ 
-    a2&b2&c2\\
-    \bottomrule
-    \end{tabular}
-\end{table}
-$1+2+\frac{1}{2}+5$
+\section{1-A}%
+\label{sec:1-A}
+\subsection{14}%
+\label{sub:14}
+设“第一次比赛取到$k$个新球”为$A_k$，“第二次全取到新球”为 $B$ 
+ \[
+    P\left( A_k \right) =\frac{C_{9}^{k}C_{6}^{3-k}}{C_{15}^{3}}
+.\] 
+\[
+    P\left( B|A_k \right) =P\left( A_k \right) \times \frac{C_{9-k}^{3}C_{6+k}^{0}}{C_{15}^{3}}
+.\] 
+\[
+    P\left( B \right) =\sum_{k=0}^{3} P\left( B|A_k \right) \approx 0.3399
+.\] 
 \end{document}

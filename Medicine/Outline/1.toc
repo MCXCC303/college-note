@@ -5,3 +5,7 @@
 \contentsline {subsubsection}{\numberline {1.2.2}现代药学发展}{5}{subsubsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.3}药学的任务}{7}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}药学地位}{8}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}总结}{9}{subsection.1.5}%
+\contentsline {section}{\numberline {2}中药、生药与天然药物化学}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}中药的起源和发展}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}中药学}{11}{subsection.2.2}%

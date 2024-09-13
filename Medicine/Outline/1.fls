@@ -156,6 +156,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/import/import.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/import/import.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
@@ -569,6 +571,12 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/yhmath/OMXyhex.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/yhmath/OMXyhex.fd
@@ -603,6 +611,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/yhmath/yhcmex10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/yhmath/yhcmex10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/yhmath/yhcmex10.tfm
