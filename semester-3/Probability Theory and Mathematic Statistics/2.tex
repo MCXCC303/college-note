@@ -1,0 +1,314 @@
+\subsection{公理化}%
+\label{sub:公理化}
+\[
+    \left( \Omega,\mathscr{F},p \right) 
+.\] 
+\begin{defi}
+    $\Omega$：随机试验所产生的所有样本点的集合
+
+    $\mathscr{F}$：集合内所有子集为元素的集合
+
+    $P\left( X \right) $：概率函数
+\end{defi}
+
+\begin{axiom}
+    非负性：\[
+        P\left( A \right) \ge 0,A\in \mathscr{F}
+    .\] 
+\end{axiom}
+\begin{axiom}
+    规范性：\[
+        P\left( \Omega \right) =1
+    .\] 
+\end{axiom}
+\begin{axiom}
+    可列可加性：对两两互斥的事件$A_1,A_2,\ldots$，\[
+        P\left( \sum_{i=1}^{+\infty} A_i \right) =\sum_{i=1}^{+\infty} P\left( A_i \right) 
+    .\] 
+\end{axiom}
+从三条公理得出的性质：
+\begin{notation}
+    1. $P\left( \varnothing \right) =0$ 
+
+    2. 有限可加性： \[
+        \sum_{i=1}^{n} P\left( A_i \right) =P\left( \sum_{i=1}^{n} A_i \right) 
+    .\] 
+
+    3. $P\left( \bar{A} \right) =1-P\left( A \right) $
+
+    4. $A\subset B\implies P\left( B-A \right) =P\left( B \right) -P\left( A \right) $
+
+    5. $A\subset B\implies P\left( A \right) \le P\left( B \right) $
+
+    6. $P\left( A\cup B \right) =P\left( A \right) +P\left( B \right) -P\left( AB \right) $
+\end{notation}
+\begin{notation}
+    6.1. \[
+    P\left( A\cup B\cup C \right) =P\left( A \right) +P\left( B \right) +P\left( C \right) -P\left( AB \right) -P\left( BC \right) 
+    \]
+    \[
+    -P\left( AC \right) +P\left( ABC \right) 
+    .\] 
+    6.2. \[
+        P\left( \bigcup_{i=1}^{n}A_i \right) =\sum_{i=1}^{n} P\left( A_i \right) -\sum_{i=1}^{n-1} \sum_{j=i+1}^{n} P\left( A_{i}A_{j} \right)+\sum_{i=1}^{n-2} \sum_{j=i+i}^{n-1} \sum_{k=j+1}^{n} P\left( A_{i}A_{j}A_{k} \right) 
+    \]
+    \[
+        \ldots+\left( -1 \right) ^{n-1}P\left( \prod_{i=1}^{n} A_{i}\right)  
+    .\] 
+\end{notation}
+
+\begin{eg}
+    从有号码$1,2,\ldots,n$的$n$个球中有放回地取$m$个球，求取出的m个球中最大号码为$k$的概率
+
+    \[
+        P\left\{ k=1 \right\} =\left( \frac{1}{n} \right) ^m
+    .\]  
+
+    逐个列举计算较复杂，记事件$B_k$ 为取出的$m$个球最大号码不超过k，只需保证每次摸出的球都不超过$k$即可：
+    \[
+        P\left( B_{k} \right) =\frac{k^m}{n^m}
+    .\] 
+
+    又有$P\left( A_{k} \right) =P\left( B_{k} \right) -P\left( B_{k-1} \right) $，且$B_{k-1}\subset B_{k}$ 
+
+    所以：\[
+        P\left( A_k \right) =\frac{k^m}{n^m}-\frac{\left( k-1 \right) ^m}{n^m}
+    .\] 
+\end{eg}
+ 
+\begin{eg}
+    匹配问题：$n$个学生各带有一个礼品，随机分配礼品，设第$i$个人抽到自己的礼品称为一个配对，求至少有一个配对的概率
+
+    设$A_{i}$ 是第$i$个人抽到自己的礼品，$A$为目标事件，则： \[
+        A=\bigcup_{i=1}^{n}A_{i}
+    .\] 
+    \[
+        P\left( A_{i} \right) =\frac{\left( n-1 \right) !}{n!}=\frac{1}{n}
+    .\] 
+    \[
+        P\left( A_iA_j \right) =\frac{\left( n-2 \right) !}{n!}=\frac{1}{P_{n}^{2}}
+    .\] 
+    \[
+        P\left( A_iA_jA_k \right) =\frac{1}{P_{n}^{3}}
+    .\] 
+    \[
+        \ldots\ldots\ldots
+    .\] 
+    \[
+        P\left( \prod_{i=1}^{n} A_i  \right) =\frac{1}{n!}
+    .\] 
+    \[
+        P\left( A \right) =P\left( \sum_{i=1}^{n} A_{i} \right) = \sum_{i=1}^{n} P\left( A_{i} \right) -\sum_{i=1}^{n-1} \sum_{j=i+1}^{n} P\left( A_iA_j \right) +\ldots
+    .\] 
+\end{eg}
+\subsection{条件概率与乘法公式}%
+\label{sub:条件概率与乘法公式}
+\begin{defi}
+    \[
+        P\left( A \right) >0,P\left( B | A \right) =\frac{P\left( AB \right) }{P\left( A \right) }
+    .\] 
+    即：在\textbf{A发生的条件下}，B发生的概率
+\end{defi}
+\begin{defi}
+    乘法公式：\[
+        P\left( AB \right) =P\left( A \right) P\left( B|A \right) =P\left( B \right) P\left( A|B \right) 
+    .\] 
+\end{defi}
+\begin{notation}
+    $A,B$独立：$P\left( AB \right) =P\left( A \right) P\left( B \right) $
+
+    结合乘法公式：\[
+        P\left( B \right) =P\left( B|A \right) 
+    .\] 
+    \[
+        P\left( A \right) =P\left( A|B \right) 
+    .\] 
+\end{notation}
+\subsection{全概率公式}%
+\label{sub:全概率公式}
+\begin{cor}
+    事件$A_1,A_2,\ldots,A_n$为完备事件组，事件$B\subset \Omega=\bigcup_{i=1}^{n}A_i$，则：\[
+        P\left( B \right) =\sum_{i=1}^{n} P\left( A_i \right) P\left( B|A_i \right) 
+    .\] 
+\end{cor}
+\begin{notation}
+    此时完备事件组的情况应该已知，通过完备事件组$A$的辅助可以求得较复杂事件$B$的概率
+\end{notation}
+\subsection{贝叶斯公式}%
+\label{sub:贝叶斯公式}
+\begin{cor}
+    \[
+        P\left( A_{k}|B \right) =\frac{P\left( A_{k}B \right) }{P\left( B \right) }=\frac{P\left( A_{k} \right) P\left( B|A_k \right) }{\displaystyle{\sum_{i=1}^{n}} P\left( A_i \right) P\left( B|A_i \right)}
+    .\] 
+\end{cor}
+贝叶斯公式被称为“逆概率公式/后验公式”，其中事件$B$更可能是事件的结果，将事件组$A$看作结果出现的原因，则贝叶斯公式是一个从“结果”推“原因”的可能性的公式
+
+\begin{notation}
+    对比一般公式：事件A导致B，求B发生的概率
+
+    贝叶斯公式：事件A导致B，A中的一个事件$A_i$ 导致B发生的概率
+\end{notation}
+
+\begin{axiom}
+    条件概率的公理：
+
+    1. 非负性：$P\left( A \right) \in \left[ 0,1 \right] $
+
+    2. 规范性：$P\left( \Omega|A \right) =1$
+
+    3. 可列可加性： \[
+        P\left( \sum_{i=1}^{\infty} B_i|A \right) =\sum_{i=1}^{\infty} P\left( B_i|A \right) 
+    .\] 
+\end{axiom}
+\begin{cor}
+    \[
+        P\left( \bar{B}|A \right) =P\left( \Omega-B|A \right) =P\left( \Omega|A \right) -P\left( B|A \right)
+    .\] 
+\end{cor}
+\begin{cor}
+    \[
+        P\left( B_1\cup B_2 \right) =P\left( B_1 \right) +P\left( B_2 \right) -P\left( B_1B_2 \right) 
+    .\] 
+    \[
+        \implies P\left( B_1\cup B_2|A \right) =P\left( B_1|A \right) +P\left( B_2|A \right) -P\left( B_1B_2|A \right) 
+    .\] 
+\end{cor}
+\begin{cor}
+    乘法公式：
+    \[
+        P\left( ABC \right) =P\left( A\left( BC \right)  \right) =P\left( A \right) P\left( BC|A \right) =P\left( A \right) P\left( B|A\right) P\left( C|AB \right)  
+    .\] 
+\end{cor}
+\begin{eg}
+    8个红球2个白球，求前三次结果是“红红白”的概率：
+
+    1. 不放回取3个（和一次取三个球相同）
+
+    所有可能性：$10\times 9\times 8$ 
+
+    目标事件：$8\times 7\times 2$
+
+    或使用乘法公式：设$A_i$ 为第$i$次取到红球，目标事件可表示为$A_1A_2\bar{A_3}$
+
+    概率：\[
+        P\left( A_1A_2\bar{A_3} \right) =P\left( A_1 \right) P\left( A_2|A_1 \right) P\left( \bar{A_3}|A_1A_2 \right) =\frac{8}{10}\times \frac{7}{9}\times \frac{2}{8}=\frac{7}{45}
+    .\] 
+
+    2. 每次取后放回，并加入两个同色的球，取3次（不能使用古典概型）
+
+    概率：
+
+    \[
+        P\left( A_1A_2\bar{A_3} \right) =\frac{8}{10}\times \frac{8}{12}\times \frac{2}{14}=\frac{8}{105}
+    .\] 
+\end{eg}
+\begin{eg}
+    某疾病的发病率为0.0004，患病检测呈阳性的概率为0.99，误诊为阴性的概率为0.01，误诊为阳性的概率为0.05，不患病检测呈阴性概率为0.95，一个人检测呈阳性，求其患病的概率
+
+    设阳性为$A$，患病为$B$
+
+    则： \[
+        P\left( A|B \right) =0.99,P\left( A|\bar{B} \right) =0.05,P\left( B \right) =0.0004
+    .\] 
+    要求：$P\left( B|A \right) $ 
+
+    使用贝叶斯公式：
+
+    \[
+        P\left( B|A \right) =\frac{P\left( AB \right) }{P\left( A \right) }=\frac{P\left( B \right) P\left( A|B \right) }{P\left( AB \right) +P\left( A\bar{B} \right) }
+    .\] 
+    \[
+        =\frac{P\left( B \right) P\left( A|B \right) }{P\left( B \right) P\left( A|B \right) +P\left( A|\bar{B} \right) P\left( \bar{B} \right) }=0.0079
+    .\] 
+\end{eg}
+\subsection{独立性}%
+\label{sub:独立性}
+\begin{defi}
+    $A,B$ 独立，则：$P\left( A|B \right) =P\left( A \right) $
+\end{defi}
+\begin{notation}
+    证明独立性：
+
+    1. $P\left( A \right) P\left( B \right) =P\left( AB \right) $ 
+\end{notation}
+\begin{notation}
+    独立事件的特点：
+    
+    1. $A,B$独立有：$A,B$所有的组合（包含补集）均独立
+
+    2. $A,B$独立的充要条件：$P\left( A|B \right) =P\left( A \right) \text{ or } P\left( B|A \right) =P\left( B \right) $
+
+    3. $\varnothing$ 与任何随机事件独立，$\Omega$ 与任何随机事件独立
+\end{notation}
+对于三个事件相互独立：
+\[
+    \begin{cases}
+        P\left( AB \right) =P\left( A \right) P\left( B \right) \\
+        P\left( AC \right) =P\left( A \right) P\left( C \right) \\
+        P\left( BC \right) =P\left( C \right) P\left( C \right) \\
+        P\left( ABC \right) =P\left( A \right) P\left( B \right) P\left( C \right) 
+    \end{cases}
+.\] 
+
+对比乘法公式：
+$P\left( ABC \right) =P\left( A \right) P\left( B|A \right) P\left( C|AB \right) $
+
+\begin{defi}
+    相互独立：
+
+    有$A_1,A_2,\ldots,A_n$事件组，对$\forall s \in \left[ 2, n\right] $个事件$A_{k_1},A_{k_2},\ldots,A_{k_s}$ 均有：\[
+        P\left( \prod_{n=1}^{s} A_{k_n}  \right) =\prod_{n=1}^{s} P\left( A_{k_n} \right)  
+    .\] 
+
+    称事件$A_1,A_2,\ldots,A_{n}$相互独立
+\end{defi}
+
+\begin{defi}
+    两两独立：对事件$A_1,A_2,\ldots,A_n$ ，若任意两个事件独立，则称为两两独立
+\end{defi}
+
+\begin{notation}
+    相互独立一定两两独立，反之不一定
+\end{notation}
+
+\begin{notation}
+    相互独立事件组的性质：
+
+    1. 事件$A_1,A_2,\ldots,A_n$ 相互独立，将其中任意部分改为对立事件，事件组仍为相互独立
+
+    2. 事件相互独立，将事件组任意分为两组（或多组），对组内事件进行“并、交、差、补”操作后，事件间依然相互独立
+\end{notation}
+\subsubsection*{独立重复实验}%
+\label{subsub:独立重复实验}
+\begin{defi}
+    $E_1,E_2$中一个试验的任何结果和另一个试验的任何结果相互独立，则试验相互独立；若$n$个独立试验相互独立且试验相同，称$E_1,E_2,\ldots,E_n$为$n$次独立重复实验，或$n$重独立试验
+
+    \begin{eg}
+        扔硬币和掷骰子为独立试验，其中扔硬币为伯努利试验（只有两个结果）
+    \end{eg}
+    
+\end{defi}
+\begin{defi}
+    $n$重独立试验$E$中，每次试验都是伯努利试验（可能结果只有两个），称$E$为$n$重伯努利试验
+\end{defi}
+    1. 二项概率公式：成功$k$次的概率记为$P_n\left( k \right) $，假定前$k$次成功，后$n-k$次失败，则\[
+        P_i =p^k\left( 1-p \right) ^{n-k}
+    .\] 
+
+    指定事件$A$发生的位置有$C_{n}^{k}$ 种，则：\[
+        P_n\left( k \right) =C_{n}^{k}p^{k}\left( 1-p \right) ^{n-k}
+    .\] 
+
+    称为二项概率公式
+
+    2. 几何概率公式：首次成功恰好发生在第$k$次的概率记为$G\left( k \right) $ ，设前$k-1$次失败，则：\[
+        G\left( k \right)= q^{k-1}p
+    .\] 
+
+    可以验证：$\sum G\left( k \right) =1$ 
+
+    3. 负二项概率：需要成功$r$次，第$r$次成功恰好发生在第$k$次的概率记为$G_r\left( k \right) $ ，设前$k-1$次试验有$r-1$次成功，则：\[
+        G_r\left( k \right) =C_{k-1}^{n-1}p^rq^{k-r}
+    .\] 
+
+    同样有：$\sum G_r\left( k \right) =1$
