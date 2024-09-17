@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1726294636.55392 "2.xdv" "2.pdf" "2" 1726294636.71088 0
-  "2.xdv" 1726294636.47163 22616 a103ebe47b94cc66850ba43f06e77e8d "xelatex"
+["xdvipdfmx"] 1726577839.43303 "main.xdv" "main.pdf" "main" 1726577839.59777 0
+  "main.xdv" 1726577839.35669 105740 ee80560021a2a0317799a1cbdd1c0d54 "xelatex"
   (generated)
-  "2.pdf"
+  "main.pdf"
   (rewritten before read)
-["xelatex"] 1726294635.59957 "2.tex" "2.xdv" "2" 1726294636.70801 0
-  "/home/thf/Notebook/header.tex" 1726162545.23709 4763 2f652a2b58384fe93277491fbf9b139a ""
+["xelatex"] 1726577838.44279 "main.tex" "main.xdv" "main" 1726577839.59486 0
+  "../header.tex" 1726305014.8233 5029 d38e9c6a9d5526ff6d30037da16a81fa ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -17,8 +17,10 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm" 1136768653 1116 4e6ba9d7914baa6482fd69f67d126380 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1136768653 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -34,6 +36,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1229303445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1229303445 684 3a51bd4fd9600428d5264cf25f04bb9a ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/yhmath/yhcmex10.tfm" 1136768653 1684 af67583ad46e8b1511363fd580d94047 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -309,12 +312,16 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719785820 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1721973222 9836347 80ab924a85bfc2cf0a4064b97183bc97 ""
   "/usr/local/texlive/2024/texmf.cnf" 1721973129.91209 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "2.aux" 1726294636.47163 811 468bf212672739fcdc0188500cfe86b7 "xelatex"
-  "2.out" 1726294636.4383 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "2.tex" 1726294635.35493 4491 2d90a8561f421365b6a1426339e3c6e0 ""
+  "1.tex" 1726466279.84839 12317 d6a3ea8616003ef28b2839a3abc75c18 ""
+  "2.tex" 1726466260.09259 3159 37405818c1ff7b6adeb1ee35095cd4ab ""
+  "main.aux" 1726577839.35669 4012 9c3e41ef769bbd5ae2f5c492b1e13fef "xelatex"
+  "main.out" 1726577839.35669 1085 4698b3930a672c4d777796e686860487 "xelatex"
+  "main.tex" 1726466296.7613 394 ef49aca9c5d9295ae69c97ff361fbe09 ""
+  "main.toc" 1726577839.35669 901 7d563cf479279b148c12c1c88213f8e1 "xelatex"
   (generated)
-  "2.aux"
-  "2.log"
-  "2.out"
-  "2.xdv"
+  "main.aux"
+  "main.log"
+  "main.out"
+  "main.toc"
+  "main.xdv"
   (rewritten before read)

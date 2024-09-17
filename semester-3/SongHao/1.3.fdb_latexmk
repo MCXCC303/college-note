@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1726162447.83949 "1.3.xdv" "1.3.pdf" "1.3" 1726162447.99572 0
-  "1.3.xdv" 1726162447.76274 29952 d95c72373c92eb30bc7820060326e1c8 "xelatex"
+["xdvipdfmx"] 1726491781.60388 "1.3.xdv" "1.3.pdf" "1.3" 1726491781.76098 0
+  "1.3.xdv" 1726491781.52469 29952 4f9f9b1f15557117d7cb0daef0e1e560 "xelatex"
   (generated)
   "1.3.pdf"
   (rewritten before read)
-["xelatex"] 1726162446.90869 "1.3.tex" "1.3.xdv" "1.3" 1726162447.99286 0
-  "/home/thf/Notebook/header.tex" 1726161848.59931 4739 4eb537e852afda45ae44a85000a118ea ""
+["xelatex"] 1726491780.53337 "1.3.tex" "1.3.xdv" "1.3" 1726491781.75818 0
+  "../header.tex" 1726305014.8233 5029 d38e9c6a9d5526ff6d30037da16a81fa ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -34,6 +34,9 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1229303445 688 37338d6ab346c2f1466b29e195316aa4 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1229303445 684 3a51bd4fd9600428d5264cf25f04bb9a ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/yhmath/yhcmex10.tfm" 1136768653 1684 af67583ad46e8b1511363fd580d94047 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -225,6 +228,8 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def" 1720644236 117112 df92f59263f7368ce05087964c585de5 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty" 1525197427 318 019510c713feab56160631df4423d2aa ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/import/import.sty" 1586645574 6201 0ad8b5da8e12f60a88d546b2198a56f2 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/mathrsfs.sty" 1137110241 300 12fa6f636b617656f2810ee82cb05015 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd" 1137110241 548 cc4e3557704bfed27c7002773fad6c90 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1655478651 22555 6d8e155cfef6d82c3d5c742fea7c992e ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty" 1665067230 13815 760b0c02f691ea230f5359c4e1de23a7 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xetex.def" 1716410060 31593 96a7f07a08af85a2bbfee2e0a9cdbb50 ""
@@ -307,10 +312,10 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719785820 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1721973222 9836347 80ab924a85bfc2cf0a4064b97183bc97 ""
   "/usr/local/texlive/2024/texmf.cnf" 1721973129.91209 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "1.3.aux" 1726162447.76274 642 f1484b589f0afc5178ccf22f29ab9933 "xelatex"
-  "1.3.out" 1726162447.76274 221 7935ca525d7cbad96990e279efe71eb9 "xelatex"
-  "1.3.tex" 1726162397.63081 3573 1f07d7de3f1653c2ed1786ea2ebb0af4 ""
-  "1.3.toc" 1726162447.76274 212 579f46036bb7a44127fc4b97a91fdd99 "xelatex"
+  "1.3.aux" 1726491781.52469 642 f1484b589f0afc5178ccf22f29ab9933 "xelatex"
+  "1.3.out" 1726491781.52469 221 7935ca525d7cbad96990e279efe71eb9 "xelatex"
+  "1.3.tex" 1726491771.90469 3564 438f8880054918615f09e8c9507936e6 ""
+  "1.3.toc" 1726491781.52469 212 579f46036bb7a44127fc4b97a91fdd99 "xelatex"
   (generated)
   "1.3.aux"
   "1.3.log"
