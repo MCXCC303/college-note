@@ -25,6 +25,7 @@
 \usepackage[]{bm}
 \usepackage[]{booktabs}
 \usepackage[UTF8]{ctex}
+\usepackage[]{fancyhdr}
 \usepackage[]{geometry}
 \usepackage[]{hyperref}
 \usepackage[]{import}
@@ -38,6 +39,16 @@
 \usepackage[]{wrapfig}
 \usepackage[]{xifthen}
 \usepackage[]{yhmath}
+
+%────────────────%
+% Fancy Settings %
+%────────────────%
+\fancypagestyle{CustomStyle}{%
+    \fancyhf{}
+    \setlength{\headheight}{14.49998pt}
+    \fancyhead[R]{\thepage}
+    \fancyhead[L]{\lecturer: \className}
+}
 
 %──────────────────%
 % pgfplot Settings %
@@ -113,7 +124,7 @@
 %────────────%
 \title{\textbf{Part III-B: \className}}
 \author{Lecture by \lecturer\\Note by \noter}
-
+\pagestyle{CustomStyle}
 %────────────────────────────────%
 % Page Settings (set when print) %
 %────────────────────────────────%
