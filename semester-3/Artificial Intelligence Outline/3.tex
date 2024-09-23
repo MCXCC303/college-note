@@ -1,0 +1,123 @@
+\begin{notation}
+    行为主义的代表性成果：蚁群算法、粒子群算法
+\end{notation}
+比较三种主流方法：
+
+\begin{table}[htpb]
+    \centering
+    \caption{学习模式}
+    \label{tab:学习模式}
+    \begin{tabular}{ccc}
+    \toprule
+    符号主义 & 连接主义 & 行为主义\\
+    \midrule
+    与人类逻辑类似 & 直接从数据中学习 & 从经验中持续学习\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+第一章作业：1-19题
+\section{人工智能的知识表示}%
+\label{sec:人工智能的知识表示}
+\subsection{概述}%
+\label{sub:概述}
+研究人工智能的目的：使其得以模拟、延伸、扩展，
+\begin{notation}
+    人是一个物理符号系统
+\end{notation}
+为使人工智能达到相应的功能：将知识破译、重新编码、建立相应的符号系统
+\begin{notation}
+    知识的层次：
+
+    现象$\implies$ 数据$\implies$ 信息$\implies$ 知识$\implies$ 智慧
+
+    数据：一些无关联的现象
+
+    数据$\to$ 信息：组织、分析
+
+    信息$\to$ 知识：解释、评价
+
+    知识$\to$ 智慧：理解、归纳
+\end{notation}
+\begin{eg}
+    数据：下雨了，温度下降至15度
+
+    信息：地面水蒸发，遇冷暖峰过境
+
+    知识：理解下雨、蒸发、空气状况、地形、风向等及其中的作用机理
+
+    智慧：模拟天气变化，人工天气可控化
+\end{eg}
+\begin{notation}
+    知识的特性：
+
+    1. 相对正确性
+
+    2. 不确定性
+
+    3. 可表示性和可利用性
+\end{notation}
+\begin{question}
+    如何将人类知识形式化/模型化
+\end{question}
+对知识的一种描述或约定：转化为机器可接受描述的形式
+\[
+    \text{知识表示}
+    \begin{cases}
+        \text{符号主义}\begin{cases}
+            \text{谓词逻辑}\\
+            \text{产生式系统}\\
+            \text{框架系统}
+        \end{cases}\\
+        \text{经验主义}\begin{cases}
+            \text{状态表示}\\
+            \text{特征表示}
+        \end{cases}\\
+        \text{连接主义}\begin{cases}
+            \text{语义变量}\\
+            \text{网络权重}
+        \end{cases}
+    \end{cases}
+.\] 
+\subsection{谓词逻辑}%
+\label{sub:谓词逻辑}
+\begin{notation}
+    亚里士多德提出了“三段论”演绎推理方法
+
+    莱布尼茨在17世纪提出二进制，乔治贝尔提出用简单符号表示逻辑命题，产生了“贝尔代数”：适于机器使用的数学规律
+\end{notation}
+概念理论由概念名、概念内涵和概念外延组成
+\begin{notation}
+    命题：一个非真即假的陈述句
+    \[
+        \text{命题分类}
+        \begin{cases}
+            \text{真命题}\\
+            \text{假命题}\\
+            \text{在一定条件下为真，一定条件下为假}
+        \end{cases}
+    .\] 
+
+    对于$R: x<8$ 由于$R$的真假依赖于 $x$ 的取值，因此无法判断
+\end{notation}
+\subsection{命题逻辑}%
+\label{sub:命题逻辑}
+\begin{table}[htpb]
+    \centering
+    \caption{命题真值表}
+    \label{tab:命题真值表}
+    \begin{tabular}{ccccccc}
+    \toprule
+    $p$ & $q$& $\urcorner p$& $p\land q$& $p\lor q$& $p\Rightarrow q$& $p\Leftrightarrow q$\\
+    \midrule
+    F&F&T&F&F&T&T\\
+    F&T&T&F&T&T&F\\
+    T&F&F&F&T&F&F\\
+    T&T&F&T&T&T&T\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\begin{notation}
+    蕴含连结词：“若$p$ 则$q$”称为$p$ 对$q$ 的蕴含式：$p\to q$
+\end{notation}
+

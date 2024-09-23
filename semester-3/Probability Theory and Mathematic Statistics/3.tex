@@ -94,7 +94,25 @@
         \end{cases}
     .\] 
 
-    图像：P43
+    图像：
+    \begin{center}
+        \begin{tikzpicture}
+            \node [] at (0,-0.5)  {$0$};
+            \draw [->] (-3,0)--(7,0) node at (7,-0.5) {$x$};
+            \draw [->] (0,0)--(0,6) node at (-0.5,6) {$y$};
+            \draw [dashed] (2,3)--(0,3) node at (-0.5,3) {$\displaystyle{\frac{7}{10}}$};
+            \draw [dashed] (4,5)--(0,5) node at (-0.5,5) {$1$};
+            \draw [dashed] (2,3)--(2,0) node at (2,-0.5) {$1$};
+            \draw [dashed] (4,5)--(4,0) node at (4,-0.5) {$2$};
+            \draw [line width=2] (0,1)--(2,1) node at (-0.5,1) {$\displaystyle{\frac{1}{10}}$};
+            \draw [line width=2] (2,3)--(4,3);
+            \draw [line width=2] (4,5)--(6,5);
+            \draw [line width=2] (-3,0)--(0,0);
+            \draw [] (2,1) circle [radius=2pt];
+            \draw [] (4,3) circle [radius=2pt];
+            \draw [] (0,0) circle [radius=2pt];
+        \end{tikzpicture}
+    \end{center}
 
 \end{eg}
 \begin{notation}
@@ -117,7 +135,7 @@
 关于$X$ 的事件都可以使用分布函数表示：
 \[
     \begin{cases}
-        P\left\{ X=a \right\} =\lim_{\varepsilon \to 0^+} P\left\{ a-\varepsilon<X\le a \right\} =F\left( a \right) -F\left( a-0^+ \right) \\
+        P\left\{ X=a \right\} =\displaystyle{\lim_{\varepsilon \to 0^+}} P\left\{ a-\varepsilon<X\le a \right\} =F\left( a \right) -F\left( a-0^+ \right) \\
         P\left\{ a\le X<b \right\} =F\left( b-0^+ \right) -F\left( a-0^+ \right) \\
         \ldots\ldots
     \end{cases}
