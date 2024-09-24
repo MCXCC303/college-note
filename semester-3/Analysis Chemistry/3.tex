@@ -1,0 +1,220 @@
+\subsection{如何提高分析结果的准确度}%
+\label{sub:如何提高分析结果的准确度}
+1. 选择合适的分析方法：
+\begin{notation}
+    对于化学分析法：适用于常量组分（>1\%）的分析
+
+    对于仪器分析法：适用于微量组分（0.01 $\sim $ 1\%）或痕量组分（<0.01\%）的分析
+\end{notation}
+
+2. 减少相对误差：增大取样量
+
+3. 减少偶然误差：增加平行测试次数（$\ge 3$，活体测试$\ge 6$）
+
+4. \textbf{消除}系统误差：
+\begin{notation}
+    常用方法：
+
+    1. 与经典方法比较：（用其他方法测试该方法）
+
+    2. 对照试验(control test)：（用其他样本对比）
+
+    3. 回收试验/标准加入法：测量原样本$x_1$ ，加入某标准量$x_2$ ，测量加入后的样本$x_3$ ，计算回收率：\[
+        \text{Recovery}\%=\frac{x_3-x_1}{x_2}\times 100\%\approx 95\%\sim 105\%
+    .\] 
+
+    4. 空白试验：不加试样测试，得到并扣去空白值，用于检验由试剂、容器等引入杂质导致的系统误差
+
+    5. 仪器校正
+\end{notation}
+
+\subsection{有效数字}%
+\label{sub:有效数字}
+\begin{defi}
+    有效数字：分析工作中实际上能测量到的数字
+\end{defi}
+原则上：
+
+1. 在记录测量数据时，只允许保留一位可疑数字（欠准数字）
+
+2. 误差是末尾数的$\pm 1$个单位
+\begin{eg}
+    在分析天平上称出$m=21.5370\text{g}$ ，则真值为$21.5370\pm 0.0001\text{g}$
+\end{eg}
+\begin{notation}
+    有效数字的末尾0不可省略：反映相对误差
+\end{notation}
+
+\begin{question}
+    如何判断有效数字的位数？
+\end{question}
+1. 在数据中1 $\sim $ 9均为有效数字（0待定）
+
+2. 算式中的倍数、分数及某些常数（$\pi,\text{e}$ 等）可看为无数位有效数字
+
+3. 变化单位时有效数字的位数必须保持不变，如$0.0015\text{g}=1.5\text{mg}$ 
+
+4. pH和$\text{pK}_{\text{a}}$ 等对数值，有效数字仅取决于小数部分，例：$\text{pH}=4.23$，有效数字2位
+
+\begin{notation}
+    0的位置和有效数字：
+
+    1. 小数前的0起定位作用，后面的0为有效数字
+
+    2. 整数后的0不一定是有效数字
+
+    \begin{eg}
+        $36000 \Rightarrow 3.60\times 10^4$：3位有效数字
+    \end{eg}    
+\end{notation}
+\subsubsection{修约规则}%
+\label{subsub:修约规则}
+1. 四舍六入五留双，五后有数需进位
+
+2. 修约标准偏差：只进不舍，降低精密度，提高可信度
+
+\begin{table}[htpb]
+    \centering
+    \caption{修约为两位}
+    \label{tab:修约为两位}
+    \begin{tabular}{ccc}
+    \toprule
+    原值 & 修约值 & 原因\\
+    \midrule
+    3.249 & 3.2 & 四舍\\
+    8.361 & 8.4 & 六入\\
+    6.550 & 6.6 & 五留双\\
+    6.250 & 6.2 & 五留双\\
+    6.252 & 6.3 & 五后有数\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+2.1. 可多保留一位有效数字进行计算
+
+2.2. 与标准限度值比较不应修约
+\subsubsection{运算规则}%
+\label{subsub:运算规则}
+1. 加减法：结果的小数位数以小数点后位数最少的为标准
+\begin{eg}
+\[
+    0.0121+25.64+1.057=26.7091\approx 26.71
+.\]
+\end{eg}
+
+2. 乘除法：取相对误差最大的为标准
+\begin{eg}
+    \[
+        \frac{0.0325\times 5.10\times 60.1}{139.8}\approx 0.0712
+    .\]     
+\end{eg}
+
+\begin{notation}
+    对于高含量组分$\left( w>10\% \right) $，分析结果一般保留4位有效数字
+
+    对于中等含量组分$\left( 1\%<w<10\% \right) $，保留3位
+
+    对于微量组分$\left( w<1\% \right) $，保留2位
+\end{notation}
+
+\subsection{有限量分析数据的统计处理}%
+\label{sub:有限量分析数据的统计处理}
+\subsubsection{偶然误差的正态分布}%
+\label{subsub:偶然误差的正态分布}
+正态分布的概率密度函数：\[
+    y=f\left( x \right) =\frac{1}{\sigma \sqrt{2\pi} }\text{e}^{-\left( x-\mu \right) ^{2}/2\sigma^{2}}
+.\] 
+\begin{notation}
+    $x$ ：测量值
+
+    $\mu$ ：无限次测量的总体平均值
+
+    $\sigma$ ：总体偏差
+\end{notation}
+特点：
+
+1. 当$x=\mu$ 时，$y$ 最大：大部分测量值集中在算术平均值附近
+
+2. 函数图像以$x=\mu$ 的直线对称：正负误差出现的概率相同
+
+3. $x\to -\infty$或$x\to +\infty$ 时：无限趋近$x$ 轴
+
+4. $\mu$ 越大，数据越分散，函数图像矮小、坡度较缓
+
+5. 
+\[
+    \int_{-\infty}^{+\infty} f\left( x \right) \text{d}x=1
+.\] 
+
+\begin{notation}
+    若令\[
+        u=\frac{x-\mu}{\sigma}
+    .\] 
+
+    则：\[
+        y=f\left( x \right) =\frac{1}{\sigma\sqrt{2\pi}} \text{e}^{-\frac{u^{2}}{2}}
+    .\] 
+    
+    称为标准正态分布曲线
+\end{notation}
+
+\begin{notation}
+    $3\sigma$ 标准：测量结果需要有$99.7\%$ 以上的数据在真值范围内，即：
+    \[
+        \int_{\mu-3\sigma}^{\mu+3\sigma}f\left( x \right) \text{d}x\approx 99.7\%
+    .\] 
+\end{notation}
+
+\subsubsection{T分布}%
+\label{subsub:T分布}
+\begin{defi}
+    T分布为有限量数据n平均值的概率误差分布
+\end{defi}
+\[
+    t=\frac{\left| \bar{x}-\mu \right| }{S}\sqrt{n} 
+.\] 
+
+$x$ ：样本平均值
+
+$S$ ：样品标准偏差
+
+$t$ 值随自由度$f\left( f=n-1 \right) $ 而变
+
+当$f\to +\infty$ 时为正态分布
+\begin{notation}
+    T分布和正态分布的异同：
+
+    相同：形状相似，积分面积表示概率
+
+    不同：T不同时概率不同
+\end{notation}
+\begin{notation}
+    T分布相关概念：
+
+    1. 自由度$f$ 
+
+    2. 置信区间：以测定区间为中心，包括总体平均值在内的可信范围\[
+        \bar{x}\pm \frac{tS}{\sqrt{n} }
+    .\]
+
+    3. 置信水平（置信度$P$）：样本平均值落在置信区间的概率\[
+        P = \mu\pm \frac{tS}{\sqrt{n} }
+    .\]
+
+    4. 显著性水平$\alpha=1-P$
+\end{notation}
+$t$值的表达：一定P下，$t\to t_{\alpha,f}$ 
+\subsubsection{平均值的精密度和置信区间}%
+\label{subsub:平均值的精密度和置信区间}
+\begin{eg}
+    有一个样品，$m$个人各测量$n$次，计算出每个人测得的平均值，平均值的分布符合正态分布
+\end{eg}
+平均值的标准偏差：
+\[
+    S_{\bar{x}}=\frac{S_{x}}{\sqrt{n} }
+.\] 
+
+即：增加平行测定次数$n$ 可以减小平均值的标准偏差$S_{\bar{x}}$ 
+\begin{notation}
+    增加测定次数，平均值的标准偏差呈反比变化，一般3到4次已经可以达到目标，继续增加效果不显著
+\end{notation}
