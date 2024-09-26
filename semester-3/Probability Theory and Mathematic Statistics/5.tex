@@ -1,0 +1,157 @@
+\begin{notation}
+	马尔可夫分布也具有无记忆性
+\end{notation}
+回忆：正态分布（高斯分布）
+\[
+	f\left( x \right) =\frac{1}{\sqrt{2\pi} \sigma}\text{e}^{-\frac{ (x-\mu)^2 }{2\sigma^2}}
+.\] 
+
+标准正态分布\[
+	\phi\left( x \right) =\frac{1}{\sqrt{2\pi} }\text{e}^{-\frac{x^2}{2\sigma^2}}
+.\] 
+\subsection{标准化}%
+\label{sub:标准化}
+\begin{defi}
+	标准化将随机变量转化为另一组随机变量
+
+	对于$X\sim N\left( \mu,\sigma^2 \right) $ ，移除前者的中心（将中心变为0），除以标准差，即得到符合标准正态分布的$Y\sim N\left( 0,1 \right) $
+\end{defi}
+
+1. 去中心化
+
+2. 除以标准差
+
+即：
+\[
+	Y=\frac{X-E\left( X \right) }{\sqrt{D\left( X \right) } }
+.\] 
+
+标准化后的随机变量期望为0，方差为1
+
+\[
+	P\left\{ \left| X-\mu \right| <k\sigma \right\} =P\left\{ \left| \frac{x-\mu}{\sigma} \right| <k \right\} =P\left\{ Y<k \right\} 
+.\] 
+
+此时$Y\sim N\left( 0,1 \right) $ ，即符合标准正态分布
+
+对于原来的$3\sigma$ 原则，转化为$P\left\{ -3<Y<3 \right\} $
+
+\[
+	P\left\{ -3<Y<3 \right\} = F_{Y}\left( 3 \right) -F_{Y}\left( -3 \right)
+.\] 
+\[
+	=\phi\left( 3 \right) -\phi\left( -3 \right) 
+.\] 
+\begin{notation}
+	 \[
+		\phi\left( -x \right) =1-\phi\left( x \right)
+	.\] 
+\end{notation}
+\[
+	=2\phi\left( 3 \right) -1
+.\] 
+
+\begin{eg}
+	设人的高度符合正态分布$X\sim N\left( 170,49 \right) $，问在公共设施处的门需要设计多高才能使至少90\%的人通过
+
+	求门高$H$ 使得$P\{X\le H\}\ge 0.9$
+
+	\[
+		P\left\{ X\le H \right\} \implies P\left\{ \frac{X-170}{49}\le \frac{H-170}{49} \right\} 
+	.\]
+	即：
+	\[
+		\phi\left( \frac{H-170}{49} \right) \ge 0.9
+	.\] 
+	 \[
+		\frac{H-170}{49}\ge 1.28 \implies H\ge 1.80
+	.\] 
+\end{eg}
+
+\subsection{随机变量函数的分布}%
+\label{sub:随机变量函数的分布}
+\begin{eg}
+	 \[
+		Y=\frac{X-E\left( X \right) }{\sqrt{D\left( X \right) } }
+	.\] 
+	\[
+		Y=g\left( X \right) \sim F_{Y}\left( Y \right) 
+	.\] 
+
+	求解$F_{Y}\left( Y \right) $
+\end{eg}
+\begin{eg}
+	$D\sim U[a,b]$且
+	 \[
+		S=\pi\left( \frac{b}{2} \right) ^2 = \frac{\pi\rho^2}{4}
+	.\] 
+\end{eg}
+1. $X$ 离散：$Y$ 一般是离散的
+
+2. $X$ 连续：$Y$ 可能连续，可能分段连续（离散）
+\begin{eg}
+	$X$ 的分布律：
+	\[
+		\begin{pmatrix}
+			-2&-1&0&1&2&3\\
+			0.15&0.1&0.1&0.2&0.3&0.15
+		\end{pmatrix}
+	.\] 
+
+	求$Y=X^2$ 的分布律
+
+	列举$Y$ 的分布律：
+	\begin{table}[htpb]
+		\centering
+		\caption{Y Func}
+		\label{tab:Y-Func}
+		\begin{tabular}{cccccc}
+		\toprule
+		0.15 & 0.1 & 0.1 & 0.2 & 0.3 & 0.15\\
+		\midrule
+		4 & 1 & 0 & 1 & 4 & 9\\
+		\bottomrule
+		\end{tabular}
+	\end{table}
+	合并后：
+	\[
+		\begin{pmatrix}
+			0 & 1 & 4 & 9\\
+			0.1 & 0.3 & 0.45 & 0.15\\
+		\end{pmatrix}
+	.\] 
+\end{eg}
+
+\begin{eg}
+	分析法：$X\sim G\left( 0.5 \right) $ （几何分布），求$Y=\sin\left( \displaystyle{\frac{\pi}{2}}X \right) $ 的分布律
+
+	易得：$Y$ 可以取得：0,1,-1
+
+	\[
+		Y=\sin\left( \frac{\pi}{2}X \right) =\begin{cases}
+			-1, X=4n-1\\
+			0,X=4n\text{且}X=4n-2\\
+			1,X=4n-3
+		\end{cases}
+	.\] 
+	\[
+		P\left\{ Y=-1 \right\} =\sum_{n=1}^{+\infty} P\left\{ X=4n-1 \right\} =\sum_{n=1}^{+\infty} 0.5\times 0.5^{4n-1-1}
+	.\] 
+
+	同理：
+	\[
+		P\left\{ Y=0 \right\} =\sum_{n=1}^{+\infty} 0.5\times 0.5^{2n-1}
+	.\] 
+	\[
+		P\left\{ Y=1 \right\} =\sum_{n=1}^{+\infty} 0.5\times 0.5^{4n-4}
+	.\] 
+
+	求得$Y$ 的分布律：
+	\[
+		\begin{pmatrix}
+			-1 & 0 & 1\\
+			\displaystyle{\frac{2}{15}} & \displaystyle{\frac{1}{3}} & \displaystyle{\frac{8}{15}}\\
+		\end{pmatrix}
+	.\] 
+\end{eg}
+

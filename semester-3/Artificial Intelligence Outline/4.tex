@@ -1,0 +1,204 @@
+\begin{table}[htpb]
+	\centering
+	\caption{命题的五种连结词}
+	\label{tab:命题的五种连结词}
+	\begin{tabular}{ccccc}
+	\toprule
+	$\land$(and) & $\lor$(or) & $\neg$(not) & $\Rightarrow$ (implies) & $\Leftrightarrow$(forth and come)\\
+	\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[htpb]
+    \centering
+    \caption{命题真值表}
+    \label{tab:命题真值表}
+    \begin{tabular}{ccccccc}
+    \toprule
+    $p$ & $q$& $\neg p$& $p\land q$& $p\lor q$& $p\Rightarrow q$& $p\Leftrightarrow q$\\
+    \midrule
+    F&F&T&F&F&T&T\\
+    F&T&T&F&T&T&F\\
+    T&F&F&F&T&F&F\\
+    T&T&F&T&T&T&T\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{notation}
+	充分条件：$p\subset q\text{即} p\Rightarrow q$
+\end{notation}
+
+\begin{eg}
+	符号化：
+
+	1. 铁和氧化合但铁和氮不化合：
+	\[
+		p= \text{铁和氧化合，}q=\text{铁和氮化合}
+	.\] 
+	\[
+		\text{Org: }p \lor \left( \neg q \right) 
+	.\] 
+
+	2. 小张或小明通过了CET6
+	\[
+		p=\text{小张通过CET6，}q=\text{小明通过CET6}
+	.\] 
+	\[
+		\text{Org: }p \lor q
+	.\] 
+
+	3. 如果我下班早，就去商城看看，除非我很累
+	\[
+		p=\text{我下班早，}q=\text{我很累，}r=\text{我会去商城}
+	.\] 
+	\[
+		\text{Org: }\left( p\land \left( \neg q \right)  \right) \Rightarrow r
+	.\] 
+\end{eg}
+
+\begin{notation}
+	命题逻辑的优劣：
+
+	优点：能把客观世界的各种事实转化为逻辑命题
+
+	缺点：不适合表达复杂问题、细节缺省
+\end{notation}
+
+\subsection{谓词逻辑}%
+\label{sub:谓词逻辑}
+\begin{defi}
+	谓词逻辑：一种形式语言，接近自然语言，方便计算机处理
+\end{defi}
+谓词：用于刻画个体的性质、状态和个体之间关系的成分
+\begin{eg}
+	$x$ 是$A$ 类型的命题使用$A\left( x \right) $ 表达
+
+	$x$ 大于$y$ 可表达为$B\left( x,y \right) $ 
+
+	$A\left( x \right) $ 称为一元谓词，$B\left( x,y \right) $ 称为二元谓词
+
+	用$P\left( x_1,x_2,\ldots,x_{n} \right) $ 表示一个$n$ 元谓词公式，$P$ 为$n$ 元谓词，$x_1,x_2,\ldots,x_{n}$ 为客体变量或变元
+
+	定义谓词$U\left( x \right) $表示$x$ 为大学生，该谓词可以记录相关的属性
+\end{eg}
+语法元素：
+
+1. 常量（个体符号）：通常是对象的名称
+
+2. 变量符号：小写字母
+
+3. 函数符号：小写英文字母$f,g$ 等
+
+\begin{eg}
+	我喜欢音乐和绘画：
+	\[
+		\text{Like}\left( \text{I},\text{Music} \right) \land \text{Like}\left( \text{I},\text{Painting} \right) 
+	.\] 
+\end{eg}
+连词：
+
+1. 与/合取：$\text{Like}\left( \text{I},\text{Music} \right) \land \text{Like}\left( \text{I},\text{Painting} \right) $ 
+
+2. 或/析取
+
+\begin{notation}
+	全称量词$\forall $ 
+	
+	\begin{eg}
+		所有机器人都是灰色的：
+		\[
+			\forall \left( x \right) [\text{Robot}\left( x \right) \to \text{Color}\left( x,\text{gray} \right) ]
+		.\] 
+	\end{eg}
+	
+\end{notation}
+\begin{notation}
+	存在量词$\exists $ 
+	\begin{eg}
+		1号房间有一个物品：
+		\[
+			\exists \left( x \right) \text{InRoom}\left( x,R_1 \right) 
+		.\] 
+	\end{eg}
+	
+\end{notation}
+函数和命题的区别：
+
+函数是定义域到值域的映射
+
+命题是定义域到$\left\{ \text{True},\text{False} \right\} $ 的映射
+\begin{eg}
+	符号化“所有数的平方是非负的”：
+
+	1. 个体$x$
+
+	2. 函数符号$f$ ：某数的平方
+
+	3. 谓词$Q$ ：某个数是非负的
+
+	4. 符号化：$\left( \forall x \right) Q\left( f\left( x \right)  \right) $ 
+
+	第二种：
+
+	1. 个体$z$ ：表达一个数
+
+	2. 谓词$R$ ：$x$ 是一个实数
+
+	3. 函数符号$f$ 
+
+	4. 谓词$Q$ 
+
+	5. 符号化：$\left( \forall z \right) [R\left( z \right) \to Q\left( f\left( z \right)  \right)] $
+\end{eg}
+
+\subsubsection*{谓词逻辑推理形式化}%
+\label{subsub:谓词逻辑推理形式化}
+\begin{eg}
+	所有人都要死，孔子是人，所以孔子会死：
+	\[
+		\left( \forall x \right) \left( A\left( x \right) \to \left( B\left( x \right)  \right)  \right) \land A\left( \text{Confucious} \right) \to B\left( \text{Confucious} \right) 
+	.\] 
+\end{eg}
+
+\begin{notation}
+	谓词逻辑的优点：自然性、精确性、易实现
+
+	缺点：不能表示不确定性知识，过于自由而兼容性差
+
+	应用：
+
+	1. 自动问答系统
+
+	2. 机器人行动规划系统
+
+	3. 机器博弈系统
+
+	4. 问题求解系统
+\end{notation}
+作业：第二章 1-18题
+\subsection{产生式知识表示法}%
+\label{sub:产生式知识表示法}
+\begin{notation}
+	确定性规则知识产生式：
+	\[
+		P\to Q
+	.\] 
+	
+	不确定性规则知识产生式：
+	\[
+		P\to Q \left( \text{Conf} \right) 
+	.\] 
+
+	确定性规则知识产生式表示：
+	\[
+		\left( \text{Relate},a,b \right) 
+	.\] 
+
+	不确定性规则知识产生式表示：
+	\[
+		\left( \text{Relate},a,b,\text{Conf} \right) 
+	.\] 
+\end{notation}
+
+
