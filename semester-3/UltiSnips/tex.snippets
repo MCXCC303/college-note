@@ -94,6 +94,45 @@ $0
 \end{document}
 endsnippet
 
+#──────────#
+# Brackets #
+#──────────#
+snippet {} "{}" iA
+{$1}$0
+endsnippet
+
+snippet （） "（）" iA
+（$1）$0
+endsnippet
+
+snippet '' "''" iA
+'$1'$0
+endsnippet
+
+snippet "" "" iA
+"$1"$0
+endsnippet
+
+snippet “” "“”" iA
+“$1”$0
+endsnippet
+
+snippet ‘’ "‘’" iA
+‘$1’$0
+endsnippet
+
+snippet () "()" iA
+($1)$0
+endsnippet
+
+snippet 《》 "《》" iA
+《$1》$0
+endsnippet
+
+snippet [] "[]" iA
+[$1]$0
+endsnippet
+
 #─────────────#
 # Auto Script #
 #─────────────#
@@ -223,17 +262,17 @@ endsnippet
 snippet plot "Plot" w
 \begin{figure}[${1:htbp}]
 	\centering
+	\caption{${2:plot}}
+	\label{${3:$2}}
 	\begin{tikzpicture}
 		\begin{axis}[
-			xmin=${2:-10}, xmax=${3:10},
-			ymin=${4:-10}, ymax=${5:10},
+			xmin=${4:-10}, xmax=${5:10},
+			ymin=${6:-10}, ymax=${7:10},
 			axis lines=middle,
 		]
-			\addplot[domain=$2:$3, samples=${6:100}]{$7};
+			\addplot[domain=$10:$11, samples=${8:100}]{$9};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{$8}
-	\label{${9:$8}}
 \end{figure}
 endsnippet
 
@@ -305,29 +344,6 @@ snippet ali "Align" bA
 .\end{align*}
 endsnippet
 
-snippet {} "{}" iA
-{$1}$0
-endsnippet
-
-snippet （） "（）" iA
-（$1）$0
-endsnippet
-
-snippet '' "''" iA
-'$1'$0
-endsnippet
-
-snippet "" "" iA
-"$1"$0
-endsnippet
-
-snippet “” "“”" iA
-“$1”$0
-endsnippet
-
-snippet ‘’ "‘’" iA
-‘$1’$0
-endsnippet
 #───────────────#
 # Tikz Settings #
 #───────────────#
