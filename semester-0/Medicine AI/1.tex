@@ -1,0 +1,72 @@
+\section{导论}%
+\label{sec:导论}
+\begin{notation}
+    机器学习的流程：
+
+    1. 确立目标
+
+    2. 收集数据
+
+    3. 数据预处理
+    
+    4. 数据分析
+
+    5. 模型训练
+
+    6. 模型评估优化
+
+    7. 预测
+\end{notation}
+
+机器学习和人工智能的关系：
+\begin{center}
+    \begin{tikzpicture}
+        \draw [] (0,0) circle [radius=2] node at(0,0) {$\text{深度学习}$};
+        \draw [] (0,0) circle [radius=4] node at(2,2) {$\text{机器学习}$};
+        \draw [] (0,0) circle [radius=6] node at(3.5,3.5) {$\text{人工智能}$};
+    \end{tikzpicture}
+\end{center}
+
+机器学习算法包含：无监督学习、监督学习、强化学习
+\subsection{监督学习}%
+\label{sub:监督学习}
+\begin{notation}
+    机器学习选择数据要求：
+
+    1. 了解数据类型、属性、量纲
+
+    2. 分析分布特性
+
+    3. 选择高可信度数据
+
+    4. 进行数据表征（将原始数据转换为计算机可识别数据）
+\end{notation}
+\begin{eg}
+    医药领域对小分子、蛋白质、核酸进行特征数字化方法
+\end{eg}
+\subsubsection{数据挖掘}%
+\label{subsub:数据挖掘}
+1. 通过数据分析与统计学规律
+
+2. 通过爬虫与自动化程序
+\subsubsection{数据选择}%
+\label{subsub:数据选择}
+通过一部分数据来体现总体数据
+\subsubsection{数据表征}%
+\label{subsub:数据表征}
+\begin{eg}
+    分子指纹：
+
+    首先提取分子结构特征（官能团等），使用分子结构特征生成比特向量，每个比特元素对应一种分子片段，通过对比比特向量的相似度来记录分子特征
+
+    分子指纹分类：基于子结构、拓扑或路径、药效集团的分子指纹和圆形分子指纹
+\end{eg}
+
+\begin{notation}
+    SMILES/简化分子线性输入规范：
+
+    SMILES是一种ASCII字符串，具体规则如下
+\end{notation}
+\input{SMILES}
+
+
