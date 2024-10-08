@@ -1,0 +1,190 @@
+\begin{notation}
+    常用估计法：点估计
+
+    求$x$ 和$\bar{x}$ 进行比较
+\end{notation}
+平均值的置信区间：
+
+1. 单次
+ \[
+    \mu=x\pm u\sigma
+.\] 
+
+其中$u=(x-\mu)/\sigma$（见标准正态分布曲线）
+
+2. 多次：使用$\sigma_{\bar{x}}$代替$\sigma$
+\[
+    \mu=\bar{x} \pm u\sigma_{\bar{x}}=\bar{x}\pm u\cdot \frac{\sigma}{\sqrt{n} }
+.\] 
+
+3. 少量：$t$ 分布
+\[
+    \mu=\bar{x}\pm tS_{\bar{x}}=\bar{x}\pm\frac{tS}{\sqrt{n} }
+.\] 
+
+可以用$X_{U}$ 表示上限，$X_{L}$ 表示下限
+
+\begin{notation}
+    置信水平越高，置信区间越宽
+
+    通常置信水平取$P=0.95$ 或$\alpha=0.05$ 
+
+    置信区间反映估计的精密度
+
+    置信水平说明估计的把握程度
+\end{notation}
+\begin{notation}
+    1. $\mu$ 为一个定值，无随机性
+
+    2. 单侧检验大于或小于总体均值，双侧检验同时大于和小于总体均值
+\end{notation}
+\subsubsection{可疑数据的取舍和显著性检验}%
+\label{subsub:可疑数据的取舍和显著性检验}
+主要使用$G$ 检验（可疑数据取舍）$\to $ $F$检验 （精密度检验）$\to $ $t$ 检验（准确度检验）
+\begin{notation}
+    $F$ 检验和$t$ 检验合称显著性检验
+\end{notation}
+
+\begin{notation}
+    $G$ 检验
+
+    在一组平行测量数据中有过高或过低的数据，称为可疑数据/异常值/逸出值
+
+    1. 确定可疑值$x_{q}$ ，求出包括可疑值在内的平均值$\bar{x}$
+
+    2. 求出可疑值与平均值之差的绝对值$\left| x_{q}-\bar{x} \right| $ 
+
+    3. 计算包括可疑值在内的标准偏差$S$ 
+    \[
+        G=\frac{\left| x_{q}-\bar{x} \right| }{S}
+    .\] 
+
+    4. 根据置信度$P$ 得到$\alpha$ ，查表得$G$ 的临界值$G_{\alpha,n}$，若$G>G_{\alpha,n}$ ，则数据应当舍弃
+\end{notation}
+
+\begin{notation}
+    $F$ 检验
+
+    判断两组数据间存在偶然误差是否有显著不同
+    \[
+        F=\frac{S_1^2}{S_2^2},\left( S_1>S_2 \right) 
+    .\]
+
+    $f_1,f_2$ 为$S_1,S_2$ 的自由度
+
+    $P$ 一定时，查表得$F_{\alpha,f_1,f_2}$，比较$F<F_{\alpha,f_1,f_2}$ 则无显著性差异
+\end{notation}
+
+\begin{notation}
+    $t$ 检验
+
+    判断某一分析方法或操作过程中是否存在较大的系统误差
+
+    1. 使用$\bar{x}$ 和$\mu$ 的比较：已知真值的$t$ 检验
+    \[
+        t=\frac{\left| \bar{x}-\mu \right| }{s}\sqrt{n} 
+    .\] 
+    
+    2. 两组样本平均值比较：未知真值的$t$ 检验
+
+    两组数据：
+    \[
+        \begin{cases}
+            n_1,s_1,\bar{x_1}\\
+            n_2,s_2,\bar{x_2}
+        \end{cases}
+    .\] 
+    当$s_1\approx s_2$ ，令合并标准偏差：
+    \[
+        s_{R}=\sqrt{\frac{\text{偏差平方和}}{\text{总自由度}}} =\sqrt{\frac{s_1^2\left( n_1-1 \right) +s_2^2\left( n_2-1 \right) }{n_1-1+n_2-1}}  
+    .\] 
+    \[
+        \implies t=\frac{\left| \bar{x_1}-\bar{x_2} \right| }{s_{R}}\sqrt{\frac{n_1\cdot n_2}{n_1+n_2}} 
+    .\] 
+
+    查表得$t_{\alpha,f}$ （若无真值使用总自由度$f=f_1+f_2$），比较$t,t_{\alpha,f}$
+\end{notation}
+
+\begin{notation}
+    更常用的数据组比较准确度方法：ANOVA分析
+
+    通过比较$p$ 值判断，用*号个数表示差异的大小
+\end{notation}
+
+\subsubsection{相关和回归}%
+\label{subsub:相关和回归}
+\[
+    r = \frac{\displaystyle{\sum_{i=1}^{n}} \left( x_{i}-\bar{x} \right) \left( y_{i}-\bar{y} \right) }{\sqrt{\displaystyle{\sum_{i=1}^{n}} \left( x_{i}-\bar{x} \right) ^2\times \displaystyle{\sum_{i=1}^{n}} \left( y_{i}-\bar{y} \right)^2 } }
+.\] 
+
+作业：P25，8、9题
+
+\section{酸碱滴定法}%
+\label{sec:酸碱滴定法}
+\subsection{概述}%
+\label{sub:概述}
+滴定分析法（titrimetry）是一种定量分析方法
+
+\begin{notation}
+    将已知准确浓度的试剂溶液低价到待测物质的溶液中，通过滴加试剂的浓度和体积，定量计算待测物质的含量
+
+    滴定分析法又称容量分析法
+\end{notation}
+特点：
+
+1. 准确度高、适于常量组分分析（组分含量$>1\%$ ，取样量$>0.1\text{g}$）
+
+2. 易于操作
+
+3. 快速
+
+\begin{notation}
+    基本术语：
+
+    滴定剂：浓度准确已知的试样溶液
+
+    滴定：将滴定剂通过滴定管逐滴滴加到被测物质溶液中的过程
+
+    化学计量点：滴定剂与待测溶液按化学计量关系完全反应的点，用sp表示
+
+    指示剂：发生颜色改变指示终点的物质
+
+    滴定终点：指示剂发生颜色改变的点，用ep表示
+
+    滴定误差：滴定终点和化学计量点的差距，用$TE$ 表示
+\end{notation}
+\subsection{基本原理}%
+\label{sub:基本原理}
+\subsubsection{酸碱定义}%
+\label{subsub:酸碱定义}
+1. 电离理论
+\[
+    \begin{cases}
+        \text{酸：能电离出}\text{H}^{+} \text{的物质}\\
+        \text{碱：能电离出}\text{OH} ^{-}\text{的物质}
+    \end{cases}
+.\] 
+
+2. 质子理论
+\[
+    \begin{cases}
+    \text{Br}\varnothing\text{nster酸：能给出质子的物质}\\
+    \text{Br}\varnothing\text{nster碱：能接受质子的物质}
+    \end{cases}
+.\] 
+
+\begin{notation}
+    共轭酸碱对：酸$\leftrightarrow$ 碱（质子）
+
+    两性物质：能给出和接受质子的物质（例：水）
+\end{notation}
+\subsubsection{酸碱的强度}%
+\label{subsub:酸碱的强度}
+1. 酸HA的解离常数： \[
+    K_{a}=\frac{[\text{H}_3\text{O}^{+}][\text{A}^{-}]}{[\text{HA}]}
+.\] 
+
+2. 碱BOH的解离常数：
+\[
+    K_{b}=\frac{[\text{OH}^{-}][\text{B}^{+}]}{[\text{BOH}]}
+.\] 

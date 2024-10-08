@@ -50,7 +50,7 @@
 \end{question}
 1. 在数据中1 $\sim $ 9均为有效数字（0待定）
 
-2. 算式中的倍数、分数及某些常数（$\pi,\text{e}$ 等）可看为无数位有效数字
+2. 算式中的倍数、分数及某些常数（$\pi,\mathrm{e}$ 等）可看为无数位有效数字
 
 3. 变化单位时有效数字的位数必须保持不变，如$0.0015\text{g}=1.5\text{mg}$ 
 
@@ -122,7 +122,7 @@
 \subsubsection{偶然误差的正态分布}%
 \label{subsub:偶然误差的正态分布}
 正态分布的概率密度函数：\[
-    y=f\left( x \right) =\frac{1}{\sigma \sqrt{2\pi} }\text{e}^{-\left( x-\mu \right) ^{2}/2\sigma^{2}}
+    y=f\left( x \right) =\frac{1}{\sigma \sqrt{2\pi} }\mathrm{e}^{-\left( x-\mu \right) ^{2}/2\sigma^{2}}
 .\] 
 \begin{notation}
     $x$ ：测量值
@@ -143,7 +143,7 @@
 
 5. 
 \[
-    \int_{-\infty}^{+\infty} f\left( x \right) \text{d}x=1
+    \int_{-\infty}^{+\infty} f\left( x \right) \mathrm{d}x=1
 .\] 
 
 \begin{notation}
@@ -152,7 +152,7 @@
     .\] 
 
     则：\[
-        y=f\left( x \right) =\frac{1}{\sigma\sqrt{2\pi}} \text{e}^{-\frac{u^{2}}{2}}
+        y=f\left( x \right) =\frac{1}{\sigma\sqrt{2\pi}} \mathrm{e}^{-u^2 / 2}
     .\] 
     
     称为标准正态分布曲线
@@ -161,14 +161,14 @@
 \begin{notation}
     $3\sigma$ 标准：测量结果需要有$99.7\%$ 以上的数据在真值范围内，即：
     \[
-        \int_{\mu-3\sigma}^{\mu+3\sigma}f\left( x \right) \text{d}x\approx 99.7\%
+        \int_{\mu-3\sigma}^{\mu+3\sigma}f\left( x \right) \mathrm{d}x\approx 99.7\%
     .\] 
 \end{notation}
 
-\subsubsection{T分布}%
-\label{subsub:T分布}
+\subsubsection{t分布}%
+\label{subsub:t分布}
 \begin{defi}
-    T分布为有限量数据n平均值的概率误差分布
+    $t$分布为有限量数据$n$平均值的概率误差分布
 \end{defi}
 \[
     t=\frac{\left| \bar{x}-\mu \right| }{S}\sqrt{n} 
@@ -182,14 +182,14 @@ $t$ 值随自由度$f\left( f=n-1 \right) $ 而变
 
 当$f\to +\infty$ 时为正态分布
 \begin{notation}
-    T分布和正态分布的异同：
+    $t$分布和正态分布的异同：
 
     相同：形状相似，积分面积表示概率
 
-    不同：T不同时概率不同
+    不同：$t$不同时概率不同
 \end{notation}
 \begin{notation}
-    T分布相关概念：
+    $t$分布相关概念：
 
     1. 自由度$f$ 
 
@@ -203,13 +203,13 @@ $t$ 值随自由度$f\left( f=n-1 \right) $ 而变
 
     4. 显著性水平$\alpha=1-P$
 \end{notation}
-$t$值的表达：一定P下，$t\to t_{\alpha,f}$ 
+$t$值的表达：一定$P$下，$t\to t_{\alpha,f}$ 
 \subsubsection{平均值的精密度和置信区间}%
 \label{subsub:平均值的精密度和置信区间}
 \begin{eg}
     有一个样品，$m$个人各测量$n$次，计算出每个人测得的平均值，平均值的分布符合正态分布
 \end{eg}
-平均值的标准偏差：
+平均值的标准偏差/平均值的精密度：
 \[
     S_{\bar{x}}=\frac{S_{x}}{\sqrt{n} }
 .\] 

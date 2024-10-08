@@ -1,0 +1,161 @@
+\begin{cor}
+    $X$ 是连续性随机变量，密度函数为$f_{X}\left( x \right) $ ，随机变量$Y=g\left( X \right) $，且$\exists D, P\left\{ Y\in D \right\} =1$，$g\left( x \right) $ 存在反函数$h \left( y \right) $且严格单调可导，则：
+    \[
+        f_{Y}\left( y \right) =\begin{cases}
+            \left| h'\left( y \right)  \right| f_{X}\left( h\left( y \right)  \right) ,y\in D\\
+            0, \text{Others}
+        \end{cases}
+    .\] 
+\end{cor}
+
+\begin{notation}
+    指数分布$X\sim \varGamma\left( 1,\lambda \right) $的数学期望$E\left( X \right) =\displaystyle{\frac{1}{\lambda}}$
+\end{notation}
+
+\section{多维随机变量函数及其分布}%
+\label{sec:多维随机变量函数及其分布}
+在实际问题中，试验结果有时需要使用两个或两个以上的随机变量(random value, r.v.)来描述
+\begin{eg}
+    天气预报：温度、湿度、风力、降水等
+\end{eg}
+\subsection{二维随机变量及其分布}%
+\label{sub:二维随机变量及其分布}
+\begin{defi}
+    设 $\Omega$ 为随机试验的样本空间，则\[
+    \forall \omega\in \Omega \ce{->[\text{某种变化}][]} \exists \left( X\left( \omega \right) ,Y\left( \omega \right)  \right) \in \mathbb{R}^2
+    .\] 
+
+    或：\[
+        \left\{ X\le x,Y\le y \right\} =\left\{ \omega|X\left( \omega \right) \le x,Y\left( \omega \right) \le y ,\omega\in \Omega\right\} \in \mathscr{F}
+    .\] 
+    
+    称$\left( X,Y \right) $为概率空间$\left( \Omega,\mathscr{F},P \right) $ 上的二维随机变量
+\end{defi}
+\begin{notation}
+    $\left\{ X\le x,Y\le y \right\} =\left\{ X\le x \right\} \cap \left\{ Y\le y \right\} $
+\end{notation}
+
+性质：
+
+1. $F\left( x,y \right) \in [0,1]$
+
+2. 关于每个变量单调不减，即固定$x$ ，对$\forall y_1<y_2$， \[
+    F\left( x,y_1 \right) \le F(x,y_2)
+.\] 
+
+3. 对每个变量右连续，即：\[
+    F\left( x_0,y_0 \right) =F\left( x_0+0^{+},y_0 \right) =F\left( x_0,y_0+0^{+} \right) 
+.\] 
+
+4. 对$\forall a<b,c<d$ ，有：\[
+    F\left( b,d \right) -F\left( b,c \right) -F\left( a,d \right) +F\left( a,c \right) \ge 0
+.\] 
+
+即：在任意地方框一个矩形，内部区域的概率必须大于等于0
+\begin{eg}
+    性质4例题：设 \[
+        F\left( x,y \right) =\begin{cases}
+            0,x+y<1\\
+            1,x+y\ge 1
+        \end{cases}
+    .\] 
+
+    讨论$F\left( x,y \right) $ 能否成为二维随机变量的分布函数
+\end{eg}
+\begin{notation}
+    \[
+        P\left\{ X>a,Y>c \right\} \neq 1-F\left( a,c \right) 
+    .\] 
+\end{notation}
+
+\subsection{二维随机变量的边缘分布函数}%
+\label{sub:二维随机变量的边缘分布函数}
+边缘分布：降一维
+\begin{align*}
+    F_{X}\left( x \right) &= P\left\{ X\le x \right\}  \\
+    &= P\left\{ X\le x,Y<+\infty \right\}  \\
+    &= F\left( x,+\infty \right)  \\
+.\end{align*}
+\begin{eg}
+    设随机变量$\left( X,Y \right) $ 的联合分布函数为\[
+        F\left( x,y \right) =A\left( B+\arctan \frac{x}{2} \right) \left( C+\arctan \frac{y}{2} \right) , x,y\in \left( -\infty,+\infty \right) 
+    .\] 
+
+    求$A,B,C$ 
+
+    解：$\arctan x$ 的性质：\[
+        \lim_{x \to \pm\infty} \arctan x=\pm\frac{\pi}{2}
+    .\] 
+
+    则\[
+        F\left( +\infty,+\infty \right) =A\left( B+\frac{\pi}{2} \right) \left( C+\frac{\pi}{2} \right)=1 
+    .\] 
+    \[
+        F\left( -\infty,+\infty \right) =A\left( B-\frac{\pi}{2} \right) \left( C+\frac{\pi}{2} \right) =0
+    .\] 
+    \[
+        F\left( -\infty,-\infty \right) =A\left( B-\frac{\pi}{2} \right) \left( C-\frac{\pi}{2} \right) =1
+    .\] 
+
+    联立解出$A,B,C$
+\end{eg}
+\subsection{联合分布律}%
+\label{sub:联合分布律}
+\begin{table}[htpb]
+    \centering
+    \caption{联合分布律}
+    \label{tab:联合分布律}
+    \begin{tabular}{ccccc|c}
+    \toprule
+    \multirow{2}{*}{$X$} & \multicolumn{5}{c}{$Y$} \\
+    \cmidrule{2-6}
+                         & $b_1$ & $b_2$ & $\ldots$ & $b_{j}$ & $p_{a_{i}}$ \\
+                         \hline
+    $a_1$ & $p_{11}$ & $p_{12}$ & $\ldots$ & $p_{1j}$ & $\displaystyle{\sum_{n=1}^{j} p_{nj}}$\\
+    $a_2$ & $p_{21}$ & $p_{22}$ & $\ldots$ & $p_{2j}$ & $\displaystyle{\sum_{n=2}^{j} p_{nj}}$ \\
+    $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ & $\vdots$\\
+    $a_{i}$ & $p_{i1}$ & $p_{i2}$ & $\ldots$ & $p_{ij}$ & $\displaystyle{\sum_{n=i}^{j} p_{nj}}$\\
+    \hline
+    $p_{b_{j}}$ & $\displaystyle{\sum_{m=1}^{i} p_{im}}$ & $\displaystyle{\sum_{m=2}^{i} p_{im}}$ & $\ldots$ & $\displaystyle{\sum_{m=1}^{i} p_{im}}$ & 1\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection*{二维离散随机变量的联合分布函数}%
+\label{subsub:二维离散随机变量的联合分布函数}
+\[
+    F\left( x,y \right) =\sum_{x_{i}\le x} \sum_{y_{j}\le y} p_{ij}
+.\] 
+
+如何求$p_{ij}$ ：
+
+1. 古典概型
+
+2. 乘法公式：\[
+    p_{ij}=P\left\{ X=x_{i} \right\} P\left\{ Y=y_{i}|X=x_{i} \right\} =P\left\{ X=x_{i},Y=y_{i} \right\} 
+.\] 
+\subsection{二维连续性随机变量及其概率特性}%
+\label{sub:二维连续性随机变量及其概率特性}
+\begin{defi}
+    若\[
+        F\left( x,y \right) =\int_{-\infty}^{x} \int_{-\infty}^{y} f\left( u,v \right)  \mathrm{d}v \mathrm{d}u
+    .\] 
+
+    则称$f\left( x,y \right) $为二维随机变量$(X,Y)$ 的联合密度函数，称$\left( X,Y \right) $ 为二维连续型随机变量
+\end{defi}
+\begin{notation}
+    联合密度与联合分布函数的性质：
+
+    1. $f\left( x,y \right) \ge 0$ 
+
+    2. \[
+        \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f\left( x,y \right)  \mathrm{d}y \mathrm{d}x = 1 = F\left( -\infty,+\infty \right) 
+    .\] 
+    
+    3. 对每个边缘连续，在$f\left( x,y \right) $ 的连续点处：\[
+        \frac{\partial^2 F}{\partial x\partial y} = f\left( x,y \right) 
+    .\] 
+
+    从而有：$P\left( x<X\le x+\Delta x,y<Y\le y+\Delta y \right) \approx f\left( x,y \right) \Delta x \Delta y$
+\end{notation}
+

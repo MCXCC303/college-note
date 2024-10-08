@@ -59,9 +59,13 @@ H原子：省略
 芳香键=单键（直接省略）
 \begin{notation}
     部分软件芳香键使用单双键交替表示
+
+    芳香原子使用小写字母
 \end{notation}
 \begin{eg}
     hex-2-en-4-yne/戊-2-烯-4-炔（不分顺反）：CC=CC\#CC
+
+    toluene: Cc1ccccc1
 \end{eg}
 \subsubsection*{2. 立体结构}%
 \label{subsub:2-立体结构}
@@ -93,4 +97,11 @@ $-\text{CH}_{3}$最小，放在最后，对基团大小比较：
 .\] 
 为R构型，即：N[C@@](F)(C)C(=O)O
 \end{eg}
+\subsubsection*{3. 算法与生成}%
+\label{subsub:3-算法与生成}
+\begin{notation}
+    大部分SMILES生成算法为商业算法，如Morgan算法、Canonical SMILES算法等
+
+    生成SMILES主要使用深度优先搜素（DFS）算法遍历分子图
+\end{notation}
 
