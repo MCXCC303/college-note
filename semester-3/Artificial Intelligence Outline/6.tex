@@ -1,0 +1,93 @@
+
+% \input{AIGC}
+\subsection{框架式表达方法}%
+\label{sub:框架式表达方法}
+\begin{defi}
+    框架：对某种知识的整体认识，描述所论对象属性的数据结构
+\end{defi}
+通过框架可以生成表格
+\begin{eg}
+    框架：课程
+
+    \begin{table}[htpb]
+        \centering
+        \caption{上课}
+        \label{tab:上课}
+        \begin{tabular}{|c|c|}
+        \hline
+        XXX课程 & \\
+        \hline
+        \multirow{3}{*}{课程需求} & 需求1 \\
+                                  & 需求2 \\
+                                  & 需求3 \\
+                                  \hline
+        \multirow{3}{*}{课程内容} & 内容1 \\
+                                  & 内容2 \\
+                                  & 内容3 \\
+                                  \hline
+        $\ldots$ & $\ldots$ \\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{eg}
+框架理论使用层次化结构表达知识
+\newpage
+\begin{eg}
+    \begin{table}[htpb]
+        \centering
+        \caption{框架}
+        \label{tab:框架}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        框架名 &  &  & \\
+        \hline
+        \multirow{3}{*}{槽名1} & 侧面名11 & 值111，值112，$\ldots$ & 约束条件$\ldots$\\
+                               & 侧面名12 & 值121，值122，$\ldots$ & \\
+                               & 侧面名13 & 值131，值132，$\ldots$ & \\
+                               \hline
+        \multirow{3}{*}{槽名2} & 侧面名21 & 值211 & \\
+                               & 侧面名22 & 值212 & \\
+                               & 侧面名23 & 值213 & \\
+                               \hline
+        $\ldots$ & $\ldots$ & $\ldots$ & \\
+        \hline
+        关联框架 & \multicolumn{3}{c|}{<框架名1,关系>,<框架名2,关系>$\ldots$} \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    例：教师
+
+    框架名：教师
+
+    1. 姓名（VARCHAR(12)）
+
+    2. 年龄（INT）
+
+    3. 性别（男、女）
+
+    4. 职称（教授、副教授、讲师、助教）
+
+    5. 部门：（系、教研室）
+
+    6. 住址：（VARCHAR(64)）
+
+    7. 工资（INT）
+
+    8. 开始工作时间（DATETIME）
+
+    9. 截止时间（DATETIME，DEFAULT DATE(CURRENT\_TIMESTAMP)）
+
+    10. 框架关联：教职工，教师
+\end{eg}
+\begin{notation}
+    框架表达的特点：
+
+    1. 结构性
+
+    2. 继承性
+
+    3. 自然性
+\end{notation}
+作业：习题24,25
+
