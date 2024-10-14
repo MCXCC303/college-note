@@ -254,6 +254,19 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
+snippet table* "Table environment (hline)" b
+\begin{table}[${1:htpb}]
+	\centering
+	\caption{${2:caption}}
+	\label{tab:${3:${2/\W+/-/g}}}
+	\begin{tabular}{${5:c}}
+	\hline
+	$6${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
+	\hline
+	\end{tabular}
+\end{table}
+endsnippet
+
 snippet fig "Figure environment" b
 \begin{figure}[${1:htpb}]
 	\centering

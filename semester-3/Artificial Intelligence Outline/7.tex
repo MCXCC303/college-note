@@ -1,0 +1,243 @@
+\subsection{状态空间表示法}%
+\label{sub:状态空间表示法}
+\begin{notation}
+    回忆：
+
+    命题$\to $ 谓词$\to $ 产生式$\to $ 框架$\to $ 状态
+\end{notation}
+\begin{defi}
+    状态空间表示法：表示问题及其搜索过程
+\end{defi}
+\begin{eg}
+    与空格相连的棋子可以移动到空格中：
+    \begin{table}[htpb]
+        \centering
+        \caption{初始状态}
+        \label{tab:初始状态}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        2 & 8 & 3 \\
+        \hline
+        1 &   & 4 \\
+        \hline
+        7 & 6 & 5\\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    如何将某一初始状态变成目标状态：
+    \begin{table}[htpb]
+        \centering
+        \caption{目标状态}
+        \label{tab:目标状态}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        1 & 2 & 3 \\
+        \hline
+        8 &   & 4 \\
+        \hline
+        7 & 6 & 5\\
+        \hline
+        \end{tabular}
+    \end{table}
+\end{eg}
+\begin{eg}
+    渡河问题：三个传教士M和三个野人C过河，只有一条能装下两个人的船，在河的一方或船上，如果野人的人数大于传教士的人数，那么传教士会有危险，如何使所有人安全地过河
+\end{eg}
+\[
+    \text{状态空间适用的场景}
+    \begin{cases}
+        \text{调度}\\
+        \text{分配}\\
+        \text{导航}\\
+        \text{路径规划}\\
+        \text{游戏}\\
+        \ldots
+    \end{cases}
+.\] 
+\begin{notation}
+    状态空间法主要包括：
+
+    1. 状态集：其中的每个元素表示一种状态
+
+    2. 操作算符集：连结状态间的条件
+
+    3. 状态空间：包括状态集、操作算符集、目标状态集
+\end{notation}
+\begin{eg}
+    某棋局：
+    \begin{table}[htpb]
+        \centering
+        \caption{棋盘S}
+        \label{tab:棋盘S}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        $X_1$ & $X_2$ & $X_3$ \\
+        \hline
+        $X_8$ & $X_0$ & $X_4$ \\
+        \hline
+        $X_7$ & $X_6$ & $X_5$ \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    用$S=\left( X_0,X_1,\ldots,X_8 \right) $ 表示状态，0代表空格
+
+    如：表6表示为：$S_0=\left( 0,2,8,3,4,5,6,7,1 \right) $
+
+    表7表示为$S_8=\left( 0,1,2,3,4,5,6,7,8 \right) $
+
+    将表6中棋子4左移，状态变为：$S_1=\left( 4,2,8,3,0,5,6,7,1 \right) $
+    \begin{table}[htpb]
+        \centering
+        \caption{S1}
+        \label{tab:S1}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        2 & 8 & 3 \\
+        \hline
+        1 & 4 &   \\
+        \hline
+        7 & 6 & 5 \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    继续移动，直至找到一套操作得到状态$S_8$ : $S_0\to S_1\to \ldots\to S_8$
+
+    该问题称为八数码难题
+\end{eg}
+\begin{notation}
+    八数码难题的算符：
+
+    仅为空格制定操作：空格上下左右移动，空格的约束条件为不能移出棋盘
+\end{notation}
+\begin{eg}
+    \begin{table}[htpb]
+        \centering
+        \caption{S0->S1}
+        \label{tab:S0->S1}
+        \begin{tabular}{|c|c|c|}
+        \hline
+        2 &   & 3 \\
+        \hline
+        1 & 8 & 4 \\
+        \hline
+        7 & 6 & 5 \\
+        \hline
+        \end{tabular}
+        $\ce{->[\text{空格向左移}][]} $
+        \begin{tabular}{|c|c|c|}
+        \hline
+          & 2 & 3 \\
+        \hline
+        1 & 8 & 4 \\
+        \hline
+        7 & 6 & 5 \\
+        \hline
+        \end{tabular}
+    \end{table}
+    此时空格有3种移动方式
+\end{eg}
+\begin{notation}
+    状态空间图：
+
+    把初始状态可达到的各状态所组成的空间设想为由各种状态对应的节点组成的图（有向图）
+
+    图的节点表示状态
+
+    图的边表示操作算符
+\end{notation}
+\begin{eg}
+    二阶汉诺塔问题：
+
+    $S_i\left( a,b \right) $表示状态盘 $A$ 在$a$ 柱上，盘$B$ 在$b$ 柱上
+
+    算符：$A\left( i,j \right) $ 表示将$A$ 盘从$i$ 柱移动到$j$ 柱
+
+    $B\left( i,j \right) $同理
+
+    汉诺塔问题的状态图可以是双向图，限制为：$A$ 不能在$B$ 下方
+\end{eg}
+\begin{eg}
+    渡河问题：
+
+    初始状态：$\left( 0,0,0 \right) $ 
+
+    目标状态：$\left( 3,3,1 \right) $
+
+    状态格式：$\left( \text{右岸传教士数量},\text{右岸野人数量},\text{船的位置} \right) $ 
+
+    算符：
+
+    Move-1m1c-lr：将一个传教士和一个野人从左边传到右边
+
+    Move-2c-lr：将两个野人从左边移到右边
+
+    Move-1m-rl：将一个传教士从右边移动到左边
+
+    操作：
+
+    $\left( 0,0,0 \right) \ce{->[\text{Move-1m1c-lr}]} \left( 1,1,1 \right) \ce{->[\text{Move-1c-rl}]} \left( 1,0,0 \right) \ce{->[\text{Move-2c-lr}]} \left( 1,2,1 \right) \ce{->[\text{Move-1c-rl}]} \left( 1,1,0 \right) \to \ldots $
+\end{eg}
+作业：第26-29题
+
+\section{搜索求解策略}%
+\label{sec:搜索求解策略}
+\begin{notation}
+    早期搜索策略：图搜索、盲目搜索、启发式搜索
+
+    高级搜索技术：规则演绎系统、产生式系统
+\end{notation}
+\begin{defi}
+    搜索技术：根据问题的实际情况，不断寻找可利用的知识，构造出一条代价较少的推理路线
+
+    搜索技术是AI的基本技术之一
+\end{defi}
+搜索好的标准：
+
+1. 搜索空间小
+
+2. 解最佳
+\begin{eg}
+    爬山路径：
+
+    1. 问题全状态空间：整座山
+
+    2. 搜索空间：山的路
+
+    3. 解：爬山路径
+\end{eg}
+\[
+    \text{一般搜索算法}
+    \begin{cases}
+        \text{无信息搜索（盲目搜索）}\begin{cases}
+            \text{宽度/广度优先搜索（BFS）}\\
+            \text{深度优先搜索（DFS）}\\
+            \text{等代价搜索}
+        \end{cases}\\
+        \text{有信息搜索}\begin{cases}
+            \text{A算法}\\
+            \text{A*算法}
+        \end{cases}
+    \end{cases}
+.\] 
+\begin{notation}
+    搜索算法：
+
+    必须记住哪些节点已经遍历（OPEN表）
+
+    需给出下一步可以选择哪些节点（CLOSED表）
+
+    必须记住从目标节点返回的路径
+\end{notation}
+\begin{notation}
+    BFS: Breath-First Search
+
+    首先扩展根节点
+
+    然后扩展根节点的\textbf{所有后继节点}
+
+    以此类推，在第$n$ 层节点未完全遍历之前不进入第$n+1$ 层的遍历
+\end{notation}
+
