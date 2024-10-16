@@ -1,0 +1,121 @@
+\lecture{5}{10.15}
+\subsubsection{分布系数}%
+\label{subsub:分布系数}
+\begin{defi}
+    分布系数：$\delta$
+
+    用$\delta_0,\delta_1,\delta_2\ldots$ 来表示电荷数为$0,1,2\ldots$ 的组分的分布系数
+\end{defi}
+一元弱酸的浓度（分析浓度）为$c$ ，解离平衡后：
+\begin{align*}
+    \delta_{\text{HA}}&=\frac{[\text{HA}]}{c}=\frac{[\text{HA}]}{[\text{HA}]+[\ce{A-}]}\\
+                      &= \frac{1}{1+K_a/[\ce{H+}]} =\frac{[\ce{H+}]}{[\ce{H+}]+K_a} \\
+    \delta_{\ce{A-}}&= \frac{K_a}{\ce{[H+]}+K_a}
+.\end{align*}
+
+易得$\delta_{\text{HA}}+\delta_{\ce{A-}}=1$
+\begin{eg}
+    计算pH=5是0.10mol/L HAc溶液中各组分(HAc,$\ce{Ac-},\ce{H+}$)的分布系数$\delta$和平衡浓度$c$
+\end{eg}
+解：$\ce{[H+]}=10^{-5}\text{mol/L}$,$K_a=1.7 \times 10^{-5}$
+
+计算$\delta$ ：\[
+    \delta_0=\delta_{\text{HAc}}=\frac{[\ce{H+}]}{[\ce{H+}]+K_a}=0.37
+.\] 
+\[
+    \delta_1=\delta_{\ce{Ac-}}=1-\delta_{\text{HAc}}=1-0.37=0.63
+.\] 
+
+\[
+    \ldots
+.\] 
+\begin{notation}
+    一元强酸$\ce{H+}$ 的浓度（精确式）
+    \[
+        [\ce{H+}]=\frac{c_a+\sqrt{c_a^2+4K_w} }{2}
+    .\] 
+
+    忽略水的解离（$c_a\ge 20[\ce{OH-}]$），可以近似为下式（最简式）：
+    \[
+        \begin{cases}
+            [\ce{H+}]=[\ce{A-}]=c_a\\
+            \ce{pH}=-\lg [\ce{H+}]=-\lg c_a
+        \end{cases}
+    .\] 
+\end{notation}
+\begin{notation}
+    一元弱酸的pH计算：
+
+    精确式：\[
+        [\ce{H+}]^2 = K_a\left( c_a-[\ce{H+}] \right) 
+    .\] 
+    \[
+        [\ce{H+}]=\frac{-K_a+\sqrt{K_a^2+4c_a\cdot K_a} }{2}
+    .\]
+
+    近似式（$c_aK_a<20K_w, c_a/K_w\ge 500$）
+    \[
+        [\ce{H+}]=\sqrt{c_aK_a+K_w} 
+    .\]
+
+    最简式（$c_aK_a\ge 20K_w, c_a/K_w\ge 500$）
+    \[
+        [\ce{H+}]=\sqrt{K_a\cdot c_a} 
+    .\] 
+\end{notation}
+\begin{notation}
+    两性物质pH计算
+
+    精确式：
+    \[
+        [\ce{H+}]=\sqrt{\frac{K_{a_1}\left( K_{a_2}[\ce{HB}]+K_w \right) }{K_{a_1}+[\ce{HB}]}} 
+    .\] 
+    
+    近似式：
+    \[
+        [\ce{H+}]=\sqrt{\frac{K_{a_1}\left( K_{a_2}c+K_w \right) }{K_{a_1}+c}} 
+    .\] 
+
+    最简式：
+    \[
+        [\ce{H+}]=\sqrt{K_{a_1}K_{a_2}} 
+    .\] 
+    \[
+        \ce{pH}=\frac{1}{2}\left( \text{p}K_{a_1}+\text{p}K_{a_2} \right) 
+    .\] 
+\end{notation}
+\subsubsection{缓冲溶液的pH}%
+\label{subsub:缓冲溶液的pH}
+\begin{notation}
+    缓冲溶液的种类：
+
+    1. 共轭酸碱对
+
+    2. 两性物质，如$\ce{H_2PO_4}\sim \ce{HPO_4^{2+}}$(PBS,磷酸缓冲盐)
+
+    3. 高浓度的强酸/强碱
+\end{notation}
+\begin{notation}
+    缓冲溶液有缓冲能力/缓冲容量$\beta$，与缓冲溶液的总浓度与组分有关
+
+    1. 总浓度$\propto \beta$
+    
+    2. 缓冲组分的浓度比 $\to 1\propto \beta$ 
+
+    3. 
+\end{notation}
+缓冲溶液的Henderson缓冲公式：
+ \[
+     [\ce{H+}]=K_a \frac{c_a}{c_b}
+.\] 
+\[
+    \ce{pH}=\text{p}K_a+\lg \frac{c_b}{c_a}
+.\] 
+\begin{notation}
+    生物上常用的缓冲溶液：
+
+    1. 三（羟甲基）氨基甲胺+HCl（tris-HCL）
+    
+    2. HEPES
+\end{notation}
+

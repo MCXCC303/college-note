@@ -1,18 +1,4 @@
-%─────────────────%
-% Header Settings %
-%─────────────────%
-\def\lecturer{SongHao}
-\def\noter{THF}
-\def\className{Probability Theory and Mathematical Statistics}
-\def\term{III-A}
-\input{../header}
-
-%──────────%
-% Document %
-%──────────%
-\begin{document}
-\maketitle
-\tableofcontents
+\learn{1}{}
 \section{引言}%
 \label{sec:引言}
 \subsection{确定事件}%
@@ -232,16 +218,16 @@ $A\cap B:$（交/积）$A$与$B$同时发生
         A\Omega=A
     \end{cases}
 .\]
-\begin{defi}[]
+\begin{defi}
     无限可列个：能按某种规律排成一个序列
 \end{defi}
-\begin{eg}[]
+\begin{eg}
     自然数无限可列：$0,1,2,\ldots$
 \end{eg}
-\begin{eg}[]
+\begin{eg}
     整数无限可列：$0,1,-1,2,-2,\ldots$
 \end{eg}
-\begin{eg}[]
+\begin{eg}
     有理数：能写成$\displaystyle{\frac{p}{q}}$的数
 
     $0.\dot{5}\dot{6}$可以写为：$\displaystyle{\frac{56}{99}}$
@@ -250,7 +236,7 @@ $A\cap B:$（交/积）$A$与$B$同时发生
 
     有理数无限可列：$\displaystyle{0,\frac{1}{1},\frac{-1}{1},\frac{1}{2},\frac{-1}{2}\ldots}$
 \end{eg}
-\begin{eg}[]
+\begin{eg}
     实数集、平面点集非无限可列。
 \end{eg}
 以下定义：
@@ -259,10 +245,12 @@ $A\cap B:$（交/积）$A$与$B$同时发生
     \[
          A_1\cup A_2\cup \ldots\cup A_{n}=\bigcup_{i=1}^{n}A_{i}
     .\]
+
     $n$个事件同时发生：
     \[
         A_1\cap A_2\cap \ldots\cap A_n=\bigcap_{i=1}^{n}A_{i}
     .\]
+
     该定义支持无限可列个。
 \end{defi}
 \subsection{差}
@@ -318,6 +306,7 @@ $n$ 个事件：
 \[
     A_1,A_2,\ldots A_n
 .\] 
+
 互不相容，则：
 \[
     \forall i,j: A_iA_j=\varnothing
@@ -338,9 +327,11 @@ $AB=\varnothing$ 且$A\cup B=\Omega$
 记作： \[
     A=\overline{B}
 .\] 
+
 或：\[
     B=\overline{A}
 .\]
+
 由此可得：
 \[
 \begin{cases}
@@ -499,6 +490,7 @@ $A_1,A_2,\ldots A_n$ 两两互不相容，且\[
 \[
     \overline{A\cap B}=\overline{A}\cup \overline{B}
 .\] 
+
 记法：
 
 1. 画图
@@ -516,7 +508,7 @@ $A_1,A_2,\ldots A_n$ 两两互不相容，且\[
         \end{cases}
     .\] 
 \end{notation}
-\begin{eg}[]
+\begin{eg}
     $A,B,C$ 是试验$E$ 的随机事件，用符号表示以下事件：
     
     1. 只有$A$ 发生：$A\bar{B}\bar{C}$
@@ -535,7 +527,7 @@ $A_1,A_2,\ldots A_n$ 两两互不相容，且\[
 
     8. $A,B,C$ 至少两个发生：$AB\bar{C}+A\bar{B}C+\bar{A}BC+ABC$或$AB+BC+AC$
 \end{eg}
-\begin{eg}[]
+\begin{eg}
     从产品中抽查，不放回，一共取了三次：$A_1,A_2,A_3$ 代表三次取得合格品：
 
     1. 三次都合格：$A_1A_2A_3$ 
@@ -564,5 +556,3 @@ $A_1,A_2,\ldots A_n$ 两两互不相容，且\[
 
     7. $\overline{A_1}+\overline{A_3}$ ：第一次和第三次至少一次未能击中
 \end{eg}
-\end{document}
-

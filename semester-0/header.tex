@@ -10,6 +10,15 @@
 \else
 \fi
 
+%──────────────%
+% New Commands %
+%──────────────%
+\newcommand{\learn}[2]{
+    \def\@learn{Learn #1}%
+    \subsection*{\@learn}
+    \marginpar{\small\textsf{\text{#2}}}
+}
+
 %───────────────────%
 % Document Settings %
 %───────────────────%
@@ -57,6 +66,7 @@
     \setlength{\headheight}{14.49998pt}
     \fancyhead[R]{\thepage}
     \fancyhead[L]{\lecturer: \className}
+    \fancyfoot[C]{\@learn}
 }
 
 %──────────────────%

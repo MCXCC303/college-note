@@ -1,24 +1,9 @@
-%─────────────────%
-% Header Settings %
-%─────────────────%
-\def\lecturer{SongHao}
-\def\noter{THF}
-\def\className{Probability Theory and Mathematical Statistics}
-\def\term{III-A}
-\input{../header}
-
-%──────────%
-% Document %
-%──────────%
-\begin{document}
-\maketitle
-\tableofcontents
+\ldate{2}{}
 \section{排列组合}%
 \label{sub:排列组合}
 1. 加法原理：完成事件有多类方案
 
 2. 乘法原理：完成事件分多步
-
 \begin{eg}
     有三种馒头，四种米饭
 
@@ -37,26 +22,21 @@
 \begin{eg}
     $P^5_{10}=10\times 9\times 8\times 7\times 6$
 \end{eg}
-
 2. 全排列
-
 \[
     P^n_n=n!
 .\] 
 \begin{eg}
     $P_{0}^{0}=0! =1$
 \end{eg}
-
 3. 重复排列
 
 从$n$ 个不同元素中取出$m$个排列，可放回
 \[
     (P_n^m)=n^m
 .\] 
-
 \subsection{组合}%
 \label{sub:组合}
-
 从 $n$ 个不同元素中取出$m$ 个，不排列
 \[
     C_n^m=\frac{P_n^m}{m!}=\frac{n!}{\left( n-m \right)! m!}
@@ -67,7 +47,6 @@
         C_{n}^{n}=C_{n}^{0}=1
     \end{cases}
 .\] 
-
 \begin{eg}
     在书架上有序放置五本书，求其顺序为$1,2,3,4,5$ 的概率：
 
@@ -667,7 +646,6 @@ $\mu\left( G \right) $ ：度量
     \[
         B\subset A
     .\] 
-
 \end{rrule}
 \begin{proof}
    由$B\subset A$ 可得：\[
@@ -689,6 +667,7 @@ $\mu\left( G \right) $ ：度量
         P\left( A+B \right) =P\left( A \right) +P\left( B \right) -P\left( AB \right) 
     .\] 
 \end{rrule}
+\newpage
 \begin{proof}
     画图如下：
     \begin{center}
@@ -698,6 +677,7 @@ $\mu\left( G \right) $ ：度量
             \filldraw [yellow,opacity=0.3] (0,{1/sqrt(2)}) arc (135:225:1) (0,{-1/sqrt(2)}) arc (-45:45:1);
         \end{tikzpicture}
     \end{center}
+
     $P\left( A \right) +P\left( B \right) $ 会多加一次$P\left( AB \right) $ （图中黄色部分），因此减去即可。
 \end{proof}
 \begin{notation}
@@ -783,11 +763,10 @@ $\mu\left( G \right) $ ：度量
     不可能事件的概率为$0$ ，但反之，概率为$0$ 的事件不一定是不可能事件
 
     即：概率为$0$ 的事件可能会发生
-    \begin{eg}
-        朝一条长为$1$ ，头尾分别是$0,1$ 的线上扔一个质子，扔到一个点$A$ 的概率为$0$ ，但该事件可能发生
-    \end{eg}
 \end{notation}
-
+\begin{eg}
+    朝一条长为$1$ ，头尾分别是$0,1$ 的线上扔一个质子，扔到一个点$A$ 的概率为$0$ ，但该事件可能发生
+\end{eg}
 \begin{eg}
     有四个白球，三个黑球，任取三个球，求这三个球至少有两个白球的概率
 
@@ -808,7 +787,6 @@ $\mu\left( G \right) $ ：度量
             \draw [] (-3,2) rectangle (3,-2) node at(2.5,-1.5) {$\Omega$};
             \draw [] (-1.2,0) circle [radius=1] node at(-1.2,0) {$A$};
             \draw [] (1,0) circle [radius=1.3] node at(1,0) {$B$};
-            
         \end{tikzpicture}
     \end{center}
     \[
@@ -852,6 +830,3 @@ $\mu\left( G \right) $ ：度量
 
     即这个班上几乎必然有生日在同一天的人
 \end{eg}
-
-\end{document}
-

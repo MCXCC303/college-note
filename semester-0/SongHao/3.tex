@@ -1,18 +1,4 @@
-%─────────────────%
-% Header Settings %
-%─────────────────%
-\def\lecturer{SongHao}
-\def\noter{THF}
-\def\className{Probability Theory and Mathematical Statistics}
-\def\term{III-A}
-\input{../header}
-
-%──────────%
-% Document %
-%──────────%
-\begin{document}
-\maketitle
-\tableofcontents
+\learn{3}{}
 \section{条件概率}%
 \label{sec:条件概率}
 \begin{eg}
@@ -48,10 +34,8 @@
         \draw [] (1,0) circle [radius=1.5] node at(1,0) {$B/\Omega_B$};
         \node [] () at (0,-2.5) {$AB$};
         \draw [->] (-0.3,0)--(0,-2.2);
-        
     \end{tikzpicture}
 \end{center}
-
 \begin{eg}
     有编号$1-6$ 的六个球，随机取一个，观察号码，$B$ 代表号码为偶数，$A_1,A_2$ 代表取到$1,2$ 号，$A_3$ 代表取到大于$4$ ，求：
 
@@ -66,15 +50,12 @@
     5. $$P\left( A_3 \right) =\frac{2}{6}=\frac{1}{3}$$
 
     6. $$P\left( A_3|B \right) =\frac{1}{3}$$
-    
 \end{eg}
-
 \begin{notation}
     条件概率和无条件概率一般不相等
 \end{notation}
-
 \subsection{性质}%
-\label{sub:性质}
+\label{sub:条件概率性质}
 \begin{rrule}
     \[
         P\left( A|B \right) \ge 0
@@ -86,11 +67,10 @@
     .\] 
 \end{rrule}
 \begin{rrule}
-    可列可加性：对$A_1,A_2\ldots An,\ldots$ 不相容，则：\[
-    P\left( \sum_{i=1}^{\infty} A_i | B \right) =\sum_{i=1}^{\infty} P\left( A_i | B \right) 
+    可列可加性：对$A_1,A_2\ldots A_n,\ldots$ 不相容，则：\[
+        P\left( \sum_{i=1}^{\infty} A_i | B \right) =\sum_{i=1}^{\infty} P\left( A_i | B \right) 
     .\] 
 \end{rrule}
-
 \begin{rrule}
     乘法公式：
     \[
@@ -112,31 +92,5 @@
         \draw [] (-3,2) rectangle (3,-2) node at(2.5,-1.5) {$\Omega$};
         \draw [] (-1,0) circle [radius=1.5] node at(-1,0) {$A$};
         \draw [] (1,0) circle [radius=1.5] node at(1,0) {$B$};
-        
     \end{tikzpicture}
 \end{center}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\end{document}
-

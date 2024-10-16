@@ -1,0 +1,131 @@
+\lecture{8}{10.15}
+\subsubsection{条件分布}%
+\label{subsub:条件分布}
+\begin{notation}
+    离散型条件分布：
+    \[
+        P\left\{ X=a_i|Y=b_j \right\} =\frac{P\left\{ X=a_i,Y=b_j \right\} }{P\left\{ Y=b_j \right\} }
+    .\] 
+    \[
+        P\left\{ Y=b_j \right\} =\sum_{i=1}^{+\infty} P\left\{ Y=b_j,X=a_i \right\} 
+    .\] 
+
+    性质：
+
+    1. $P\left\{ X=a_i|Y=b_j \right\} \ge 0$
+
+    2. $\displaystyle{\sum_{i=1}^{+\infty} P=1}$
+\end{notation}
+\begin{notation}
+    连续型条件分布：
+    \[
+        P\left\{ X=a|Y=b \right\} =0
+    .\] 
+
+    （无穷多个点）
+
+    通过微元法：
+    \begin{align*}
+        P\left\{ X\le x|Y=y \right\} &=\lim_{\varepsilon \to 0^{+}} P\left\{ X\le x|y-\varepsilon < Y \le y \right\} \\
+                                     &= \lim_{\varepsilon \to 0^+} \frac{P\left\{ X\le x,Y\in (y-\varepsilon,y] \right\} }{P\left\{ Y\in (y-\varepsilon,y] \right\} } \\
+                                     &= \lim_{\varepsilon \to 0^+} \frac{F\left( x,y \right) -F\left( x,y-\varepsilon \right) }{F_{Y}\left( y \right) -F_{Y}\left( y-\varepsilon \right) } \\
+                                     &= \frac{\displaystyle{\frac{\partial F\left( x,y \right) }{\partial y} }}{\displaystyle{\frac{\mathrm{d}F_Y\left( y \right) }{\mathrm{d}y}}} \\
+                                     &= \frac{\displaystyle{\int_{-\infty}^{x} f\left( u,y \right) \mathrm{d}u}}{f_{Y}\left( y \right) } \\
+                                     &= \int_{-\infty}^{x} \frac{f\left( u,y \right) }{f_{Y}\left( y \right) } \mathrm{d}u \\
+    .\end{align*}
+\end{notation}
+\subsection{二维随机变量函数的分布}%
+\label{sub:二维随机变量函数的分布}
+\[
+    \begin{cases}
+        aX+bY+c\\
+        \max\{X,Y\}\\
+        \min\{X,Y\}
+    \end{cases}
+.\] 
+重点公式：3.4.5～3.4.8
+
+假设随机变量Z=aX+bY+c，有分布函数$\left( X,Y \right) \to F\left( x,y \right) $
+
+\begin{align*} 
+    F_Z\left( z \right) &=P\left\{ Z\le z \right\} \\
+                        &= P\left\{ aX+bY+c\le z \right\}  \\
+                        &= \begin{cases}
+                            \displaystyle{\underset{ax_{i}+by_{j}+c\le z}{\sum{\sum}}} P\left\{ X=x_{i},Y=y_{j} \right\} ,&\left( X,Y \right) \text{离散}\\
+                            \displaystyle{\iint_{ax+by+c\le z}}P\left\{ X=x,Y=y \right\} \mathrm{d}x\mathrm{d}y,&\left( X,Y \right) \text{连续}
+                        \end{cases} \\
+.\end{align*}
+\begin{notation}
+    二项分布可加性：有两个相互独立的试验$X\sim B\left( m,p \right) ,Y\sim B\left( n,p \right) $ ，相当于一个试验$Z\sim B\left( m+n,p \right) $ 
+
+    泊松分布可加性：相互独立的两个随机变量$X\sim P\left( \lambda_1 \right) ,Y\sim P\left( \lambda_2 \right) $ ，相当于一个分布$Z\sim P\left( \lambda_1+\lambda_2 \right) $
+\end{notation}
+\begin{notation}
+    极值公式：
+
+    两个随机变量（连续）$X,Y$ 相互独立，求$Z_1=\max\left( X,Y \right) ,Z_2=\min\left( X,Y \right) $的分布函数和密度函数
+
+    1. $F_{Z_1}\left( z \right) $ ：最大的不超过$z$ 等价于每一个都不超过$z$ 
+    \begin{align*}
+        F_{Z_1}\left( z \right) &= P\left\{ X\le z,Y\le z \right\} \\
+                                &= P\left\{ X\le z \right\} \cdot P\left\{ Y\le z \right\}  \\
+                                &=F_X\left( z \right) \cdot F_Y\left( z \right) \\
+    .\end{align*}
+
+    2. $F_{Z_2}\left( z \right) $：最小的不超过$z$ 不等价于每一个都不超过$z$ ，但最小的超过$z$ 等价与每一个都超过了$z$ 
+    \begin{align*}
+        F_{Z_2}\left( z \right) &= 1-P\left\{ X>z,Y>z \right\}  \\
+                                &= 1-[1-F_X\left( z \right) ]\cdot [1-F_Y\left( z \right) ] \\
+    .\end{align*}
+\end{notation}
+\begin{notation}
+    独立同分布：变量相互独立且分布律相同
+\end{notation}
+对极值公式扩展：$\left( X_1,X_2,\ldots,X_n \right) $ 独立同分布：
+\[
+    F_{Z_1}\left( z \right)=\prod_{i=1}^{n} F_{X_i}\left( z \right)  
+.\] 
+由于同分布，因此$F_{X_i}\left( z \right) =F_{X}\left( z \right) $
+\[
+    F_{Z_1}\left( z \right)=(F_{X}\left( z \right) ) ^{n}
+.\] 
+\[
+    f_{Z_1}\left( z \right) =\left( F_{Z_1}\left( z \right)  \right) '=n\left( F_{X}\left( z \right)  \right) ^{n-1}
+.\] 
+\begin{notation}
+    3.4.5:
+
+    \begin{align*}
+        F_Z\left( z \right) &=P\left\{ X+Y\le z \right\} \\
+        &= \iint_D f\left( x,y \right) \mathrm{d}x\mathrm{d}y \\
+        &= \int_{-\infty}^{+\infty} \mathrm{d}x\int_{-\infty}^{z-x} f\left( x,y \right)  \mathrm{d}y \\
+        &= \int_{-\infty}^{z} \mathrm{d}t \int_{-\infty}^{+\infty} f\left( x,t-x \right)   \mathrm{d}x \\
+        f_Z\left( z \right) &= F_Z'\left( z \right)  \\
+        &= \int_{-\infty}^{+\infty} f\left( x,z-x \right)  \mathrm{d}x \\
+    .\end{align*}
+\end{notation}
+同理：\[
+    f_Z\left( z \right) =\int_{-\infty}^{+\infty} f\left( z-y,y \right)  \mathrm{d}y
+.\] 
+\begin{notation}
+    正态分布的可加性：
+
+    $X\sim N\left( \mu_1,\sigma_1^2 \right) ,Y\sim N\left( \mu_2,\sigma_2^2 \right) $ ，且$X,Y$ 相互独立，则：\[
+        X+Y=Z\sim N\left( \mu_1+\mu_2,\sigma_1^2,\sigma_2^2 \right) 
+    .\] 
+
+    多元：
+
+    \[
+        Z=\sum_{i=1}^{n} a_iX_i\sim N\left( \sum_{i=1}^{n} a_i\mu_i,\sum_{i=1}^{n} a_i^2\sigma_i^2 \right) 
+    .\] 
+\end{notation}
+\subsection{二元正态分布}%
+\label{sub:二元正态分布}
+\[
+    f( x_1,x_2 ) =\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2} }\exp\{-\frac{1}{2( 1-\rho^2 )}
+\] 
+\[
+     \times \left[ \frac{(x_1-\mu_1)^2}{\sigma_1^2}-2\rho \frac{( x_1-\mu_1 ) ( x_2-\mu_2 ) }{\sigma_1\sigma_2} +\frac{(x_2-\mu_2)^2}{\sigma_2^2}\right]\}
+.\] 
+
