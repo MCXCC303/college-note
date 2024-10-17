@@ -1,0 +1,123 @@
+\learn{2}{10.17}
+\begin{notation}
+    氨基酸组成和二肽组成
+
+    基础知识：组成人体的二十种氨基酸
+\end{notation}
+\begin{table}[htpb]
+    \centering
+    \caption{20 amino acids}
+    \label{tab:20-amino-acids}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    Alanine(A) & Arginine(R) & Asparagine(N) \\
+    \hline
+    Asparticacid(D) & Cysteine(C) & Glutamine(Q) \\
+    \hline
+    Glutamicaci(E) & Glycine(G) & Histidine(H) \\
+    \hline
+    Isoleucine(I) & Leucine(L) & Lysine(K) \\
+    \hline
+    Methionine(M) & Phenylalani(F) & Proline(P) \\
+    \hline
+    Serine(S) & Threonine(T) & Tryptophan(W) \\
+    \hline
+    Tyrosine(Y) & Valine(V) & \\
+    \hline
+    \end{tabular}
+\end{table}
+\begin{table}[htpb]
+    \centering
+    \caption{20种基本氨基酸}
+    \label{tab:20种基本氨基酸}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    丙氨酸,A & 精氨酸,R & 天冬酰胺,N \\
+    \hline
+    天冬氨酸,D & 半胱氨酸,C & 谷氨酰胺,Q \\
+    \hline
+    谷氨酸,E & 甘氨酸,G & 组氨酸,H \\
+    \hline
+    异亮氨酸,I & 亮氨酸,L & 赖氨酸,K \\
+    \hline
+    甲硫氨酸,M & 苯丙氨酸,F & 脯氨酸,P \\
+    \hline
+    丝氨酸,S & 苏氨酸,T & 色氨酸,W \\
+    \hline
+    酪氨酸,Y & 缬氨酸,V & \\
+    \hline
+    \end{tabular}
+\end{table}
+除此外还有用于终止密码子的硒半胱氨酸、吡咯赖氨酸（U）
+\begin{notation}
+    氨基酸组成的公式：
+    \[
+        f\left( k \right) =\frac{N_k}{N},k=1,2,\ldots,20
+    .\] 
+
+    其中 $N_k$表示第$k$ 种氨基酸的数量，$N$ 表示氨基酸序列长度
+\end{notation}
+\begin{notation}
+    二肽组成的公式：
+    \[
+        f\left( k,s \right) =\frac{N_{ks}}{N-1},k,s=1,2,\ldots,20
+    .\] 
+    
+    同理：$N_{ks}$ 为第$k$ 种和第$s$ 种氨基酸形成的二肽数量
+\end{notation}
+\begin{notation}
+    蛋白质独热编码
+
+    使用$20\times L$的矩阵表示蛋白质的序列信息，$L$ 为蛋白质的序列长度
+
+    \begin{eg}
+        含556个氨基酸的蛋白质序列可以用$20\times 556$ 的矩阵表示，纵向量为二十种氨基酸，横向量为蛋白质在某位置的氨基酸种类
+    \end{eg}
+\end{notation}
+\begin{notation}
+    CTD描述符
+
+    组成、转换与分布（Composition, Transition and Distribution, CTD）根据蛋白质序列中残基的特性编码蛋白质
+\end{notation}
+\begin{align*}
+    \text{CTD编码分类方式}
+    \begin{cases}
+        \text{疏水性}\\
+        \text{范德华体积}\\
+        \text{极性}\\
+        \text{可极化性}\\
+        \text{带电性}\\
+        \text{表面张力}\\
+        \text{二级结构}\\
+        \text{溶剂可及性}\\
+        \ldots
+    \end{cases}
+.\end{align*}
+\newpage
+将氨基酸残基分为三类：
+\begin{table}[htpb]
+    \centering
+    \caption{CTD分类}
+    \label{tab:CTD分类}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    性质 & A & B & C \\
+    \hline
+    疏水性 & 亲水 & 中性 & 疏水\\
+    范德华体积 & (0,2.78) & (2.95,4) & (4.43,8.08) \\
+    极性 & (0,0.456) & (0.6,0.696) & (0.792,1) \\
+    可极化性 &  (0,0.108) & (0.128,0.186) & (0.219,0.409) \\
+    带电性 & 正电 & 中性 & 负电 \\
+    表面张力 & (-0.2,0.16) & (-0.52,-0.3) & (-2.46,-0.98) \\
+    二级结构 & 螺旋 & 折叠 & 卷曲\\
+    溶剂可及性 & 包埋 & 中等 & 暴露\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{notation}
+    蛋白质二级结构及蛋白质溶剂可及性
+
+    1. 蛋白质二级结构(PSS)
+\end{notation}
+
