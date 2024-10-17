@@ -1,0 +1,30 @@
+\lecture{8}{10.17}
+\begin{notation}
+    DFS: Deep-First Search
+
+    优先朝长节点扩展：先进入开放表的节点先扫描
+
+    优点：搜索空间可以远小于宽度优先
+
+    缺点：忽略深度
+
+    修正：加入深度界限，在已知目标节点的深度范围时限制搜素深度
+
+    最坏情况：$o\left( n \right) $
+\end{notation}
+应用：状态表=树状图 
+\begin{notation}
+    等代价搜索/Dijkstra算法：
+
+    BFS的一种推广
+
+    $g\left( n \right) $代表从初始节点到节点$n$ 的代价
+
+    $c\left( n_1,n_2 \right) $ 表示从$n_1$ 到$n_2$ 的代价
+
+    $g\left( n_2 \right) =g\left( n_1 \right) +c\left( n_1,n_2 \right) $ 
+
+    优点：加入了状态图中的路径长短元素（走一步看一步），以等代价选择下一节点的选择
+\end{notation}
+
+
