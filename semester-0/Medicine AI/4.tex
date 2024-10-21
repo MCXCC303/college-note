@@ -1,0 +1,57 @@
+\learn{4}{10.20}
+\subsection{数据预处理}%
+\label{sub:数据预处理}
+\subsubsection{标准化}%
+\label{subsub:标准化}
+\begin{notation}
+    变量离差标准化：标准化后所有变量范围都在[0,1]内
+    \[
+        y_{i}=\frac{x_{i}-x_{\min}}{x_{\max}-x_{\min}}
+    .\] 
+\end{notation}
+\begin{eg}
+    一组变量如下：
+    \[
+        X=\left( 1.5,1.7,2.2,1.2,1.6,1.4,1.1 \right) 
+    .\] 
+
+    易得$x_{\min}=1.1,x_{\max}=2.2$
+    \begin{align*}
+        y_{i}&= \frac{x_{i}-x_{\min}}{x_{\max}-x_{\min}}\\
+        &= \frac{x_{i}-1.1}{2.2-1.1} \\
+        &= \frac{x_{i}-1.1}{1.1} \\
+        &= \frac{x_{i}}{1.1}-1 \\
+    .\end{align*}
+
+    得$Y=\left( 0.364,0.545,1,0.091,0.455,0.273,0 \right) $
+\end{eg}
+\begin{notation}
+    \textit{Z-score}（变量标准差）标准化
+
+    经过标准化后平均值为0，标准差为1
+    \[
+        z_i=\frac{x_{i}-\bar{x}}{s} \hspace{0.5cm} s=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n} \left( x_{i}-\bar{x} \right) ^2} 
+    .\] 
+
+    可以看出$s$ 为原数据的标准差，$z_i$ 值其实等同于标准正态分布中的$u$ 值：
+    \[
+        u=\frac{x-\mu}{\sigma} \hspace{0.5cm} y=\frac{1}{\sigma\sqrt{2\pi} }\mathrm{e}^{-u^2}/2
+    .\] 
+\end{notation}
+\subsubsection{插补缺失值}%
+\label{subsub:插补缺失值}
+\begin{notation}
+    均值插补
+
+    1. 数值性变量：采用平均值插补
+
+    2. 离散型：采用众数插补
+\end{notation}
+\begin{notation}
+    同类均值插补：使用层次聚类方法归类缺失值的样本，用该类别的特征均值插补
+\end{notation}
+\begin{notation}
+    KNN(\textit{K-nearest neighbor})缺失值插补：找到与含缺失值样本相似的$K$个样本，使用这$K$ 个样本在该缺失变量上的均值填充
+\end{notation}
+\input{KNN}
+

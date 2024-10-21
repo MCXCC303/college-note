@@ -30,6 +30,10 @@ Plug 'vim-airline/vim-airline-themes'
     let g:airline#extensions#tabline#show_buffers=0
     let g:airline#extensions#tabline#formatter='default'
 
+" vim-csv
+Plug 'chrisbra/csv.vim'
+    let g:csv_arrange_align='lc*'
+
 " wal Theme
 Plug 'dylanaraps/wal'
 
@@ -57,6 +61,7 @@ set ruler
 set number
 set tabstop=4
 set viminfo='1000,<500
+set hlsearch
 set expandtab
 set autoindent
 set cursorline
@@ -75,10 +80,13 @@ let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_liststyle=3
 
 " CurSor & Line
-hi CursorLine ctermfg=NONE ctermbg=black
+hi CursorLine ctermfg=NONE ctermbg=NONE
 let &t_SI="\e[5 q"
 let &t_SR="\e[3 q"
 let &t_EI="\e[1 q"
+
+" Searching
+highlight Search ctermfg=NONE ctermbg=darkgray
 
 "—————————”
 " Key Map “
@@ -91,3 +99,6 @@ nnoremap -- :resize -3<CR>
 nnoremap == :resize +3<CR>
 nnoremap ++ :vertical resize +3<CR> 
 nnoremap __ :vertical resize -3<CR>
+
+" vim-csv
+nnoremap rr :%ArrangeColumn<CR>

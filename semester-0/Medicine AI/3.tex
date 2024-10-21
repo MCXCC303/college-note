@@ -1,14 +1,131 @@
 \learn{3}{10.18}
 编码规则：
 \begin{align*}
-    \text{二级结构}
     \begin{cases}
-        \text{H：}\alpha\text{螺旋}\\
-        \text{E：}\beta\text{折叠}\\
-        \text{C：其他结构}
-    \end{cases}\\
-    \text{溶剂可及性}\begin{cases}
-        \text{b: buried（包埋）}\\
-        \text{e: exposed（暴露）}
+        \text{二级结构}
+        \begin{cases}
+            \text{H：}\alpha\text{螺旋}\to \left( 0,1,0 \right) \\
+            \text{E：}\beta\text{折叠}\to \left( 1,0,0 \right)  \\
+            \text{C：其他结构}\to \left( 0,0,1 \right) 
+        \end{cases}\\
+        \text{溶剂可及性}\begin{cases}
+            \text{b: buried（包埋）}\to \left( 1,0 \right) \\
+            \text{e: exposed（暴露）}\to \left( 0,1 \right) 
+        \end{cases}
     \end{cases}
 .\end{align*}
+\begin{table}[htpb]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{Prot.} & M & V & L & S & P & A & D & K & T & N \\
+    \hline
+    \multicolumn{2}{|c|}{Sec.} & C & C & C & C & E & H & E & E & H & H \\
+    \hline
+    \hline
+    \multirow{5}{*}{PSSSA}        &\multirow{3}{*}{PSS} & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 \\
+                                  & & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 \\
+                                  & & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                                  &\multirow{2}{*}{PSA} & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+                                  & & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 1 \\
+                         \hline
+                         \hline
+    \multicolumn{2}{|c|}{S.A.} & e & e & b & e & e & b & b & e & e & e \\
+    \hline
+    \end{tabular}
+\end{table}
+\begin{eg}
+    有一条10氨基酸长度的蛋白质序列：
+
+    PSSSA使用$5\times 1000$ 的矩阵编码蛋白质，每一个氨基酸由一个5维向量表示
+
+    用PSSSA编码时，一般取序列羧基的一侧开始的1000个氨基酸编码，如不满1000个使用0向量补齐
+\end{eg}
+\subsection{核酸物质表征}%
+\label{sub:核酸物质表征}
+\begin{notation}
+    基本知识：碱基与核酸
+\end{notation}
+\subsubsection{碱基}%
+\label{subsub:-碱基}
+\begin{table}[htpb]
+    \centering
+    \caption{常见碱基}
+    \label{tab:常见碱基}
+    \begin{tabular}{ccc}
+    \toprule
+    种类 & DNA & RNA \\
+    \midrule
+    \multirow{2}{*}{嘌呤族（R）} & \multicolumn{2}{c}{腺嘌呤（A）} \\
+                                 & \multicolumn{2}{c}{鸟嘌呤（G）} \\
+                                 \midrule
+    \multirow{2}{*}{嘧啶族（Y）} & \multicolumn{2}{c}{胞嘧啶（C）} \\
+                                 & 胸腺嘧啶（T）& 尿嘧啶（U）\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\begin{notation}
+    碱基配对方式：
+    \begin{align*}
+        \begin{cases}
+            \text{DNA}
+            \begin{cases}
+                A= T \\
+                C\equiv G
+            \end{cases}\\
+            \text{RNA}
+            \begin{cases}
+                A= U \\
+                C\equiv G
+            \end{cases}
+        \end{cases}
+    .\end{align*}
+\end{notation}
+\begin{notation}
+    K-mer
+
+    K: DNA或RNA中一个长度为K的序列
+
+    以该序列为子序列，遍历核酸序列，计算该长度的所有子序列组合出现的频率
+\end{notation}
+\begin{eg}
+    长度为$K$ 的K-mer种类共有$4^{k}$ 种可能
+
+    如长度为3的子序列，子序列每个位置有A,G,C,U四种选择，共$4^3$ 种组合
+
+    一段15个核酸的RNA序列如下：
+    \begin{table}[htpb]
+        \centering
+        \caption{3-mer RNA}
+        \label{tab:3-mer-RNA}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        C & A & T & C & G & G & T & A & A & C & C & C & A & T \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    所有可能的长度为3的子序列及其频率：
+    \begin{table}[htpb]
+        \centering
+        \caption{3-mers}
+        \label{tab:3-mers}
+        \begin{tabular}{ccc}
+        \toprule
+        & RNA seq. & freq. \\
+        \midrule
+            1 & CAT & 0.111\\
+            2 & ATC & 0.056\\
+            3 & TCG & 0.056\\
+            4 & CGG & 0.056\\
+            $\ldots$ & $\ldots$ & $\ldots$\\
+            12 & CCA & 0.056\\
+            13 & ATG & 0\\
+            $\ldots$ & $\ldots$ & $\ldots$ \\
+            64 & $\ldots$ & 0 \\
+        \bottomrule
+        \end{tabular}
+    \end{table}
+\end{eg}
+
+
