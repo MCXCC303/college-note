@@ -455,6 +455,12 @@ endsnippet
 
 snippet 、、 "RF" iA
 \\\\
+$0
+endsnippet
+
+snippet \\\\ "RF" iA
+\\\\
+$0
 endsnippet
 
 priority 100
@@ -462,8 +468,12 @@ snippet ... "ldots" iA
 \ldots
 endsnippet
 
-snippet => "implies" Ai
+snippet ==> "implies" A
 \implies
+endsnippet
+
+snippet => "Right arrow" A
+\Rightarrow
 endsnippet
 
 snippet =< "implied by" Ai
@@ -572,27 +582,38 @@ snippet conj "conjugate" iA
 \overline{$1}$0
 endsnippet
 
+context "math()"
 snippet sum "sum" w
 \sum_{i=${1:1}}^{${2:n}} ${3:f(i)}
 endsnippet
 
+context "math()"
 snippet taylor "taylor" w
 \sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1 $0
 endsnippet
 
+context "math()"
 snippet lim "limit" w
 \lim_{${1:n} \to ${2:\infty}} 
 endsnippet
 
+context "math()"
 snippet limsup "limsup" w
 \limsup_{${1:n} \to ${2:\infty}} 
 endsnippet
 
+context "math()"
 snippet prod "product" w
-\prod_{${1:n=${2:1}}}^{${3:\infty}} ${4:${VISUAL}} $0
+\prod_{${1:i=${2:1}}}^{${3:n}} ${4:${VISUAL}} $0
 endsnippet
 
-snippet part "d/dx" w
+context "math()"
+snippet dfx "df/dx" w
+\frac{\mathrm{d}${1:F(x)}}{\mathrm{d}${2:x}} $0
+endsnippet
+
+context "math()"
+snippet part "partial V(x)" w
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
 endsnippet
 
@@ -621,14 +642,17 @@ snippet rd "to the ... power" iA
 ^{($1)}$0
 endsnippet
 
+context "math()"
 snippet __ "subscript" iA
 _{$1}$0
 endsnippet
 
+context "math()"
 snippet <= "leq" iA
 \le 
 endsnippet
 
+context "math()"
 snippet >= "geq" iA
 \ge 
 endsnippet
@@ -673,6 +697,7 @@ snippet xmm "x" iA
 x_{m}
 endsnippet
 
+context "math()"
 snippet R0+ "R0+" iA
 \\R_0^+
 endsnippet
@@ -683,6 +708,7 @@ snippet xx "cross" iA
 endsnippet
 
 priority 100
+context "math()"
 snippet ** "cdot" iA
 \cdot 
 endsnippet
@@ -701,7 +727,7 @@ endsnippet
 priority 300
 context "math()"
 snippet dint "integral" wA
-\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} \mathrm{d}$0
+\int_{${1:-\infty}}^{${2:+\infty}} ${3:${VISUAL}} \mathrm{d}$0
 endsnippet
 
 priority 200
@@ -713,18 +739,18 @@ endsnippet
 priority 100
 context "math()"
 snippet -> "to" iA
-\to 
+\to $0
 endsnippet
 
 priority 200
 context "math()"
-snippet <-> "leftrightarrow" iA
-\leftrightarrow
+snippet <-> "leftrightarrow" A
+\leftrightarrow $0
 endsnippet
 
 context "math()"
 snippet !> "mapsto" iA
-\mapsto 
+\mapsto $0
 endsnippet
 
 context "math()"
@@ -750,8 +776,9 @@ snippet << "<<" iA
 \ll
 endsnippet
 
+context "math()"
 snippet ~~ "~" iA
-\sim 
+\sim $0
 endsnippet
 
 context "math()"
@@ -760,22 +787,24 @@ snippet set "set" wA
 endsnippet
 
 snippet <! "normal" iA
-\triangleleft 
+\triangleleft $0
 endsnippet
 
 snippet <> "hokje" iA
-\diamond 
+\diamond $0
 endsnippet
 
 #─────────────#
 # Math Symbol #
 #─────────────#
+context "math()"
 snippet ooo "\infty" iA
-\infty
+\infty 
 endsnippet
 
+context "math()"
 snippet nth "\varnothing" wA
-\varnothing
+\varnothing 
 endsnippet
 
 snippet rij "mrij" i
@@ -798,7 +827,7 @@ snippet mcal "mathcal" iA
 endsnippet
 
 snippet lll "l" iA
-\ell
+\ell 
 endsnippet
 
 context "math()"
@@ -806,6 +835,7 @@ snippet nbl "nabla" iA
 \nabla 
 endsnippet
 
+context "math()"
 snippet || "mid" iA
 \mid 
 endsnippet
@@ -815,6 +845,7 @@ snippet cc "subset" Ai
 \subset 
 endsnippet
 
+context "math()"
 snippet notin "not in " iA
 \not\in 
 endsnippet
@@ -825,30 +856,36 @@ snippet inn "in " iA
 endsnippet
 
 snippet Nn "n" iA
-\N
+\N 
 endsnippet
 
+context "math()"
 snippet NN "cap" iA
 \cap 
 endsnippet
 
+context "math()"
 snippet UU "cup" iA
 \cup 
 endsnippet
 
+context "math()"
 snippet uuu "bigcup" iA
 \bigcup_{${1:i \in ${2: I}}}${3:^{${4:n}}}$0
 endsnippet
 
+context "math()"
 snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}}${3:^{${4:n}}}$0
 endsnippet
 
-snippet CC "Conbine" iA
+context "math()"
+snippet CC "Conbine" A
 \mathrm{C}_{${1:n}}^{${2:m}}$0
 endsnippet
 
-snippet PP "Permute" iA
+context "math()"
+snippet PP "Permute" A
 \mathrm{P}_{${1:n}}^{${2:m}}$0
 endsnippet
 
@@ -856,55 +893,57 @@ endsnippet
 # \O
 # endsnippet
 
+context "math()"
 snippet RR "real" iA
 \mathbb{R}
 endsnippet
 
+context "math()"
 snippet QQ "Q" iA
 \mathbb{Q}
 endsnippet
 
+context "math()"
 snippet ZZ "Z" iA
 \mathbb{Z}
 endsnippet
 
+context "math()"
 snippet HH "H" iA
 \mathbb{H}
 endsnippet
 
+context "math()"
 snippet DD "D" iA
 \mathbb{D}
 endsnippet
 
+context "math()"
 snippet FF "F" iA
 \mathscr{F}
 endsnippet
 
+context "math()"
 snippet \ee "e" iA
 \mathrm{e}
 endsnippet
 
+context "math()"
 snippet \ii "i" iA
 \mathrm{i}
 endsnippet
 
+context "math()"
 snippet dx "dx" iA
 \mathrm{d}${1:x}$0
 endsnippet
 
-snippet tbf "\textbf{}" wA
-\textbf{$1}$0
-endsnippet
-
-snippet bf "\textbf{}" w
+snippet tbf "\textbf{}" iA
 \textbf{${1:${VISUAL}}}$0
 endsnippet
 
-snippet dssp "Display style" wA
-\displaystyle{$1}$0
-endsnippet
-
-snippet dsp "Display style" w
+context "math()"
+snippet dssp "Display style" iA
 \displaystyle{${1:${VISUAL}}}$0
 endsnippet
 

@@ -1,0 +1,168 @@
+\lecture{10}{10.22}
+\begin{eg}
+    $(X,Y)\sim N_2\left( 0,1 \right) ,\phi\left( x,y \right) =\frac{1}{2\pi}\mathrm{e}^{-x^2+y^2 /2}$
+
+    $Z=\sqrt{X^2+Y^2} $ ，求$E\left( Z \right) $
+\end{eg}
+解：由定理：
+\begin{rrule}
+    \begin{align*}
+        E\left( g\left( X,Y \right)  \right) =\begin{cases}
+            \displaystyle{\sum_{i=1}^{+\infty}{\sum_{j=1}^{+\infty} g\left( x_{i},y_{j} \right) P\left\{ X=x_{i},Y=y_{j} \right\}} },&\text{离散}\\
+            \displaystyle{\int_{-\infty}^{+\infty}{\int_{-\infty}^{+\infty} g\left( x,y \right) f\left( x,y \right)  \mathrm{d}x} \mathrm{d}y},&\text{连续}
+        \end{cases}
+    .\end{align*}
+\end{rrule}
+可得数学期望：
+\begin{align*}
+    E\left( Z \right) =\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} Z\cdot f\left( x,y \right)  \mathrm{d}x \mathrm{d}y
+.\end{align*}
+\subsection{数学期望的性质}%
+\label{sub:数学期望的性质}
+\begin{align*}
+    \begin{cases}
+        \text{线性可加性}\\
+        \text{独立性}
+    \end{cases}
+.\end{align*}
+
+$\circ$ $E\left( aX+bY+c \right) =E\left( aX+bY \right) +c$：常数的数学期望为其本身
+\begin{notation}
+    什么是数学期望：一个随机变量的中心
+
+    方差：去中心化的随机变量
+
+    常数的中心为其本身
+\end{notation}
+$\circ$ $E\left( aX+bY \right) =E\left( aX \right) +E\left( bY \right) =aE\left( X \right) +bE\left( Y \right) $：线性性
+\begin{proof}
+    已知：\[
+        \int_{-\infty}^{+\infty} f\left( x,y \right)  \mathrm{d}y=F_X\left( x \right) 
+    .\] 
+    \[
+        \int_{-\infty}^{+\infty} xf\left( x,y \right)  \mathrm{d}x=E\left( X \right) 
+    .\] 
+    \begin{align*}
+        E\left( aX+bY \right) &=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \left( ax+by \right) f\left( x,y \right)  \mathrm{d}x \mathrm{d}y \\
+        &= a \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xf\left( x,y \right)  \mathrm{d}x \mathrm{d}y +b \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} yf\left( x,y \right)  \mathrm{d}x  \mathrm{d}y\\
+        &= aE\left( X \right) +bE\left( Y \right)
+    .\end{align*}
+\end{proof}
+\begin{eg}
+    $E\left( X \right) \pm E\left( Y \right) =E\left( X\pm Y \right) $
+\end{eg}
+
+$\circ$ 对于独立的随机变量：$E\left( XY \right) =E\left( X \right) \cdot E\left( Y \right) $
+\begin{proof}
+    二重积分转换为二次积分：
+    \begin{align*}
+        E\left( XY \right) &=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xyf\left( x,y \right)  \mathrm{d}x \mathrm{d}y\\
+        &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xyf_X\left( x \right) f_Y\left( y \right)  \mathrm{d}x \mathrm{d}y \\
+        &= \left( \int_{-\infty}^{+\infty} xf_X\left( x \right)  \mathrm{d}x \right) \left( \int_{-\infty}^{+\infty} yf_Y\left( y \right)  \mathrm{d}y \right)  \\
+        &= E\left( X \right) \cdot E\left( Y \right)
+    .\end{align*}
+\end{proof}
+\begin{notation}
+    \begin{align*}
+        \text{cov}\left( X,Y \right) &=E\left( XY \right) -E\left( X \right) E\left( Y \right)=0\\
+        &\implies \rho_{X,Y}=\frac{\text{cov}\left( X,Y \right) }{\sqrt{DX} \sqrt{DY} }=0\\
+        &\implies X,Y\text{无相关（独立）}
+    .\end{align*}
+\end{notation}
+
+ \begin{notation}
+     线性可加性：\[
+         E\left( \sum_{i=1}^{n} a_iX_i+c \right) =\sum_{i=1}^{n} a_iE\left( X_i \right) +c
+     .\] 
+     
+     将$n$ 重积分转换为一重积分
+ \end{notation}
+\subsection{方差的性质}%
+\label{sub:方差的性质}
+\[
+    D\left( X \right) =E\left( X-EX \right) ^2
+.\] 
+\begin{notation}
+    方差是描述数据偏离中心的程度值
+\end{notation}
+$\circ$ 常数的方差等于0：$D\left( c \right) =0$
+\begin{notation}
+    正态分布的方差$\sigma$ 不大：$3\sigma$ 准则保证数据方差在可控范围内
+\end{notation}
+$\circ$ $D\left( aX+b \right) =D\left( aX \right)=\bm{a^2}D\left( X \right)  $ ：离散程度与整体移动无关
+\begin{proof}
+    \begin{align*}
+        D\left( aX+b \right) &= E\left( aX+b-E\left( aX+b \right)  \right) ^2 \\
+        &= E\left( aX+b-aE\left( X \right) -b \right) ^2 \\
+        &= E\left( aX-aE\left( X \right)  \right) ^2 =D\left( aX \right) \\
+        &= a\left( X-E\left( X \right)  \right) \cdot aE\left( X-E\left( X \right)  \right)  \\
+        &= a^2E\left( X-E(X) \right)^2 \\
+        &= \bm{a^2}D\left( X \right) 
+    .\end{align*}
+\end{proof}
+$\circ$ $D\left( X\pm Y \right) =E\left( \left( X-EX \right) \cdot \left( Y-EY \right)  \right) $
+\begin{proof}
+    \begin{align*}
+        D\left( X-Y \right) &=E\left( X-Y-E\left( X-Y \right)  \right) ^2\\
+        &= E\left( X-Y-\left( EX-EY \right)  \right) ^2 \\
+        &= E\left( \left( X-EX \right) -\left( Y-EY \right)  \right) ^2 \\
+        &= E\left( \left( X-EX \right) ^2-2\left( X-EX \right) \left( Y-EY \right) +\left( Y-EY \right) ^2 \right)  \\
+        &= E\left( X-EX \right) ^2 -2E\left( X-EX \right) \left( Y-EY \right) +E\left( Y-EY \right) ^2\\
+        &= D\left( X \right) +D\left( Y \right) -2\text{cov}\left( X,Y \right)
+    .\end{align*}
+    \begin{align*}
+        \text{cov}\left( X,Y \right) &= E\left( X-EX \right) \left( Y-EY \right)\\
+        &= E\left( XY-X\cdot EY-Y\cdot EX+EX\cdot EY \right) \\
+        &= E\left( XY \right) -E\left( X\cdot EY \right) -E\left( Y\cdot EX \right) +E\left( EX\cdot EY \right)  \\
+        &= E\left( XY \right) -EY\cdot E\left( X \right) -EX\cdot E\left( Y \right)+EX\cdot EY  \\
+        &= E\left( XY \right) -E\left( X \right) \cdot E\left( Y \right)
+    .\end{align*}
+    
+    当$X,Y$ 独立时：$\text{cov}\left( X,Y \right) =0$，即$D\left( X-Y \right) =D\left( X \right) -D\left( Y \right) $ ，加法同理
+\end{proof}
+\begin{notation}
+    当$X=Y$ 时：
+    \begin{align*}
+        \text{cov}\left( X,Y \right) &= \text{cov}\left( X,X \right) \\
+        &= E\left( X-EX \right) \left( X-EX \right)  \\
+        &= E\left( X-EX \right) ^2 \\
+        &= D\left( X \right)
+    .\end{align*}
+
+    即协方差退化为方差
+\end{notation}
+\begin{notation}
+    均方偏离函数：$f\left( x \right) =E\left( X-x \right) ^2\ge D\left( X \right) $，当且仅当$x=E\left( X \right) $ 时$f\left( X \right) =D\left( X \right) $
+\end{notation}
+$\circ$ 切比雪夫不等式（概率论最基础的不等式）
+\[
+    P\left\{ \left| X-EX \right| \ge \varepsilon \right\} \le \frac{D\left( X \right) }{\varepsilon^2}
+.\]
+
+或：
+\[
+    P\left\{ \left| X-EX \right| >\varepsilon \right\} \ge 1-\frac{D\left( X \right) }{\varepsilon}
+.\] 
+
+证明时使用： \[
+    P\left\{ \left( X-EX \right) ^2\le \varepsilon^2 \right\} \le \frac{D\left( X \right) }{\varepsilon^2}
+.\] 
+\begin{proof}
+    \begin{align*}
+        P\left\{ \left| X-EX \right| \ge \varepsilon \right\} &= \int_{\left| x-EX \right| \ge \varepsilon} f\left( x \right)  \mathrm{d}x \\
+        &\le  \int_{\left| x-EX \right| \ge \varepsilon}^{} \frac{\left| x-EX \right| ^2}{\varepsilon^2}f\left( x \right)  \mathrm{d}x \\
+        &\le \int_{-\infty}^{+\infty} \frac{\left| x-EX \right| ^2}{\varepsilon^2}f\left( x \right)  \mathrm{d}x \\
+        &= \frac{1}{\varepsilon^2}\int_{-\infty}^{+\infty} \left( x-EX \right) ^2f\left( x \right)  \mathrm{d}x \\
+        &= \frac{1}{\varepsilon^2}E\left( X-EX \right) ^2 \\
+        &= \frac{D\left( X \right) }{\varepsilon^2} 
+    .\end{align*}
+\end{proof}
+\begin{notation}
+    切比雪夫不等式$\implies$ 马尔可夫不等式$\implies$ 协方差不等式$\implies$ 阶乘不等式$\implies\ldots$
+
+    $D\left( X \right) =0$ 的充要条件为$P=1$
+\end{notation}
+
+
+
+
