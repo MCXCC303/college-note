@@ -153,7 +153,7 @@ while True:
 	if depth == 0: break;
 	i-=1
 snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
-`{$1}$0
+`{$1} $0
 endsnippet
 
 context "math()"
@@ -468,11 +468,11 @@ snippet ... "ldots" iA
 \ldots
 endsnippet
 
-snippet ==> "implies" A
+snippet -=> "implies" A
 \implies
 endsnippet
 
-snippet => "Right arrow" A
+snippet => "Right arrow" iA
 \Rightarrow
 endsnippet
 
@@ -506,16 +506,16 @@ endsnippet
 
 context "math()"
 snippet // "Fraction" iA
-\\frac{$1}{$2}$0
+\\frac{$1}{$2} $0
 endsnippet
 
 snippet / "Fraction" i
-\\frac{${VISUAL}}{$1}$0
+\\frac{${VISUAL}}{$1} $0
 endsnippet
 
 context "math()"
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
-\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+\\frac{`!p snip.rv = match.group(1)`}{$1} $0
 endsnippet
 
 snippet == "equals" iA
@@ -940,6 +940,10 @@ endsnippet
 
 snippet tbf "\textbf{}" iA
 \textbf{${1:${VISUAL}}}$0
+endsnippet
+
+snippet tit "\textit{}" iA
+\textit{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"

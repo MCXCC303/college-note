@@ -2,8 +2,83 @@
 \subsection{模型评估和性能度量}%
 \label{sub:模型评估和性能度量}
 \begin{notation}
-    留出法(hold-out)：
+    留出法(\textit{hold-out})：
 
     将原始数据集$D$ 分为两个互斥的子集$S,T$，$S$作为训练数据集，$T$ 作为测试数据集：$D=S\cup T,S\cap T=\varnothing $
 \end{notation}
+在划分任务时要尽量保证$S$ 和$T$ 中的样本类别比例相似
+\begin{eg}
+    \[
+        D\left( a,b \right)  \to S\left( \lambda a,\lambda b \right) \cup T\left( \left( 1-\lambda \right) a,\left( 1-\lambda \right) b \right)
+    .\] 
+
+    该过程称为分层采样法，其中$\lambda\in [\frac{2}{3} , \frac{4}{5} ]$
+
+    使用$S$ 训练模型，$T$ 进行模型测试，多次随机划分$a,b$ 在$S$ 和$T$ 内的内容，多次实验取测试结果平均值
+\end{eg}
+\begin{notation}
+    交叉验证法/\textit{k}折交叉验证(\textit{cross validation}/\textit{k-fold cross validation})：\[
+        D=D_1\cup D_2\cup \ldots\cup D_k\text{ 且 }D_I\cap D_j=\varnothing \left( i\neq j \right)
+    .\]   
+
+    此处$\forall D_i$ 由$D$ 分层采样得到
+
+    每次实验使用$k-1$ 个子集的并集训练，剩下的一个子集作为测试集：\[
+        S=\sum_{i=1}^{m-1} D_i + \sum_{i=m+1}^{k}D_i \hspace{0.5cm} T=D_m
+    .\] 
+
+    取不同的$m$ 值共可以得到$k$ 组“训练集-测试集”，得到$k$ 个结果，取$k$ 个结果的平均值
+\end{notation}
+\begin{eg}
+    5折交叉验证的数据划分：
+    \begin{table}[htpb]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $D_1$ & $D_2$ & $D_3$ & $D_4$ & $\bm{D}_5$ \\
+        \hline
+        $D_1$ & $D_2$ & $D_3$ & $\bm{D}_4$ & $D_5$ \\
+        \hline
+        $D_1$ & $D_2$ & $\bm{D}_3$ & $D_4$ & $D_5$ \\
+        \hline
+        $D_1$ & $\bm{D}_2$ & $D_3$ & $D_4$ & $D_5$ \\
+        \hline
+        $\bm{D}_1$ & $D_2$ & $D_3$ & $D_4$ & $D_5$ \\
+        \hline
+        \end{tabular}
+        $\Rightarrow \begin{cases}
+            Res_1\\
+            Res_2\\
+            Res_3\\
+            Res_4\\
+            Res_5
+        \end{cases}$
+        \ce{->[Avg.]}Result
+    \end{table}
+\end{eg}
+\begin{notation}
+    若样本量$m$ 等于子集数$k$ ，交叉验证法等同于留一法(\textit{leave one out}, LOO)
+
+    留一法的优点：训练结果更准确
+
+    缺点：样本量太大的时候消耗过多资源
+\end{notation}
+\subsection{模型性能度量}%
+\label{sub:模型性能度量}
+\begin{notation}
+    错误率：\[
+        E=\frac{1}{m} N\left( f\left( x_{i} \right) \neq y_{i} \right) 
+    .\] 
+
+    准确率：\[
+        \text{Acc}=\frac{1}{m} N\left( f\left( x_{i} \right) =y_{i} \right) 
+    .\] 
+
+    $m$ 为样本总数，$N\left( f\left( x_{i} \right) =y \right) $ 表示符合特征$f:x\to y$的样本数量
+\end{notation}
+
+
+
+
+
 
