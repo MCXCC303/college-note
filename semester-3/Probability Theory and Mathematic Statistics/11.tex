@@ -1,0 +1,170 @@
+\lecture{11}{10.24}
+\textit{Review}:
+\begin{notation}
+    数学期望的性质：
+    
+    1. $E\left( c \right) =c$ 
+    
+    2. $E\left( cX \right) =cE\left( X \right)$
+    
+    3. $E\left( X+Y \right) =E\left( X \right) +E\left( Y \right) $ 
+    
+    3.1 $E\left( E\left( Y \right) X \right) =E\left( Y \right) E\left( X \right) $ 
+    
+    4. $X,Y$ 相互独立，$E\left( XY \right) =E\left( X\right) E\left( Y \right) $
+\end{notation}
+协方差：$\text{cov}\left( X,Y \right) =E\left( X-EX \right) \left( Y-EY \right) =E\left( XY \right) -E\left( X \right) E\left( Y \right) $
+
+若$X,Y$ 独立则$\text{cov}\left( X,Y \right) =0$ 
+\begin{notation}
+    方差的性质：
+    
+    1. $D\left( c \right) =0$ 
+    
+    2. $D\left( cX \right) =c^2D\left( X \right) $
+
+    2.1. $D\left( X \right) = E\left( X-EX \right) ^2=E\left( X^2 \right) -E\left( X \right) ^2$
+
+    3. $X,Y$ 相互独立，$D\left( X+Y \right) =D\left( X \right) +D\left( Y \right) $
+\end{notation}
+$\text{cov}\left( X,Y \right) =E\left( X-EX \right) \left( Y-EY \right) $ 
+
+当$X=Y$ ，$\text{cov}\left( X,Y \right) =\text{cov}\left( X,X \right) =E\left( X-EX \right) ^2=D\left( X \right) $
+
+或：$\text{cov}\left( X,Y \right) =E\left( XY \right) -E\left( X \right) E\left( Y \right) =E\left( X^2 \right) -E\left( X \right) ^2$
+
+\begin{eg}
+    $D\left( aX+bY+c \right) =D\left( aX+bY \right) $
+    \begin{align*}
+        D\left( aX+bY \right) &= E\left( \left( aX+bY \right) -E\left( aX+bY \right)  \right) ^2 \\
+        &= E\left( a\left( X-EX \right) +b\left( Y-EY \right)  \right) ^2 \\
+        &= E\left( a^2\left( X-EX \right) ^2 +2ab\left( X-EX \right)\left( Y-EY \right) +b^2\left( Y-EY \right) ^2 \right)  \\
+        &= a^2D\left( X \right) +b^2D\left( Y \right) +2ab\text{cov}\left( X,Y \right)
+    .\end{align*} 
+\end{eg}
+
+$\circ$ 切比雪夫不等式：已知一个随机变量的方差可以估算出数学期望
+\begin{question}
+    一个随机变量$X$ 分布未知，已知$\mu=18,\sigma=2.5$ ，求$P\left\{ X\in (8,28) \right\} $
+\end{question}
+解：由切比雪夫不等式：
+\begin{align*}
+    P\left\{ X\in (8,28) \right\} &= P\left\{ X-18\in (-10,10) \right\}  \\
+    &= P\left\{ \left| X-18 \right| <10 \right\}  \\
+    &= P\left\{ \left| X-\mu \right| <\varepsilon \right\}  \\
+    &\ge 1-\frac{\sigma^2}{\varepsilon^2} \\
+    &= 1-\frac{2.5^2}{10^2} =0.9375 
+.\end{align*}
+
+$\circ$ 马尔可夫不等式
+
+\begin{eg}
+    $X_1,X_2,\ldots,X_n: i.i.d,X\sim N\left( \mu,\sigma^2 \right) $，证明：
+
+    1. $\overline{X}=\displaystyle{\frac{1}{n} \sum_{i=1}^{n}X_i\sim N\left( \mu,\frac{\sigma^2}{n}  \right) }$
+
+    2. 设$Y_i=\displaystyle{\frac{X_i-\mu}{\sigma}} ,i=1,2,\ldots,n$ 则$E\left( \displaystyle{\sum_{i=1}^{n}} Y_i^2 \right) =n$
+\end{eg}
+\begin{proof}
+    1. 由线性性：\[
+        \overline{X}=\frac{1}{n} \sum_{i=1}^{n} X_i\sim N\left( E\overline{X},D\overline{X} \right) 
+    .\] 
+
+    由于$X$ 之间相互独立，有$D\left( X_1+X_2 \right) =D\left( X_1 \right) +D\left( X_2 \right) $
+    \[
+        E\overline{X}=\frac{1}{n} \sum_{i=1}^{n} EX_i=\mu, \hspace{0.5cm} D\overline{X}=\frac{1}{n^2} \sum_{i=1}^{n} DX_i=\frac{\sigma^2}{n} 
+    .\] 
+
+    2. 由题：$EY_i=0,DY_i=1$ 
+    \[
+        E\left( \sum_{i=1}^{n} Y_i^2 \right) =\sum_{i=1}^{n} EY_i^2
+    .\] 
+    \begin{notation}
+        $Y_i^2$ 符合自由度为1的卡方分布：$Y_i^2\sim X^2\left( 1 \right) $
+    \end{notation}
+    
+    即：$\displaystyle{\sum_{i=1}^{n} E\left( Y_i^2 \right) =nE\left( Y_i^2 \right) }$
+
+    由方差的定义：$D\left( Y_i \right) =E\left( Y_i^2 \right) -E\left( Y_i \right) ^2$ ：
+\begin{align*}
+    EY_i^2=D\left( Y_i \right) +E\left( Y_i \right) ^2=1+0^2=1\\
+    \sum_{i=1}^{n} E\left( Y_i^2 \right) =nE\left( Y_i^2 \right) =n
+.\end{align*}
+\end{proof}
+
+\subsection{协方差的性质}%
+\label{sub:协方差的性质}
+$\circ$ $\text{cov}\left( X,Y \right) =\text{cov}\left( Y,X \right) $ （对称性）
+
+$\circ$ $\text{cov}\left( aX,bY \right) =ab\text{cov}\left( X,Y \right) $ 
+\begin{proof}
+    已知：$\text{cov}\left( X,Y \right) =E\left( XY \right) -E\left( X \right) E\left( Y \right) $
+    \begin{align*}
+        \text{cov}\left( aX,bY \right) &=E\left( aXbY \right) -E\left( aX \right) E\left( bY \right) \\
+        &= abE\left( XY \right) -abE\left( X \right) E\left( Y \right)  \\
+        &= ab\text{cov}E\left( X,Y \right)
+    .\end{align*}
+\end{proof}
+
+$\circ$ $\text{cov}\left( c,X \right) =0$ 
+\begin{notation}
+    协方差用于衡量随机变量之间的线性关系，常数和其他随机变量不存在线性关系
+\end{notation}
+\begin{proof}
+    \begin{align*}
+        \text{cov}\left( cX \right) &= E\left( cX \right) -E\left( c \right) E\left( X \right)  \\
+        &= cE\left( X \right) -cE\left( X \right)  \\
+        &= 0
+    .\end{align*}
+\end{proof}
+\begin{notation}
+    $\text{cov}\left( c,c \right) =D\left( c \right) =0$
+\end{notation}
+
+$\circ$ $\text{cov}\left( aX+bY ,cZ\right) =ac\text{cov}\left( X+Y \right) +bc\text{cov}\left( Y+Z \right) $ （分配律）
+\begin{proof}
+    \begin{align*}
+        \text{cov}\left( aX+bY,cZ \right) &=E\left( \left( aX+bY \right) cZ \right) -E\left( aX+bY \right) E\left( cZ \right) \\
+        &= E\left( acXZ+bcYZ \right) -cEZ\left( aEX+bEY \right)  \\
+        &= acE\left( XZ \right) +bcE\left( YZ \right) -acEXEZ-bcEYEZ \\
+        &= ac\text{cov}\left( X,Z \right) +bc\text{cov}\left( Y,Z \right)
+    .\end{align*}
+\end{proof}
+\begin{notation}
+    $\displaystyle{\text{cov}\left( \sum_{i=1}^{n}a_iX_i,b_iZ\right) =\sum_{i=1}^{n} a_ib_i\text{cov}\left( X_i,Z \right) }$
+\end{notation}
+\begin{notation}
+    $\displaystyle{D\left( \sum_{i=1}^{n} a_iX_i \right) =\sum_{i=1}^{n} a_i^2DX_i+\sum_{i=1}^{n} \sum_{j=1,j\neq i}^{n} a_ia_j\text{cov}\left( X_i,X_j \right) }$
+\end{notation}
+
+\subsection{相关系数}%
+\label{sub:相关系数}
+\subsubsection{标准化}%
+\label{subsub:标准化}
+\[
+    X^*=\frac{X-EX}{\sqrt{DX} } 
+.\] 
+
+标准化后的变量$EX^*=0,DX^*=1$
+
+\begin{defi}
+    $X^*,Y^*$ 的协方差$\text{cov}\left( X^*,Y^* \right) $ 为$X,Y$ 的相关系数$\rho\left( X,Y \right) $
+    \begin{align*}
+        \text{cov}\left( X^*,Y^* \right) &=\text{cov}\left( \frac{X-EX }{\sqrt{D\left( X \right) } } ,\frac{Y-EY}{\sqrt{DX} }  \right) \\
+        &= \frac{1}{\sqrt{DX} \sqrt{DY} } \text{cov}\left( X-EX,Y-EY \right)
+    .\end{align*}
+
+    易得$\text{cov}\left( X-EX,Y-EY \right) =\text{cov}\left( X,Y \right) $
+    \begin{align*}
+        \text{cov}\left( X^*,Y^* \right) &= \frac{\text{cov}\left( X,Y \right) }{\sqrt{DX}\sqrt{DY} }  \\
+        &= \rho\left( X,Y \right) 
+    .\end{align*}
+\end{defi}
+
+\subsubsection{性质}%
+\label{subsub:性质}
+$\circ$ $\left| \rho\left( X,Y \right)  \right| \le 1$ 
+
+$\circ$ $\displaystyle{P\left\{ X^*=\pm Y^* \right\} =1}$ 是$\rho\left( X,Y \right) =\pm_1$ 的充要条件
+
+

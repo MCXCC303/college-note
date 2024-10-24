@@ -201,11 +201,16 @@ endsnippet
 # Environment Syntax #
 #────────────────────#
 snippet beg "begin{} / end{}" bA
-\\begin{$1}
+\begin{$1}
 	$0
-\\end{$1}
+\end{$1}
 endsnippet
 
+snippet prf "proof" bA
+\begin{proof}
+	$0
+\end{proof}
+endsnippet
 
 snippet enum "Enumerate" bA
 \begin{enumerate}
@@ -225,6 +230,7 @@ snippet desc "Description" b
 \end{description}
 endsnippet
 
+context "math()"
 snippet pmat "pmat" iA
 \begin{pmatrix}
 $1\\\\
@@ -232,6 +238,7 @@ $1\\\\
 $0
 endsnippet
 
+context "math()"
 snippet bmat "bmat" iA
 \begin{bmatrix}
 $1\\\\
@@ -449,6 +456,7 @@ snippet "([a-zA-Z])hat" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 
+context "math()"
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
 endsnippet
@@ -458,44 +466,45 @@ snippet 、、 "RF" iA
 $0
 endsnippet
 
-snippet \\\\ "RF" iA
+snippet \\ "RF" iA
 \\\\
 $0
 endsnippet
 
 priority 100
 snippet ... "ldots" iA
-\ldots
+\ldots $0
+endsnippet
+
+snippet --- "hline" iA
+\hline
+$0
 endsnippet
 
 snippet -=> "implies" A
-\implies
+\implies $0
 endsnippet
 
 snippet => "Right arrow" iA
-\Rightarrow
+\Rightarrow $0
 endsnippet
 
 snippet =< "implied by" Ai
-\impliedby
+\impliedby $0
 endsnippet
 
 context "math()"
 snippet iff "iff" Ai
-\iff
+\iff $0
 endsnippet
 
 snippet mk "Math" wA
-$${1}$`!p
+$${1:${VISUAL}}$`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 	snip.rv = ' '
 else:
 	snip.rv = ''
 `$2
-endsnippet
-
-snippet mt "Math" w
-$${1:${VISUAL}}$$0
 endsnippet
 
 snippet dm "Math" wA
@@ -519,19 +528,19 @@ snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
 endsnippet
 
 snippet == "equals" iA
-&= $1 \\\\
+&= $1 \\\\$0
 endsnippet
 
 snippet != "Not equals" iA
-\neq 
+\neq $0
 endsnippet
 
 snippet ~= "Approximately equals" iA
-\approx 
+\approx $0
 endsnippet
 
 snippet +- "Plus or minus" iA
-\pm
+\pm $0
 endsnippet
 
 context "math()"
@@ -649,12 +658,12 @@ endsnippet
 
 context "math()"
 snippet <= "leq" iA
-\le 
+\le $0
 endsnippet
 
 context "math()"
 snippet >= "geq" iA
-\ge 
+\ge $0
 endsnippet
 
 context "math()"
@@ -704,13 +713,13 @@ endsnippet
 
 context "math()"
 snippet xx "cross" iA
-\times 
+\times $0
 endsnippet
 
 priority 100
 context "math()"
 snippet ** "cdot" iA
-\cdot 
+\cdot $0
 endsnippet
 
 context "math()"
@@ -720,7 +729,7 @@ endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)' "ln" rwA
+snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|star|perp)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -765,15 +774,17 @@ endsnippet
 
 context "math()"
 snippet \\\ "setminus" iA
-\setminus
+\setminus $0
 endsnippet
 
+context "math()"
 snippet >> ">>" iA
-\gg
+\gg $0
 endsnippet
 
+context "math()"
 snippet << "<<" iA
-\ll
+\ll $0
 endsnippet
 
 context "math()"
@@ -786,10 +797,12 @@ snippet set "set" wA
 \\{$1\\} $0
 endsnippet
 
+context "math()"
 snippet <! "normal" iA
 \triangleleft $0
 endsnippet
 
+context "math()"
 snippet <> "hokje" iA
 \diamond $0
 endsnippet
@@ -799,26 +812,27 @@ endsnippet
 #─────────────#
 context "math()"
 snippet ooo "\infty" iA
-\infty 
+\infty $0
 endsnippet
 
 context "math()"
 snippet nth "\varnothing" wA
-\varnothing 
+\varnothing $0
 endsnippet
 
+context "math()"
 snippet rij "mrij" i
 (${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0
 endsnippet
 
 context "math()"
 snippet EE "Exist" iA
-\exists 
+\exists $0
 endsnippet
 
 context "math()"
 snippet AA "For All" iA
-\forall 
+\forall $0
 endsnippet
 
 context "math()"
@@ -855,6 +869,7 @@ snippet inn "in " iA
 \in 
 endsnippet
 
+context "math()"
 snippet Nn "n" iA
 \N 
 endsnippet
@@ -929,13 +944,23 @@ snippet \ee "e" iA
 endsnippet
 
 context "math()"
+snippet exp "exp" iA
+\mathrm{e}^{${1:f(x)}} $0
+endsnippet
+
+context "math()"
 snippet \ii "i" iA
 \mathrm{i}
 endsnippet
 
 context "math()"
 snippet dx "dx" iA
-\mathrm{d}${1:x}$0
+\mathrm{d}${1:x} $0
+endsnippet
+
+context "math()"
+snippet cov "Covariance"
+\mathrm{cov}(${1:X},${2:Y}) $0
 endsnippet
 
 snippet tbf "\textbf{}" iA
