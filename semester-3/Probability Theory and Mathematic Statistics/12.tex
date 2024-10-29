@@ -1,0 +1,165 @@
+\lecture{12}{10.27}
+\begin{notation}
+    相关系数/Pearson相关系数：描述两个随机变量之间的线性相关性
+
+    只能描述数值性的变量
+\end{notation}
+$|\rho\left( X,Y \right)|=1 $ 时：正相关
+
+$\left| \rho\left( X,Y \right) >0.8 \right| $ ：强相关
+
+$\left| \rho\left( X,Y \right) \in \left( 0,0.5 \right)  \right| $：弱相关
+
+$\rho=0$ ：不相关/非线性关系
+\begin{notation}
+    相关系数本质上描述：
+    \[
+        P\left\{ Y=aX+b \right\} 
+    .\] 
+\end{notation}
+\begin{eg}
+    $f\left( x,y \right) =\begin{cases}
+        \frac{1}{\pi} ,&x^2+y^2\le 1\\
+        0,&x^2+y^2>1
+    \end{cases}$ ，求：
+
+    1. $X,Y$ 的相关性；2. $X,Y$ 的独立性
+\end{eg}
+解：1. 
+\begin{align*}
+    EX=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xf\left( x,y \right)  \mathrm{d}x \mathrm{d}y\\
+    &= \int_{-1}^{1}  \mathrm{d}x \int_{-\sqrt{1-x^2} }^{\sqrt{1-x^2} } \frac{x}{\pi}  \mathrm{d}y \\
+    &= 0
+.\end{align*}
+
+同理$EY=0$，即不相关
+
+2. 
+\begin{align*}
+    f_X\left( x \right) &= \int_{D}^{} f\left( x,y \right)  \mathrm{d}y \\
+    &=\int_{-\sqrt{1-x^2} }^{\sqrt{1-x^2} } \frac{1}{\pi}  \mathrm{d}y\\
+                        &=\frac{2}{\pi} \sqrt{1-x^2} 
+.\end{align*}
+
+同理$f_Y\left( y \right) =\displaystyle{\frac{2}{\pi} \sqrt{1-y^2}}$ ，易得$f\left( x,y \right) \neq f_X\left( x \right) f_Y\left( y \right) $ ，即不独立
+
+{\centering{\section*{数理统计部分}%
+\label{sec:数理统计部分}
+}}
+\section{大数定律和中心极限定理}%
+\label{sec:大数定律和中心极限定理}
+\begin{defi}
+    大数定律：\[
+        \bar{X}\ce{->[P][n\to \infty ]} EX
+    .\] 
+
+    即：以某事件发生的频率估计该事件的概率
+\end{defi}
+\begin{defi}
+    中心极限定理： \[
+        \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}
+    .\] 
+
+    其中$X_1,X_2,\ldots X_{i}$ 独立同分布
+
+    该随机变量序列存在分布，中心极限定理提出不论$\bar{X}$ 的分布是什么，该序列的分布为正态分布
+    \[
+        \bar{X}\ce{->[L][n\to \infty ]}N\left( E\bar{X},D\bar{X} \right) 
+    .\] 
+\end{defi}
+如何判断随机变量的敛散性：
+\begin{cor}
+    依概率收敛：
+
+    对$\forall \varepsilon$ 有：
+    \[
+        \lim_{n \to \infty} P\left\{ \left| X_n-X \right| <\varepsilon \right\} =1
+    .\]
+
+    代表序列 $\left\{ X_n \right\} $ 收敛于随机变量$X$ ，记为$X_n\ce{->[P][n\to \infty ]}X$
+\end{cor}
+\begin{cor}
+    依分布收敛：
+
+    序列的分布函数为$F_n\left( x \right) $ ，随机变量的分布函数$F\left( x \right) $ ，对$\forall x$ ，有： \[
+        \lim_{n \to \infty} F_n\left( x \right) =F\left( x \right) 
+    .\] 
+
+    则$\left\{ X_n \right\} $ 依分布收敛于$X$ ，记为$X_n\ce{->[L][n\to \infty }X$
+\end{cor}
+\begin{notation}
+    测度变换：通过将问题映射到另一个空间简化计算
+
+    依分布收敛要求更弱， 即：依概率收敛$\Rightarrow $ 依分布收敛
+
+    当收敛对象为常数时二者可互推
+\end{notation}
+\begin{notation}
+    撞骗：只要发出的短信足够多，成功率符合大数定律
+\end{notation}
+三大大数定律：
+\[
+    \begin{cases}
+        \text{\textbf{切比雪夫大数定律}：最根本}\\
+        \text{伯努利大数定律：例子}\\
+        \text{辛钦大数定律}
+    \end{cases}
+.\] 
+\subsection{大数定律}%
+\label{sub:大数定律}
+\begin{defi}
+    $\left\{ X_i \right\} i.i.d$ ，$\exists EX_i,DX_i$ ，且$\exists C$ ，使得$DX_i\le C$ （方差有界），则对$\forall \varepsilon>0$ 当：
+    \[
+        \lim_{n \to \infty} P\left\{ \left| \bar{X_n}-E\bar{X_n} \right| <\varepsilon \right\} =1
+    .\] 
+
+    时：
+    \[
+        \bar{X_n}\ce{->[P][n\to \infty ]}E\bar{X_n}
+    .\] 
+\end{defi}
+\begin{proof}
+    $\bar{X_n}=\displaystyle{\frac{1}{n} \sum_{i=1}^{n} X_i}$，有：
+    \begin{align*}
+        E\bar{X_n}&=\frac{1}{n} \sum_{i=1}^{n} EX_i\\
+        D\bar{X_i}&=\frac{1}{n^2} \sum_{i=1}^{n} DX_i\\
+                  &\le \frac{C}{n}
+    .\end{align*}
+
+    由切比雪夫不等式：
+    \begin{align*}
+        P\left\{ \left| \bar{X_n}-E\bar{X_n} \right| <\varepsilon \right\} &\ge 1-\frac{D\bar{X_n}}{\varepsilon^2}\\
+                                                                        &\ge 1-\frac{C}{n\varepsilon^2}
+    .\end{align*}
+
+    当$n\to \infty $ 时原式收敛于1
+\end{proof}
+\begin{notation}
+    辛钦大数定律：序列中的随机变量独立同分布
+\end{notation}
+\begin{notation}
+    伯努利大数定律：序列中$X_i\sim B\left( 1,p \right) $（已知分布），记$\mu_s$ 为随机变量序列之和，有：
+    \[
+        \lim_{n \to \infty} P\left\{ \left| \frac{\mu_s}{n} -p  \right| <\varepsilon \right\} =1
+    .\] 
+    
+    即：$\displaystyle{\frac{\mu_s}{n}} $ 依概率收敛于$p$
+\end{notation}
+\subsection{中心极限定理}%
+\label{sub:中心极限定理}
+\begin{eg}
+    高尔顿钉板
+\end{eg}
+\begin{cor}
+    \textit{i.i.d}的中心极限定理：
+
+    \[
+        \lim_{n \to \infty} P\left\{ \frac{\bar{X_n}-\mu}{\frac{\sigma}{\sqrt{n} } }\le x  \right\} =\Phi\left( x \right) 
+    .\] 
+\end{cor}
+\begin{cor}
+    拉普拉斯中心极限定理：$X_i$ 独立同分布，$X_i\sim B\left( 1,p \right) $，令$Y=\sum_{i=1}^{n} X_i$，对$\forall x$ 有：
+    \[
+        \lim_{n \to \infty} P\left\{ \frac{Y-np}{\sqrt{np\left( 1-p \right) } } \le x \right\} =\Phi\left( x \right) 
+    .\]
+\end{cor}

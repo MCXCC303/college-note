@@ -81,25 +81,25 @@
      类似于等代价算法，通过比较估价函数值即可减少遍历节点数
 \end{eg}
 \begin{notation}
-    A*算法：对函数进行限定，使其一定可以找到最优解
+    $A^\star$算法：对函数进行限定，使其一定可以找到最优解
 \end{notation}
 \[
-    A^{*}=g\left( n \right) +h\left( n \right) 
+    A^\star=g\left( n \right) +h\left( n \right) 
 .\] 
 
 $g\left( n \right) $ 为起点到$n$ 点已走过距离
 
-$g^{*}\left( n \right) $ 是起点到$n$点的最短路径
+$g^\star\left( n \right) $ 是起点到$n$点的最短路径
 
-$g\left( n \right) $是对$g^{*}\left( n \right) $的估计
+$g\left( n \right) $是对$g^\star\left( n \right) $的估计
 
 $h\left( n \right) $ 为引导从$n$ 点到目的地的参照距离，一般为欧氏距离$L_2\left( \bm{x}_i,\bm{x}_j \right) $
 
-$h^{*}\left( n \right) $ 为从$n$ 点到目的地的实际最短距离，$h\left( n \right) \le h^{*}\left( n \right) $
+$h^\star\left( n \right) $ 为从$n$ 点到目的地的实际最短距离，$h\left( n \right) \le h^\star\left( n \right) $
 \begin{eg}
     百度地图：一直有一条红线引导方向，该红线即是$h\left( n \right) $ 
 
-    确定的路线为绿色，为$h^{*}\left( n \right) $
+    确定的路线为绿色，为$h^\star\left( n \right) $
 \end{eg}
 \begin{eg}
     八数码难题：$h_1\left( n \right) $ 表示不在位置上的数字数量

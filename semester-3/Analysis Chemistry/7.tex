@@ -1,0 +1,212 @@
+\lecture{7}{10.28}
+\begin{notation}
+    $K_a<10^{-9}$的弱酸无法准确滴定
+
+    判断弱酸/弱碱能否被准确滴定：
+    \[
+        c_aK_a\ge 10^{-8}\hspace{0.5cm} c_bK_b\ge 10^{-8}
+    .\] 
+\end{notation}
+\begin{eg}
+    酸的浓度为0.1000mol/L，则其 $K_a\ge 10^{-7}$ 才能被准确滴定
+\end{eg}
+\subsubsection{多元酸/碱的滴定}%
+\label{subsub:多元酸/碱的滴定}
+\begin{notation}
+    首先解决：
+
+    1. 能准确滴定至第几级解离产物
+
+    2. 是否能准确滴定、能形成几个pH突越
+
+    3. 选择什么指示剂
+\end{notation}
+\subsubsection*{准确滴定}%
+\label{subsub:准确滴定}
+\[
+    c_aK_a\ge 10^{-8} \hspace{0.5cm} c_bK_b\ge 10^{-8}
+.\] 
+\subsubsection*{分布滴定}%
+\label{subsub:分布滴定}
+\[
+    \frac{K_{a_1}}{K_{a_2}} \ge 10^{4}\hspace{0.5cm} \frac{K_{b_1}}{K_{b_2}} \ge 10^{4}
+.\] 
+判断第二级解离的$\ce{H+}$ 是否影响第一步
+\begin{eg}
+    用0.1000mol/L NaOH滴定0.1000mol/L磷酸：
+
+    磷酸：$K_{a_1}=10^{-2.16}$ ，$K_{a_2}=10^{-7.12}$，$K_{a_3}=10^{-12.32}$ 
+
+    判断是否能准确滴定：
+
+    第一步：$c_aK_{a_1}=10^{-1.16}>10^{-8}$ 且$K_{a_1}/K_{a_2}=10^{4.96}>10^{4}$
+
+    第二步同理：可以准确分步滴定
+
+    第三步：$c_aK_{a_3}<10^{-8}$ ，不能准确滴定
+\end{eg}
+\subsubsection*{指示剂选择}%
+\label{subsub:指示剂选择}
+只看化学计量点的pH
+\begin{eg}
+    以磷酸为例：第一化学计量点pH=4.68：甲基橙、甲基红、溴甲酚绿+甲基橙
+
+    第二化学计量点pH=9.76：酚酞、百里酚酞、酚酞+百里酚酞
+\end{eg}
+\subsection{滴定应用}%
+\label{sub:滴定应用}
+\subsubsection{酸碱标准溶液的配置}%
+\label{subsub:酸碱标准溶液的配置}
+\begin{defi}
+    基准物质：用于直接配置或标定标准溶液的物质
+\end{defi}
+\begin{notation}
+    基准物质常用纯金属或纯化合物
+\end{notation}
+对基准物质的要求：
+
+1. 组成与化学式完全相符
+
+2. 纯度足够高（主成分含量>99.9\%）
+
+2.1. 杂质不能影响反应
+
+3. 性质稳定
+
+4. 有较大的摩尔质量
+
+5. 按滴定反应式定量反应
+\begin{defi}
+    标准溶液：已知\textbf{准确}浓度的试剂溶液
+\end{defi}
+标准溶液浓度：物质的量浓度$c$
+\begin{notation}
+    滴定度(\textit{titer})：每\textbf{毫升}标准溶液相当于被测物质的\textbf{质量}，用$\bm{T}_{T / B}$ 表示
+    \[
+        \bm{T}_{T/B}=\frac{m_B}{V_T} 
+    .\] 
+\end{notation}
+配置标准溶液：
+\begin{notation}
+    直接法：称量$\Rightarrow $ 溶解$\Rightarrow $ 定容$\Rightarrow $ 标签
+\end{notation}
+\begin{notation}
+    标定法（非标准物质的标准溶液配置）：
+
+    配置为近似于所需浓度的溶液后，使用标定后的标准溶液标定该溶液
+\end{notation}
+\begin{eg}
+    配置0.1 mol/L HCl 标准溶液：
+
+    1. 浓盐酸稀释为近似0.1 mol/L
+
+2. 用基准物质硼砂$\ce{Na_2B_4O_7}\cdot \ce{10H_2O}$ 标定
+\end{eg}
+\subsubsection{常用酸碱标准溶液的配置与标定}%
+\label{subsub:常用酸碱标准溶液的配置与标定}
+\begin{notation}
+    酸标准溶液：最常用0.1 mol/L
+
+    最常用HCl，配置方法：浓盐酸间接法
+
+    标定使用的基准物质：无水碳酸钠（易吸湿），硼砂（易风化）
+
+    常用指示剂：甲基橙、甲基红
+\end{notation}
+\begin{notation}
+    碱标准溶液：最常用NaOH，配置方法：浓碱间接法（NaOH易吸水和$\ce{CO_2}$，KOH较贵）
+
+    标定使用基准物质：邻苯二甲酸氢钾（纯净、易保存、摩尔质量大）、草酸
+\end{notation}
+\subsubsection{酸碱滴定分析中的计算}%
+\label{subsub:酸碱滴定分析中的计算}
+计量关系：
+\[
+    t \text{T}+b \text{B}=c \text{C}+ d \text{D}
+.\] 
+ 
+\begin{notation}
+    标定法配置：
+    \[
+        c_T=\frac{t}{b} \times \frac{m_b}{M_bV_T} 
+    .\] 
+\end{notation}
+\begin{notation}
+    物质的量浓度和滴定度之间的关系：
+    \[
+        \frac{n_b}{n_t} =\frac{c_T\cdot V_T}{T_{T/B}\cdot V_T/M_B} =\frac{c_b\times 10^{-3}\times M_B}{T_{T /B}} 
+    .\] 
+\end{notation}
+\begin{notation}
+    被测组分百分含量：
+    \[
+        \omega_B\%=\frac{m_B}{m} =\frac{n_BM_B}{m} =\frac{b}{t} \times \frac{c_tV_tM_B}{m} \times 100\%
+    .\] 
+\end{notation}
+\begin{eg}
+    $T_{\ce{K_2Cr_2O_7 /Fe}}=0.005022\text{g/mL}$，测定0.5000g Fe，用去标准溶液25.10 mL，计算 $T_{\ce{K_2Cr_2O_7 /Fe_3O_4}}$ 和试样中Fe和$\ce{Fe_3O_4}$ 的质量分数
+\end{eg}
+\subsubsection{滴定方式}%
+\label{subsub:滴定方式}
+\[
+    \begin{cases}
+        \text{直接滴定}\\
+        \text{间接滴定}\\
+        \text{返滴定}\\
+        \text{置换滴定}
+    \end{cases}
+.\] 
+\begin{notation}
+    直接滴定要求（重点）：
+
+    1. 反应必须反应完全、定量进行
+
+    2. 反应必须较快
+
+    3. 反应必须有确定的化学计量关系
+
+    4. 必须有适当简便的方法确定终点
+\end{notation}
+\begin{eg}
+    用NaOH滴定乙酰水杨酸
+
+    缺点：乙酰基可能被碱水解
+
+    改进：使用中性乙醇溶解，使用已知滴定度计算
+\end{eg}
+\begin{notation}
+    返滴定：适用于反应较慢、难溶、无合适的指示剂
+
+    1. 准确加入定量且过量的标准溶液A
+
+    2. 加入待测物质
+
+    3. 等待彻底反应完全
+
+    4. 使用另一种标准溶液B滴定剩余的标准溶液A
+\end{notation}
+\begin{eg}
+    HCl标定固体ZnO（难溶）、HCl标定$\ce{CaCO_3}$，$\ce{AgNO_3}$ 标定$\ce{Cl-}$
+\end{eg}
+\begin{notation}
+    置换滴定：适用于无明确定量关系、有副反应
+
+    1. 用适当试剂与待测物质反应，定量置换出另一种物质
+
+    2. 用标准物质滴定置换出的物质
+\end{notation}
+\begin{notation}
+    间接滴定：适用于不能与滴定剂直接反应
+\end{notation}
+\begin{eg}
+    $\ce{KMnO_4}$ 滴定$\ce{Ca^2+}$ ：先使用草酸沉淀，使用硫酸溶解，用高锰酸钾测定脱落的草酸根浓度
+\end{eg}
+\begin{eg}
+    硼酸（酸性极弱，不能直接滴定）：使用甘油结合生成甘油硼酸($K_a=4.26$)后可以滴定
+\end{eg}
+
+
+
+
+
+

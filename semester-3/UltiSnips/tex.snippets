@@ -707,6 +707,11 @@ x_{m}
 endsnippet
 
 context "math()"
+snippet star "*" iA
+^\star
+endsnippet
+
+context "math()"
 snippet R0+ "R0+" iA
 \\R_0^+
 endsnippet
@@ -729,7 +734,7 @@ endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|star|perp)' "ln" rwA
+snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|perp|min|max)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -741,7 +746,7 @@ endsnippet
 
 priority 200
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -949,7 +954,7 @@ snippet exp "exp" iA
 endsnippet
 
 context "math()"
-snippet \ii "i" iA
+snippet \ii "i" i
 \mathrm{i}
 endsnippet
 
@@ -972,7 +977,7 @@ snippet tit "\textit{}" iA
 endsnippet
 
 context "math()"
-snippet dssp "Display style" iA
+snippet dsp "Display style" iA
 \displaystyle{${1:${VISUAL}}}$0
 endsnippet
 
