@@ -50,8 +50,10 @@ $\rho=0$ ：不相关/非线性关系
 \label{sec:大数定律和中心极限定理}
 \begin{defi}
     大数定律：\[
-        \bar{X}\ce{->[P][n\to \infty ]} EX
+        \bar{X}\xrightarrow[P]{n\to +\infty }EX
     .\] 
+    % From here I tested some arrows from package chemfig
+    % I will soon add them to snippet
 
     即：以某事件发生的频率估计该事件的概率
 \end{defi}
@@ -64,7 +66,7 @@ $\rho=0$ ：不相关/非线性关系
 
     该随机变量序列存在分布，中心极限定理提出不论$\bar{X}$ 的分布是什么，该序列的分布为正态分布
     \[
-        \bar{X}\ce{->[L][n\to \infty ]}N\left( E\bar{X},D\bar{X} \right) 
+        \bar{X}\ce{->[$L$][$n\to \infty $]}N\left( E\bar{X},D\bar{X} \right) 
     .\] 
 \end{defi}
 如何判断随机变量的敛散性：
@@ -76,7 +78,7 @@ $\rho=0$ ：不相关/非线性关系
         \lim_{n \to \infty} P\left\{ \left| X_n-X \right| <\varepsilon \right\} =1
     .\]
 
-    代表序列 $\left\{ X_n \right\} $ 收敛于随机变量$X$ ，记为$X_n\ce{->[P][n\to \infty ]}X$
+    代表序列 $\left\{ X_n \right\} $ 收敛于随机变量$X$ ，记为$X_n\ce{->[$P$][$n\to \infty $]}X$
 \end{cor}
 \begin{cor}
     依分布收敛：
@@ -85,7 +87,7 @@ $\rho=0$ ：不相关/非线性关系
         \lim_{n \to \infty} F_n\left( x \right) =F\left( x \right) 
     .\] 
 
-    则$\left\{ X_n \right\} $ 依分布收敛于$X$ ，记为$X_n\ce{->[L][n\to \infty }X$
+    则$\left\{ X_n \right\} $ 依分布收敛于$X$ ，记为$X_n\ce{->[$L$][$n\to \infty $]}X$
 \end{cor}
 \begin{notation}
     测度变换：通过将问题映射到另一个空间简化计算
@@ -107,6 +109,10 @@ $\rho=0$ ：不相关/非线性关系
 .\] 
 \subsection{大数定律}%
 \label{sub:大数定律}
+\begin{notation}
+    切比雪夫大数定律：
+\end{notation}
+
 \begin{defi}
     $\left\{ X_i \right\} i.i.d$ ，$\exists EX_i,DX_i$ ，且$\exists C$ ，使得$DX_i\le C$ （方差有界），则对$\forall \varepsilon>0$ 当：
     \[
@@ -115,7 +121,7 @@ $\rho=0$ ：不相关/非线性关系
 
     时：
     \[
-        \bar{X_n}\ce{->[P][n\to \infty ]}E\bar{X_n}
+        \bar{X_n}\ce{->[$P$][$n\to +\infty $]}E\bar{X_n}
     .\] 
 \end{defi}
 \begin{proof}
@@ -154,7 +160,7 @@ $\rho=0$ ：不相关/非线性关系
     \textit{i.i.d}的中心极限定理：
 
     \[
-        \lim_{n \to \infty} P\left\{ \frac{\bar{X_n}-\mu}{\frac{\sigma}{\sqrt{n} } }\le x  \right\} =\Phi\left( x \right) 
+        \lim_{n \to \infty} P\left\{ \frac{\bar{X_n}-\mu}{\sigma /\sqrt{n}  }\le x  \right\} =\Phi\left( x \right) 
     .\] 
 \end{cor}
 \begin{cor}

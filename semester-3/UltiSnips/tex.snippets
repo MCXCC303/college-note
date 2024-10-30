@@ -481,6 +481,14 @@ snippet --- "hline" iA
 $0
 endsnippet
 
+snippet qd "space in math" iA
+\quad $0
+endsnippet
+
+snippet hs "space in math" w
+\hspace{${1:0.5cm}} $0
+endsnippet
+
 snippet -=> "implies" A
 \implies $0
 endsnippet
@@ -738,10 +746,22 @@ snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|perp|min|max)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
+priority 100
+context "math()"
+snippet int "simple integral" wA
+\int $0
+endsnippet
+
 priority 300
 context "math()"
 snippet dint "integral" wA
 \int_{${1:-\infty}}^{${2:+\infty}} ${3:${VISUAL}} \mathrm{d}$0
+endsnippet
+
+priority 300
+context "math()"
+snippet iint "Multi Integral" wA
+\underset{${1:D}}{\iint} {\left(${2:${VISUAL:f(x,y)}}\right)} \mathrm{d}${3:x} \mathrm{d}${4:y}
 endsnippet
 
 priority 200
@@ -758,7 +778,7 @@ endsnippet
 
 priority 200
 context "math()"
-snippet <-> "leftrightarrow" A
+snippet <-> "leftrightarrow" iA
 \leftrightarrow $0
 endsnippet
 
@@ -944,7 +964,7 @@ snippet FF "F" iA
 endsnippet
 
 context "math()"
-snippet \ee "e" iA
+snippet ee "e" i
 \mathrm{e}
 endsnippet
 
@@ -954,7 +974,7 @@ snippet exp "exp" iA
 endsnippet
 
 context "math()"
-snippet \ii "i" i
+snippet ii "i" i
 \mathrm{i}
 endsnippet
 
@@ -964,29 +984,58 @@ snippet dx "dx" iA
 endsnippet
 
 context "math()"
-snippet cov "Covariance"
+snippet cov "Covariance" iA
 \mathrm{cov}(${1:X},${2:Y}) $0
 endsnippet
 
 snippet tbf "\textbf{}" iA
-\textbf{${1:${VISUAL}}}$0
+\textbf{${1:${VISUAL}}} $0
 endsnippet
 
 snippet tit "\textit{}" iA
-\textit{${1:${VISUAL}}}$0
+\textit{${1:${VISUAL}}} $0
 endsnippet
 
 context "math()"
 snippet dsp "Display style" iA
-\displaystyle{${1:${VISUAL}}}$0
+\displaystyle{${1:${VISUAL}}} $0
 endsnippet
 
 snippet mtr "multirow"
-\multirow{${VISUAL}}$0
+\multirow{${2:2}}{${3:*}}{${1:${VISUAL}}} $0
 endsnippet
 
 snippet mtc "multicolumn"
-\multicolumn{${1:2}}{c}{${VISUAL}}$0
+\multicolumn{${2:2}}{${3:c}}{${1:${VISUAL}}} $0
+endsnippet
+
+snippet |_ "From to" iA
+\left.${1:${VISUAL:F(x)}}\right|_{${2:a}}^{${3:b}} $0
+endsnippet
+
+#───────────────────#
+# Chemistry Symbols #
+#───────────────────#
+context "math()"
+priority 200
+snippet cmf "Chemfig Environment" wA
+\chemfig{${1:${VISUAL}}} $0
+endsnippet
+
+context "math()"
+snippet mhe "mhchem Environment" wA
+\ce{${1:${VISUAL}}} $0
+endsnippet
+
+priority 500
+context "math()"
+snippet --> "Chem arrow" iA
+\xrightarrow[${2:Lower Text}]{${1:Upper Text}} $0
+endsnippet
+
+context "math()"
+snippet /=\ "Reversible arrow" iA
+\xrightleftharpoons[${2:Lower Text}]{${1:Upper Text}} $0
 endsnippet
 
 # vim:ft=snippets
