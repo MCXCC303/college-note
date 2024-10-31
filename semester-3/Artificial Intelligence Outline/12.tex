@@ -1,0 +1,62 @@
+\lecture{12}{10.31}
+\[
+    \text{机器学习}\begin{cases}
+        \text{计算机视觉}
+        \begin{cases}
+            \text{手写识别}\\
+            \text{行人再识别}
+        \end{cases} \\
+        \text{自然语言处理}\\
+        \text{社交媒体计算}\\
+        \text{经济金融}
+    \end{cases}
+.\] 
+
+机器学习的四个部分：
+\[
+    \begin{cases}
+        \text{T: Task}\\
+        \text{A: Algorithm}\\
+        \text{E: Experience}\\
+        \text{P: Performance}
+    \end{cases}
+.\] 
+\begin{eg}
+    人脸识别：
+
+    A：线性回归
+
+    E：以标定身份的人脸图片数据
+
+    P：人脸识别准确率
+\end{eg}
+\subsubsection*{机器学习的基本过程}%
+\label{subsub:机器学习的基本过程}
+从给定的数据中学习规律$\to $ 学习方法，建立模型$\to $ 预测$\to $ 测试匹配度
+\subsubsection*{机器学习分类}%
+\label{subsub:机器学习分类}
+\[
+    \begin{cases}
+        \text{半监督学习}\begin{cases}
+            \text{监督学习}\\
+            \text{无监督学习}
+        \end{cases}\\
+        \text{强化学习}
+    \end{cases}
+.\] 
+\subsubsection{监督学习}%
+\label{subsub:监督学习}
+\begin{defi}
+    根据已知的输入和输出训练模型，预测未来输出
+\end{defi}
+监督学习的数据存在样本标签，有训练集和测试集
+\begin{eg}
+    学习书籍内容，设定标签：艺术/政治/科学等，找出训练文字和标签的映射关系
+\end{eg}
+\begin{notation}
+    分类方法：\textit{K-nearest neighbour}，决策树，支持向量机，朴素贝叶斯
+
+    回归方法：线性、树、支持向量回归，集成方法
+\end{notation}
+\input{KNN}
+

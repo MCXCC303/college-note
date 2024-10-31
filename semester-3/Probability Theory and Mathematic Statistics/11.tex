@@ -61,9 +61,9 @@ $\circ$ 马尔可夫不等式
 \begin{eg}
     $X_1,X_2,\ldots,X_n: i.i.d,X\sim N\left( \mu,\sigma^2 \right) $，证明：
 
-    1. $\overline{X}=\displaystyle{\frac{1}{n} \sum_{i=1}^{n}X_i\sim N\left( \mu,\frac{\sigma^2}{n}  \right) }$
+    1. $\overline{X}={\frac{1}{n} \sum_{i=1}^{n}X_i\sim N\left( \mu,\frac{\sigma^2}{n}  \right) }$
 
-    2. 设$Y_i=\displaystyle{\frac{X_i-\mu}{\sigma}} ,i=1,2,\ldots,n$ 则$E\left( \displaystyle{\sum_{i=1}^{n}} Y_i^2 \right) =n$
+    2. 设$Y_i={\frac{X_i-\mu}{\sigma}} ,i=1,2,\ldots,n$ 则$E\left( {\sum_{i=1}^{n}} Y_i^2 \right) =n$
 \end{eg}
 \begin{proof}
     1. 由线性性：\[
@@ -83,7 +83,7 @@ $\circ$ 马尔可夫不等式
         $Y_i^2$ 符合自由度为1的卡方分布：$Y_i^2\sim X^2\left( 1 \right) $
     \end{notation}
     
-    即：$\displaystyle{\sum_{i=1}^{n} E\left( Y_i^2 \right) =nE\left( Y_i^2 \right) }$
+    即：${\sum_{i=1}^{n} E\left( Y_i^2 \right) =nE\left( Y_i^2 \right) }$
 
     由方差的定义：$D\left( Y_i \right) =E\left( Y_i^2 \right) -E\left( Y_i \right) ^2$ ：
 \begin{align*}
@@ -131,10 +131,10 @@ $\circ$ $\text{cov}\left( aX+bY ,cZ\right) =ac\text{cov}\left( X+Y \right) +bc\t
     .\end{align*}
 \end{proof}
 \begin{notation}
-    $\displaystyle{\text{cov}\left( \sum_{i=1}^{n}a_iX_i,b_iZ\right) =\sum_{i=1}^{n} a_ib_i\text{cov}\left( X_i,Z \right) }$
+    ${\text{cov}\left( \sum_{i=1}^{n}a_iX_i,b_iZ\right) =\sum_{i=1}^{n} a_ib_i\text{cov}\left( X_i,Z \right) }$
 \end{notation}
 \begin{notation}
-    $\displaystyle{D\left( \sum_{i=1}^{n} a_iX_i \right) =\sum_{i=1}^{n} a_i^2DX_i+\sum_{i=1}^{n} \sum_{j=1,j\neq i}^{n} a_ia_j\text{cov}\left( X_i,X_j \right) }$
+    ${D\left( \sum_{i=1}^{n} a_iX_i \right) =\sum_{i=1}^{n} a_i^2DX_i+\sum_{i=1}^{n} \sum_{j=1,j\neq i}^{n} a_ia_j\text{cov}\left( X_i,X_j \right) }$
 \end{notation}
 
 \subsection{相关系数}%
@@ -142,21 +142,21 @@ $\circ$ $\text{cov}\left( aX+bY ,cZ\right) =ac\text{cov}\left( X+Y \right) +bc\t
 \subsubsection{标准化}%
 \label{subsub:标准化}
 \[
-    X^*=\frac{X-EX}{\sqrt{DX} } 
+    X^\star=\frac{X-EX}{\sqrt{DX} } 
 .\] 
 
-标准化后的变量$EX^*=0,DX^*=1$
+标准化后的变量$EX^\star=0,DX^\star=1$
 
 \begin{defi}
-    $X^*,Y^*$ 的协方差$\text{cov}\left( X^*,Y^* \right) $ 为$X,Y$ 的相关系数$\rho\left( X,Y \right) $
+    $X^\star,Y^\star$ 的协方差$\text{cov}\left( X^\star,Y^\star \right) $ 为$X,Y$ 的相关系数$\rho\left( X,Y \right) $
     \begin{align*}
-        \text{cov}\left( X^*,Y^* \right) &=\text{cov}\left( \frac{X-EX }{\sqrt{D\left( X \right) } } ,\frac{Y-EY}{\sqrt{DX} }  \right) \\
+        \text{cov}\left( X^\star,Y^\star \right) &=\text{cov}\left( \frac{X-EX }{\sqrt{D\left( X \right) } } ,\frac{Y-EY}{\sqrt{DX} }  \right) \\
         &= \frac{1}{\sqrt{DX} \sqrt{DY} } \text{cov}\left( X-EX,Y-EY \right)
     .\end{align*}
 
     易得$\text{cov}\left( X-EX,Y-EY \right) =\text{cov}\left( X,Y \right) $
     \begin{align*}
-        \text{cov}\left( X^*,Y^* \right) &= \frac{\text{cov}\left( X,Y \right) }{\sqrt{DX}\sqrt{DY} }  \\
+        \text{cov}\left( X^\star,Y^\star \right) &= \frac{\text{cov}\left( X,Y \right) }{\sqrt{DX}\sqrt{DY} }  \\
         &= \rho\left( X,Y \right) 
     .\end{align*}
 \end{defi}
@@ -165,6 +165,6 @@ $\circ$ $\text{cov}\left( aX+bY ,cZ\right) =ac\text{cov}\left( X+Y \right) +bc\t
 \label{subsub:性质}
 $\circ$ $\left| \rho\left( X,Y \right)  \right| \le 1$ 
 
-$\circ$ $\displaystyle{P\left\{ X^*=\pm Y^* \right\} =1}$ 是$\rho\left( X,Y \right) =\pm1$ 的充要条件
+$\circ$ ${P\left\{ X^\star=\pm Y^\star \right\} =1}$ 是$\rho\left( X,Y \right) =\pm1$ 的充要条件
 
 

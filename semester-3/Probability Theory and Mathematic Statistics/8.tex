@@ -14,7 +14,7 @@
 
     1. $P\left\{ X=a_i|Y=b_j \right\} \ge 0$
 
-    2. $\displaystyle{\sum_{i=1}^{+\infty} P=1}$
+    2. ${\sum_{i=1}^{+\infty} P=1}$
 \end{notation}
 \begin{notation}
     连续型条件分布：
@@ -29,8 +29,8 @@
         P\left\{ X\le x|Y=y \right\} &=\lim_{\varepsilon \to 0^{+}} P\left\{ X\le x|y-\varepsilon < Y \le y \right\} \\
                                      &= \lim_{\varepsilon \to 0^+} \frac{P\left\{ X\le x,Y\in (y-\varepsilon,y] \right\} }{P\left\{ Y\in (y-\varepsilon,y] \right\} } \\
                                      &= \lim_{\varepsilon \to 0^+} \frac{F\left( x,y \right) -F\left( x,y-\varepsilon \right) }{F_{Y}\left( y \right) -F_{Y}\left( y-\varepsilon \right) } \\
-                                     &= \frac{\displaystyle{\frac{\partial F\left( x,y \right) }{\partial y} }}{\displaystyle{\frac{\mathrm{d}F_Y\left( y \right) }{\mathrm{d}y}}} \\
-                                     &= \frac{\displaystyle{\int_{-\infty}^{x} f\left( u,y \right) \mathrm{d}u}}{f_{Y}\left( y \right) } \\
+                                     &= \frac{{\frac{\partial F\left( x,y \right) }{\partial y} }}{{\frac{\mathrm{d}F_Y\left( y \right) }{\mathrm{d}y}}} \\
+                                     &= \frac{{\int_{-\infty}^{x} f\left( u,y \right) \mathrm{d}u}}{f_{Y}\left( y \right) } \\
                                      &= \int_{-\infty}^{x} \frac{f\left( u,y \right) }{f_{Y}\left( y \right) } \mathrm{d}u
     .\end{align*}
 \end{notation}
@@ -51,8 +51,8 @@
     F_Z\left( z \right) &=P\left\{ Z\le z \right\} \\
                         &= P\left\{ aX+bY+c\le z \right\}  \\
                         &= \begin{cases}
-                            \displaystyle{\underset{ax_{i}+by_{j}+c\le z}{\sum{\sum}}} P\left\{ X=x_{i},Y=y_{j} \right\} ,&\left( X,Y \right) \text{离散}\\
-                            \displaystyle{\iint_{ax+by+c\le z}}P\left\{ X=x,Y=y \right\} \mathrm{d}x\mathrm{d}y,&\left( X,Y \right) \text{连续}
+                            {\underset{ax_{i}+by_{j}+c\le z}{\sum{\sum}}} P\left\{ X=x_{i},Y=y_{j} \right\} ,&\left( X,Y \right) \text{离散}\\
+                            {\iint_{ax+by+c\le z}}P\left\{ X=x,Y=y \right\} \mathrm{d}x\mathrm{d}y,&\left( X,Y \right) \text{连续}
                         \end{cases} 
 .\end{align*}
 \begin{notation}

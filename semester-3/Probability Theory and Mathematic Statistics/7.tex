@@ -30,7 +30,7 @@
     二维均匀分布：
     \begin{align*}
         f\left( x,y \right) =\begin{cases}
-            \displaystyle{\frac{1}{S\left( D \right) }},&\left( x,y \right) \in D\\
+            {\frac{1}{S\left( D \right) }},&\left( x,y \right) \in D\\
             0 ,& \left( x,y \right) \not\in D
         \end{cases}
     .\end{align*}
@@ -47,19 +47,18 @@
     \[
         \iint_{x\in [0,y] ,y\in [0,1] } Axy \mathrm{d}x\mathrm{d}y=1
     .\] 
-    \begin{figure}[htbp]
+    \begin{figure}[htpb]
         \centering
-        \caption{f(x,y)}
+        \caption{$f\left( x,y \right) $}%
         \label{f( x,y )}
-        \begin{tikzpicture}
-            \begin{axis}[
-                xmin=-1, xmax=2,
-                ymin=-1, ymax=2,
-                axis lines=middle,
-            ]
-                \addplot[domain=0:1]{x};
-                \addplot[domain=0:1]{1};
-            \end{axis}
+        \begin{tikzpicture}[yscale=1]
+            % Axis
+            \draw [->] (0,0)--(2,0) node [right] {$x$};
+            \draw [->] (0,0)--(0,2) node [above] {$y$};
+            \node [anchor=north east] at(0,0) {$O$};
+    
+            \draw [color=blue,semithick,domain=0:1] plot (\x, {\x});
+            \draw [color=blue,semithick,domain=0:1] plot (\x,{1});
         \end{tikzpicture}
     \end{figure}
 
@@ -70,22 +69,22 @@
         P\left\{ X+Y\ge 1 \right\} &=\iint_{x+y\ge 1} f\left( x,y \right)  \mathrm{d}x\mathrm{d}y \\
         &= \iint_{x+y\ge 1} 8xy \mathrm{d}x\mathrm{d}y \\
         &= \int_{0.5}^{1} \mathrm{d}y \int_{1-y}^{y} 8xy \mathrm{d}x \\
-        &= \frac{5}{6} \\
-    \end{align*}
+        &= \frac{5}{6}
+    .\end{align*}
+
     \begin{figure}[htbp]
         \centering
-        \caption{P(x+y>= 1)}
+        \caption{$P(x+y\ge 1)$}
         \label{P(x+y>= 1)}
-        \begin{tikzpicture}
-            \begin{axis}[
-                xmin=-1, xmax=2,
-                ymin=-1, ymax=2,
-                axis lines=middle,
-            ]
-                \addplot[domain=-1:2]{1-x};
-                \addplot[domain=0:1]{x};
-                \addplot[domain=0:1]{1};
-            \end{axis}
+        \begin{tikzpicture}[yscale=1]
+            % Axis
+            \draw [->] (-1,0)--(2,0) node [right] {$x$};
+            \draw [->] (0,-1)--(0,2) node [above] {$y$};
+            \node [anchor=north east] at(0,0) {$O$};
+    
+            \draw [color=blue,semithick,domain=0:1] plot (\x, {\x});
+            \draw [color=blue,semithick,domain=0:1] plot (\x,{1});
+            \draw [color=blue,semithick,domain=-1:2] plot (\x,{1-\x});
         \end{tikzpicture}
     \end{figure}
 
@@ -151,7 +150,7 @@
         P\left\{ X_1=k_1,X_2=k_2,\cdots,X_r=k_r \right\} =\frac{n!}{k_1!k_2!\cdots k_r!}\prod_{i=1}^{r} p_{i}^{k_i} 
     .\] 
 
-    其中$k_i\ge 0,\displaystyle{\sum_{i=1}^{r} k_i=n}$，当$n=2$ 时为二项分布
+    其中$k_i\ge 0,{\sum_{i=1}^{r} k_i=n}$，当$n=2$ 时为二项分布
 \end{notation}
 
 \subsubsection{多维随机变量的独立性}%

@@ -1,4 +1,4 @@
-\ldate{2}{}
+\learn{2}{}
 \section{排列组合}%
 \label{sub:排列组合}
 1. 加法原理：完成事件有多类方案
@@ -17,45 +17,45 @@
 
 从$n$ 个不同元素中取出$m$个排列，不放回
 \[
-    P_n^m=n\left( n-1 \right) \left( n-2 \right) \ldots\left( n-m+1 \right)=\frac{n!}{\left( n-m \right) !} 
+    \mathrm{P}_{n}^{m}=n\left( n-1 \right) \left( n-2 \right) \ldots\left( n-m+1 \right)=\frac{n!}{\left( n-m \right) !} 
 .\] 
 \begin{eg}
     $P^5_{10}=10\times 9\times 8\times 7\times 6$
 \end{eg}
 2. 全排列
 \[
-    P^n_n=n!
+    \mathrm{P}_{n}^{n}=n!
 .\] 
 \begin{eg}
-    $P_{0}^{0}=0! =1$
+    $\mathrm{P}_{0}^{0}=0! =1$
 \end{eg}
 3. 重复排列
 
 从$n$ 个不同元素中取出$m$个排列，可放回
 \[
-    (P_n^m)=n^m
+    (\mathrm{P}_{n}^{m})=n^m
 .\] 
 \subsection{组合}%
 \label{sub:组合}
 从 $n$ 个不同元素中取出$m$ 个，不排列
 \[
-    C_n^m=\frac{P_n^m}{m!}=\frac{n!}{\left( n-m \right)! m!}
+    \mathrm{C}_n^m=\frac{\mathrm{P}_n^m}{m!}=\frac{n!}{\left( n-m \right)! m!}
 .\] 
 \[
     \begin{cases}
-        C_{n}^{m}=C_{n}^{n-m}\\
-        C_{n}^{n}=C_{n}^{0}=1
+        \mathrm{C}_{n}^{m}=\mathrm{C}_{n}^{n-m}\\
+        \mathrm{C}_{n}^{n}=\mathrm{C}_{n}^{0}=1
     \end{cases}
 .\] 
 \begin{eg}
     在书架上有序放置五本书，求其顺序为$1,2,3,4,5$ 的概率：
 
-    总样本点个数：$P_{5}^{5}$
+    总样本点个数：$\mathrm{P}_{5}^{5}$
 
     目标事件样本点个数：$2$（顺序、逆序）
 
     概率： \[
-        P=\frac{2}{P_{5}^{5}}= \frac{1}{60}
+        P=\frac{2}{\mathrm{P}_{5}^{5}}= \frac{1}{60}
     .\] 
 \end{eg}
 \begin{eg}
@@ -65,7 +65,7 @@
 
     总样本点个数：$4\times 4=16$ 
 
-    第一个邮箱有一封信且第二个邮箱有一封信的样本点个数：$P_{2}^{2}=2$ （第一封信前往$1,2$ ，第二封信前往$2,1$）
+    第一个邮箱有一封信且第二个邮箱有一封信的样本点个数：$\mathrm{P}_{2}^{2}=2$ （第一封信前往$1,2$ ，第二封信前往$2,1$）
 
     概率：\[
         P=\frac{2}{16}=\frac{1}{8}
@@ -76,11 +76,11 @@
     事件：从两封信中抽一封放到邮箱$2$ 中，剩余的$1$ 封信在除$2$以外的三个邮箱中选一个放入
 
     即：\[
-        C_{2}^{1}C_{3}^{1}=6
+        \mathrm{C}_{2}^{1}\mathrm{C}_{3}^{1}=6
     .\] 
 
     概率：\[
-        P=\frac{C_{2}^{1}C_{3}^{1}}{4\times 4}=\frac{3}{8}
+        P=\frac{\mathrm{C}_{2}^{1}\mathrm{C}_{3}^{1}}{4\times 4}=\frac{3}{8}
     .\] 
 
     3. 两封信不在一个邮箱内的概率
@@ -94,25 +94,25 @@
     
     或：$1-$ 信在同一个邮箱的概率
 
-    $\displaystyle{=1-\frac{4}{16}=\frac{3}{4}}$
+    ${=1-\frac{4}{16}=\frac{3}{4}}$
 \end{eg}
 \begin{eg}
     有$5$ 白$4$ 黑共$9$ 个球，任取$3$ 个球，求：
 
     1. 取出$2$ 白$1$ 黑的概率：\[
-        P=\frac{C_{5}^{2}C_{4}^{1}}{C_{9}^{3}}
+        P=\frac{\mathrm{C}_{5}^{2}\mathrm{C}_{4}^{1}}{\mathrm{C}_{9}^{3}}
     .\] 
 
     2. 全是白球的概率：\[
-        P=\frac{C_{5}^{3}}{C_{9}^{3}}
+        P=\frac{\mathrm{C}_{5}^{3}}{\mathrm{C}_{9}^{3}}
     .\] 
 
     3. 颜色相同的概率：\[
-        P=\frac{C_{5}^{3}+C_{4}^{3}}{C_{9}^{3}}
+        P=\frac{\mathrm{C}_{5}^{3}+\mathrm{C}_{4}^{3}}{\mathrm{C}_{9}^{3}}
     .\] 
 
     4. 颜色不同的概率：\[
-        P=\frac{C_{5}^{1}C_{3}^{2}}{C_{9}^{3}}+\frac{C_{5}^{2}C_{3}^{1}}{C_{9}^{3}}
+        P=\frac{\mathrm{C}_{5}^{1}\mathrm{C}_{3}^{2}}{\mathrm{C}_{9}^{3}}+\frac{\mathrm{C}_{5}^{2}\mathrm{C}_{3}^{1}}{\mathrm{C}_{9}^{3}}
     .\] 
 \end{eg}
 \begin{eg}
@@ -134,15 +134,15 @@
     .\] 
     法2：只取$m$ 个球
 
-    从$a+b$ 个中取出$m$ 个并排好：$P_{a+b}^{m}$
+    从$a+b$ 个中取出$m$ 个并排好：$\mathrm{P}_{a+b}^{m}$
 
     要使第$m$ 个是白球，单独挑一个白球放在第$m$ 个上
 
-    然后在剩余的球中取出$m-1$个并排好： $P_{a+b-1}^{m-1}$ 
+    然后在剩余的球中取出$m-1$个并排好： $\mathrm{P}_{a+b-1}^{m-1}$ 
 
     概率：
     \[
-        P=\frac{P_{a+b-1}^{m-1}\times a}{P_{a+b}^{m}}=\frac{a\times \frac{\left( a+b-1 \right) !}{\left( a+b-1-\left( m-1 \right)  \right) !}}{\frac{\left( a+b \right) !}{\left( a+b-m \right) !}}=\frac{a}{a+b}
+        P=\frac{\mathrm{P}_{a+b-1}^{m-1}\times a}{\mathrm{P}_{a+b}^{m}}=\frac{a\times \frac{\left( a+b-1 \right) !}{\left( a+b-1-\left( m-1 \right)  \right) !}}{\frac{\left( a+b \right) !}{\left( a+b-m \right) !}}=\frac{a}{a+b}
     .\] 
     法3. 先取第$m$ 个位置的球
 
@@ -249,23 +249,21 @@ $\mu\left( G \right) $ ：度量
 
     甲乙两人约定从六点到七点见面，先到的人等$15$ 分钟，且这一小时内甲乙可在任意时刻到达，求甲乙见面的概率。
 \end{eg}
-\begin{figure}[ht]
+\begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            xlabel=$x$,ylabel=$y$,
-            xmin=0, xmax=80,
-            ymin=0, ymax=70,
-            axis lines=middle,
-        ]
-            \filldraw [blue,opacity=0.5] (0,60) rectangle (60,0);
-            \filldraw [white] (0,15)--(0,60)--(45,60)--cycle (15,0)--(60,0)--(60,45)--cycle;
-            \draw [] (0,60) rectangle (60,0);
-            \node [] (Omega) at(10,50) {$\Omega$};
-            \node [] (A) at(40,40) {$A$};
-            \addplot[domain=0:45]{x+15};
-            \addplot[domain=0:60]{x-15};
-        \end{axis}
+    \begin{tikzpicture}[yscale=0.05,xscale=0.05]
+        % Axis
+        \draw [->] (0,0)--(70,0) node [right] {$x$};
+        \draw [->] (0,0)--(0,70) node [above] {$y$};
+        \node [anchor=north east] at(0,0) {$O$};
+
+        \filldraw [blue,opacity=0.5] (0,60) rectangle (60,0);
+        \filldraw [white] (0,15)--(0,60)--(45,60)--cycle (15,0)--(60,0)--(60,45)--cycle;
+        \draw [] (0,60) rectangle (60,0);
+        \node [] (Omega) at(10,50) {$\Omega$};
+        \node [] (A) at(40,40) {$A$};
+        \draw [domain=0:45] plot (\x,{\x+15});
+        \draw [domain=15:60] plot (\x,{\x-15});
     \end{tikzpicture}
 \end{figure}
     令$A$ 为事件两人见面，$x$ 为甲到达的时间，$y$ 为乙到达的时间，$A$ 发生的情况如下:
@@ -335,24 +333,16 @@ $\mu\left( G \right) $ ：度量
     在坐标轴中绘制出全集图像：
     \begin{figure}[htbp]
         \centering
-        \begin{tikzpicture}
-            \begin{axis}[
-                trig format plots=rad,
-                xlabel=$x$,
-                xmin=0,
-                xmax=3,
-                xtick distance=1,
-                xticklabels={0,,$\frac{d}{4}$,$\frac{d}{2}$,$\frac{3d}{4}$},
-                ylabel= $\varphi$,
-                ymin=0,
-                ymax=pi*3/2,
-                ytick distance=pi/2,
-                yticklabels={0,,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$},
-                axis lines=middle,
-            ]
-                \draw [] (0,pi)--(2,pi)--(2,0);
-                \node [] (Omega) at (1,pi/2) {$\Omega$}; 
-            \end{axis}
+        \begin{tikzpicture}[yscale=1.3]
+            % Axis
+            \draw [->] (0,0)--(5,0) node [right] {$x$};
+            \draw [->] (0,0)--(0,3*pi/2) node [above] {$\varphi$};
+            \node [anchor=north east] at(0,0) {$O$};
+
+            \draw [] (0,pi)--(4,pi)--(4,0);
+            \node [] (Omega) at (2,pi/2) {$\Omega$}; 
+            \node [below] (fracd2) at(4,0) {$\frac{d}{2}$};
+            \node [left] (pi) at(0,pi) {$\pi$};
         \end{tikzpicture}
     \end{figure}
 
@@ -385,7 +375,7 @@ $\mu\left( G \right) $ ：度量
             \node [] (A) at (-3.25,1) {$A$};
             \node [] (B) at (-3.25,2.3) {$B$};
             \node [] (C) at (-1.5,1.6) {$C$};
-            \node [] (displaystylefracl2) at (-4.5,0) {$\displaystyle{\frac{l}{2}}$};
+            \node [] (displaystylefracl2) at (-4.5,0) {${\frac{l}{2}}$};
             
         \end{tikzpicture}
     \end{center}    
@@ -409,32 +399,25 @@ $\mu\left( G \right) $ ：度量
     .\] 
     
     在坐标轴上绘制该区域：
-    \begin{center}
-        \begin{tikzpicture}
-            \begin{axis}[
-                trig format plots=rad,
-                ylabel=$x$,
-                ymin=0,
-                ymax=3,
-                ytick distance=1,
-                yticklabels={0,,$\frac{d}{4}$,$\frac{d}{2}$,$\frac{3d}{4}$},
-                xlabel= $\varphi$,
-                xmin=0,
-                xmax=pi*3/2,
-                xtick distance=pi/2,
-                xticklabels={0,,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$},
-                axis lines=middle,
-            ]
-                \draw [fill=blue,opacity=0.5,domain=0:3.14]plot(\x,{1.3*sin(\x r)});
-                \draw [] (0,2)--(pi,2)--(pi,0);
-                \node [] (Omega) at (1,pi/2) {$\Omega$}; 
-                \addplot [domain=0:pi] {1.3*sin(x)};
-                \draw [dashed] (pi/2,1.3)--(0,1.3);
-                \node [] (fracl2) at (0.2,1.5) {$\frac{l}{2}$};
-                \node [] (A) at (pi/2,0.4) {$A$};
-            \end{axis}
+    \begin{figure}[htbp]
+        \centering
+        \begin{tikzpicture}[yscale=1.5]
+            % Axis
+            \draw [->] (0,0)--(0,3) node [above] {$x$};
+            \draw [->] (0,0)--(3*pi/2,0) node [right] {$\varphi$};
+            \node [anchor=north east] at(0,0) {$O$};
+
+            \draw [fill=blue,opacity=0.5,domain=0:pi] plot (\x,{1.3*sin(\x r)});
+            \draw [domain=0:pi] plot (\x,{1.3*sin(\x r)});
+            \draw [] (pi,0)--(pi,2)--(0,2);
+            \node [] (Omega) at (3*pi/4,1.7) {$\Omega$}; 
+            \node [left] (fracd2) at(0,2) {$\frac{d}{2}$};
+            \node [below] (pi) at(pi,0) {$\pi$};
+            \draw [dashed] (pi/2,1.3)--(0,1.3);
+            \node [] (A) at (pi/2,0.8) {$A$};
+            \node [left] (fracl2) at (0,1.5) {$\frac{l}{2}$};
         \end{tikzpicture}
-    \end{center}
+    \end{figure}
 
     即有：\[
         P=\frac{S_A}{S_\Omega}
@@ -741,7 +724,7 @@ $\mu\left( G \right) $ ：度量
 
     $=P\left( A \right) +P\left( B \right) +P\left( C \right) -P\left( AB \right) -P\left( AC \right) -P\left( BC \right) +P\left( ABC \right)$
 
-    $\displaystyle{=\frac{3}{4}-0-\frac{1}{16}*2+P\left( ABC \right) }$
+    ${=\frac{3}{4}-0-\frac{1}{16}*2+P\left( ABC \right) }$
      
     由于$P\left( ABC \right) \in P\left( AB \right) $ 
 
@@ -775,7 +758,7 @@ $\mu\left( G \right) $ ：度量
     目标：从四个白球中取两个/三个，从三个黑球中取一个/不取
 
     即：\[
-        P\left( A \right) =\frac{C_{4}^{2}C_{3}^{1}+C_{4}^{3}}{C_{7}^{3}}
+        P\left( A \right) =\frac{\mathrm{C}_{4}^{2}\mathrm{C}_{3}^{1}+\mathrm{C}_{4}^{3}}{\mathrm{C}_{7}^{3}}
     .\] 
 \end{eg}
 \begin{eg}
@@ -806,7 +789,7 @@ $\mu\left( G \right) $ ：度量
 
     概率：
      \[
-        P\left( \bar{A} \right) =\frac{C_{6}^{1}C_{10}^{1}C_{4}^{1}}{C_{20}^{3}}
+        P\left( \bar{A} \right) =\frac{\mathrm{C}_{6}^{1}\mathrm{C}_{10}^{1}\mathrm{C}_{4}^{1}}{\mathrm{C}_{20}^{3}}
     .\] 
      \[
         P\left( A \right) =1-P\left( \bar{A} \right) =\frac{15}{19}

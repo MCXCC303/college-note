@@ -31,6 +31,10 @@ snippet ## "#" iA
 \#
 endsnippet
 
+snippet `o "No." iA
+$\circ$ 
+endsnippet
+
 #─────────────────#
 # Basic Structure #
 #─────────────────#
@@ -283,19 +287,36 @@ snippet fig "Figure environment" b
 \end{figure}
 endsnippet
 
+# snippet plot "Plot" w
+# \begin{figure}[${1:htbp}]
+# 	\centering
+# 	\caption{${2:plot}}
+# 	\label{${3:$2}}
+# 	\begin{tikzpicture}
+# 		\begin{axis}[
+# 			xmin=${4:-10}, xmax=${5:10},
+# 			ymin=${6:-10}, ymax=${7:10},
+# 			axis lines=middle,
+# 		]
+# 			\addplot[domain=$10:$11, samples=${8:100}]{$9};
+# 		\end{axis}
+# 	\end{tikzpicture}
+# \end{figure}
+# endsnippet
+
 snippet plot "Plot" w
 \begin{figure}[${1:htbp}]
 	\centering
 	\caption{${2:plot}}
 	\label{${3:$2}}
-	\begin{tikzpicture}
-		\begin{axis}[
-			xmin=${4:-10}, xmax=${5:10},
-			ymin=${6:-10}, ymax=${7:10},
-			axis lines=middle,
-		]
-			\addplot[domain=$10:$11, samples=${8:100}]{$9};
-		\end{axis}
+	\begin{tikzpicture}[yscale=${1:1}]
+		% Axis
+		\draw [->] ($8,0)--($9,0) node [right] {$${2:x}$};
+		\draw [->] (0,${12:-2})--(0,${13:3}) node [above] {$${3:y}$};
+		\node [anchor=north east] at(0,0) {$O$};
+
+		\draw [${4:color=${5:blue}},${6:semithick},${7:domain=${8:-2}:${9:3}}] plot (${10:\\$2}, {${11:f($10)}});
+		$14
 	\end{tikzpicture}
 \end{figure}
 endsnippet
@@ -372,23 +393,27 @@ endsnippet
 # Tikz Settings #
 #───────────────#
 snippet tnn "Tikz node" w
-\node [${5:settings}] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1:context}$};
+\node [${5:above}] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at(${4:0,0}) }{$${1:context}$};
 $0
 endsnippet
 
 snippet gcr "Geometry Circle" w
-\draw [${3:settings}] (${2:point}) circle [radius=$1] node at($2) {$${4:context}$};
+\draw [${3:color=blue}] (${2:0,0}) circle [radius=$1] node [${5:above}] at($2) {$${4:context}$};
 $0
 endsnippet
 
 snippet gln "Geometry Line" w
-\draw [${3:settings}] (${1:start})--(${2:end});
+\draw [${3:dashed}] (${1:start})--(${2:end}) ${4:node [${5:above}] at(${6:0,0}) {$${7:context}$}};
 $0
 endsnippet
 
 snippet grt "Geometry Rectangle" w
-\draw [${5:settings}] (${1:start}) rectangle (${2:end}) node at(${4:point}) {$${3:context}$};
+\draw [${3:semithick}] (${1:-1,-1}) rectangle (${2:1,1}) node [${6:above}] at(${5:$1}) {$${4:context}$};
 $0
+endsnippet
+
+snippet plt "Plot in Geometry draw" w
+\draw [color=${1:blue},${2:semithick},${3:domain=${4:-1}:${5:1}}] plot (${6:\\x},{${7:f($6)}});
 endsnippet
 
 #────────────────#

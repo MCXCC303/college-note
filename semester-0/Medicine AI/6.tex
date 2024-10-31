@@ -1,0 +1,42 @@
+\learn{6}{10.31}
+\begin{notation}
+    二分类问题：
+    
+    将一个样本分至两个类别的问题，如：鉴定邮件是否为垃圾邮件，预测某人是否会患上某种疾病等问题
+\end{notation}
+对于二分类问题，真实结果有两种，使用模型预测也会产生两种结果，组合得到混淆矩阵：
+\begin{align*}
+    \begin{bmatrix}
+        \text{真阳性(TP)} & \text{假阴性(FN)}\\
+        \text{假阳性(FP)} & \text{真阴性(TN)}\\
+    \end{bmatrix}
+.\end{align*}
+
+其中：阳性/阴性为模型预测结果，真/假为真实结果
+
+准确率(Acc)根据混淆矩阵的计算：
+\[
+    \text{Acc}=\frac{\text{TP}+\text{TN}}{\text{TP}+\text{TN}+\text{FP}+\text{FN}} 
+.\] 
+\begin{notation}
+    马修斯相关系数(Matthews Correlation Coefficient, MCC)：
+
+    MCC比Acc更加全面（正负数据不平衡）
+\end{notation}
+\[
+    \text{MCC}=\frac{\text{TP}\times \text{TN}-\text{FP}\times \text{FN}}{\sqrt{\left( \text{TP}+\text{FP} \right) \left( \text{TP}+\text{FN} \right) \left( \text{TN}+\text{FP} \right) \left( \text{TN}+\text{FN} \right) } } \in [-1,1]
+.\] 
+\begin{notation}
+    MCC结果解读：
+
+    $\circ$ $\text{FP}=\text{FN}=0$ ：无误判结果，代入得：$\text{MCC}=1$ ，表示模型完美
+
+    $\circ$ $\text{TP}=\text{TN}=0$ ：全部误判，代入得：$\text{MCC}=-1$ ，表示最差
+
+    $\circ$ $\text{TP}\times \text{TN}=\text{FP}\times \text{FN}$ ，即$\text{MCC}=0$ ，表示模型完全随机判断
+
+    当样本中阴性样本远少于阳性样本时，Acc计算不能涉及到假阴性与假阳性而MCC可以
+
+    若第一个模型对阳性和阴性样本判断接近，而第二个模型对阳性样本表现极佳但对阴性样本表现极差，则$\text{MCC}_1>\text{MCC}_2$，而Acc可能接近
+\end{notation}
+

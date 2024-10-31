@@ -273,9 +273,9 @@ MOOC：爱课程，Coursera，Edx，网易公开课等
 如图:
 \begin{center}
     \begin{tikzpicture}
-        \draw [] (-4,4) rectangle (4,-4);
-        \draw [] (-2,2) circle [radius=2] node at(-2,2) {};
-        \draw [dashed] (-2,2) rectangle (2,-2);
+        \draw [] (-2,2) rectangle (2,-2);
+        \draw [] (-1,1) circle [radius=1] node at(-1,1) {};
+        \draw [dashed] (-1,1) rectangle (1,-1);
     \end{tikzpicture}
 \end{center}
 课后习题：A组8题，B组3题
@@ -286,11 +286,13 @@ MOOC：爱课程，Coursera，Edx，网易公开课等
 
     设G为样本空间，绘制样本空间：
     \begin{center}
-        \begin{tikzpicture}
-            \draw [->] (0,0)--(0,7);
-            \draw [->] (0,0)--(7,0);
+        \begin{tikzpicture}[xscale=0.5,yscale=0.5]
+            % Axis
+            \node [anchor=north east] (O) at(0,0) {$O$};
+            \draw [->] (0,0)--(0,7)  node [above] {$y$};
+            \draw [->] (0,0)--(7,0) node [right] {$x$};
+
             \draw [] (0,0) rectangle (6,6) node at(5,5) {$G$};
-            
         \end{tikzpicture}
     \end{center}
 
@@ -299,14 +301,16 @@ MOOC：爱课程，Coursera，Edx，网易公开课等
     .\] 
     将事件绘制：
     \begin{center}
-        \begin{tikzpicture}
-            \draw [->] (0,0)--(0,7);
-            \draw [->] (0,0)--(7,0);
+        \begin{tikzpicture}[xscale=0.5,yscale=0.5]
+            % Axis
+            \draw [->] (0,0)--(0,7)  node [above] {$y$};
+            \draw [->] (0,0)--(7,0) node [right] {$x$};
+            \node [anchor=north east] (O) at(0,0) {$O$};
+
             \draw [] (0,0) rectangle (6,6) node at(5,1) {$G$};
             \draw [dashed] (2,0)--(6,4);
             \draw [dashed] (0,2)--(4,6);
-            \node[] (g) at (3,3) {$g$};
-            
+            \node [] (g) at (3,3) {$g$};
         \end{tikzpicture}
     \end{center}
     \[

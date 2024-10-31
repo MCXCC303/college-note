@@ -61,7 +61,7 @@
 
     1. 非负性：$p_{i}\ge 0$
 
-    2. 正则性：$\displaystyle{\sum_{i=1}^{+\infty} p_{i}=1}$，即每一个点的概率都应该知道
+    2. 正则性：${\sum_{i=1}^{+\infty} p_{i}=1}$，即每一个点的概率都应该知道
 \end{notation}
 \begin{eg}
     保险问题
@@ -82,7 +82,7 @@
     \begin{notation}
         泊松定理：二项分布有时可以转化为泊松分布：
 
-        如果$\displaystyle{\lim_{n \to +\infty} np_n=\lambda>0}$（极小但不为0），则：
+        如果${\lim_{n \to +\infty} np_n=\lambda>0}$（极小但不为0），则：
         \[
             \lim_{n \to +\infty} \mathrm{C}_{n}^{k}p_n^{k}\left( 1-p_n \right) ^{n-k}=\mathrm{e}^{-\lambda}\frac{\lambda^{k}}{k!},k=0,1,2\ldots
         .\] 
@@ -157,20 +157,23 @@
 
 1. 均匀分布（$X\sim U\left[ a,b \right] $）：\[
     f\left( x \right) =\begin{cases}
-        \displaystyle{\frac{1}{b-a}},x\in \left[ a,b \right] \\
+        {\frac{1}{b-a}},x\in \left[ a,b \right] \\
         0,x \not\in \left[ a,b \right] 
     \end{cases}
 .\] 
 对应的分布函数图像：
 \begin{center}
     \begin{tikzpicture}
-        \draw [->] (0,0)--(0,3) node at (-0.5,3) {$F\left( x \right) $};
-        \draw [->] (-2,0)--(3,0) node at (3,-0.5) {$x$};
+        % Axis
+        \draw [->] (-1,0)--(-1,3) node [above] {$F\left( x \right) $};
+        \draw [->] (-2,0)--(3,0) node [right] {$x$};
+        \node [anchor=north east] at(-1,0) {$O$};
+        
         \draw [] (0,0)--(1,1);
         \draw [] (1,1)--(3,1);
         \draw [dashed] (1,1)--(1,0);
-        \node at (1,-0.5) {$b$};
-        \node at (0,-0.5) {$a$};
+        \node [below] at(1,0) {$b$};
+        \node [below] at(0,0) {$a$};
     \end{tikzpicture}
 \end{center}
 

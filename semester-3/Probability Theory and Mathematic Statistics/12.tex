@@ -27,7 +27,7 @@ $\rho=0$ ：不相关/非线性关系
 \end{eg}
 解：1. 
 \begin{align*}
-    EX=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xf\left( x,y \right)  \mathrm{d}x \mathrm{d}y\\
+    EX&=\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xf\left( x,y \right)  \mathrm{d}x \mathrm{d}y\\
     &= \int_{-1}^{1}  \mathrm{d}x \int_{-\sqrt{1-x^2} }^{\sqrt{1-x^2} } \frac{x}{\pi}  \mathrm{d}y \\
     &= 0
 .\end{align*}
@@ -41,7 +41,7 @@ $\rho=0$ ：不相关/非线性关系
                         &=\frac{2}{\pi} \sqrt{1-x^2} 
 .\end{align*}
 
-同理$f_Y\left( y \right) =\displaystyle{\frac{2}{\pi} \sqrt{1-y^2}}$ ，易得$f\left( x,y \right) \neq f_X\left( x \right) f_Y\left( y \right) $ ，即不独立
+同理$f_Y\left( y \right) ={\frac{2}{\pi} \sqrt{1-y^2}}$ ，易得$f\left( x,y \right) \neq f_X\left( x \right) f_Y\left( y \right) $ ，即不独立
 
 {\centering{\section*{数理统计部分}%
 \label{sec:数理统计部分}
@@ -125,7 +125,7 @@ $\rho=0$ ：不相关/非线性关系
     .\] 
 \end{defi}
 \begin{proof}
-    $\bar{X_n}=\displaystyle{\frac{1}{n} \sum_{i=1}^{n} X_i}$，有：
+    $\bar{X_n}={\frac{1}{n} \sum_{i=1}^{n} X_i}$，有：
     \begin{align*}
         E\bar{X_n}&=\frac{1}{n} \sum_{i=1}^{n} EX_i\\
         D\bar{X_i}&=\frac{1}{n^2} \sum_{i=1}^{n} DX_i\\
@@ -149,7 +149,7 @@ $\rho=0$ ：不相关/非线性关系
         \lim_{n \to \infty} P\left\{ \left| \frac{\mu_s}{n} -p  \right| <\varepsilon \right\} =1
     .\] 
     
-    即：$\displaystyle{\frac{\mu_s}{n}} $ 依概率收敛于$p$
+    即：${\frac{\mu_s}{n}} $ 依概率收敛于$p$
 \end{notation}
 \subsection{中心极限定理}%
 \label{sub:中心极限定理}
@@ -164,7 +164,7 @@ $\rho=0$ ：不相关/非线性关系
     .\] 
 \end{cor}
 \begin{cor}
-    拉普拉斯中心极限定理：$X_i$ 独立同分布，$X_i\sim B\left( 1,p \right) $，令$Y=\sum_{i=1}^{n} X_i$，对$\forall x$ 有：
+    棣莫弗-拉普拉斯定理：$X_i$ 独立同分布，$X_i\sim B\left( 1,p \right) $，令$Y=\sum_{i=1}^{n} X_i$，对$\forall x$ 有：
     \[
         \lim_{n \to \infty} P\left\{ \frac{Y-np}{\sqrt{np\left( 1-p \right) } } \le x \right\} =\Phi\left( x \right) 
     .\]

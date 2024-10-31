@@ -1,0 +1,95 @@
+\lecture{13}{10.31}
+\begin{notation}
+    偏度$r_1$：三阶标准化随机变量的矩，用于描述对称性
+
+    峰度$r_2$：四阶标准化随机变量的矩，一般使正态分布的峰度$r_2=0$，描述分布的陡峭程度
+\end{notation}
+\begin{table}[htpb]
+    \centering
+    \caption{常见分布的数字特征}
+    \label{tab:常见分布的数字特征}
+    \begin{tabular}{ccccc}
+    \toprule
+    分布 & $EX$ & $DX$ & $r_1$ & $r_2$\\
+    \midrule
+    $B\left( 1,p \right) $ & $p$ & $p\left( 1-p \right) $ & $\frac{1-2p}{\sqrt{p\left( 1-p \right) } } $ & $\frac{1}{p\left( 1-p \right) -6} $\\
+    $B\left( n,p \right) $ & $np$ & $np\left( 1-p \right) $ & $\frac{1-2p}{\sqrt{np\left( 1-p \right) } } $ & $\frac{1-6p\left( 1-p \right) }{np\left( 1-p \right) } $ \\
+    $P\left( \lambda \right) $ & $\lambda$ & $\lambda$ & $\frac{1}{\sqrt{\lambda} } $ & $\frac{1}{\lambda} $ \\
+    $G\left( p \right) $ & $\frac{1}{p} $ & $\frac{1-p}{p^2} $ & $\frac{2-p}{\sqrt{1-p} } $ & $6+\frac{p^2}{1-p} $ \\
+    $U[a,b]$ & $\frac{a+b}{2} $ & $\frac{\left( b-a \right) ^2}{12} $ & $0$ & $\frac{9}{5}-3 $ \\
+    $\Gamma\left( 1,\lambda \right) $ & $\frac{1}{\lambda} $ & $\frac{1}{\lambda^2} $ & 2 & 6\\
+    $N\left( \mu,\sigma^2 \right) $ & $\mu$ & $\sigma^2$ & 0 & 0\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\section{数理统计基本概念}%
+\label{sec:数理统计基本概念}
+随机变量引入：使样本空间映射到实数轴上
+
+分布函数：任意随机变量的概率
+
+大数定律和中心极限定理：由概率论过渡到数理统计
+\[
+    \begin{cases}
+        \text{描述统计学：过去的实验数据/相关分析图}\\
+        \text{推断统计学：根据现有的实验数据决策}\begin{cases}
+            \text{参数估计：第七章}\\
+            \text{假设检验：第八章}\\
+            \text{回归分析：第九章}
+        \end{cases}
+    \end{cases}
+.\] 
+\begin{defi}
+    总体：全部研究对象，可以用分布描述（随机变量组）
+\end{defi}
+\begin{defi}
+    个体：组成总体的成员，符合总体分布（每一个个体都是一个随机变量）
+\end{defi}
+\begin{eg}
+    从总体中抽取$n$ 个样本，对数据记录：$x_1,x_2,\ldots ,x_n$ 称为$n$ 维随机变量$X_1,X_2,\ldots ,X_n$ 对应的观测值，$X_1,X_2,\ldots ,X_n$ 为来自总体$X$ 的一个样本
+\end{eg}
+\begin{notation}
+    简单样本：$X_1,X_2,\ldots ,X_n$ \textit{i.i.d}，且与总体分布相符 
+
+    特点：
+
+    $\circ$ 独立性
+
+    $\circ$ 代表性
+\end{notation}
+\begin{defi}
+    样本空间：$\bm{\varOmega}=\left\{ \left( x_1,x_2,\ldots ,x_n \right) |x_i\in \mathbb{R},\mathrm{i}=1,2,\ldots ,n \right\} $
+\end{defi}
+\begin{notation}
+    样本联合分布和总体分布的关系(\textit{i.i.d})：
+    \begin{align*}
+        F\left( x_1,x_2,\ldots ,x_n \right) &=P\left\{ X_1\le x_1,X_2\le x_2,\ldots ,X_n\le x_n \right\} \\
+        &=\prod_{i=1}^{n} P\left\{ X_i\le x_i \right\} \\
+        &= \prod_{i=1}^{n} F\left( x_i \right) 
+    .\end{align*}
+\end{notation}
+扩展：$X$ 为连续型，密度函数的关系：
+\begin{align*}
+    f\left( x_1,x_2,\ldots ,x_n \right) &= \prod_{i=1}^{n} f_{X_i}\left( x_i \right)   \\
+    &= \prod_{i=1}^{n} f\left( x_i \right) \quad x_i\in \mathbb{R},i=1,2,\ldots ,n
+.\end{align*}
+\subsection{经验分布函数}%
+\label{sub:经验分布函数}
+经验分布函数：$F_n\left( x \right) $
+
+将样本观测值$x_1,x_2,\ldots ,x_n$ 按大小分类为$x_{\left( 1 \right)} ,x_{\left( 2 \right)} ,\ldots ,x_{\left( n \right) }$
+\begin{align*}
+    F_n\left( x \right) &=f_n\left\{ X\le x \right\} \\
+    &= \begin{cases}
+        0,&x<x_{\left( 1 \right) }\\
+        \frac{k}{n} ,&x\in [x_{\left( k \right) },x_{\left( k+1 \right) })\\
+        1,&x\ge x_{\left( n \right) }
+    \end{cases}\\
+    &\approx F\left( X \right) 
+.\end{align*}
+\begin{cor}
+    格利文科定理：\[
+        P\left\{ \limsup_{n \to \infty,x\in \mathbb{R}} \left| F\left( x \right) -F_n\left( x \right) =0 \right|  \right\} =1
+    .\] 
+\end{cor}
+根据格利文科定理：可以使用经验分布函数来估计理论分布函数
