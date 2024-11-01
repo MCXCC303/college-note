@@ -212,26 +212,38 @@ endsnippet
 
 snippet prf "proof" bA
 \begin{proof}
-	$0
+	$1
 \end{proof}
+$0
 endsnippet
 
 snippet enum "Enumerate" bA
 \begin{enumerate}
-	\item $0
+	\item $1
+	$2
 \end{enumerate}
+$0
 endsnippet
 
 snippet item "Itemize" bA
 \begin{itemize}
-	\item $0
+	\item $1
+	$2
 \end{itemize}
+$0
+endsnippet
+
+snippet iit "Item Symbol" bA
+\item $2
+$0
 endsnippet
 
 snippet desc "Description" b
 \begin{description}
-	\item[$1] $0
+	\item[$1] $2
+	$3
 \end{description}
+$0
 endsnippet
 
 context "math()"
@@ -259,10 +271,11 @@ snippet table "Table environment" b
 	\toprule
 	$6${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
 	\midrule
-	$0${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
+	$7${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
 	\bottomrule
 	\end{tabular}
 \end{table}
+$0
 endsnippet
 
 snippet table* "Table environment (hline)" b
@@ -276,6 +289,7 @@ snippet table* "Table environment (hline)" b
 	\hline
 	\end{tabular}
 \end{table}
+$0
 endsnippet
 
 snippet fig "Figure environment" b
@@ -285,6 +299,7 @@ snippet fig "Figure environment" b
 	\caption{${4:$3}}
 	\label{fig:${5:${3/\W+/-/g}}}
 \end{figure}
+$0
 endsnippet
 
 # snippet plot "Plot" w
@@ -319,6 +334,7 @@ snippet plot "Plot" w
 		$14
 	\end{tikzpicture}
 \end{figure}
+$0
 endsnippet
 
 snippet gdw "Geometry Draws" w
@@ -326,14 +342,15 @@ snippet gdw "Geometry Draws" w
 	\begin{tikzpicture}
 		$1
 	\end{tikzpicture}
-\end{center}$0
+\end{center}
+$0
 endsnippet
 
 context "math()"
 snippet case "cases" wA
 \begin{cases}
 	$1
-\end{cases}
+\end{cases}$0
 endsnippet
 
 snippet exmp "Example" wA
@@ -386,7 +403,7 @@ endsnippet
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+.\end{align*}$0
 endsnippet
 
 #───────────────#
@@ -414,6 +431,7 @@ endsnippet
 
 snippet plt "Plot in Geometry draw" w
 \draw [color=${1:blue},${2:semithick},${3:domain=${4:-1}:${5:1}}] plot (${6:\\x},{${7:f($6)}});
+$0
 endsnippet
 
 #────────────────#
@@ -1060,7 +1078,7 @@ endsnippet
 
 context "math()"
 snippet /=\ "Reversible arrow" iA
-\xrightleftharpoons[${2:Lower Text}]{${1:Upper Text}} $0
+\ce{<=>[${1:Upper Text}][${2:Lower Text}]} $0
 endsnippet
 
 # vim:ft=snippets

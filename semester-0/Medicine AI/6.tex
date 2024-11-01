@@ -39,4 +39,21 @@
 
     若第一个模型对阳性和阴性样本判断接近，而第二个模型对阳性样本表现极佳但对阴性样本表现极差，则$\text{MCC}_1>\text{MCC}_2$，而Acc可能接近
 \end{notation}
+\begin{notation}
+    查准率$\bm{P}$ ，查全率$\bm{R}$，$\bm{F}_1$ 度量：
+    
+    $\circ$ 查准率(precision, $\bm{P}$) ：又叫精确率
+\end{notation}
+\begin{align*}
+    \bm{P} &=\frac{N_\text{TP}}{N_{\text{P}_p}} \\
+    &= \frac{\text{TP}}{\text{TP}+\text{FP}}
+.\end{align*}
+\begin{notation}
+    $\circ$ 查全率(recall, $\bm{R}$)：又叫召回率
+\end{notation}
+\begin{align*}
+    \bm{R}&= \frac{N_\text{TP}}{N_{\text{P}_a}}  \\
+    &= \frac{\text{TP}}{\text{TP}+\text{FN}}
+.\end{align*}
 
+一般情况下：查全率和查准率相矛盾

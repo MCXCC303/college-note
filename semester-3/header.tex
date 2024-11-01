@@ -22,7 +22,7 @@
 %───────────────────%
 % Document Settings %
 %───────────────────%
-\documentclass[12pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
 %─────────────────%
 % Package Imports %
@@ -35,6 +35,7 @@
 \usepackage[]{booktabs}
 \usepackage[]{chemfig}
 \usepackage[UTF8]{ctex}
+\usepackage[]{enumitem}
 \usepackage[]{fancyhdr}
 \usepackage[]{geometry}
 \usepackage[]{hyperref}
@@ -129,11 +130,21 @@
 %─────────────%
 
 %────────────%
+% Enum items %
+%────────────%
+\setlist[enumerate,1]{noitemsep,leftmargin=4em,label=\emph{\alph*}.}
+\setlist[enumerate,2]{noitemsep,leftmargin=1em,label=$\circ$}
+\setlist[itemize,1]{noitemsep,leftmargin=3em,label=$\bullet$}
+\setlist[itemize,2]{noitemsep,leftmargin=1em,label=$\circ$}
+\setlist[description]{noitemsep}
+
+%────────────%
 % Beginnings %
 %────────────%
 \title{\textbf{Part III-B: \className}}
 \author{Lecture by \lecturer\\Note by \noter}
 \pagestyle{CustomStyle}
+
 %────────────────────────────────%
 % Page Settings (set when print) %
 %────────────────────────────────%
