@@ -31,7 +31,6 @@ $\rho=0$ ：不相关/非线性关系
     &= \int_{-1}^{1}  \mathrm{d}x \int_{-\sqrt{1-x^2} }^{\sqrt{1-x^2} } \frac{x}{\pi}  \mathrm{d}y \\
     &= 0
 .\end{align*}
-
 同理$EY=0$，即不相关
 
 2. 
@@ -40,7 +39,6 @@ $\rho=0$ ：不相关/非线性关系
     &=\int_{-\sqrt{1-x^2} }^{\sqrt{1-x^2} } \frac{1}{\pi}  \mathrm{d}y\\
                         &=\frac{2}{\pi} \sqrt{1-x^2} 
 .\end{align*}
-
 同理$f_Y\left( y \right) ={\frac{2}{\pi} \sqrt{1-y^2}}$ ，易得$f\left( x,y \right) \neq f_X\left( x \right) f_Y\left( y \right) $ ，即不独立
 {\centering{\section*{数理统计部分}%
 \label{sec:数理统计部分}
@@ -53,14 +51,12 @@ $\rho=0$ ：不相关/非线性关系
     .\] 
     % From here I tested some arrows from package chemfig
     % I will soon add them to snippet
-
     即：以某事件发生的频率估计该事件的概率
 \end{defi}
 \begin{defi}
     中心极限定理： \[
         \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}
     .\] 
-
     其中$X_1,X_2,\ldots X_{i}$ 独立同分布
 
     该随机变量序列存在分布，中心极限定理提出不论$\bar{X}$ 的分布是什么，该序列的分布为正态分布
@@ -76,7 +72,6 @@ $\rho=0$ ：不相关/非线性关系
     \[
         \lim_{n \to \infty} P\left\{ \left| X_n-X \right| <\varepsilon \right\} =1
     .\]
-
     代表序列 $\left\{ X_n \right\} $ 收敛于随机变量$X$ ，记为$X_n\ce{->[$P$][$n\to \infty $]}X$
 \end{cor}
 \begin{cor}
@@ -85,7 +80,6 @@ $\rho=0$ ：不相关/非线性关系
     序列的分布函数为$F_n\left( x \right) $ ，随机变量的分布函数$F\left( x \right) $ ，对$\forall x$ ，有： \[
         \lim_{n \to \infty} F_n\left( x \right) =F\left( x \right) 
     .\] 
-
     则$\left\{ X_n \right\} $ 依分布收敛于$X$ ，记为$X_n\ce{->[$L$][$n\to \infty $]}X$
 \end{cor}
 \begin{notation}
@@ -117,7 +111,6 @@ $\rho=0$ ：不相关/非线性关系
     \[
         \lim_{n \to \infty} P\left\{ \left| \bar{X_n}-E\bar{X_n} \right| <\varepsilon \right\} =1
     .\] 
-
     时：
     \[
         \bar{X_n}\ce{->[$P$][$n\to +\infty $]}E\bar{X_n}
@@ -130,13 +123,11 @@ $\rho=0$ ：不相关/非线性关系
         D\bar{X_i}&=\frac{1}{n^2} \sum_{i=1}^{n} DX_i\\
                   &\le \frac{C}{n}
     .\end{align*}
-
     由切比雪夫不等式：
     \begin{align*}
         P\left\{ \left| \bar{X_n}-E\bar{X_n} \right| <\varepsilon \right\} &\ge 1-\frac{D\bar{X_n}}{\varepsilon^2}\\
                                                                         &\ge 1-\frac{C}{n\varepsilon^2}
     .\end{align*}
-
     当$n\to \infty $ 时原式收敛于1
 \end{proof}
 \begin{notation}
@@ -147,7 +138,6 @@ $\rho=0$ ：不相关/非线性关系
     \[
         \lim_{n \to \infty} P\left\{ \left| \frac{\mu_s}{n} -p  \right| <\varepsilon \right\} =1
     .\] 
-    
     即：${\frac{\mu_s}{n}} $ 依概率收敛于$p$
 \end{notation}
 \subsection{中心极限定理}%

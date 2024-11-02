@@ -38,6 +38,7 @@
 \usepackage[]{enumitem}
 \usepackage[]{fancyhdr}
 \usepackage[]{geometry}
+\usepackage[]{graphicx}
 \usepackage[]{hyperref}
 \usepackage[]{import}
 \usepackage[]{mathrsfs}
@@ -46,9 +47,14 @@
 \usepackage[]{pdfpages}
 \usepackage[]{pgfplots}
 \usepackage[]{tabu}
+\usepackage[]{tcolorbox}
+\usepackage[]{textcomp}
+\usepackage[]{thmtools}
 \usepackage[]{tikz}
 \usepackage[]{tkz-euclide}
+\usepackage[]{url}
 \usepackage[]{wrapfig}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[]{xifthen}
 \usepackage[]{yhmath}
 
@@ -100,13 +106,69 @@
 % Theorem Environments %
 %──────────────────────%
 \theoremstyle{definition}
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+%     mdframed={
+%         linewidth=2pt,
+%         rightline=false, topline=false, bottomline=false,
+%         linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+%     }
+% ]{thmDefi} % Defi = Green box
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+%     numbered=no,
+%     mdframed={
+%         linewidth=2pt,
+%         rightline=false, topline=false, bottomline=false,
+%         linecolor=RawSienna, backgroundcolor=RawSienna!1,
+%     },
+%     qed=\qedsymbol
+% ]{thmProof} % Proof = Red box
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+%     mdframed={
+%         linewidth=2pt,
+%         rightline=false, topline=false, bottomline=false,
+%         linecolor=NavyBlue
+%     }
+% ]{thmNotation} % Notation = Blue line
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+%     mdframed={
+%         linewidth=2pt,
+%         rightline=false, topline=false, bottomline=false,
+%         linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+%     }
+% ]{thmbluebox}
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+%     mdframed={
+%         linewidth=2pt,
+%         rightline=false, topline=false, bottomline=false,
+%         linecolor=RawSienna, backgroundcolor=RawSienna!5,
+%     }
+% ]{thmredbox}
+% \declaretheoremstyle[
+%     headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+%     numbered=no,
+%     mdframed={
+%         linewidth=2pt,
+%         rightline=false, topline=false, bottomline=false,
+%         linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+%     },
+% ]{thmexplanationbox}
+% \declaretheorem[style=thmNotation,numbered=no,name=Notation]{notation}
+% \declaretheorem[style=thmDefi,numbered=no,name=Definition]{defi}
+% \declaretheorem[style=thmProof,numbered=no,name=Proof]{replacementproof}
 \newtheorem*{aim}{Aim}
+\newtheorem*{assumption}{Assumption}
 \newtheorem*{axiom}{Axiom}
 \newtheorem*{claim}{Claim}
-\newtheorem*{cor}{Corollary}
 \newtheorem*{conjecture}{Conjecture}
+\newtheorem*{cor}{Corollary}
 \newtheorem*{defi}{Definition}
 \newtheorem*{eg}{Example}
+\newtheorem*{exercise}{Exercise}
 \newtheorem*{ex}{Exercise}
 \newtheorem*{fact}{Fact}
 \newtheorem*{law}{Law}
@@ -114,16 +176,15 @@
 \newtheorem*{notation}{Notation}
 \newtheorem*{prop}{Proposition}
 \newtheorem*{question}{Question}
+\newtheorem*{remark}{Remark}
 \newtheorem*{rrule}{Rule}
 \newtheorem*{thm}{Theorem}
-\newtheorem*{assumption}{Assumption}
-\newtheorem*{remark}{Remark}
 \newtheorem*{warning}{Warning}
-\newtheorem*{exercise}{Exercise}
 \newtheorem{nthm}{Theorem}[section]
+\newtheorem{ncor}[nthm]{Corollary}
 \newtheorem{nlemma}[nthm]{Lemma}
 \newtheorem{nprop}[nthm]{Proposition}
-\newtheorem{ncor}[nthm]{Corollary}
+% \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
 
 %─────────────%
 % Math Symbol %

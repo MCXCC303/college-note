@@ -324,14 +324,14 @@ snippet plot "Plot" w
 	\centering
 	\caption{${2:plot}}
 	\label{${3:$2}}
-	\begin{tikzpicture}[yscale=${1:1}]
+	\begin{tikzpicture}[yscale=${4:1}]
 		% Axis
-		\draw [->] ($8,0)--($9,0) node [right] {$${2:x}$};
-		\draw [->] (0,${12:-2})--(0,${13:3}) node [above] {$${3:y}$};
+		\draw [->] ($11,0)--($12,0) node [right] {$${5:x}$};
+		\draw [->] (0,${15:-2})--(0,${16:3}) node [above] {$${6:y}$};
 		\node [anchor=north east] at(0,0) {$O$};
-
-		\draw [${4:color=${5:blue}},${6:semithick},${7:domain=${8:-2}:${9:3}}] plot (${10:\\$2}, {${11:f($10)}});
-		$14
+		% Plot
+		\draw [${7:color=${8:blue}},${9:semithick},${10:domain=${11:-2}:${12:3}},samples=100] plot (${13:\\$5}, {${14:f($13)}});
+		$17
 	\end{tikzpicture}
 \end{figure}
 $0

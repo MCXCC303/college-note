@@ -1,8 +1,6 @@
 \lecture{10}{10.22}
 \begin{eg}
-    $(X,Y)\sim N_2\left( 0,1 \right) ,\phi\left( x,y \right) =\frac{1}{2\pi}\mathrm{e}^{-x^2+y^2 /2}$
-
-    $Z=\sqrt{X^2+Y^2} $ ，求$E\left( Z \right) $
+    $(X,Y)\sim N_2\left( 0,1 \right) ,\phi\left( x,y \right) =\frac{1}{2\pi}\mathrm{e}^{-x^2+y^2 /2}$，令$Z=\sqrt{X^2+Y^2} $ ，求$E\left( Z \right) $
 \end{eg}
 解：由定理：
 \begin{rrule}
@@ -19,13 +17,10 @@
 .\end{align*}
 \subsection{数学期望的性质}%
 \label{sub:数学期望的性质}
-\begin{align*}
-    \begin{cases}
-        \text{线性可加性}\\
-        \text{独立性}
-    \end{cases}
-.\end{align*}
-
+\begin{itemize}
+    \item 线性可加性
+    \item 独立性
+\end{itemize}
 $\circ$ $E\left( aX+bY+c \right) =E\left( aX+bY \right) +c$：常数的数学期望为其本身
 \begin{notation}
     什么是数学期望：一个随机变量的中心
@@ -74,7 +69,6 @@ $\circ$ 对于独立的随机变量：$E\left( XY \right) =E\left( X \right) \cd
      线性可加性：\[
          E\left( \sum_{i=1}^{n} a_iX_i+c \right) =\sum_{i=1}^{n} a_iE\left( X_i \right) +c
      .\] 
-     
      将$n$ 重积分转换为一重积分
  \end{notation}
 \subsection{方差的性质}%
@@ -117,7 +111,6 @@ $\circ$ $D\left( X\pm Y \right) =D\left( X \right) +D\left( Y \right) \pm E\left
         &= E\left( XY \right) -EY\cdot E\left( X \right) -EX\cdot E\left( Y \right)+EX\cdot EY  \\
         &= E\left( XY \right) -E\left( X \right) \cdot E\left( Y \right)
     .\end{align*}
-    
     当$X,Y$ 独立时：$\text{cov}\left( X,Y \right) =0$，即$D\left( X-Y \right) =D\left( X \right) +D\left( Y \right) $ ，加法同理
 \end{proof}
 \begin{notation}
@@ -128,7 +121,6 @@ $\circ$ $D\left( X\pm Y \right) =D\left( X \right) +D\left( Y \right) \pm E\left
         &= E\left( X-EX \right) ^2 \\
         &= D\left( X \right)
     .\end{align*}
-
     即协方差退化为方差
 \end{notation}
 \begin{notation}
@@ -138,12 +130,10 @@ $\circ$ 切比雪夫不等式（概率论最基础的不等式）
 \[
     P\left\{ \left| X-EX \right| \ge \varepsilon \right\} \le \frac{D\left( X \right) }{\varepsilon^2}
 .\]
-
 或：
 \[
     P\left\{ \left| X-EX \right| >\varepsilon \right\} \ge 1-\frac{D\left( X \right) }{\varepsilon}
 .\] 
-
 证明时使用： \[
     P\left\{ \left( X-EX \right) ^2\le \varepsilon^2 \right\} \le \frac{D\left( X \right) }{\varepsilon^2}
 .\] 
