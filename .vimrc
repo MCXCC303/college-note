@@ -86,7 +86,7 @@ let &t_SR="\e[3 q"
 let &t_EI="\e[1 q"
 
 " Searching
-highlight Search ctermfg=NONE ctermbg=darkgray
+highlight Search ctermfg=NONE ctermbg=235
 
 "—————————”
 " Key Map “
@@ -102,3 +102,12 @@ nnoremap __ :vertical resize -3<CR>
 
 " vim-csv
 nnoremap rr :%ArrangeColumn<CR>
+
+" F5 Compile
+nnoremap <F5> :call ComplieRun()<CR>
+func! ComplieRun()
+    exec "w"
+    if &filetype == "python"
+        exec "!python %"
+    endif
+endfunc

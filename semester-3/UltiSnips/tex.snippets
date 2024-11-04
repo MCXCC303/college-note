@@ -683,6 +683,11 @@ snippet sq "\sqrt{}" iA
 endsnippet
 
 context "math()"
+snippet (\d)sq "\sqrt[n]{}" iA
+\\sqrt[`!p snip.rv = match.group(1)`]{$1} $0
+endsnippet
+
+context "math()"
 snippet sr "^2" iA
 ^2
 endsnippet
@@ -1035,7 +1040,7 @@ snippet tbf "\textbf{}" iA
 \textbf{${1:${VISUAL}}} $0
 endsnippet
 
-snippet tit "\textit{}" iA
+snippet tit "\textit{}" wA
 \textit{${1:${VISUAL}}} $0
 endsnippet
 
