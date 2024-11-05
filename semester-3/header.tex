@@ -27,14 +27,13 @@
 %─────────────────%
 % Package Imports %
 %─────────────────%
+\usepackage[]{amsmath}
 \usepackage[]{amssymb}
 \usepackage[]{amsthm}
-\usepackage[]{amsmath}
 \usepackage[]{array}
 \usepackage[]{bm}
 \usepackage[]{booktabs}
 \usepackage[]{chemfig}
-\usepackage[UTF8]{ctex}
 \usepackage[]{enumitem}
 \usepackage[]{fancyhdr}
 \usepackage[]{geometry}
@@ -42,7 +41,6 @@
 \usepackage[]{hyperref}
 \usepackage[]{import}
 \usepackage[]{mathrsfs}
-\usepackage[version=4]{mhchem}
 \usepackage[]{multirow}
 \usepackage[]{pdfpages}
 \usepackage[]{pgfplots}
@@ -54,9 +52,11 @@
 \usepackage[]{tkz-euclide}
 \usepackage[]{url}
 \usepackage[]{wrapfig}
-\usepackage[dvipsnames]{xcolor}
 \usepackage[]{xifthen}
 \usepackage[]{yhmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[UTF8]{ctex}
+\usepackage[version=4]{mhchem}
 
 %────────────────%
 % Fancy Settings %
@@ -193,11 +193,11 @@
 %────────────%
 % Enum items %
 %────────────%
+\setlist[description]{noitemsep}
 \setlist[enumerate,1]{noitemsep,leftmargin=4em,label=\emph{\alph*}.}
 \setlist[enumerate,2]{noitemsep,leftmargin=1em,label=$\circ$}
 \setlist[itemize,1]{noitemsep,leftmargin=3em,label=$\bullet$}
 \setlist[itemize,2]{noitemsep,leftmargin=1em,label=$\circ$}
-\setlist[description]{noitemsep}
 
 %────────────%
 % Beginnings %

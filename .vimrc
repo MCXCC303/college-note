@@ -22,13 +22,13 @@ Plug 'sirver/ultisnips'
 	let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 " vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-    let g:airline_theme='simple'
-    let g:airline_powerline_fonts=1
-    let g:airline#extensions#tabline#enabled=0
-    let g:airline#extensions#tabline#show_buffers=0
-    let g:airline#extensions#tabline#formatter='default'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+"     let g:airline_theme='simple'
+"     let g:airline_powerline_fonts=1
+"     let g:airline#extensions#tabline#enabled=0
+"     let g:airline#extensions#tabline#show_buffers=0
+"     let g:airline#extensions#tabline#formatter='default'
 
 " vim-csv
 Plug 'chrisbra/csv.vim'
@@ -55,20 +55,22 @@ call plug#end()
 colorscheme wal
 
 " Texting
+set autoindent
 set bg=dark
+set cursorline
+set expandtab
+set hlsearch
+set incsearch
+set laststatus=0
+set number
 set rtp+=${HOME}/Notebook/current-semester
 set ruler
-set number
+set shiftwidth=4
+set smartcase
+set softtabstop=4
+set tabpagemax=15
 set tabstop=4
 set viminfo='1000,<500
-set hlsearch
-set expandtab
-set autoindent
-set cursorline
-set ignorecase
-set shiftwidth=4
-set tabpagemax=15
-set softtabstop=4
 syntax on
 
 " conceal (vimtex)

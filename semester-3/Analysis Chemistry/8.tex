@@ -1,0 +1,195 @@
+\lecture{8}{11.05}
+\begin{notation}
+    药物本身含有金属离子：通过对金属离子定量分析控制药品质量
+\end{notation}
+\begin{eg}
+    复方葡萄糖酸钙口服溶液：
+    \begin{description}
+        \item[葡萄糖酸钙] 50g
+        \item[乳酸钙] 50g
+        \item[辅料] 适量
+        \item [水] 适量
+    \end{description}
+\end{eg}
+\begin{eg}
+    重质碳酸镁：治疗胃溃疡，含杂质氧化钙
+
+    药典规定该药品氧化钙杂质不得超过0.60\%
+\end{eg}
+\section{配位滴定法}%
+\label{sec:配位滴定法}
+\begin{itemize}
+    \item 概述
+    \item 基本原理
+    \item 条件选择
+    \item 应用
+\end{itemize}
+\subsection{概述}%
+\label{sub:概述：配位滴定法}
+\begin{defi}
+    配位滴定法又称络合滴定法，以\textbf{配位反应} 为基础的滴定方法
+\end{defi} 
+配合物的生成：中心元素（阳离子、原子，提供空轨道）+配体（阴离子、分子，提供电子对）
+\begin{notation}
+    \textit{Review:直接滴定的四大要求}
+    \begin{itemize}
+        \item 明确的剂量比
+        \item 反应完全
+        \item 反应迅速
+        \item 明确的指示终点的方式
+    \end{itemize}
+    $\Rightarrow $配位反应对反应的要求：
+    \begin{itemize}
+        \item 配位比恒定
+        \item 生成的配合物足够稳定（可逆反应）
+        \item 反应迅速
+        \item 合适的方法判断终点
+    \end{itemize}
+\end{notation}
+配位剂种类：
+
+$\circ$ 无机配位剂：逐级配位，速率较慢
+\begin{eg}
+    $\ce{SCN-,CN-,CO}$ 等
+\end{eg}
+
+$\circ$ 有机配位剂：氨羧类配位剂
+\begin{eg}
+    EDTA：乙二胺四乙酸，可用于数十种金属离子的滴定
+
+    EDTA可以提供大量孤对电子：-NHR,-COOR
+
+    EDTA为六齿配体，且由于其中的氨基可以结合质子，因此认为EDTA为六元酸
+\end{eg}
+\begin{notation}
+    EDTA难溶于水（0.2g/L）但EDTA可溶于碱，一般使用EDTA的二钠盐（111g/L）
+
+    EDTA在水溶液中存在七种型体：$\chemfig{H_iY^{i-4}} ,i\in [0,6]$，其中$\chemfig{Y^{-4}} $ 为最佳型体
+\end{notation}
+EDTA的特点：
+\begin{itemize}
+    \item 广泛
+    \item 稳定
+    \item 配位比简单（1：1）
+    \item 配位反应速度快
+    \item 反应完全，水溶性好
+    \item 与无色金属离子生成无色配合物，与有色金属离子生成颜色更深的配合物
+\end{itemize}
+其他氨羧类配位剂：
+\begin{enumerate}
+    \item EGTA
+    \item NTA（氨三乙酸）
+    \item EDTMP（乙二胺四甲叉膦酸）
+    \item EDTP（乙二胺四丙酸）
+\end{enumerate}
+\subsection{配位滴定法的基本原理}%
+\label{sub:配位滴定法的基本原理}
+\subsubsection*{配位平衡}%
+\label{subsub:配位平衡}
+\begin{notation}
+    配合物的稳定常数：
+
+    反应\[
+        \chemfig{M+Y}\ce{<=>[][]} \chemfig{MY}  
+    .\] 
+    对应的稳定常数：
+    \[
+        K_\text{MY} =\frac{[\chemfig{MY} ]}{[\text{M}][\text{Y}] } 
+    .\] 
+\end{notation}
+\begin{notation}
+    逐级配位常数：
+    \begin{align*}
+        \chemfig{M+L=ML} &\Rightarrow K_1=\frac{[\text{ML}]}{[ \text{M}][\text{L}]} \\
+        \chemfig{ML+L=ML_2} &\Rightarrow K_2=\frac{[\chemfig{ML_2} ]}{[\text{ML}][\text{L}]} 
+    .\end{align*}
+    累计稳定常数：
+     \[
+         \beta_n=\prod_{i=1}^{n} K_{i} =\frac{[\chemfig{ML_{n}} ]}{[\text{M}][\text{L}]^{n}} 
+    .\] 
+\end{notation}
+\begin{notation}
+    配位反应的副反应系数：
+    \begin{enumerate}
+        \item 辅助配位效应：与其他单齿配体配位
+
+        \item 羟基配位效应：与羟基配位
+
+        \item 酸效应：有氢离子存在时配体的型体发生变化
+
+        \item 共存离子效应：配体与其他中心离子配位
+
+        \item 混合配位效应：中心离子同时和目标配体和其他配体配位（利于主反应进行）
+    \end{enumerate}
+    副反应系数$\alpha$ ：
+    \[
+        \alpha=\frac{[\text{X'}]}{[\text{X}]} 
+    .\] 
+    [\text{X}]代表总平衡浓度，[\text{X'}]代表参与反应的平衡浓度
+\end{notation}
+\begin{notation}
+    配位剂的副反应系数：
+    \[
+        \begin{cases}
+            c_\text{Y} \begin{cases}
+                [\text{Y'}]\begin{cases}
+                    [\text{Y}]\\
+                    [\ce{HY+H_2Y+\ldots +H_{n}Y+NY} ]
+                \end{cases}\\
+                [\text{MY}]
+            \end{cases}
+        \end{cases}
+    .\] 
+    副反应系数
+    \[
+        \alpha_\text{Y} =\frac{[\text{Y'}]}{[\text{Y}]} 
+    .\] 
+    副反应产物HY,NY等和游离态Y为[\text{Y'}]，只有Y为[\text{Y}]，所有包含Y的部分为$c_\text{Y} $
+
+    可再分为$\alpha_\text{Y(H)} $ 和$\alpha_\text{Y(N)} $
+\end{notation}
+酸效应系数$\alpha_\text{Y(H)} $ ：
+\begin{align*}
+    \alpha_\text{Y(H)} &= \frac{[\text{Y'}]}{[\text{Y}]}  \\
+                       &= 1+\frac{[\text{H}^+]}{K_{a_6}} +\ldots .+\frac{[\text{H}^+]^6}{K_{a_6}K_{a_5}K_{a_4}\ldots K_{a_1} }
+.\end{align*}
+当pH>12时可以忽略酸效应
+
+共存离子效应系数：
+\begin{align*}
+    \alpha_\text{Y(N)} &= \frac{[\text{Y'}]}{[\text{Y}]} =\frac{[\text{Y}]+[\text{NY}]}{[\text{Y}]}  \\
+                       &= 1+K_\text{NY} [\text{N}]
+.\end{align*}
+
+\subsubsection*{金属离子的副反应系数}%
+\label{subsub:金属离子的副反应系数}
+\begin{defi}
+    $\alpha_\text{M} $ ：未与EDTA配位的金属离子以各种形式存在的浓度与总浓度比
+\end{defi}
+\begin{align*}
+    \alpha_\text{M(L)} &= 1+\frac{[\text{ML}]}{[\text{M}]} +\ldots +\frac{[\text{ML}]_{n}}{[\text{M}]}  \\
+                       &= 1+\sum_{i=1}^{n} \beta_{i}[\text{L}]^{i}
+.\end{align*}
+同理可得$\alpha_\text{M(OH)} =1+\sum_{i=1}^{n} \beta_{i}[\text{OH}]^{i}$
+
+$\lg\alpha$ 均可以查表得知
+
+若溶液中配位剂有$P$种：
+\begin{align*}
+    \alpha_\text{M} =\frac{[\text{M}^+]}{[\text{M}]} =\sum_{i=1}^{n} \alpha_{\text{M(L)}_i} +\left( 1-P \right) 
+.\end{align*}
+\subsubsection*{配合物的副反应系数}%
+\label{subsub:配合物的副反应系数}
+配合物的副反应可以推动主反应的进行
+\[
+    \alpha_\text{MY} =\frac{[\text{MY'}]}{[\text{MY}]} \approx 1
+.\] 
+即一般情况下生成的副产物稳定性非常低，该反应几乎不发生
+\begin{notation}
+    在酸性/碱性较强的条件下不能忽略：
+    \begin{align*}
+        \alpha_\text{MY(H)} &=1+K_\text{MHY} \times [\text{H}^+]\\
+        \alpha_\text{MY(OH)} &=1+K_\text{M(OH)Y} \times [\text{OH}^-]
+    .\end{align*}
+\end{notation}
+重点题目：例5-3

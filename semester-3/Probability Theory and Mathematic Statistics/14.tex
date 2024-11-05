@@ -1,0 +1,145 @@
+\lecture{14}{11.05}
+\subsection{密度函数}%
+\label{sub:密度函数}
+\begin{notation}
+    密度函数和分布函数的关系：
+    \begin{align*}
+        F_X\left( x \right) &=\int_{-\infty}^{+\infty} f_X\left( x \right)  \mathrm{d}x\\
+        f_X\left( x \right) &=\frac{\mathrm{d}F_X\left( x \right) }{\mathrm{d}x} 
+    .\end{align*}
+\end{notation}
+对于直方图：将中点光滑连接=密度函数
+
+或：核密度
+\subsubsection*{直方图}%
+\label{subsub:直方图}
+\begin{notation}
+    直方图的面积代表频率：\[
+        \text{高度}h_{i}=\frac{\text{面积}f_{i}}{\text{区间长度}\Delta x_{i}} 
+    .\] 
+\end{notation}
+直方图的高度代表密度，直方图的横坐标的取值范围为观测值的取值范围，直方图分块的区间来源一般为经验公式：$m\approx 1.87\left( n-1 \right) ^{0.4}$，其中$m$ 为区间分组数量
+
+计算直方图频率：\[
+    \text{频率}f_{i}=\frac{\text{落入区间的个数}y_{i}}{\text{总个数}y} 
+.\] 
+\subsection{统计量}%
+\label{sub:统计量}
+统计量(statistic)，统计学(statistics)
+\begin{defi}
+    统计量：关于样本的函数，不含任何未知参数
+
+    完整定义：
+\end{defi}
+\begin{eg}
+    $X_1,X_2$ 来自正态总体$N\left( \mu,\sigma^2 \right) $的样本（这两个任意抽出一个都属于一个样本），其中$\mu,\sigma$ 均未知，以下表达式：
+    \begin{itemize}
+        \item $\frac{1}{4} \left( X_1+X_2 \right) -\mu$
+        \item $\frac{X_1}{\sigma} $
+    \end{itemize}
+    均不是统计量（使用了未知的数），以下表达式都是统计量
+    \begin{itemize}
+        \item $3X_1$
+        \item $X_1-8$
+        \item $X_1^2+X_2^2$
+    \end{itemize}
+\end{eg}
+提出统计量的目的：通过样本估计或检测未知量，因此统计量不能含未知量
+
+常见统计量：
+\begin{itemize}
+    \item 样本均值（算术平均数）：$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$
+    \item 样本方差：$S^2=\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2=\frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\bar{X}^2 \right) $
+    \item 样本标准差：$S=\sqrt{\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2} $
+    \item 样本阶原点矩
+    \item 样本阶中心距
+\end{itemize}
+\begin{notation}
+    样本均值：若$X_1,X_2,\ldots X_{n}$ \textit{i.i.d}：根据辛钦大数定律：$\bar{X}\xrightarrow[n \to +\infty]{P} E\bar{X}=EX$
+\end{notation}
+\begin{notation}
+    样本阶中心矩：
+     \[
+        B_2=\frac{1}{n} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^{k}\xrightarrow[n\to \infty]{P} DX
+    .\] 
+    或：$S^2=B_2\times \frac{n}{n-1} \Rightarrow E\left( S^2 \right) =DX$
+\end{notation}
+\begin{proof}
+    \begin{align*}
+        S^2&=\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2=\frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\bar{X}^2 \right) \\
+        &= \frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}^2-2X_{i}\bar{X}+\bar{X}^2 \right) \\
+        &= \frac{1}{n-1} \left( \sum_{i=1}^{n} Xi^2 \right) -\sum_{i=1}^{n} \bar{X}^2 \\
+        ES^2&= E\left[ \frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\bar{X}^2 \right)  \right]  \\
+        &= \frac{1}{n-1} \left( \sum_{i=1}^{n} EX_{i}^2-nE\bar{X}^2 \right)  \\
+        &= \frac{1}{n-1} \left[ \sum_{i=1}^{n} \left( DX_{i}+\left( EX_{i} \right) ^2 \right) -n\left( D\bar{X}+\left( E\bar{X} \right) ^2   \right)  \right]  \\
+        &= \frac{1}{n} \left[ \sum_{i=1}^{n} \left( DX+\left( EX \right) ^2 \right) -n\left( \frac{DX}{n} +\left( EX \right) ^2 \right)  \right]  \\
+        &= \frac{1}{n-1} \left[ nDX+n\left( EX \right) ^2-DX-n\left( EX \right) ^2 \right] =\frac{1}{n-1} \left( n-1 \right) DX =DX
+    .\end{align*}
+    即：$EB_2=E\left( \frac{n-1}{n} S^2 \right) =\frac{n-1}{n}DX $
+\end{proof}
+用样本均值估计总体均值：
+\[
+    \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2\le \sum_{i=1}^{n} \left( X_{i}-x \right) ^2
+.\] 
+\subsubsection*{顺序统计量}%
+\label{subsub:顺序统计量}
+令$X_{\left( 1 \right) }=\min\left\{ X_1,X_2,\ldots ,X_{n} \right\} $ 为最小顺序统计量，最大同理
+
+要求第几小的顺序统计量：$R$ 成为样本极差，$\widetilde{X}$ 称为样本中位数
+\subsection{样本均值的分布}%
+\label{sub:样本均值的分布}
+\begin{thm}
+    $X_1,X_2,\ldots ,X_{n}$ 来自$N\left( \mu,\sigma^2 \right) $ ，则\[
+        \frac{\bar{X}-\mu}{\sigma} \sqrt{n} \sim N\left( 0,1 \right) 
+    .\] 
+\end{thm}
+定义$\bar{X}$ 为$X_1,X_2,\ldots ,X_{n}$的线性函数，$\bar{X}\sim N\left( \mu,\frac{\sigma^2}{n}  \right) $，计算期望和方差，将$\bar{X}$ 标准化
+\begin{thm}
+    标准化后的线性函数$\frac{\bar{X}-\mu}{\sigma} \sqrt{n} $ ：
+    \[
+        \frac{\bar{X}-\mu}{\sigma} \sqrt{n} \xrightarrow[n\to \infty]{L} N\left( 0,1 \right) 
+    .\] 
+\end{thm}
+\begin{eg}
+    总体：$X\sim N\left( 20,9 \right) $ ，求样本容量$n$ 多大时使样本均值与总体均值的绝对值之差$\le 0.3$ 的概率$> 95\%$
+\end{eg}
+\subsubsection{三大抽样分布}%
+\label{subsub:三大抽样分布}
+\begin{itemize}
+    \item 卡方分布：$\chi^2\left( n \right) $
+    
+\end{itemize}
+\begin{notation}
+    卡方分布实际上为$\alpha=\frac{1}{2} ,\lambda=\frac{n}{2} $ 的Gamma分布
+    
+    当$n=2$ 时为参数为$\frac{1}{2} $ 的指数分布
+    
+    一般称$f\left( x \right) =\frac{\lambda^{\alpha}}{\Gamma\left( \alpha \right) } x^{\alpha-1}\mathrm{e}^{-\lambda x} $ 为伽马分布族
+\end{notation}
+\begin{defi}
+    设$X_1,X_2,\ldots ,X_{n}\sim N\left( 0,1 \right) $ \textit{i.i.d} ，令$\chi^2=\sum_{i=1}^{n} X_{i}^2$ ，称$\chi^2$ 为自由度为$n$ 的卡方分布
+\end{defi}
+\begin{notation}
+    卡方分布具有可加性：\[
+        Y_1\sim \chi^2\left( m \right) ,Y_2\sim \chi^2\left( n \right) : Y_1+Y_2\sim \chi^2\left( m+n \right) 
+    .\] 
+\end{notation}
+从$n=3$ 开始，卡方分布出现最大值，且$n$ 越大卡方分布的方差越大
+
+卡方分布的性质：
+\begin{itemize}
+    \item $E\left( \chi^2 \right) =n,D\left( \chi^2 \right) =2n$
+    \item 可加性
+    \item 分位点：
+\end{itemize}
+对性质1：
+\begin{proof}
+    \begin{align*}
+        E\left( \sum_{i=1}^{n} X_{i}^2 \right) &= \sum_{i=1}^{n} E(X_{i}^2) = nEX^2\\
+                                               &=n\left( DX+\left( EX \right) ^2 \right)  \\
+        D\left( \sum_{i=1}^{n} X_{i}^2 \right) &= nDX^2 =n\left( E\left( X^2 \right) ^2-\left( EX^2 \right) ^2 \right) \\
+        &= n\left( EX^4-1 \right)  
+    .\end{align*}
+\end{proof}
+
+

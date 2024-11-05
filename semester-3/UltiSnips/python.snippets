@@ -2,37 +2,59 @@
 # Brackets #
 #──────────#
 snippet {} "{}" iA
-{$1}$0
+{$1}
 endsnippet
 
 snippet （） "（）" iA
-（$1）$0
+（$1）
 endsnippet
 
 snippet '' "''" iA
-'$1'$0
+'$1'
 endsnippet
 
 snippet "" "" iA
-"$1"$0
+"$1"
 endsnippet
 
 snippet “” "“”" iA
-“$1”$0
+“$1”
 endsnippet
 
 snippet ‘’ "‘’" iA
-‘$1’$0
+‘$1’
 endsnippet
 
 snippet () "()" iA
-($1)$0
+($1)
 endsnippet
 
 snippet 《》 "《》" iA
-《$1》$0
+《$1》
 endsnippet
 
 snippet [] "[]" iA
-[$1]$0
+[$1]
+endsnippet
+
+snippet main "main Entry" wA
+if __name__ == "__main__":
+	$0
+endsnippet
+
+snippet pkt "package name" wA
+if __name__ == "__${1:init}__":
+	$0
+endsnippet
+
+#─────────────#
+# Math Syntax #
+#─────────────#
+snippet abs	"abs(float)->float" w
+abs($0)
+endsnippet
+
+snippet frw "file read/write" w
+with open('${1:path/to/file}', ${2:r}, encoding="${3:utf-8}"${4}) as ${5:f}:
+	$0
 endsnippet

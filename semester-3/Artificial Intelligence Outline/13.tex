@@ -9,6 +9,17 @@ KNN算法的局限
 当$K$ 值太大：无法区分不同样本
 \subsubsection{归一化}%
 \label{subsub:归一化}
+\begin{notation}
+    为何归一化：某些数据在未归一化之前占比过大，如年龄-存款
+\end{notation}
+归一化处理：
+\[
+    M_j=\underset{i=1,2,\ldots ,m}{\max}x_{ij}-\underset{i=1,2,\ldots ,m}{\min}x_{ij}
+.\]
+归一化后的距离计算：
+\[
+    L_2\left( A,B \right) =\sqrt{\sum_{j=1}^{n} \left( \frac{a_j-b_j}{M_j} \right) ^2 } 
+.\] 
 \begin{table}[htpb]
     \centering
     \caption{分类}
