@@ -11,6 +11,19 @@ def comment():
 def env(name):
 	[x,y] = vim.eval("vimtex#env#is_inside('" + name + "')") 
 	return x != '0' and y != '0'
+
+def add_row(snip):
+	row_len = int(''.join(s for s in snip.buffer[snip.line] if s.isdigit()))
+	old_spacing = snip.buffer[snip.line][:snip.buffer[snip.line].rfind('\t') + 1]
+	snip.buffer[snip.line] = ''
+	final_str = old_spacing
+	final_str += " & ".join(['$' + str(j + 1) for j in range(row_len)])
+	final_str += " \\\\\\"
+	snip.expand_anon(final_str)
+
+def init_row(snip):
+	t = int(''.join(s for s in snip.buffer[snip.line] if s.isdigit()))
+	snip.expand_anon(" & ".join(['$' + str(j + 5) for j in range(len(t[4]) - 1)]))
 endglobal
 
 #──────────#
@@ -360,17 +373,35 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
+# snippet table* "Table environment (hline)" b
+# \begin{table}[${1:htpb}]
+# 	\centering
+# 	\caption{${2:caption}}
+# 	\label{tab:${3:${2/\W+/-/g}}}
+# 	\begin{tabular}{${5:c}}
+# 	\hline
+# 	$6${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
+# 	\hline
+# 	\end{tabular}
+# \end{table}
+# endsnippet
+
+post_jump "init_row(snip)"
 snippet table* "Table environment (hline)" b
 \begin{table}[${1:htpb}]
 	\centering
 	\caption{${2:caption}}
 	\label{tab:${3:${2/\W+/-/g}}}
-	\begin{tabular}{${5:c}}
+	\begin{tabular}{${4:c}}
 	\hline
-	$6${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
+	$0\\\\
 	\hline
 	\end{tabular}
 \end{table}
+endsnippet
+
+pre_expand "add_row(snip)"
+snippet "tr(\d+)" "Add table row of dimension ..." r
 endsnippet
 
 snippet fig "Figure environment" b

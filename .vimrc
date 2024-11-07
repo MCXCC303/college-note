@@ -5,14 +5,14 @@ call plug#begin()
 " vimtex
 Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim'
-	set conceallevel=2
-	let g:tex_flavor='latex'
-	let g:tex_conceal='abdmg'
+    set conceallevel=2
+    let g:tex_flavor='latex'
+    let g:tex_conceal='abdmg'
     let g:vimtex_quickfix_mode=2
     let g:vimtex_quickfix_autoclose_after_keystokes=2
-	let g:vimtex_view_method='zathura'
-	let g:vimtex_compiler_latexmk_engines={'_':'-xelatex'}
-	let g:vimtex_compiler_latexrun_engines={'_':'xelatex'}
+    let g:vimtex_view_method='zathura'
+    let g:vimtex_compiler_latexmk_engines={'_':'-xelatex'}
+    let g:vimtex_compiler_latexrun_engines={'_':'xelatex'}
 
 " UltiSnips
 Plug 'sirver/ultisnips'
