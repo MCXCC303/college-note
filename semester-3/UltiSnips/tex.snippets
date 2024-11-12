@@ -373,32 +373,32 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
-# snippet table* "Table environment (hline)" b
-# \begin{table}[${1:htpb}]
-# 	\centering
-# 	\caption{${2:caption}}
-# 	\label{tab:${3:${2/\W+/-/g}}}
-# 	\begin{tabular}{${5:c}}
-# 	\hline
-# 	$6${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
-# 	\hline
-# 	\end{tabular}
-# \end{table}
-# endsnippet
-
-post_jump "init_row(snip)"
 snippet table* "Table environment (hline)" b
 \begin{table}[${1:htpb}]
 	\centering
 	\caption{${2:caption}}
 	\label{tab:${3:${2/\W+/-/g}}}
-	\begin{tabular}{${4:c}}
+	\begin{tabular}{${5:c}}
 	\hline
-	$0\\\\
+	$6${5/((?<=.)c|l|r)|./(?1: & )/g}\\\\
 	\hline
 	\end{tabular}
 \end{table}
 endsnippet
+
+# post_jump "init_row(snip)"
+# snippet table* "Table environment (hline)" b
+# \begin{table}[${1:htpb}]
+# 	\centering
+# 	\caption{${2:caption}}
+# 	\label{tab:${3:${2/\W+/-/g}}}
+# 	\begin{tabular}{${4:c}}
+# 	\hline
+# 	$0\\\\
+# 	\hline
+# 	\end{tabular}
+# \end{table}
+# endsnippet
 
 pre_expand "add_row(snip)"
 snippet "tr(\d+)" "Add table row of dimension ..." r
@@ -630,7 +630,7 @@ endsnippet
 
 priority 100
 snippet ... "ldots" iA
-\ldots
+\ldots 
 endsnippet
 
 snippet --- "hline" iA
@@ -639,7 +639,7 @@ $0
 endsnippet
 
 snippet qd "space in math" iA
-\quad
+\quad 
 endsnippet
 
 snippet hs "space in math" w
@@ -647,21 +647,21 @@ snippet hs "space in math" w
 endsnippet
 
 snippet -=> "implies" A
-\implies
+\implies 
 endsnippet
 
 snippet => "Right arrow" iA
-\Rightarrow
+\Rightarrow 
 endsnippet
 
 snippet =< "implied by" Ai
-\impliedby
+\impliedby 
 endsnippet
 
 priority 2000
 context "math()"
 snippet iff "iff" Ai
-\iff
+\iff 
 endsnippet
 
 context "math()"
@@ -678,15 +678,15 @@ snippet == "equals" iA
 endsnippet
 
 snippet != "Not equals" iA
-\neq
+\neq 
 endsnippet
 
 snippet ~= "Approximately equals" iA
-\approx
+\approx 
 endsnippet
 
 snippet +- "Plus or minus" iA
-\pm
+\pm 
 endsnippet
 
 context "math()"
@@ -736,12 +736,12 @@ endsnippet
 
 context "math()"
 snippet sr "^2" iA
-^2
+^2 
 endsnippet
 
 context "math()"
 snippet cb "^3" iA
-^3
+^3 
 endsnippet
 
 context "math()"
@@ -761,12 +761,12 @@ endsnippet
 
 context "math()"
 snippet <= "leq" iA
-\le
+\le 
 endsnippet
 
 context "math()"
 snippet >= "geq" iA
-\ge
+\ge 
 endsnippet
 
 context "math()"
@@ -776,7 +776,7 @@ endsnippet
 
 context "math()"
 snippet star "*" iA
-^\star
+^\star 
 endsnippet
 
 context "math()"
@@ -786,13 +786,13 @@ endsnippet
 
 context "math()"
 snippet xx "cross" iA
-\times
+\times 
 endsnippet
 
 priority 100
 context "math()"
 snippet ** "cdot" iA
-\cdot
+\cdot 
 endsnippet
 
 context "math()"
@@ -821,18 +821,18 @@ endsnippet
 priority 100
 context "math()"
 snippet -> "to" iA
-\to
+\to 
 endsnippet
 
 priority 200
 context "math()"
 snippet <-> "leftrightarrow" iA
-\leftrightarrow
+\leftrightarrow 
 endsnippet
 
 context "math()"
 snippet !> "mapsto" iA
-\mapsto
+\mapsto 
 endsnippet
 
 context "math()"
@@ -847,22 +847,22 @@ endsnippet
 
 context "math()"
 snippet \\\ "setminus" iA
-\setminus
+\setminus 
 endsnippet
 
 context "math()"
 snippet >> ">>" iA
-\gg
+\gg 
 endsnippet
 
 context "math()"
 snippet << "<<" iA
-\ll
+\ll 
 endsnippet
 
 context "math()"
 snippet ~~ "~" iA
-\sim
+\sim 
 endsnippet
 
 context "math()"
@@ -872,12 +872,12 @@ endsnippet
 
 context "math()"
 snippet <! "normal" iA
-\triangleleft
+\triangleleft 
 endsnippet
 
 context "math()"
 snippet <> "hokje" iA
-\diamond
+\diamond 
 endsnippet
 
 #─────────────#
@@ -886,12 +886,12 @@ endsnippet
 priority 2000
 context "math()"
 snippet ooo "\infty" iA
-\infty
+\infty 
 endsnippet
 
 context "math()"
 snippet nth "\varnothing" wA
-\varnothing
+\varnothing 
 endsnippet
 
 context "math()"
@@ -901,12 +901,12 @@ endsnippet
 
 context "math()"
 snippet EE "Exist" iA
-\exists
+\exists 
 endsnippet
 
 context "math()"
 snippet AA "For All" iA
-\forall
+\forall 
 endsnippet
 
 context "math()"

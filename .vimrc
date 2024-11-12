@@ -43,6 +43,11 @@ Plug 'honza/vim-snippets'
 " vim-fugitive
 Plug 'tpope/vim-fugitive'
 
+" vim-markdown
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+    let g:vim_markdown_folding_style_pythonic=1
+
 call plug#end()
 "—————————————————"
 " Plugin List End "

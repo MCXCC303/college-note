@@ -1,0 +1,125 @@
+\lecture{9}{11.12}
+\textit{Review:}
+
+反应\[
+    \ce{M+Y}\ce{<=>[][]}\ce{MY}
+.\]
+有大量副反应存在，如$\ce{M +L}\ce{<=>[][]}\ce{ML},\ce{H+ +Y}\ce{<=>[][]}\ce{HY},\ce{MY +H+}\ce{<=>[][]}\ce{MHY+}$
+
+\begin{notation}
+    条件稳定常数：\[
+        K_{\text{MY}}'=\frac{[MY']}{[M'][Y']}
+    .\]
+    对比：稳定常数：\[
+        K_{\text{MY}}=\frac{[MY]}{[M][Y]}
+    .\]
+    由$[M']=\alpha_\text{M}\cdot [M']$ 等：可得条件稳定常数和稳定常数的关系：$\lg K_\text{MY}'=\lg K_\text{MY}-\lg\alpha_\text{M}-\lg\alpha_\text{Y}+\lg\alpha_\text{MY}$；条件稳定常数在所有条件确定后是一个常数
+\end{notation}
+在没有副反应时稳定常数为1：$\frac{\alpha_\text{MY}}{\alpha_\text{M}\alpha_\text{Y}}=1,K_\text{MY}'=K_\text{MY}$，但只要有副反应条件稳定常数就小于1：\[
+    K_\text{MY}'=K_\text{MY}\cdot \frac{\alpha_\text{MY}}{\alpha_\text{M}\alpha_\text{Y}}
+.\]
+\begin{notation}
+    条件稳定常数$K_{\text{MY}}'$ 越大，所形成的配合物越稳定
+\end{notation}
+\begin{eg}
+    求$\text{pH}=2,\text{pH}=5$ 时ZnY的条件稳定常数
+\end{eg}
+解：对比公式$\lg K_\text{ZnY}'=\lg K_\text{ZnY}-\lg\alpha_\text{Zn}-\lg\alpha_\text{Y}+\lg\alpha_\text{ZnY}$可得：不同pH下的$\alpha_\text{Y(H)},\alpha_\text{Zn(OH)}$和$K_{\text{ZnY}}$ 可查表，即原式变为$\lg K_\text{ZnY}'=\lg K_{\text{ZnY}}-\lg\alpha_\text{Y(H)}$，即可以计算出$K_\text{ZnY}'$
+\subsection{配位滴定曲线}%
+\label{sub:配位滴定曲线}
+\begin{notation}
+    滴定曲线的横坐标恒为滴定剂的体积$V_\text{Y}$
+\end{notation}
+建立对于M和Y的物料平衡：\[
+    \begin{cases}
+        [M']+[MY']=\frac{V_\text{M}}{V_\text{M}+V_\text{Y}}\cdot c_\text{M}\\
+        [Y']+[MY']=\frac{V_\text{Y}}{V_\text{M}+V_\text{Y}}\cdot c_\text{Y}
+    \end{cases}
+.\]
+结合条件稳定常数$K_\text{MY}'=\frac{[MY']}{[M'][Y']}$ ，解该三元一次方程组即可算出不同滴定剂下的结合情况：\[
+    K_\text{MY}'[M']^2 +\left( \frac{V_\text{Y}c_\text{Y}-V_\text{M}c_\text{M}}{V_\text{M}+V_\text{Y}}\cdot K_\text{MY}+1 \right)\cdot [M']-\frac{V_\text{M}}{V_\text{M}+V_\text{Y}}\cdot c_\text{M}=0
+.\]
+\begin{itemize}
+    \item 影响滴定突越上限：$\text{pM}'=\lg K_\text{MY}'-3$
+    \item 影响滴定突越下限：$\text{pM}'=\text{p}C_\text{M}^{\text{sp}}+3$
+\end{itemize}
+即：
+\begin{itemize}
+    \item 金属离子浓度越大，滴定突越前侧的滴定突越范围越大
+    \item $K_\text{MY}'$ 越大，滴定突越后侧的突越范围越大
+\end{itemize}
+能影响$K_{\text{MY}}'$ 的因素：\textbf{酸效应、配位效应}等
+
+近似计量点时的情况：$\text{pM}'_\text{sp}=\frac{1}{2}\left( \lg K_\text{MY}'+\text{p}C_\text{M}^{\text{sp}} \right)$，即两个影响因素的平均值
+\begin{eg}
+    pH=10的氨性缓冲溶液$[\ce{NH_3}]=0.2$ 中用0.02mol/L的EDTA滴定0.02mol/L的$\ce{Cu2+}$，计算$\text{p}\ce{Cu}'_{\text{sp}}$
+\end{eg}
+\subsection{金属指示剂}%
+\label{sub:金属指示剂}
+\begin{notation}
+    通过指示金属离子的含量确定终点
+\end{notation}
+$\circ$ 铬黑T（EBT）：本身为蓝色，Mg和EBT可以配对而变为红色
+\begin{notation}
+    指示原理：
+
+    加入滴定剂前：金属离子和指示剂结合：$\ce{M +In}\ce{<=>[][]}\ce{MIn}$ 
+
+    滴定开始时：金属离子和滴定剂反应：$\ce{M +Y}\ce{<=>[][]}\ce{MY}$ 
+
+    滴定结束时：指示剂配合物消耗完后显示指示剂本身的颜色：$\ce{MIn +Y}\ce{<=>[][]}\ce{MY +In}$
+\end{notation}
+\begin{notation}
+    指示剂本身为弱酸，因此需要控制溶液pH；EDTA与有色金属离子结合生成颜色更深的配合物
+\end{notation}
+\subsubsection*{指示剂应具备的条件}%
+\label{subsub:指示剂应具备的条件}
+\begin{eg}
+    以EBT为例：
+    \[
+        \underset{\text{紫红}}{\ce{H_2In-}}\ce{<=>[][]} \underset{\text{蓝色}}{\ce{HIn^2-}}\ce{<=>[][]} \underset{\text{橙色}}{\ce{In^3-}}
+    .\]
+\end{eg}
+$\circ$ 显色反应灵敏、快速、具有良好的变色可逆性
+
+$\circ$ MIn稳定性要适当：
+
+比滴定生成的配合物更不稳定，但需要在溶液中稳定存在：$K_\text{MIn}'>10^{-4}$
+
+在滴定未到达终点时不被滴定剂置换，但到达终点时可以被置换：$\frac{K_\text{MY}'}{K_\text{MIn}'}>10^2 $
+\begin{notation}
+    指示剂的封闭现象：指示剂和金属离子结合太稳定，滴定剂无法将金属离子置换出来，无法观察到颜色的变化；在不更换指示剂的前提下，首先确定是由待测离子还是干扰离子引起的封闭
+\end{notation}
+\begin{eg}
+    干扰离子$\ce{Fe^3+}$和 $\ce{Al^3+}$ 可以封闭EBT，解决方法是：加入三乙醇胺（掩蔽剂）结合这两个离子（更稳定的配合物），使这两个离子无法与EBT结合
+\end{eg}
+\begin{eg}
+    如果要测$\ce{Al^3+}$ ：使用返滴定
+
+    先加入定量过量的EDTA与Al离子反应，反应完全后加EBT：此时EBT不会和Al反应$^\star $ ，此时再用Zn离子滴定EBT
+\end{eg}
+常用掩蔽剂表格：P82
+\begin{notation}
+    指示剂的僵化现象：有些指示剂和金属离子结合后的配合物不溶于水，此时EDTA和该配合物反应速率非常慢，使终点延长；可以通过加热或加入其他溶剂提高溶解度解决
+\end{notation}
+\begin{eg}
+    PAN（1-(2-吡啶偶氮)-2-萘酚）与金属离子形成的配合物难溶，通过加热或加入EtOH将其溶解
+\end{eg}
+常用金属指示剂：EBT、二甲酚橙(XO)，酸性铬蓝K，磺基水杨酸(Ssal)、PAN等
+\subsection{配位滴定误差}%
+\label{sub:配位滴定误差}
+\[
+    TE\%=\frac{[Y']_\text{sp}-[M']_\text{sp}}{C_\text{M}^{\text{sp}}}\times 100\%=\frac{10^{\Delta \text{pM}'}-10^{-\Delta \text{pM}'}}{\sqrt{K_\text{MY}'C_\text{M}^{\text{sp}}}}
+.\]
+\subsection{配位滴定条件选择}%
+\label{sub:配位滴定条件选择}
+$\circ$ 酸度（单一离子测定的最高酸度和最低酸度）：使$\lg K_\text{MY}'\ge 8$
+
+当$\lg K_\text{MY}'=\lg K_\text{MY}-\lg\alpha_\text{Y(H)}=8$ 时的pH为单一金属滴定的最高酸度
+
+通过金属离子和氢氧根形成的沉淀的$K_\text{sp}$ 可以求得氢氧根浓度，为防止形成沉淀：$[\ce{OH-}]\le \sqrt[a]{K_\text{sp}/c_\text{M}}$
+
+$\circ$ 最佳酸度：$\text{pM}'_\text{指示剂变色}=\text{pM}'_\text{sp}$
+\begin{notation}
+    可以通过缓冲溶液来保持滴定过程中的酸度基本不变
+\end{notation}
