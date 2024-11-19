@@ -21,15 +21,6 @@ Plug 'sirver/ultisnips'
 	let g:UltiSnipsJumpForwardTrigger='<tab>'
 	let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
-" vim-airline
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-"     let g:airline_theme='simple'
-"     let g:airline_powerline_fonts=1
-"     let g:airline#extensions#tabline#enabled=0
-"     let g:airline#extensions#tabline#show_buffers=0
-"     let g:airline#extensions#tabline#formatter='default'
-
 " vim-csv
 Plug 'chrisbra/csv.vim'
     let g:csv_arrange_align='lc*'

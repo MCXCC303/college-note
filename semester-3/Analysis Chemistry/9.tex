@@ -8,12 +8,12 @@
 
 \begin{notation}
     条件稳定常数：\[
-        K_{\text{MY}}'=\frac{[MY']}{[M'][Y']}
+        K_{\text{MY}}'=\frac{[\text{MY}']}{[\text{M}'][\text{Y}']}
     .\]
     对比：稳定常数：\[
-        K_{\text{MY}}=\frac{[MY]}{[M][Y]}
+        K_{\text{MY}}=\frac{[\text{MY}]}{[\text{M}][\text{Y}]}
     .\]
-    由$[M']=\alpha_\text{M}\cdot [M']$ 等：可得条件稳定常数和稳定常数的关系：$\lg K_\text{MY}'=\lg K_\text{MY}-\lg\alpha_\text{M}-\lg\alpha_\text{Y}+\lg\alpha_\text{MY}$；条件稳定常数在所有条件确定后是一个常数
+    由$[\text{M}]=\alpha_\text{M}\cdot [\text{M}']$ 等：可得条件稳定常数和稳定常数的关系：$\lg K_\text{MY}'=\lg K_\text{MY}-\lg\alpha_\text{M}-\lg\alpha_\text{Y}+\lg\alpha_\text{MY}$；条件稳定常数在所有条件确定后是一个常数
 \end{notation}
 在没有副反应时稳定常数为1：$\frac{\alpha_\text{MY}}{\alpha_\text{M}\alpha_\text{Y}}=1,K_\text{MY}'=K_\text{MY}$，但只要有副反应条件稳定常数就小于1：\[
     K_\text{MY}'=K_\text{MY}\cdot \frac{\alpha_\text{MY}}{\alpha_\text{M}\alpha_\text{Y}}
@@ -32,12 +32,12 @@
 \end{notation}
 建立对于M和Y的物料平衡：\[
     \begin{cases}
-        [M']+[MY']=\frac{V_\text{M}}{V_\text{M}+V_\text{Y}}\cdot c_\text{M}\\
-        [Y']+[MY']=\frac{V_\text{Y}}{V_\text{M}+V_\text{Y}}\cdot c_\text{Y}
+        [\text{M}']+[\text{MY}']=\frac{V_\text{M}}{V_\text{M}+V_\text{Y}}\cdot c_\text{M}\\
+        [\text{Y}']+[\text{MY}']=\frac{V_\text{Y}}{V_\text{M}+V_\text{Y}}\cdot c_\text{Y}
     \end{cases}
 .\]
-结合条件稳定常数$K_\text{MY}'=\frac{[MY']}{[M'][Y']}$ ，解该三元一次方程组即可算出不同滴定剂下的结合情况：\[
-    K_\text{MY}'[M']^2 +\left( \frac{V_\text{Y}c_\text{Y}-V_\text{M}c_\text{M}}{V_\text{M}+V_\text{Y}}\cdot K_\text{MY}+1 \right)\cdot [M']-\frac{V_\text{M}}{V_\text{M}+V_\text{Y}}\cdot c_\text{M}=0
+结合条件稳定常数$K_\text{MY}'=\frac{[\text{MY}']}{[\text{M}'][\text{Y}']}$ ，解该三元一次方程组即可算出不同滴定剂下的结合情况：\[
+    K_\text{MY}'[\text{M}']^2 +\left( \frac{V_\text{Y}c_\text{Y}-V_\text{M}c_\text{M}}{V_\text{M}+V_\text{Y}}\cdot K_\text{MY}+1 \right)\cdot [\text{M}']-\frac{V_\text{M}}{V_\text{M}+V_\text{Y}}\cdot c_\text{M}=0
 .\]
 \begin{itemize}
     \item 影响滴定突越上限：$\text{pM}'=\lg K_\text{MY}'-3$
@@ -109,7 +109,7 @@ $\circ$ MIn稳定性要适当：
 \subsection{配位滴定误差}%
 \label{sub:配位滴定误差}
 \[
-    TE\%=\frac{[Y']_\text{sp}-[M']_\text{sp}}{C_\text{M}^{\text{sp}}}\times 100\%=\frac{10^{\Delta \text{pM}'}-10^{-\Delta \text{pM}'}}{\sqrt{K_\text{MY}'C_\text{M}^{\text{sp}}}}
+    TE\%=\frac{[\text{Y}']_\text{sp}-[\text{M}']_\text{sp}}{C_\text{M}^{\text{sp}}}\times 100\%=\frac{10^{\Delta \text{pM}'}-10^{-\Delta \text{pM}'}}{\sqrt{K_\text{MY}'C_\text{M}^{\text{sp}}}}
 .\]
 \subsection{配位滴定条件选择}%
 \label{sub:配位滴定条件选择}

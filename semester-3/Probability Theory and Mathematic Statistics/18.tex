@@ -1,0 +1,58 @@
+\lecture{18}{11.19}
+\textit{Review:}
+
+$\circ$ 对参数（完全可观测数据）进行点估计：极大似然估计、矩估计
+
+两种方法得到的结果可能一样或不一样
+
+$\circ$ 点估计的评价标准：
+\begin{description}
+    \item [（渐进）无偏] 估计的参数的期望$E \hat{\theta}$求极限为$\theta$
+    \item [有效性] 在无偏的前提下：$D \hat{\theta}$ 越小越有效
+    \item [相合性（一致性）] $\text{MSE}\left( \hat{\theta},\theta \right)$：均方误差
+\end{description}
+\begin{eg}
+$\bar{X}$ 和$\hat{W}=\sum_{i=1}^{n} a_{i}X_{i}$ 可以证明都是$\mu$ 的无偏估计，称$\bar{X}$ 为算术均值，$\hat{W}$ 为加权均值，且算术均值比加权均值更有效（均值不等式）
+\end{eg}
+\begin{notation}
+均方误差：$\text{MSE}\left( \hat{\theta},\theta \right)=E\left( \hat{\theta}-\theta \right)^2 $
+\end{notation}
+\subsection{区间估计}%
+\label{sub:区间估计}
+\begin{defi}
+    置信区间：$\alpha$ 为给定值，总体的分布函数为$F\left( x,\theta \right)$ ，有两个从总体中抽取后构造的统计量$T_1,T_2$ ，当：\[
+        P\left\{ T_1<\theta<T_2 \right\}=1-\alpha
+    .\]
+    时：称$P$ 为置信度，区间长度$T_2-T_1$ 的数学期望$E\left( T_2-T_1 \right)$为精度
+\end{defi}
+纽曼提出的准则：先确定$\alpha$ 来确定置信度，再确定置信上下限
+\begin{notation}
+    已知标准正态分布$X\sim N\left( \mu,\sigma^2  \right)$ 中的$\sigma^2 $ ，置信度为$1-\alpha$ 时参数$\mu$ 的置信区间：\[
+        \left( T_1,T_2 \right)=\left( \bar{X}-\frac{\sigma}{\sqrt{n}}u_{1-\frac{\alpha}{2}},\bar{X}+\frac{\sigma}{\sqrt{n}}u_{1-\frac{\alpha}{2}} \right)
+    .\]
+    如果$\sigma^2 $ 未知：通过$t$ 分布可得：$T=\frac{\bar{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$ ，置信区间为：\[
+        \left( T_1,T_2 \right)=\left( \bar{X}-\frac{S}{\sqrt{n}}t_{1-\frac{\alpha}{2}}\left( n-1 \right),\bar{X}+\frac{S}{\sqrt{n}}t_{1-\frac{\alpha}{2}}\left( n-1 \right) \right)
+    .\]
+\end{notation}
+\begin{notation}
+卡方分布下：方差为$\sigma^2 $ ，置信度为$1-\alpha$ 的置信区间：\[
+    \left( T_1,T_2 \right)=\left( \frac{\left( n-1 \right)S^2 }{\chi^2 _{1-\frac{\alpha}{2}}\left( n-1 \right)},\frac{\left( n-1 \right)S^2 }{\chi^2 _{\frac{\alpha}{2}}\left( n-1 \right)} \right)
+.\]
+对应的标准差为$\sigma$ ，置信度为$1-\alpha$ 的置信区间：$T_1'=\sqrt{T_1},T_2'=\sqrt{T_2}$
+
+如果$\mu$ 已知，$\sigma^2 $ 未知，令$S_1^2 =\frac{1}{n}\sum_{i=1}^{n} \left( X_{i}-\mu \right)^2 $ ，因为$\chi^2 =\frac{nS_1^2 }{\sigma^2 }\sim \chi^2 \left( n \right)$ ，可得置信度为$1-\alpha$ 的方差的置信区间为：\[
+    \left( \frac{nS_1^2 }{\chi^2 _{1-\frac{\alpha}{2}}\left( n \right)},\frac{nS_1^2 }{\chi^2 _{\frac{\alpha}{2}}\left( n \right)} \right)
+.\] 
+\end{notation}
+\section{假设检验}%
+\label{sec:假设检验}
+\begin{notation}
+    在医药研发大量应用
+\end{notation}
+\begin{itemize}
+    \item 参数假设检验：假设效果
+    \item 非参数假设检验
+\end{itemize}
+\begin{notation}
+    下节课之前准备一个本专业的假设检验问题
+\end{notation}

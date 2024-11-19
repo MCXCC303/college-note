@@ -1,0 +1,68 @@
+\lecture{16}{11.12}
+\textit{Review:}
+
+1. 抽样分布定理：定理6.4.3
+
+2. 表达式$\frac{\left( n-1 \right)S^2 }{\sigma^2 }$ 什么时候是统计量：$\sigma^2 $ 已知
+
+当$\sigma^2 $ 未知时：表达式符合$\chi^2 \left( n-1 \right)$ ，称为\textbf{枢轴量}
+\begin{cor}
+    $X_1,X_2,\ldots X_{n}$ 来自总体$X\sim N\left( \mu,\sigma^2  \right)$ ，样本均值和方差记为$\bar{X},S^2 $ ，则：
+    \begin{enumerate}
+        \item 求$ES^2 $ ：$ES^2 =\sigma^2 $ 
+        \item 求$DS^2 $ ：$DS^2 =\frac{2\sigma^4 }{n-1}$
+        \item 构造$t$ 分布：$\frac{\bar{X}-\mu}{\sigma /\sqrt{n}}/\sqrt{\frac{S^2 }{\sigma^2 }}=\frac{\bar{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$
+    \end{enumerate}
+    （上述$\sqrt{\left( n-1 \right)S^2 /\sigma^2} \sim \chi^2 \left( n-1 \right)$ 且$(\bar{X}-\mu) /\frac{\sigma}{\sqrt{n}}\sim \Phi\left( x \right)$）
+\end{cor}
+重点题目：例6.4.4
+\begin{cor}
+    两个正态总体的抽样分布定理：两个总体记为$X,Y$ ，样本容量分别为$m,n$ ，样本分布分别符合$\mu=\mu_1,\sigma^2 =\sigma_1^2 $和$\mu=\mu_2,\sigma^2 =\sigma_2^2 $ 的正态分布，$\ldots $
+\end{cor}
+\section{参数估计}%
+\label{sec:参数估计}
+参数：\textit{param}
+\begin{itemize}
+    \item 点估计
+    \begin{itemize}
+        \item 矩估计
+        \item 极大似然估计
+    \end{itemize}
+    \item 区间估计
+\end{itemize} 
+\subsection{矩估计}%
+\label{sub:矩估计}
+使用样本矩$\bar{X}$替代总体矩$\hat{\mu}$ 
+\begin{notation}
+    总体矩不存在（无穷）时不能使用矩估计
+\end{notation}
+\begin{eg}
+    总体$X\sim U[a,b]$，$X_1,X_2,\ldots ,X_{n}$ 为总体的样本，求$a,b$ 的矩估计量
+\end{eg}
+解：\[
+    \begin{cases}
+        EX&= \frac{a+b}{2} \\
+        DX&= \frac{\left( b-a \right)^2 }{12}
+    \end{cases}
+.\]
+求解得：$\begin{cases}
+    a&= EX-\sqrt{3DX} \\
+    b&= EX+\sqrt{3DX}
+\end{cases}$ ，替代后为：$\begin{cases}
+    \hat{a}&= \bar{X}-\sqrt{3M_2^\star } \\
+    \hat{b}&= \bar{X}+\sqrt{3M_2^\star }
+\end{cases}$ ，$\hat{a}$ 代表对$a$ 的估计
+\subsection{极大似然估计}%
+\label{sub:极大似然估计}
+似然函数：样本的联合概率分布函数（P167）
+\begin{eg}
+    同矩估计例题，求$a,b$ 的极大似然估计量
+\end{eg}
+解：写出联合密度函数：$L\left( \ldots  \right)=\prod_{i=1}^{n} f_{X_{i}}\left( x_{i} \right)$，由于$f_X\left( x \right)=\begin{cases}
+    \frac{1}{b-a},&x\in [a,b]\\
+    0,&\text{Others}
+\end{cases}$，则联合密度函数为：
+\begin{align*}
+    L&=\prod_{i=1}^{n} \frac{1}{b-a}I_{[a,b]}\left( x_{i} \right)\\
+     &= \frac{1}{\left( b-a \right)^n} \prod_{i=1}^{n} I_{[a,b]}\left( x_{i} \right)
+.\end{align*}
