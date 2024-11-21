@@ -1,0 +1,76 @@
+\lecture{19}{11.21}
+\begin{eg}
+    参数假设检验：主场优势：NBA某球队进行82场比赛，41场为主场，统计过去15年主场胜率$P_1$ 和客场胜率$P_2$ ，判断该球队是否存在主场优势
+\end{eg}
+通过胜率差$\Delta P=P_1-P_2$，当$\Delta P=0$时不存在，当$\Delta P>0$时存在
+\begin{notation}
+    非参数假设检验：住房面积和家庭生活幸福感的关系，学历程度和年均收入的关系；非参数假设检验的两个变量独立
+\end{notation}
+\begin{eg}
+    规定工业废水中$\text{Cr(VI)}$ 排放浓度不超过0.5，即$c_\text{Cr(VI)}\le 0.5$，设$X$ 为工业废水有害物质排放浓度总体，抽取16份废水$X_1,X_2,\ldots ,X_{16}$，测得物质浓度$\bar{x}=0.52,s^2 =0.09$，假设该物质浓度分布为$X\sim N\left( \mu,\sigma^2  \right)$ ，求排放浓度是否符合规定（$\alpha=0.5$）
+\end{eg}
+解：\[
+    \bar{x}=\frac{1}{16}\sum_{i=1}^{16} x_{i}\quad s^2 =\frac{1}{15}\sum_{i=1}^{16} \left( x_{i}-\bar{x} \right)^2 
+.\]
+判断是否超标：通过检测$\mu\le 0.5$ 达标，$\mu>0.5$ 超标：一般把带等号的假设设为原假设$H_0:\mu\le 0.5$ ，被则假设$H_1:\mu>0.5$ ；
+
+检验水平$\alpha=0.05$ ：通常不超过$0.1$ ，表示犯第一类错误的概率（$\alpha=P\left( \bar{H_0} \right)$）；对比$\beta$ ：犯第二类错误
+
+选择检验统计量：将最大似然估计标准化：$\frac{\bar{X}-\mu}{s /\sqrt{n}}=T$ ，当$H_0$ 成立时：$T=\frac{\bar{X}-0.5}{s /\sqrt{n}}\sim t\left( 15 \right)$（分布为$t$ 分布，该检验方法为$t$ 检验法）
+
+确定拒绝域$\mathscr{X}_0$：确定拒绝域的形式，由于被则假设为$H_1:\mu>0.5$ ，假设拒绝域为$\left\{ \bar{X}-0.5>c \right\}$ ，$c$ 为未知量
+
+犯第一类错误的概率$P\left\{ \bar{X}-0.5>c \mid \mu\le 0.5 \right\}\le 0.05$，原式放缩：
+\begin{align*}
+    P\left\{ \bar{X}-0.5>c \mid \mu\le 0.5 \right\}&= P\left\{ \frac{\bar{X}-0.5}{\frac{s}{\sqrt{16}}}>\frac{c}{\frac{s}{\sqrt{16}}} \mid \mu\le 0.5\right\} \\
+    &= P\left\{ \frac{\bar{X}-\mu}{\frac{s}{4}}>\frac{c+0.5-\mu}{\frac{s}{4}}\mid \mu\le 0.5 \right\} \\
+    &\le P\left\{ \frac{X-\mu}{\frac{s}{4}}>\frac{c}{\frac{s}{4}} \right\}=\alpha \quad \left( 0.5-\mu\ge 0 \right)
+.\end{align*}
+由题$\frac{c}{s /4}=t_{0.95}\left( 15 \right)$，则检验统计量在拒绝域中可以表示：$\left\{ \frac{\bar{X}-0.5}{s /4}>t_{0.95}\left( 15 \right) \right\}$ 
+
+判断：$\bar{x}=0.52,s=0.3$ ，查表得$t_{0.95}\left( 15 \right)=1.753$ ，带入原式得：$\frac{\bar{X}-0.5}{s /4}=\frac{0.52-0.5}{0.3 /4}<1.753$ ，因此并未落在拒绝域中，接受原假设$H_0$
+
+下结论：认为$t\not\in \mathscr{X}_0$ ，因此不拒绝原假设$H_0$ ，\textbf{在显著性水平}$\bm{\alpha=0.05}$\textbf{下，可以认为该区域有害物质排放浓度符合规定}
+\subsubsection*{假设检验的两类错误}%
+\label{subsub:假设检验的两类错误}
+假设$H_0$ 正确，可以认为$H_0$ 正确或错误，类似二分类问题
+\begin{table}[htpb]
+    \centering
+    \caption{假设检验的两类错误}
+    \label{tab:假设检验的两类错误}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    $_\text{真实情况}\hspace{1pt}^\text{判断}$ & 接受$H_0$ & 拒绝$H_0$ \\
+    \hline
+    $H_0$ 为真 & 正确 & 第一类错误$\alpha$ \\
+    \hline
+    $H_0$ 为假 & 第二类错误$\beta$ & 正确\\
+    \hline
+    \end{tabular}
+\end{table}
+
+对于上题：$\beta=\left\{ \frac{X-0.5}{s /4}\le t_{0.95}\left( 15 \right) \mid \mu>0.5 \right\}$
+\begin{align*}
+    \beta&=P\left\{ \frac{X-0.5}{\frac{s}{4}}<t_{0.95}\left( 15 \right) \mid \mu>0.5 \right\} \quad \left( \text{We assume that: } \mu=0.6\right) \\
+         &= P\left\{ \frac{X-0.5}{\frac{s}{4}}<t_{0.95\left( 15 \right)}+\frac{0.6-0.5}{\frac{s}{4}} \right\} \approx 60\%
+.\end{align*}
+使用被则假设检验一般有较大的概率犯错误，因此一般使用原假设检验
+
+假设检验的内容：
+\[
+    \text{理论依据：小概率原理}
+    \begin{cases}
+        \text{参数检验}\begin{cases}
+            \text{总体}\mu,\Delta\mu \text{的检验}\\
+            \text{总体}\sigma,\partial\sigma \text{的检验}
+        \end{cases}\\
+        \text{非参数检验}\begin{cases}
+            \text{分布拟合检验}\\
+            \text{符号检验}\\
+            \text{秩和检验：两个检验的分布是否是同一分布}
+        \end{cases}
+    \end{cases}
+.\]
+\begin{notation}
+小概率原理：犯第一类错误的概率$\alpha$ 为小概率；如果认为$H_0$ 正确，但是数据观测得到的是$H_1:\bar{x}-0.5>c$ ，则应该反过来认为$H_1$ 正确
+\end{notation}
