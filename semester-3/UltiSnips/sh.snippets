@@ -1,0 +1,85 @@
+#──────────#
+# Brackets #
+#──────────#
+snippet {} "{}" iA
+{ $1 }
+endsnippet
+
+snippet （） "（）" iA
+（$1）
+endsnippet
+
+snippet '' "''" iA
+'$1'
+endsnippet
+
+snippet "" "" iA
+"$1"
+endsnippet
+
+snippet “” "“”" iA
+“$1”
+endsnippet
+
+snippet ‘’ "‘’" iA
+‘$1’
+endsnippet
+
+snippet () "()" iA
+( $1 )
+endsnippet
+
+snippet $$ "replacent" iA
+$( $1 )
+endsnippet
+
+snippet 《》 "《》" iA
+《$1》
+endsnippet
+
+snippet [] "[]" iA
+[ $1 ]
+endsnippet
+
+#───────#
+# Seprs #
+#───────#
+snippet || "cmd sep" iA
+ | 
+endsnippet
+
+#─────────────────────#
+# Condition Judgement #
+#─────────────────────#
+snippet if "if" iA
+if [${1:[ $2 ]}]; then
+	$0
+fi
+endsnippet
+
+snippet elif "else if" iA
+elif [${1:[ $2 ]}]; then
+	$0
+endsnippet
+
+snippet else "else" iA
+else
+	$0
+endsnippet
+
+#───────#
+# Loops #
+#───────#
+snippet for "file for-loop" i
+for ${1:file} in ${2:"path"}/*
+do
+	$0
+done
+endsnippet
+
+snippet "for([A-Za-z])" "param for-loop" irA
+for (( ${1:`!p snip.rv = match.group(1)`}=${2:1}; $1<=${3:10}; $1${4:++} ))
+do
+	$0
+done
+endsnippet

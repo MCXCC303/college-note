@@ -122,9 +122,6 @@
 具有$N$ 个节点的全连通图，任意两点$X,Y$之间的距离$d_{XY}$ 设为已知，具有明确的起点与终点
 \begin{center}
     \begin{tikzpicture}
-        \draw [] (-1,2) circle [radius=0.1] node [above] at(-1,2) {$C$};
-        \draw [] (4,-2) circle [radius=0.1] node [below] at(4,-2) {$D$};
-        \draw [] (4.5,1) circle [radius=0.1] node [right] at(4.5,1) {$E$};
         \draw [] (0,0)--(4.5,1) node [above] at(2.25,0.5) {$\left( d_{AE}=50,\tau_{AE}=3.0 \right) $}; 
         \draw [] (4.5,1)--(4,-2) node [above] at(4.25,-0.5) {$\left( d_{DE}=30,\tau_{DE}=5.0 \right) $};
         \draw [] (-1,2)--(4.5,1);
@@ -135,8 +132,14 @@
         \draw [] (0,0)--(4,-2);
         \filldraw [color=white] (0,0) circle [radius=0.3];
         \filldraw [color=white] (3,3) circle [radius=0.3];
+        \filldraw [color=white] (-1,2) circle [radius=0.1];
+        \filldraw [color=white] (4,-2) circle [radius=0.1];
+        \filldraw [color=white] (4.5,1) circle [radius=0.1];
         \draw [] (0,0) circle [radius=0.3] node at(0,0) {$A$};
         \draw [] (3,3) circle [radius=0.3] node at(3,3) {$B$};
+        \draw [] (-1,2) circle [radius=0.1] node [above] at(-1,2) {$C$};
+        \draw [] (4,-2) circle [radius=0.1] node [below] at(4,-2) {$D$};
+        \draw [] (4.5,1) circle [radius=0.1] node [right] at(4.5,1) {$E$};
     \end{tikzpicture}
 \end{center}
 \begin{eg}
