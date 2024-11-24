@@ -42,22 +42,26 @@
     .\] 
     \begin{center}
         \begin{tikzpicture}
-            \draw [] (-1,1) circle [radius=2pt] node at(-1.5,1.5) {$A$};
-            \draw [] (1,-1) circle [radius=2pt] node at(1.5,-1.5) {$B$};
             \draw [] (-1,1)--(1,-1);
             \node at(-1.5,-1.5) {$L_2\left( A,B \right) =2\sqrt{2} $};
+            \filldraw [color=white] (-1,1) circle [radius=2pt];
+            \filldraw [color=white] (1,-1) circle [radius=2pt];
+            \draw [] (-1,1) circle [radius=2pt] node [anchor=south east] {$A$};
+            \draw [] (1,-1) circle [radius=2pt] node [anchor=north west] {$B$};
         \end{tikzpicture}
     \end{center}
 
     代入$p=1$ ：$L_1\left( x_{i},x_{j} \right) $ 称为曼哈顿距离：
     \begin{center}
         \begin{tikzpicture}
-            \draw [] (-1,1) circle [radius=2pt] node at(-1.5,1.5) {$A$};
-            \draw [] (1,-1) circle [radius=2pt] node at(1.5,-1.5) {$B$};
             \draw [dashed] (-1,1)--(1,-1);
             \draw [] (-1,1)--(-1,0)--(0,0)--(0,-1)--(1,-1);
             \draw [] (-1,1)--(1,1)--(1,-1);
             \node at(-1.5,-1.5) {$L_1\left( A,B \right) =4$};
+            \filldraw [color=white] (-1,1) circle [radius=2pt];
+            \filldraw [color=white] (1,-1) circle [radius=2pt];
+            \draw [] (-1,1) circle [radius=2pt] node [anchor=south east] {$A$};
+            \draw [] (1,-1) circle [radius=2pt] node [anchor=north west] {$B$};
         \end{tikzpicture}
     \end{center}
 \end{eg}

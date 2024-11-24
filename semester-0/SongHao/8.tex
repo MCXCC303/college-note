@@ -1,0 +1,71 @@
+\learn{8}{11.24}
+\begin{figure}[ht]
+    \centering
+    \incfig{t分布图像}
+    \caption{$t$分布图像}
+    \label{fig:t分布图像}
+\end{figure}
+解：对$Y_{i}$：$\mu=0,\sigma=2$ ，先将$Y_{i}$ 改为标准正态分布：$\frac{Y_{i}-0}{2}\sim N\left( 0,1 \right)$，写出一个关于$\frac{Y_{i}-0}{2}$ 的卡方分布：\[
+    \chi^2 =\sum_{i=1}^{4} \frac{Y_{i}-0}{2}^2 =\frac{\sum_{i=1}^{4} Y_{i}^2 }{4}\sim \chi^2 \left( 4 \right)
+.\]
+对$X$ 标准化：$\frac{X-2}{1}\sim N\left( 0,1 \right)$ ，由于$t$ 分布“上正态下卡方”，所以： \[
+    \frac{\left( X-2 \right)}{\sqrt{\frac{\sum_{i=1}^{4} Y_{i}^2 }{4} /4}}=\frac{4\left( X-2 \right)}{\sqrt{\sum_{i=1}^{4} Y_{i}^2 }}=T\sim t\left( 4 \right)
+.\]
+要求$P\left( \left| T \right|>t_0 \right)=0.01$ ：由 $t$ 分布的对称性：$P\left( \left| T \right|>t_0 \right)=2P\left( T>t_0 \right)=0.01$ ，即$P\left( T>t_0 \right)=0.005$ ；令$\alpha=0.005$ ，查表$t_{0.005}\left( 4 \right)$ 即可
+
+查表得：$t_{0.005}\left( 4 \right)=4.604$
+\subsection{F分布}%
+\label{sub:F分布}
+形式：$F\left( n_1,n_2 \right)$（共2个参数）
+\begin{cor}
+    $X\sim \chi^2 \left( n_1 \right),Y\sim \chi^2 \left( n_2 \right)$ ，且相互独立，则：\[
+        \frac{X /n_1}{Y /n_2}\sim F\left( n_1,n_2 \right)
+    .\]
+    同理： \[
+        \frac{Y /n_2}{X /n_1}\sim F\left( n_2,n_1 \right)
+    .\]
+    记$F\sim F\left( n_1,n_2 \right)$ ，则$\frac{1}{F}\sim F\left( n_2,n_1 \right)$
+\end{cor}
+\begin{eg}
+    $X_1,X_2,\ldots ,X_6\sim N\left( 0,\sigma^2  \right)$，求$\frac{2\left( X_1^2 +X_2^2  \right)}{X_3^2 +X_4^2 +X_5^2 +X_6^2 }$ 的分布
+\end{eg}
+解：$\frac{X_{i}}{\sigma}\sim N\left( 0,1 \right)$，则$\frac{X_1^2 }{\sigma^2 }+\frac{X_2^2 }{\sigma}\sim \chi^2 \left( 2 \right)$ ，同理：$\sum_{i=3}^{6} \frac{X_{i}^2 }{\sigma^2 }\sim \chi^2 \left( 4 \right)$
+\[
+    \frac{ \frac{X_1^2 +X_2^2 }{\sigma^2 } /2 }{\frac{\sum_{i=3}^{6} X_{i}^2 }{\sigma^2 } /4}=\frac{2\left( X_1^2 +X_2^2  \right)}{X_3^2+X_4^2 +X_5^2+X_6^2 } \sim F\left( 2,4 \right)
+.\]
+\begin{notation}
+    F分布的上$\alpha$ 分位数：$P\left( F>F_{\alpha}\left( n_1,n_2 \right)=\alpha \right)$
+\end{notation}
+\begin{figure}[ht]
+    \centering
+    \incfig{f分布图像}
+    \caption{F分布图像}
+    \label{fig:f分布图像}
+\end{figure}
+\begin{cor}
+    \[
+        F_{1-\alpha}\left( n_1,n_2 \right)=\frac{1}{F_{\alpha}\left( n_2,n_1 \right)}
+    .\]
+\end{cor}
+\begin{proof}
+    假设$F\sim F\left( n_1,n_2 \right)$，则$\frac{1}{F}\sim \left( n_2,n_1 \right)$，求$P\left( F>F_{1-\alpha}\left( n_1,n_2 \right) \right)=1-\alpha$ 
+
+    将两边同时取倒数，符号反向：\[
+    .\]
+    \begin{align*}
+        1-\alpha&=P\left( F>F_{1-\alpha}\left( n_1,n_2 \right) \right)=P\left( \frac{1}{F}<\frac{1}{F_{1-\alpha}\left( n_1,n_2 \right)} \right) \\
+        &= 1-P\left( \frac{1}{F}\ge \frac{1}{F_{1-\alpha}\left( n_1,n_2 \right)} \right) \\
+        \alpha &= P\left( \frac{1}{F}>\frac{1}{F_{1-\alpha}\left( n_1,n_2 \right)} \right)\\
+        \Rightarrow \frac{1}{F}\sim F\left( n_2,n_1 \right), \alpha &=P\left( \frac{1}{F}>F_\alpha\left( n_2,n_1 \right) \right) \\
+        \Rightarrow F_\alpha\left( n_2,n_1 \right)&=\frac{1}{F_{1-\alpha\left( n_1,n_2 \right)}}
+    .\end{align*}
+\end{proof}
+\begin{eg}
+    $F\sim F\left( 10,15 \right)$ ，求$\lambda_1,\lambda_2$ 是$P\left( F>\lambda_1 \right)=0.01,P\left( F\le\lambda_2 \right)=0.01$
+\end{eg}
+解：查表可得：$F_{0.01}\left( 10,15 \right)=\lambda_1=3.8$ ，由题：$P\left( F\le \lambda_2 \right)=P\left( \frac{1}{F}>\frac{1}{\lambda_2} \right)=0.01$ ，由于$\frac{1}{F}\sim F\left( 15,10 \right)$ ，则可通过查表得$F_{0.01}\left( 15,10 \right)$ 求得$\frac{1}{\lambda_2}$ ：
+
+得：$\begin{cases}
+    \lambda_1=3.8\\
+    \lambda_2=0.293
+\end{cases}$

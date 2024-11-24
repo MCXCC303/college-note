@@ -59,7 +59,7 @@ set hlsearch
 set incsearch
 set laststatus=0
 set number
-set rtp+=${HOME}/Notebook/current-semester
+set rtp+=${HOME}/Notebook
 set ruler
 set shiftwidth=4
 set smartcase
@@ -109,3 +109,7 @@ func! ComplieRun()
         exec "!python %"
     endif
 endfunc
+
+" Inkscape-figure
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>

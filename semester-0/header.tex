@@ -33,7 +33,6 @@
 \usepackage[]{array}
 \usepackage[]{bm}
 \usepackage[]{booktabs}
-\usepackage[UTF8]{ctex}
 \usepackage[]{fancyhdr}
 \usepackage[]{float}
 \usepackage[]{geometry}
@@ -42,11 +41,11 @@
 \usepackage[]{import}
 \usepackage[]{inputenc}
 \usepackage[]{mathrsfs}
-\usepackage[version=4]{mhchem}
 \usepackage[]{multirow}
 \usepackage[]{pdfpages}
 \usepackage[]{pgfplots}
 \usepackage[]{stmaryrd}
+\usepackage[notransparent]{svg}
 \usepackage[]{tabu}
 \usepackage[]{tcolorbox}
 \usepackage[]{textcomp}
@@ -55,9 +54,19 @@
 \usepackage[]{tkz-euclide}
 \usepackage[]{url}
 \usepackage[]{wrapfig}
-\usepackage[dvipsnames]{xcolor}
 \usepackage[]{xifthen}
 \usepackage[]{yhmath}
+\usepackage[UTF8]{ctex}
+\usepackage[version=4]{mhchem}
+\usepackage[dvipsnames]{xcolor}
+
+%───────────────────%
+% Inkscape Settings %
+%───────────────────%
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
 
 %────────────────%
 % Fancy Settings %

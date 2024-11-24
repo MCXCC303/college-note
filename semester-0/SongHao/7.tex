@@ -1,0 +1,63 @@
+\learn{7}{11.23}
+\section{抽样分布}%
+\label{sec:抽样分布}
+\begin{defi}
+    卡方分布$\chi^2 \left( n \right)$ ：标准正态分布平方后的和是卡方分布
+\end{defi}
+即：$X_1,X_2,\ldots X_{i}$ 相互独立且都是标准正态分布，则\[
+    \sum_{i=1}^{n} X_{i}^2 \sim \chi^2 \left( n \right)=\chi^2 
+.\]
+\begin{eg}
+    $X_1,X_2,\ldots ,X_8$ 独立同分布于$N\left( 0,1 \right)$ ，则$\sum_{i=1}^{8} X_{i}\sim \chi^2 \left( 8 \right)$
+\end{eg}
+\begin{cor}
+    卡方分布的期望$EX=n$ ，方差$DX=2n$
+\end{cor}
+\begin{figure}[ht]
+    \centering
+    \incfig[]{卡方分布图像}
+    \caption{卡方分布图像}
+    \label{fig:卡方分布图像}
+\end{figure}
+\begin{cor}
+    中心极限定理可得：如果$X\sim \chi^2 \left( n \right)$ 且$n$ 充分大的时候：$\frac{X-n}{\sqrt{2n}}$ 近似符合标准正态分布$N\left( 0,1 \right)$
+\end{cor}
+\begin{notation}
+    独立同分布的中心极限定理不管分布种类
+\end{notation}
+\begin{cor}
+    $X\sim \chi^2 \left( n \right),Y\sim \chi^2 \left( m \right)$ ，且$X,Y$ 独立，则$X+Y\sim \chi^2 \left( m+n \right)$
+\end{cor}
+\begin{notation}
+推论：$X_{i}\sim \chi^2 \left( m_{i} \right)$ ，则\[
+    \sum_{i=1}^{n} X_{i}\sim \chi^2 \left( \sum_{i=1}^{n} m_{i} \right)
+.\]
+即卡方分布符合可加性
+\end{notation}
+\begin{defi}
+上$\alpha$ 分位数：$P\left( \chi^2 >\chi^2_{\alpha} \left( n \right) \right)=\alpha$ ：在分布图某点右边的概率为$\alpha$ ，这个点的值
+\end{defi}
+\begin{eg}
+    $\chi^2 _{0.05}\left( 10 \right)=18.3,\chi^2 _{0.1}\left( 25 \right)=34.4$
+\end{eg}
+上$\alpha$ 分位数查表可得：$n$ 已知，确定所需的概率$\alpha$ 
+\begin{eg}
+    已知$X\sim \chi^2 \left( 10 \right)$ 求：当$P\left( X>a \right)=0.025,P\left( X<b \right)=0.05$ 时的$a,b$
+\end{eg}
+解：由题：$n=10,\alpha_1=0.025$ ，查表可得：$\chi^2 _{0.025}\left( 10 \right)=20.5=a$ 
+
+易得$P\left( X<b \right)=0.05=1-P\left( X\ge b \right)$ 即$P\left( X\ge b \right)=0.95=\alpha_2$ ，查表：$\chi^2 _{\alpha_2}\left( 10 \right)=3.94=b$ 
+\begin{notation}
+卡方分布为单峰曲线，$n-2$ 时取最大值
+\end{notation}
+\subsection{\textit{t}分布}%
+\label{sub:t分布}
+\begin{defi}
+    $t$ 分布由标准正态分布和卡方分布组成：$X\sim N\left( 0,1 \right),Y\sim \chi^2 \left( n \right)$，且$X,Y$ 相互独立，则$\frac{X}{\sqrt{Y /n}}\sim t\left( n \right)$
+\end{defi}
+\begin{notation}
+    上$\alpha$ 分位数：$P\left( T>t_{\alpha}\left( n \right) \right)=\alpha$ ：$\alpha$ 为一个数，由于$t$ 分布的对称性可得：$t_{\alpha}\left( n \right)=1-t_{1-\alpha}\left( n \right)$
+\end{notation}
+\begin{eg}
+    $X\sim N\left( 2,1 \right),\left( Y_1,Y_2,\ldots ,Y_4 \right)\sim N\left( 0,4 \right)$ ，且相互独立，令$T=\frac{4\left( X-2 \right)}{\sqrt{\sum_{i=1}^{4} Y_{i}^2 }}$ ，求$T$ 的分布并求$P\left( \left| T \right|>t_0 \right)=0.01$ 时的$t_0$
+\end{eg}
