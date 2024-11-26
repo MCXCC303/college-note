@@ -1,0 +1,84 @@
+\lecture{20}{11.26}
+\begin{eg}
+    假设产品出厂时要求次品率$p\le 0.04$ ，从10000件产品中抽取12件产品发现3件次品，问该批产品能否出厂；若抽出1件次品，能否出厂
+\end{eg}
+解：不使用假设检验：$p_0=\frac{3}{12}=0.25>0.04$ ，明显不能出厂（不严谨），即使$p_0=\frac{1}{12}\approx 0.08>0.04$ 也不能出厂
+\begin{notation}
+    问题在于：12件产品和10000件产品中出现次品数量的分布不一样
+\end{notation}
+使用假设检验：假设$p\le 0.04$ ，抽查率$\frac{12}{10000}\approx 0.001$，认为分布符合$B\left( 12,0.04 \right)$ ，即12重伯努利试验，计算得发生事件“在12个产品中抽到3个次品的概率为”： \[
+    P_{12}\left( 3 \right)= \mathrm{C}_{12}^{3}p^3 \left( 1-p \right)^{9}\approx0.0097
+.\]
+因此“在12个产品中抽到3个次品的概率”事件是小概率事件，但一次试验就发生，因此推翻原假设，即$p>0.04$ ，所以不能出厂
+
+同理，\[
+    P_{12}\left( 1 \right)\approx 0.306
+.\]
+概率并不算小，因此可以认为原假设$p\le 0.04$ 成立
+\begin{notation}
+一致最优势假设检验：使第二类错误尽可能小
+\end{notation}
+将上述问题建模：
+
+1. 提出假设：$H_0:p\le 0.04, H_1:p>0.04$
+
+2. 样本观测值：$\left( x_1,x_2,\ldots ,x_{12} \right)$
+
+3. 设定小概率阈值：$\alpha=0.01$ 
+\begin{question}
+    白糖打包机：包装得到的糖重量为一个服从正态分布的随机变量$X\sim N\left( \mu,\sigma^2  \right)$ ，运行正常时$\mu=100\text{ kg},\sigma^2 =0.05$ ，为检验运行是否正常，随机抽取9袋糖测得净重：\[
+        \left( 99.3,98.7,100.5,101.2,98.3,99.7,99.5,102.1,100.5 \right)
+    .\]
+求机器是否运作正常（$H_0:\mu=100,H_1:\mu\neq 100$）
+\end{question}
+\begin{sol}
+    由于$\sigma^2 =0.05$ ，且工艺不改变，因此可以认为方差不变，即$X\sim N\left( \mu,0.05 \right)$ ；
+
+假设：$\mu=\mu_0=100$ ，首先求出样本均值和方差：$\overline{X}=99.978$
+
+由于小概率事件原理以及：$\overline{X}$ 是$\mu$ 的一致最小方差无偏估计量：$\left| \overline{X}-\mu \right|$ 应该很小；易得$\overline{X}$ 是$\mu$ 的点估计（矩估计、极大似然估计），则当$H_0$ 成立时，$\left| \overline{X}-\mu_0 \right|$ 也应该很小
+
+设定拒绝域，即当\[
+    \left| \overline{X}-\mu_0 \right|>c
+.\]
+时就拒绝原假设
+
+由于$\alpha=P\left( \text{犯第一类错误} \right)=P\left( \text{拒绝}H_0\mid H_0\text{成立} \right)$，且$\overline{X}\sim N\left( \mu_0,\frac{\sigma}{n} \right)$（上一章总体的结论），标准化后为$U=\frac{\overline{X}-\mu_0}{\sigma /\sqrt{n}}\sim N\left( 0,1 \right)$
+
+根据标准化后的随机变量转换后：
+\begin{align*}
+    P\left( \left| \overline{X}-\mu_0 \right| >c\right)&= P\left( \frac{\left| \overline{X}-\mu_0 \right|}{\sigma /\sqrt{n}}>\frac{c}{\sigma /\sqrt{n}} \right) \\
+    &= 1-P\left( \frac{\left| \overline{X} -\mu_0\right|}{\sigma /\sqrt{n}}\le \frac{c}{\sigma /\sqrt{n}} \right) \\
+    &= 1-P\left( \frac{-c}{\sigma /\sqrt{n}}\le U \le \frac{c}{\sigma /\sqrt{n}} \right) =\alpha
+.\end{align*}
+这里的显著性水平$\alpha$ 可以随意定，但一般使用$0.01,0.025,0.05$ 这几个值，假定$\alpha=0.05$ ，则对于标准正态分布：$P\left( U\le \frac{c}{\sigma /\sqrt{n}} \right)=\frac{1-\alpha}{2}$，查表得到$u_{\frac{1-\alpha}{2}}=u_{0.475}=\frac{c}{\sigma /\sqrt{n}}$，即：\[
+    c=\frac{u_{0.475}\cdot \sigma}{\sqrt{n}}
+.\]
+
+已知$\overline{X}=99.98,\sigma=\sqrt{0.05},\mu_0=100,\alpha=0.05$，带入后
+
+计算可得：\[
+    \left| \overline{X}-\mu_0 \right|=0.02
+.\]
+\end{sol}
+\subsubsection*{假设检验的种类}%
+\label{subsub:假设检验的种类}
+\begin{enumerate}
+    \item $H_0:\mu=\mu_0,H_1:\mu\neq \mu_0$：双侧检验（简单原假设/简单备择假设）
+    \item $H_0:\mu\le \mu_0,H_1:\mu>\mu_0$：右侧检验（拒绝域在右边）
+    \item $H_0:\mu\ge \mu_0,H_1:\mu<\mu_0$：左侧检验（拒绝域在左边）
+\end{enumerate}
+\begin{notation}
+    期末考试规范性：10分，每步2分
+    \begin{enumerate}
+        \item 提出假设$H_0,H_1$
+        \item 选择统计检验量$\frac{\overline{X}-\mu}{\sigma /\sqrt{n}} \text{ or } \frac{\overline{X}-\mu}{S /\sqrt{n}}$
+        \item 确定拒绝域$\mathscr{X}$
+        \item 计算统计检验量的样本值，观察是否在拒绝域内
+        \item 下结论
+    \end{enumerate}
+\end{notation}
+\begin{eg}
+书上例题8.2.1：慢性铅中毒
+\end{eg}
+

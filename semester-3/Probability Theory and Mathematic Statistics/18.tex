@@ -12,7 +12,7 @@ $\circ$ 点估计的评价标准：
     \item [相合性（一致性）] $\text{MSE}\left( \hat{\theta},\theta \right)$：均方误差
 \end{description}
 \begin{eg}
-$\bar{X}$ 和$\hat{W}=\sum_{i=1}^{n} a_{i}X_{i}$ 可以证明都是$\mu$ 的无偏估计，称$\bar{X}$ 为算术均值，$\hat{W}$ 为加权均值，且算术均值比加权均值更有效（均值不等式）
+$\overline{X}$ 和$\hat{W}=\sum_{i=1}^{n} a_{i}X_{i}$ 可以证明都是$\mu$ 的无偏估计，称$\overline{X}$ 为算术均值，$\hat{W}$ 为加权均值，且算术均值比加权均值更有效（均值不等式）
 \end{eg}
 \begin{notation}
 均方误差：$\text{MSE}\left( \hat{\theta},\theta \right)=E\left( \hat{\theta}-\theta \right)^2 $
@@ -28,10 +28,10 @@ $\bar{X}$ 和$\hat{W}=\sum_{i=1}^{n} a_{i}X_{i}$ 可以证明都是$\mu$ 的无�
 纽曼提出的准则：先确定$\alpha$ 来确定置信度，再确定置信上下限
 \begin{notation}
     已知标准正态分布$X\sim N\left( \mu,\sigma^2  \right)$ 中的$\sigma^2 $ ，置信度为$1-\alpha$ 时参数$\mu$ 的置信区间：\[
-        \left( T_1,T_2 \right)=\left( \bar{X}-\frac{\sigma}{\sqrt{n}}u_{1-\frac{\alpha}{2}},\bar{X}+\frac{\sigma}{\sqrt{n}}u_{1-\frac{\alpha}{2}} \right)
+        \left( T_1,T_2 \right)=\left( \overline{X}-\frac{\sigma}{\sqrt{n}}u_{1-\frac{\alpha}{2}},\overline{X}+\frac{\sigma}{\sqrt{n}}u_{1-\frac{\alpha}{2}} \right)
     .\]
-    如果$\sigma^2 $ 未知：通过$t$ 分布可得：$T=\frac{\bar{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$ ，置信区间为：\[
-        \left( T_1,T_2 \right)=\left( \bar{X}-\frac{S}{\sqrt{n}}t_{1-\frac{\alpha}{2}}\left( n-1 \right),\bar{X}+\frac{S}{\sqrt{n}}t_{1-\frac{\alpha}{2}}\left( n-1 \right) \right)
+    如果$\sigma^2 $ 未知：通过$t$ 分布可得：$T=\frac{\overline{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$ ，置信区间为：\[
+        \left( T_1,T_2 \right)=\left( \overline{X}-\frac{S}{\sqrt{n}}t_{1-\frac{\alpha}{2}}\left( n-1 \right),\overline{X}+\frac{S}{\sqrt{n}}t_{1-\frac{\alpha}{2}}\left( n-1 \right) \right)
     .\]
 \end{notation}
 \begin{notation}

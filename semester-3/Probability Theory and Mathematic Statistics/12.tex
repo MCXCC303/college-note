@@ -47,7 +47,7 @@ $\rho=0$ ：不相关/非线性关系
 \label{sec:大数定律和中心极限定理}
 \begin{defi}
     大数定律：\[
-        \bar{X}\xrightarrow[P]{n\to +\infty }EX
+        \overline{X}\xrightarrow[P]{n\to +\infty }EX
     .\] 
     % From here I tested some arrows from package chemfig
     % I will soon add them to snippet
@@ -55,13 +55,13 @@ $\rho=0$ ：不相关/非线性关系
 \end{defi}
 \begin{defi}
     中心极限定理： \[
-        \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}
+        \overline{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}
     .\] 
     其中$X_1,X_2,\ldots X_{i}$ 独立同分布
 
-    该随机变量序列存在分布，中心极限定理提出不论$\bar{X}$ 的分布是什么，该序列的分布为正态分布
+    该随机变量序列存在分布，中心极限定理提出不论$\overline{X}$ 的分布是什么，该序列的分布为正态分布
     \[
-        \bar{X}\ce{->[$L$][$n\to \infty $]}N\left( E\bar{X},D\bar{X} \right) 
+        \overline{X}\ce{->[$L$][$n\to \infty $]}N\left( E\overline{X},D\overline{X} \right) 
     .\] 
 \end{defi}
 如何判断随机变量的敛散性：
@@ -109,23 +109,23 @@ $\rho=0$ ：不相关/非线性关系
 \begin{defi}
     $\left\{ X_i \right\} i.i.d$ ，$\exists EX_i,DX_i$ ，且$\exists C$ ，使得$DX_i\le C$ （方差有界），则对$\forall \varepsilon>0$ 当：
     \[
-        \lim_{n \to \infty} P\left\{ \left| \bar{X_n}-E\bar{X_n} \right| <\varepsilon \right\} =1
+        \lim_{n \to \infty} P\left\{ \left| \overline{X_n}-E\overline{X_n} \right| <\varepsilon \right\} =1
     .\] 
     时：
     \[
-        \bar{X_n}\ce{->[$P$][$n\to +\infty $]}E\bar{X_n}
+        \overline{X_n}\ce{->[$P$][$n\to +\infty $]}E\overline{X_n}
     .\] 
 \end{defi}
 \begin{proof}
-    $\bar{X_n}={\frac{1}{n} \sum_{i=1}^{n} X_i}$，有：
+    $\overline{X_n}={\frac{1}{n} \sum_{i=1}^{n} X_i}$，有：
     \begin{align*}
-        E\bar{X_n}&=\frac{1}{n} \sum_{i=1}^{n} EX_i\\
-        D\bar{X_i}&=\frac{1}{n^2} \sum_{i=1}^{n} DX_i\\
+        E\overline{X_n}&=\frac{1}{n} \sum_{i=1}^{n} EX_i\\
+        D\overline{X_i}&=\frac{1}{n^2} \sum_{i=1}^{n} DX_i\\
                   &\le \frac{C}{n}
     .\end{align*}
     由切比雪夫不等式：
     \begin{align*}
-        P\left\{ \left| \bar{X_n}-E\bar{X_n} \right| <\varepsilon \right\} &\ge 1-\frac{D\bar{X_n}}{\varepsilon^2}\\
+        P\left\{ \left| \overline{X_n}-E\overline{X_n} \right| <\varepsilon \right\} &\ge 1-\frac{D\overline{X_n}}{\varepsilon^2}\\
                                                                         &\ge 1-\frac{C}{n\varepsilon^2}
     .\end{align*}
     当$n\to \infty $ 时原式收敛于1
@@ -149,7 +149,7 @@ $\rho=0$ ：不相关/非线性关系
     \textit{i.i.d}的中心极限定理：
 
     \[
-        \lim_{n \to \infty} P\left\{ \frac{\bar{X_n}-\mu}{\sigma /\sqrt{n}  }\le x  \right\} =\Phi\left( x \right) 
+        \lim_{n \to \infty} P\left\{ \frac{\overline{X_n}-\mu}{\sigma /\sqrt{n}  }\le x  \right\} =\Phi\left( x \right) 
     .\] 
 \end{cor}
 \begin{cor}
@@ -158,3 +158,9 @@ $\rho=0$ ：不相关/非线性关系
         \lim_{n \to \infty} P\left\{ \frac{Y-np}{\sqrt{np\left( 1-p \right) } } \le x \right\} =\Phi\left( x \right) 
     .\]
 \end{cor}
+\begin{figure}[ht]
+    \centering
+    \incfig{中心极限定理}
+    \caption{中心极限定理}
+    \label{fig:中心极限定理}
+\end{figure}

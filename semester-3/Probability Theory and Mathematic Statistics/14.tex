@@ -48,30 +48,30 @@
 
 常见统计量：
 \begin{itemize}
-    \item 样本均值（算术平均数）：$\bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$
-    \item 样本方差：$S^2=\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2=\frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\bar{X}^2 \right) $
-    \item 样本标准差：$S=\sqrt{\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2} $
+    \item 样本均值（算术平均数）：$\overline{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i}$
+    \item 样本方差：$S^2=\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\overline{X} \right) ^2=\frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\overline{X}^2 \right) $
+    \item 样本标准差：$S=\sqrt{\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\overline{X} \right) ^2} $
     \item 样本阶原点矩
     \item 样本阶中心距
 \end{itemize}
 \begin{notation}
-    样本均值：若$X_1,X_2,\ldots X_{n}$ \textit{i.i.d}：根据辛钦大数定律：$\bar{X}\xrightarrow[n \to +\infty]{P} E\bar{X}=EX$
+    样本均值：若$X_1,X_2,\ldots X_{n}$ \textit{i.i.d}：根据辛钦大数定律：$\overline{X}\xrightarrow[n \to +\infty]{P} E\overline{X}=EX$
 \end{notation}
 \begin{notation}
     样本阶中心矩：
      \[
-        B_2=\frac{1}{n} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^{k}\xrightarrow[n\to \infty]{P} DX
+        B_2=\frac{1}{n} \sum_{i=1}^{n} \left( X_{i}-\overline{X} \right) ^{k}\xrightarrow[n\to \infty]{P} DX
     .\] 
     或：$S^2=B_2\times \frac{n}{n-1} \Rightarrow E\left( S^2 \right) =DX$
 \end{notation}
 \begin{proof}
     \begin{align*}
-        S^2&=\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2=\frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\bar{X}^2 \right) \\
-        &= \frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}^2-2X_{i}\bar{X}+\bar{X}^2 \right) \\
-        &= \frac{1}{n-1} \left( \sum_{i=1}^{n} Xi^2 \right) -\sum_{i=1}^{n} \bar{X}^2 \\
-        ES^2&= E\left[ \frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\bar{X}^2 \right)  \right]  \\
-        &= \frac{1}{n-1} \left( \sum_{i=1}^{n} EX_{i}^2-nE\bar{X}^2 \right)  \\
-        &= \frac{1}{n-1} \left[ \sum_{i=1}^{n} \left( DX_{i}+\left( EX_{i} \right) ^2 \right) -n\left( D\bar{X}+\left( E\bar{X} \right) ^2   \right)  \right]  \\
+        S^2&=\frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}-\overline{X} \right) ^2=\frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\overline{X}^2 \right) \\
+        &= \frac{1}{n-1} \sum_{i=1}^{n} \left( X_{i}^2-2X_{i}\overline{X}+\overline{X}^2 \right) \\
+        &= \frac{1}{n-1} \left( \sum_{i=1}^{n} Xi^2 \right) -\sum_{i=1}^{n} \overline{X}^2 \\
+        ES^2&= E\left[ \frac{1}{n-1} \left( \sum_{i=1}^{n} X_{i}^2-n\overline{X}^2 \right)  \right]  \\
+        &= \frac{1}{n-1} \left( \sum_{i=1}^{n} EX_{i}^2-nE\overline{X}^2 \right)  \\
+        &= \frac{1}{n-1} \left[ \sum_{i=1}^{n} \left( DX_{i}+\left( EX_{i} \right) ^2 \right) -n\left( D\overline{X}+\left( E\overline{X} \right) ^2   \right)  \right]  \\
         &= \frac{1}{n} \left[ \sum_{i=1}^{n} \left( DX+\left( EX \right) ^2 \right) -n\left( \frac{DX}{n} +\left( EX \right) ^2 \right)  \right]  \\
         &= \frac{1}{n-1} \left[ nDX+n\left( EX \right) ^2-DX-n\left( EX \right) ^2 \right] =\frac{1}{n-1} \left( n-1 \right) DX =DX
     .\end{align*}
@@ -79,7 +79,7 @@
 \end{proof}
 用样本均值估计总体均值：
 \[
-    \sum_{i=1}^{n} \left( X_{i}-\bar{X} \right) ^2\le \sum_{i=1}^{n} \left( X_{i}-x \right) ^2
+    \sum_{i=1}^{n} \left( X_{i}-\overline{X} \right) ^2\le \sum_{i=1}^{n} \left( X_{i}-x \right) ^2
 .\] 
 \subsubsection*{顺序统计量}%
 \label{subsub:顺序统计量}
@@ -90,14 +90,14 @@
 \label{sub:样本均值的分布}
 \begin{thm}
     $X_1,X_2,\ldots ,X_{n}$ 来自$N\left( \mu,\sigma^2 \right) $ ，则\[
-        \frac{\bar{X}-\mu}{\sigma} \sqrt{n} \sim N\left( 0,1 \right) 
+        \frac{\overline{X}-\mu}{\sigma} \sqrt{n} \sim N\left( 0,1 \right) 
     .\] 
 \end{thm}
-定义$\bar{X}$ 为$X_1,X_2,\ldots ,X_{n}$的线性函数，$\bar{X}\sim N\left( \mu,\frac{\sigma^2}{n}  \right) $，计算期望和方差，将$\bar{X}$ 标准化
+定义$\overline{X}$ 为$X_1,X_2,\ldots ,X_{n}$的线性函数，$\overline{X}\sim N\left( \mu,\frac{\sigma^2}{n}  \right) $，计算期望和方差，将$\overline{X}$ 标准化
 \begin{thm}
-    标准化后的线性函数$\frac{\bar{X}-\mu}{\sigma} \sqrt{n} $ ：
+    标准化后的线性函数$\frac{\overline{X}-\mu}{\sigma} \sqrt{n} $ ：
     \[
-        \frac{\bar{X}-\mu}{\sigma} \sqrt{n} \xrightarrow[n\to \infty]{L} N\left( 0,1 \right) 
+        \frac{\overline{X}-\mu}{\sigma} \sqrt{n} \xrightarrow[n\to \infty]{L} N\left( 0,1 \right) 
     .\] 
 \end{thm}
 \begin{eg}

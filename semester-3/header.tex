@@ -36,14 +36,17 @@
 \usepackage[]{chemfig}
 \usepackage[]{enumitem}
 \usepackage[]{fancyhdr}
+\usepackage[]{float}
 \usepackage[]{geometry}
 \usepackage[]{graphicx}
 \usepackage[]{hyperref}
 \usepackage[]{import}
+\usepackage[]{inputenc}
 \usepackage[]{mathrsfs}
 \usepackage[]{multirow}
 \usepackage[]{pdfpages}
 \usepackage[]{pgfplots}
+\usepackage[]{stmaryrd}
 \usepackage[]{tabu}
 \usepackage[]{tcolorbox}
 \usepackage[]{textcomp}
@@ -54,9 +57,18 @@
 \usepackage[]{wrapfig}
 \usepackage[]{xifthen}
 \usepackage[]{yhmath}
-\usepackage[dvipsnames]{xcolor}
 \usepackage[UTF8]{ctex}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[notransparent]{svg}
 \usepackage[version=4]{mhchem}
+
+%───────────────────%
+% Inkscape Settings %
+%───────────────────%
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
 
 %────────────────%
 % Fancy Settings %
@@ -177,6 +189,7 @@
 \newtheorem*{prop}{Proposition}
 \newtheorem*{question}{Question}
 \newtheorem*{remark}{Remark}
+\newtheorem*{sol}{Solve}
 \newtheorem*{rrule}{Rule}
 \newtheorem*{thm}{Theorem}
 \newtheorem*{warning}{Warning}

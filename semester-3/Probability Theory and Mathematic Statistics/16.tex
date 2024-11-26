@@ -7,13 +7,13 @@
 
 当$\sigma^2 $ 未知时：表达式符合$\chi^2 \left( n-1 \right)$ ，称为\textbf{枢轴量}
 \begin{cor}
-    $X_1,X_2,\ldots X_{n}$ 来自总体$X\sim N\left( \mu,\sigma^2  \right)$ ，样本均值和方差记为$\bar{X},S^2 $ ，则：
+    $X_1,X_2,\ldots X_{n}$ 来自总体$X\sim N\left( \mu,\sigma^2  \right)$ ，样本均值和方差记为$\overline{X},S^2 $ ，则：
     \begin{enumerate}
         \item 求$ES^2 $ ：$ES^2 =\sigma^2 $ 
         \item 求$DS^2 $ ：$DS^2 =\frac{2\sigma^4 }{n-1}$
-        \item 构造$t$ 分布：$\frac{\bar{X}-\mu}{\sigma /\sqrt{n}}/\sqrt{\frac{S^2 }{\sigma^2 }}=\frac{\bar{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$
+        \item 构造$t$ 分布：$\frac{\overline{X}-\mu}{\sigma /\sqrt{n}}/\sqrt{\frac{S^2 }{\sigma^2 }}=\frac{\overline{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$
     \end{enumerate}
-    （上述$\sqrt{\left( n-1 \right)S^2 /\sigma^2} \sim \chi^2 \left( n-1 \right)$ 且$(\bar{X}-\mu) /\frac{\sigma}{\sqrt{n}}\sim \Phi\left( x \right)$）
+    （上述$\sqrt{\left( n-1 \right)S^2 /\sigma^2} \sim \chi^2 \left( n-1 \right)$ 且$(\overline{X}-\mu) /\frac{\sigma}{\sqrt{n}}\sim \Phi\left( x \right)$）
 \end{cor}
 重点题目：例6.4.4
 \begin{cor}
@@ -32,7 +32,7 @@
 \end{itemize} 
 \subsection{矩估计}%
 \label{sub:矩估计}
-使用样本矩$\bar{X}$替代总体矩$\hat{\mu}$ 
+使用样本矩$\overline{X}$替代总体矩$\hat{\mu}$ 
 \begin{notation}
     总体矩不存在（无穷）时不能使用矩估计
 \end{notation}
@@ -49,8 +49,8 @@
     a&= EX-\sqrt{3DX} \\
     b&= EX+\sqrt{3DX}
 \end{cases}$ ，替代后为：$\begin{cases}
-    \hat{a}&= \bar{X}-\sqrt{3M_2^\star } \\
-    \hat{b}&= \bar{X}+\sqrt{3M_2^\star }
+    \hat{a}&= \overline{X}-\sqrt{3M_2^\star } \\
+    \hat{b}&= \overline{X}+\sqrt{3M_2^\star }
 \end{cases}$ ，$\hat{a}$ 代表对$a$ 的估计
 \subsection{极大似然估计}%
 \label{sub:极大似然估计}

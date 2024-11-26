@@ -492,6 +492,12 @@ snippet axi "Axiom" w
 \end{axiom}
 endsnippet
 
+snippet coll "Corollary" w
+\begin{cor}
+	$1
+\end{cor}
+endsnippet
+
 snippet bigfun "Big function" iA
 \begin{align*}
 	$1: $2 &\longrightarrow $3 \\\\
@@ -538,32 +544,32 @@ endsnippet
 #─────────────────#
 priority 10
 context "math()"
-snippet "lbar" "Long bar" riA
+snippet "bar" "Long bar" riA
 \overline{$1}
 endsnippet
 
 priority 100
 context "math()"
-snippet "([a-zA-Z])lbar" "Long bar" riA
+snippet "([a-zA-Z])bar" "Long bar" riA
 \overline{`!p snip.rv=match.group(1)`}
 endsnippet
 
-priority 10
-context "math()"
-snippet "bar" "bar" ri
-\bar{$1}
-endsnippet
-
-priority 100
-context "math()"
-snippet "([a-zA-Z])bar" "bar" ri
-\bar{`!p snip.rv=match.group(1)`}
-endsnippet
+# priority 10
+# context "math()"
+# snippet "bar" "bar" ri
+# \bar{$1}
+# endsnippet
+# 
+# priority 100
+# context "math()"
+# snippet "([a-zA-Z])bar" "bar" ri
+# \bar{`!p snip.rv=match.group(1)`}
+# endsnippet
 
 priority 10
 context "math()"
 snippet "bm" "Bold Math" ri
-\bm{$1}
+\bm{${1:${VISUAL}}}
 endsnippet
 
 priority 100
@@ -575,7 +581,7 @@ endsnippet
 priority 10
 context "math()"
 snippet "hat" "hat" riA
-\hat{$1}
+\hat{${1:${VISUAL}}}
 endsnippet
 
 priority 100
@@ -587,7 +593,7 @@ endsnippet
 priority 10
 context "math()"
 snippet "til" "widetilde" riA
-\widetilde{$1}
+\widetilde{${1:${VISUAL}}}
 endsnippet
 
 priority 100
@@ -606,7 +612,7 @@ endsnippet
 
 context "math()"
 snippet tt "text" iA
-\text{$1}
+\text{${1:${VISUAL}}}
 endsnippet
 
 snippet SI "SI" iA
@@ -895,6 +901,21 @@ snippet nth "\varnothing" wA
 endsnippet
 
 context "math()"
+snippet omi "\ominus" wA
+^\ominus
+endsnippet
+
+context "math()"
+snippet \ominus' "\ominus" iA
+{\ominus'} 
+endsnippet
+
+context "math()"
+snippet celc "Celcius" wA
+^\circ\text{C}
+endsnippet
+
+context "math()"
 snippet rij "mrij" i
 (${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}
 endsnippet
@@ -973,13 +994,13 @@ endsnippet
 
 priority 2000
 context "math()"
-snippet CC "Conbine" A
+snippet CC "Conbine" iA
 \mathrm{C}_{${1:n}}^{${2:m}}
 endsnippet
 
 priority 2000
 context "math()"
-snippet PP "Permute" A
+snippet PP "Permute" iA
 \mathrm{P}_{${1:n}}^{${2:m}}
 endsnippet
 

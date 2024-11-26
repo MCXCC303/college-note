@@ -1,0 +1,186 @@
+\learn{9}{11.25}
+\section{正态总体下的抽样分布}%
+\label{sec:正态总体下的抽样分布}
+\begin{cor}
+    $X\sim N\left( \mu,\sigma^2  \right)$ 且$X_1,X_2,\ldots ,X_{n}$ 为样本，定义：\begin{enumerate}
+        \item $\overline{X}=\frac{1}{n}\sum_{i=1}^{n} X_{i}$
+        \item $S^2 =\frac{1}{n-1}\sum_{i=1}^{n} \left( X_{i}-\overline{X} \right)$
+    \end{enumerate}
+    结论：
+    \begin{enumerate}
+        \item $\overline{X}\sim N\left( \mu,\frac{\sigma^2}{n} \right)$ ，标准化后$\frac{\overline{X}-\mu}{\sigma}\sqrt{n}\sim N\left( 0,1 \right)$
+        \item $E\overline{X}=E\left( \frac{1}{n}\sum_{i=1}^{n} X_{i} \right)=\frac{1}{n}\sum_{i=1}^{n} EX_{i}=\frac{1}{n}\cdot n\mu=\mu$
+        \item $D\overline{X}=D\left( \frac{1}{n}\sum_{i=1}^{n} X_{i} \right)=\frac{1}{n^2 }\sum_{i=1}^{n} DX_{i}=\frac{1}{n^2 }\cdot n\sigma^2 =\frac{\sigma}{n}$
+        \item $\frac{\left( n-1 \right)S^2 }{\sigma^2 }=\frac{1}{\sigma^2 }\sum_{i=1}^{n} \left( X_{i}-\overline{X} \right)^2 \sim \chi^2 \left( n-1 \right)$
+        \item $\overline{X}$ 和$S^2 $ 相互独立
+    \end{enumerate}
+\end{cor}
+\begin{notation}
+    均值的方差比原来的分布的方差小：少量样本的平均数波动会较大（取到两个很大的+取到两个很小的），大量样本的平均数波动不大
+\end{notation}
+\begin{cor}
+    \begin{enumerate}
+        \item $\frac{1}{\sigma^2 }\sum_{i=1}^{n} \left( X_{i}-\mu \right)^2 \sim \chi^2 \left( n \right)$
+        \item $\frac{\overline{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$
+    \end{enumerate}
+    \begin{proof}
+        把$X_{i}$ 标准化后求和：$\sum_{i=1}^{n} \left( \frac{X_{i}-\mu}{\sigma} \right)^2 \sim \chi^2 \left( n \right)$ ，提取后即得$\frac{1}{\sigma^2 }\left( X_{i}-\mu \right)^2 \sim \chi^2 \left( n \right)$
+    \end{proof}
+\end{cor}
+\begin{notation}
+区分：$\overline{X}$ 为样本均值，自由度为$n-1$ ，$\mu$ 为总体期望，自由度为$n$ ；样本均值为$\frac{1}{n}\sum_{i=1}^{n} X_{i}$ ，相当于多了一个约束（多了一个方程），使得自由未知量少一个
+\end{notation}
+\begin{eg}
+\[
+    \bm{Ax}=\begin{pmatrix}
+        1\\
+        2
+    \end{pmatrix}\quad \bm{A}=\begin{pmatrix}
+    1 & 0 & 1 & 1\\
+    0 & 1 & 1 & 1
+    \end{pmatrix}
+.\]
+自由未知量为$x_3,x_4$
+\end{eg}
+\begin{proof}
+    $\frac{\overline{X}-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)$ ：
+
+    需要用到： \begin{enumerate}
+        \item $\frac{\left( n-1 \right)S^2 }{\sigma^2 }\sim \chi^2 \left( n-1 \right)$ ：$S$ 和$\sigma$ 的关系
+        \item $\frac{X}{\sqrt{Y /\left( n-1 \right)}}\sim t\left( n-1 \right)$，其中$X\sim N\left( 0,1 \right),Y\sim \chi^2 \left( n-1 \right)$
+    \end{enumerate}
+    由于$\frac{\overline{X}-\mu}{\sigma}\sqrt{n}\sim N\left( 0,1 \right),  \frac{\left( n-1 \right)S^2 }{\sigma^2 }\sim \chi^2 \left( n-1 \right)$，构造$t$ 分布：\[
+        \frac{\frac{X-\mu}{\sigma}\sqrt{n}}{\sqrt{\frac{\left( n-1 \right)S^2 }{\sigma^2 } /\left( n-1 \right)}}=\frac{\frac{X-\mu}{\sigma}\sqrt{n}\cdot \sigma}{\sqrt{\left( n-1 \right)S^2 /\left( n-1 \right)}}=\frac{X-\mu}{S}\sqrt{n}\sim t\left( n-1 \right)
+    .\]
+    即结论得证。
+\end{proof}
+以上为一个正态分布总体；以下为两个正态分布总体：
+\begin{cor}
+    $X\sim N\left( \mu_1,\sigma_1^2  \right),Y\sim N\left( \mu_1,\sigma_2^2  \right)$ 
+
+    有两个正态分布总体样本：$\left\{ X_1,X_2,\ldots ,X_{n_1} \right\},\left\{ Y_1,Y_2,\ldots ,Y_{n_2} \right\}$ ，有以下结论：
+    \begin{enumerate}
+        \item $\frac{\left( \overline{X}-\overline{Y}\right) -\left( \mu_1-\mu_2 \right)}{\sqrt{\frac{\sigma_1^2 }{n_1}+\frac{\sigma_2^2 }{n_2}}}$
+        \item $\frac{S_1^2 /\sigma_1^2 }{S_2^2 /\sigma_2^2}\sim F\left( n_1-1,n_2-1 \right)$
+        \item 当$\sigma_1^2 =\sigma_2^2 =\sigma^2  $ 时：$T\left( \overline{X},\overline{Y},\mu_1,\mu_2,S_1,S_2 \right)$ 的某个形式为$t$ 分布，形式见证明（太复杂了）
+    \end{enumerate}
+\end{cor}
+\begin{proof}
+    第一个结论：$\frac{\left( \overline{X}-\overline{Y} \right)-\left( \mu_1-\mu_2 \right)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2 }{n_2} }}$
+    
+    由一个总体的正态分布结论有：$\overline{X}\sim N\left( \mu_1,\frac{\sigma_1^2}{n} \right),\overline{Y}\sim N\left( \mu_2,\frac{\sigma_2^2}{n} \right)$，则由线性可加性：\[
+        \overline{X}-\overline{Y}\sim N\left( \mu_1-\mu_2,\frac{\sigma_1^2 }{n_1}+\frac{\sigma_2^2 }{n_2} \right)
+    .\]
+    接着将这个分布标准化即可：\[
+        \frac{\left( \overline{X}-\overline{Y} \right)-\left( \mu_1-\mu_2 \right)}{\sqrt{\frac{\sigma_1^2 }{n_1}+\frac{\sigma_2^2 }{n_2}}} \sim N\left( 0,1 \right)
+    .\]
+\end{proof}
+\begin{proof}
+    第二个结论：$\frac{S_1^2 /\sigma_1^2 }{S_2^2 /\sigma_2^2 }\sim F\left( n_1-1,n_2-1 \right)$ ：
+
+    需要用到结论：$\frac{\left( n-1 \right)S^2 }{\sigma^2 }\sim \chi^2 \left( n-1 \right)$ 
+
+    两个卡方分布的比值即为F分布：\[
+        \frac{\frac{\left( n_1-1 \right)S_1^2 }{\sigma_1^2 } /\left( n_1-1 \right)}{\frac{\left( n_2-1 \right)S_2^2 }{\sigma_2^2 } /\left( n_2-1 \right)}\sim F\left( n_1-1,n_2-1 \right)
+    .\]
+\end{proof}
+\begin{notation}
+    $t$ 分布注意：开根号、除自由度：\[
+        \frac{X}{\sqrt{Y /\bm{n}}}\sim t\left( \bm{n} \right)
+    .\]
+    F分布注意：除参数：\[
+        \frac{X /\bm{n}_1}{Y /\bm{n}_2}\sim F\left( \bm{n}_1,\bm{n}_2 \right)
+    .\]
+\end{notation}
+\begin{notation}
+    某个复杂形式符合$t$ 分布的证明：\[
+        T=\frac{\left( \overline{X}-\overline{Y} \right)-\left( \mu_1-\mu_2 \right)}{\sqrt{\frac{\left( n_1-1 \right)S_1^2 +\left( n_2-1 \right)S_2^2 }{n_1+n_2-2}}\cdot \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\sim t\left( n_1+n_2-2 \right)
+    .\]
+    或者更直白的形式：\[
+        T=\frac{\frac{\left( \overline{X}-\overline{Y} \right)-\left( \mu_1-\mu_2 \right)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}}{\sqrt{\frac{\left( \frac{\left( n_1-1 \right)S_1^2}{\sigma^2 } +\frac{\left( n_2-1 \right)S_2^2 }{\sigma^2 } \right)}{n_1-1+n_2-1}}} \sim t\left( n_1-1+n_2-1 \right)
+    .\]
+    不难发现：上半部分为结论展示的正态分布，下半部分中，卡方分布部分利用卡方分布可加性：$\chi^2 \left( n_1 \right)+\chi^2 \left( n_2 \right)=\chi^2 \left( n_1+n_2 \right)$，用$\frac{\left( n-1 \right)S^2 }{\sigma^2 }$ 组合：\[
+        \begin{cases}
+            \frac{\left( n_1-1 \right)S_1^2 }{\sigma^2 }\sim \chi^2 \left( n_1-1 \right)\\
+            \frac{\left( n_2-1 \right)S_2^2 }{\sigma_2^2 }\sim \chi^2 \left( n_2-1 \right)
+        \end{cases}\Rightarrow \frac{\left( n_1-1 \right)S_1^2 }{\sigma_2^2 }+\frac{\left( n_2-1 \right)S_2^2 }{\sigma_2^2 }\sim \chi^2 \left( n_1+n_2-2 \right)
+    .\]
+    最后通过构造$t$ 分布将两部分组合即可。
+\end{notation}
+\begin{eg}
+    $X\sim N\left( \mu,\sigma^2  \right),\overline{X}$和$S^2 $ 为样本均值和方差，当$n=16$ 时，求$k$ 使$P\left( \overline{X}>\mu+kS \right)=0.95$
+\end{eg}
+解：把原式转换：\[
+    P\left( \overline{X}>\mu+kS \right)=P\left( \frac{\overline{X}-\mu}{S}\sqrt{16}>k\cdot \sqrt{16} \right)
+.\]
+由结论可得$\frac{\overline{X}-\mu}{S}\cdot \sqrt{16}\sim t\left( 15 \right)$ ，由$t$ 分布的对称性：$P\left( T>4k \right)=1-P\left( T>-4k \right)$ 即$P\left( T>-4k \right)=0.05$ ，因此查表$t_{0.05}\left( 15 \right)$ 即可
+\begin{figure}[ht]
+    \centering
+    \incfig[0.7]{t分布对称性}
+    \caption{$t$分布对称性}
+    \label{fig:t分布对称性}
+\end{figure}
+\section{参数估计}%
+\label{sec:参数估计}
+\begin{defi}
+    参数：对于分布的参数举例如下：
+
+    通过抽样$X_1,X_2,\ldots X_{n}$ 构造函数
+\end{defi}
+\begin{table}[htpb]
+    \centering
+    \caption{参数-分布关系}
+    \label{tab:参数-分布关系}
+    \begin{tabular}{cc}
+    \toprule
+    总体分布 & 总体参数\\
+    \midrule
+    $N\left( \mu,\sigma^2  \right)$ & $\mu,\sigma^2 $\\
+    $P\left( \lambda \right)$ & $\lambda$ \\
+    $U[a,b]$ & $a,b$ \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\begin{eg}
+抽取50个同学量身高，构造身高函数，通过观测值得到的估计参数来接近理论上的参数
+\end{eg}
+\begin{defi}
+参数空间：参数的取值范围
+\end{defi}
+\subsection{点估计}%
+\label{sub:点估计}
+\begin{defi}
+    点估计：估计值为一个数
+
+    对比区间估计：估计值是一个区间
+\end{defi}
+点估计构造的函数记为$\hat{\theta}=\hat{\theta}\left( X_1,X_2,\ldots ,X_{n} \right)$
+\subsection{矩估计}%
+\label{sub:矩估计}
+\begin{defi}
+    使用随机变量的矩估计参数
+
+    使用样本矩代替总体的矩，一般使用一阶矩样本矩代替一阶总体矩，二阶样本矩代替二阶总体矩
+\end{defi}
+    对于总体：
+
+    一阶（中心/原点）矩$EX$ $\leftarrow$ 一阶样本矩$\overline{X}=\frac{1}{n}\sum_{i=1}^{n} X_{i}$ 
+
+    二阶矩$EX^2 \leftarrow$ 二阶样本矩$A_2=\frac{1}{n}\sum_{i=1}^{n} X_{i}^2 $
+\begin{eg}
+    $X\sim N\left( \mu,\sigma^2  \right)$ ，取样$X_1,X_2,\ldots X_{n}$ ，使用矩估计估计参数$\mu,\sigma$
+\end{eg}
+解：$EX=\mu, \overline{X}=\frac{1}{n}\sum_{i=1}^{n} X_{i}$ （一阶样本$\to $ 一阶总体）
+
+即：$\hat{\mu}=\overline{X}$（估计值）
+
+同理：$DX=E\left( X-EX \right)=EX^2 -\left( EX \right)^2 $，转换后：$EX^2 =DX+\left( EX \right)^2 =\sigma^2 +\mu^2 $，而$A_2 =\frac{1}{n}\sum_{i=1}^{n} X_{i}^2 $
+
+即：$\hat{\sigma}^2 +\hat{\mu}^2 =A_2\Rightarrow \hat{\sigma}^2 =A_2-\hat{\mu}^2 $ （估计值）
+
+算出$\hat{\sigma}$ 即得：\[
+    \begin{cases}
+        \hat{\mu}=\frac{1}{n}\sum_{i=1}^{n} X_{i}\\
+        \hat{\sigma}=\sqrt{\frac{1}{n}\sum_{i=1}^{n} X_{i}^2 -\left( \frac{1}{n}\sum_{i=1}^{n} X_{i} \right)^2 }
+    \end{cases}
+.\]

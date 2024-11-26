@@ -47,21 +47,12 @@
     \[
         \iint_{x\in [0,y] ,y\in [0,1] } Axy \mathrm{d}x\mathrm{d}y=1
     .\] 
-    \begin{figure}[htpb]
-        \centering
-        \caption{$f\left( x,y \right) $}%
-        \label{f( x,y )}
-        \begin{tikzpicture}[yscale=1]
-            % Axis
-            \draw [->] (0,0)--(2,0) node [right] {$x$};
-            \draw [->] (0,0)--(0,2) node [above] {$y$};
-            \node [anchor=north east] at(0,0) {$O$};
-    
-            \draw [color=blue,semithick,domain=0:1] plot (\x, {\x});
-            \draw [color=blue,semithick,domain=0:1] plot (\x,{1});
-        \end{tikzpicture}
-    \end{figure}
-
+\begin{figure}[ht]
+    \centering
+    \incfig[0.3]{函数积分域}
+    \caption{函数积分域}
+    \label{fig:函数积分域}
+\end{figure}
     $A=8$
 
     2. $P\left\{ X+Y\ge 1 \right\} $ 
@@ -101,21 +92,12 @@
     3.5 $x\in [1,+\infty), y\in [0,1)$ 
 
     3.6 $x\in [1,+\infty), y\in [1,+\infty)$ 
-
-    \begin{center}
-        \begin{tikzpicture}
-            \draw [] (-1,1) rectangle (1,-1) node at(0,0) {$x\in \left[ 0,1 \right) ,y\in \left[ 0,1 \right) $};
-            \draw [] (1,1)--(3,1);
-            \draw [] (1,1)--(1,3);
-            \draw [] (-1,1)--(-1,3);
-            \draw [] (1,-1)--(3,-1);
-            \draw [] (-1,-1)--(1,1);
-            \node [] at(2,2) {$x\in [1,+\infty),y\in [1,+\infty)$};
-            \node [] at(-2,-2) {$x\in (-\infty,0),y\in (-\infty,0)$};
-            \node [] at(4,0) {$x\in [1,+\infty),y\in [0,1)$};
-            \node [] at(0,3) {$x\in [0,1),y\in [1,+\infty)$};
-        \end{tikzpicture}
-    \end{center}
+    \begin{figure}[ht]
+        \centering
+        \incfig[0.5]{积分区域}
+        \caption{积分区域}
+        \label{fig:积分区域}
+    \end{figure}
     分段对$Axy$ 积分：
     \begin{align*}
         F\left( x,y \right) =\iint_{x\le u,y\le v} f\left( u,v \right)  \mathrm{d}x\mathrm{d}y

@@ -1,0 +1,134 @@
+\lecture{11}{11.26}
+\begin{notation}
+    氧化态发生副反应时条件电位降低
+\end{notation}
+$\circ$ 酸效应：分两种情况：\begin{enumerate}
+    \item $\ce{H+}$ 或$\ce{OH-}$ 参与反应，直接影响
+    \item 氧化态或还原态为多元酸碱，酸度变化改变型体的浓度
+\end{enumerate}
+\begin{eg}
+    25度时，酸性（$c_{\ce{H+}}\approx 5$ mol/L）和碱性（$\text{pH}\approx 8.0$）下，$\ce{H_3AsO_4}/\ce{HAsO_2}$ 的条件电位，判断和$\ce{I_2}/\ce{I-}$ 的反应方向
+\end{eg}
+解：半反应：
+\begin{align*}
+    \ce{H_3AsO_4 +2H+ + 2e-}&\ce{<=>[][]}\ce{HAsO_2 +2H_2O}\quad \varphi^{\ominus}=0.56V\\
+    \ce{I_2 +2e-}&\ce{<=>[][]}\ce{2I-}\quad \varphi ^{\ominus'}\approx \varphi^{\ominus}=0.54
+.\end{align*}
+计算条件电位：
+\[
+    \varphi_\text{As}=\varphi^{\ominus}_\text{As}+\frac{0.059}{2}\lg \frac{c_{\ce{H_3AsO_4}}c_{\ce{H+}}}{c_{\ce{HAsO_2}}}
+.\]
+$\ldots $
+\begin{notation}
+    在酸性介质中铁的条件电位都会有所降低：
+    \begin{table}[htpb]
+        \centering
+        \caption{不同介质中的条件电位}
+        \label{tab:不同介质中的条件电位}
+        \begin{tabular}{cccccc}
+        \toprule
+        介质 & 高氯酸 & 稀盐酸 & 硫酸 & 稀磷酸 & 浓磷酸\\
+        \midrule
+        条件电位 & 0.767 & 0.7 & 0.68 & 0.44 & 0.32\\
+        \bottomrule
+        \end{tabular}
+    \end{table}
+\end{notation}
+\subsection{氧还反应进行的程度和速度}%
+\label{sub:氧还反应进行的程度和速度}
+使用平衡常数的大小衡量：
+\begin{itemize}
+    \item 绝对平衡常数
+    \item 相对平衡常数
+\end{itemize}
+\begin{eg}
+    写出两个半反应：
+    \begin{align*}
+        \ce{\ce{Ox_1} +n_1e- =\ce{Red_1}}\quad &\varphi_1=\varphi_1^{\ominus'}+\frac{0.059}{n_1}\lg \frac{c_{\ce{Ox_1}}}{c_{\ce{Red_1}}}\\
+        \ce{\ce{Ox_2} +n_2e- =\ce{Red_2}}\quad &\varphi_2=\varphi_2^{\ominus'}+\frac{0.059}{n_2}\lg \frac{c_{\ce{Ox_2}}}{c_{\ce{Red_2}}}
+    .\end{align*}
+    当平衡时：$\varphi_1=\varphi_2$ 即：
+    \[
+        \varphi_1^{\ominus'}+\frac{0.059}{n_1}\lg \frac{c_{\ce{Ox_1}}}{c_{\ce{Red_1}}}=\varphi_2^{\ominus'}+\frac{0.059}{n_2}\lg \frac{c_{\ce{Ox_2}}}{c_{\ce{Red_2}}}
+    .\]
+    两边同乘$n=n_1\cdot n_2$ 整理后得：\[
+        \lg K'=\lg \frac{c^{b}_{\ce{Ox_2}}\cdot c^{a}_{\ce{Red_1}}}{c^{a}_{\ce{Ox_1}}\cdot c^{b}_{\ce{Red_2}}}=\frac{n\left( \varphi_1^{\ominus'}-\varphi_2^{\ominus'} \right)}{0.059}=\frac{n\Delta\varphi^{\ominus'}}{0.059}
+    .\]
+    即电位差越大，反应越完全
+\end{eg}
+\begin{notation}
+    一般根据滴定要求，反应的完全程度需要在$99.9\%$ 以上，即：$\frac{c_{\ce{Red_1}}}{c_{\ce{Ox_1}}}\ge 10^3 $ ，计算发现条件与电子转移数有关：
+    \begin{itemize}
+        \item $n=1$ 时，$\Delta\varphi'=0.35V$
+        \item $n=2$ 时，$\Delta\varphi'=0.18V$
+        \item $n_1:n_2=2$ 时，$\Delta\varphi^{\ominus'}\ge 0.27V$
+    \end{itemize}
+    即只要满足$\Delta\varphi^{\ominus'}\ge 0.4V$ 即可完全反应
+\end{notation}
+\subsubsection*{氧化还原反应的速度}%
+\label{subsub:氧化还原反应的速度}
+\begin{notation}
+    部分反应理论上可行，但反应速度极慢
+\end{notation}
+\begin{eg}
+    水溶液中的溶解氧相较于Sn：$\Delta\varphi^{\ominus '}\approx 1.08\gg 0.4$，理论上可以完全反应，但该反应太慢了，因此锡制品可以用于锅碗瓢盆等
+\end{eg}
+\begin{notation}
+热力学只考虑反应程度，反映了反应的可能性；动力学考虑反应速度，反映了反应的现实性
+\end{notation}
+一般来说，反应物浓度越大，反应速度越快
+\begin{eg}
+$\ce{Cr_2O_7^2- +6I- +14H+} \ce{<=>[][]} \ce{2Cr^3+ +3I_2 +H_2O}$ ，加入过量$\ce{KI}$ ，置于暗处10min即可反应完全
+\end{eg}
+\begin{notation}
+一般情况下：温度每升高$10^\circ\text{C}$ ，反应速度加快2到3倍
+\end{notation}
+催化剂：分为正催化和负催化
+\begin{notation}
+    自动催化反应：反应中产生了能催化反应的物质
+\end{notation}
+\subsection{氧化还原滴定曲线}%
+\label{sub:氧化还原滴定曲线}
+滴定反应：
+\[
+    n_2\ce{Ox_1}+n_1\ce{Red_2} \ce{<=>[][]}n_2\ce{Red_1} + n_1\ce{Ox_2}
+.\]
+\begin{notation}
+滴定曲线的横坐标：滴定剂的体积或滴定百分数
+
+酸碱滴定的纵坐标：pH；络合滴定的纵坐标：$\text{p}C_x $
+
+氧还滴定的纵坐标：任意一个电对的电极电位（常用量大的/被滴定物质进行计算；随着滴定规律变化，动态平衡）
+\end{notation}
+滴定时计算电极电势：
+
+滴定前：溶液中只有被滴定物质，且不知道已经发生了什么副反应，因此\textbf{氧还滴定图像没有起点}
+
+滴定中：使用大量物质（被滴定物质）计算：
+
+计量点处：完全反应，但仍有残留，把两个电对的电势相加：$2\varphi_\text{sp}=\varphi_\text{A}^{\ominus'} +\varphi_\text{B}^{\ominus'} $
+
+过量时使用滴定物质计算
+\begin{figure}[ht]
+    \centering
+    \incfig[0.6]{氧化还原反应滴定曲线}
+    \caption{氧化还原反应滴定曲线}
+    \label{fig:氧化还原反应滴定曲线}
+\end{figure}
+\begin{itemize}
+    \item 对称电对：氧化态和还原态的系数相同
+    \item 不对称电对：系数不相同
+\end{itemize}
+对称电对的电位值计算：\[
+    \varphi_\text{sp}=\frac{n_1\varphi_1 ^{\ominus'} +n_2\varphi_2 ^{\ominus'} }{n_1+n_2}
+.\]
+\subsection{滴定突越范围的影响}%
+\label{sub:滴定突越范围的影响}
+$\Delta\varphi ^{\ominus'} $ 越大，滴定突越范围越大
+\begin{figure}[ht]
+    \centering
+    \incfig{突越范围与电位差}
+    \caption{突越范围与电位差}
+    \label{fig:突越范围与电位差}
+\end{figure}
+
