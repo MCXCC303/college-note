@@ -1,0 +1,87 @@
+\lecture{21}{11.28}
+\subsubsection*{两个总体的参数估计}%
+\label{subsub:-两个总体的参数估计}
+假设种类：
+\begin{itemize}
+    \item $H_0:\mu_1=\mu_2,H_1:\mu_1\neq \mu_2$
+    \item $H_0:\mu_1\ge \mu_2,H_1:\mu_1<\mu_2$
+    \item $H_0:\mu_1\le \mu_2,H_2:\mu_1>\mu_2$
+    \item $^\star H_0:\mu_1-\mu_2\ge c,H_1:\mu_1-\mu_2<c$
+    \item $^\star H_0:\mu_1-\mu_2\le c,H_1:\mu_1-\mu_2>c$
+\end{itemize}
+一般使用点估计：$\overline{X}=\hat{\mu_1},\overline{Y}=\hat{\mu_2}$，将假设转为：$\mu_1-\mu_2\ge c\Rightarrow \overline{X}-\overline{Y}\ge c$
+
+原因：$\overline{X}-\overline{Y}$ 是$\mu_1-\mu_2$ 的最小方差无偏估计
+\begin{notation}
+    两个总体匹配/不独立
+\end{notation}
+\begin{eg}
+    一种马达正常工作的平均电流不超过0.8A，抽取16台马达，测得$\overline{X}=0.92,S^2 =0.32$ ，假设电流符合正态分布$X\sim N\left( \mu,\sigma^2  \right)$ ，取$\alpha=0.05$ ，求厂家的话是否可信
+\end{eg}
+\begin{sol}
+    确定假设：有两种可能的假设：
+    \begin{enumerate}
+        \item $H_0:\mu\le 0.8,H_1:\mu>0.8$ 
+        \item $H_0:\mu\ge 0.8,H_1:\mu<0.8$
+    \end{enumerate}
+    确定假设统计量：由于$\sigma$ 未知，因此使用$t$ 统计量：$\frac{\overline{X}-\mu}{S}\sqrt{n}>t_{1-\frac{\alpha}{2}}\left( n-1 \right)$
+
+    分别带入数据后发现：对于$H_0:\mu<0.8$ 和$H_0:\mu\ge 0.8$ ，都不拒绝原假设
+\end{sol}
+\begin{notation}
+    对于假设检验，任何假设都有犯错误的可能，拒绝原假设的可能是充分的（$\alpha$ 一般较小），不拒绝原假设有较大的可能犯错误（$\beta$ 可能更大），因此不拒绝原假设的结论需要加大样本量继续验证
+\end{notation}
+\subsubsection*{正态总体的方差的检验}%
+\label{subsub:正态总体的方差的检验}
+检验统计量不使用$\mu$ ：$\chi^2 =\frac{\left( n-1 \right)S^2 }{\sigma_0^2 }$
+
+继续化简：\[
+    \chi^2 =\frac{\left( n-1 \right)S^2 }{\sigma_0^2 }=\frac{\left( n-1 \right)\cdot \frac{1}{n-1}\sum_{i=1}^{n} \left( X_{i}-\overline{X} \right)^2 }{\sigma_0^2 } =\frac{\sum_{i=1}^{n} \left( X_{i}-\overline{X} \right)^2 }{\sigma_0^2 }
+.\]
+此时使用$S^2 =\hat{\sigma}^2 $ 来估计$\sigma$ ，如果$\mu$ 已知则可以使用$\frac{1}{n}\sum_{i=1}^{n} \left( X_{i}-\mu \right)^2 =\hat{\sigma}^2 $ 来估计$\sigma$
+\subsubsection*{总体分布的卡方拟合优度检验}%
+\label{subsub:总体分布的卡方拟合优度检验}
+根据样本预测总体的分布种类（假设）
+\begin{eg}
+    某建筑工地发生事故的记录：
+    \begin{table}[htpb]
+        \centering
+        \caption{工地事故}
+        \label{tab:工地事故}
+        \begin{tabular}{cc}
+        \toprule
+        事故数 & 天数\\
+        \midrule
+        0 & 102\\
+        1 & 59 \\
+        2 & 30 \\
+        3 & 8 \\
+        4 & 0 \\
+        5 & 1 \\
+        $\ge 6$ & 0 \\
+        合计 & 200\\
+        \bottomrule
+        \end{tabular}
+    \end{table}
+    求$\alpha=0.05$ 下，数据是否符合泊松分布$P\left( \lambda \right)$
+\end{eg}
+\begin{notation}
+    泊松分布：
+    \[
+        X\sim P\left( \lambda \right)\quad p=P\left( X\le x \right)=\sum_{k=1}^{n} \frac{\lambda^{k}}{k!}\mathrm{e}^{-\lambda}
+    .\]
+\end{notation}
+\begin{sol}
+    设每天发生事故$i$ 次为事件$A_{i}$，确定假设：
+    \begin{itemize}
+        \item 原假设$H_0:\forall i,P\left( A_{i} \right)=p_i$
+        \item 被则假设$H_1:\exists i,P\left( A_{i} \right)\neq p_i$
+    \end{itemize}
+    $\lambda$ 可以使用$\overline{X}=\hat{\lambda}$ 估计，即$\hat{\lambda}=\overline{x}=0.74$ ，使用$P\left( 0.74 \right)$ 可以计算$\hat{p_i}$
+
+    确定假设统计量：
+    \begin{align*}
+        \chi^2 &=\sum_{i=1}^{m} \frac{n_{i}}{np_i}-n\\
+        \hat{\chi}^2 &= \sum_{i=1}^{m} \frac{n_{i}}{n\hat{p}_i}-n \\
+    .\end{align*}
+\end{sol}
