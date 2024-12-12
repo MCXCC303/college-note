@@ -1,0 +1,155 @@
+\lecture{12}{12.03}
+\textit{条件电位}
+
+$\circ$ 影响条件电位的因素：氧化态发生副反应（降低），还原态发生副反应（升高）
+
+$\circ$ 氧还反应的进行程度：$\lg K'=\frac{n\Delta\varphi ^{\ominus'}  }{0.059}$，当$\Delta\varphi ^{\ominus'} >0.4V$ 时符合滴定要求
+
+$\circ$ 影响氧还反应进行速度的因素：浓度、温度、催化剂
+
+$\circ$ 氧还反应的滴定曲线：电极电势为纵坐标，化学计量点电位$\varphi_\text{sp}=\frac{n_1\varphi_1 ^{\ominus'} +n_2\varphi_2 ^{\ominus'} }{n_1+n_2}$，影响滴定突越范围的因素有$\Delta\varphi ^{\ominus'} $ ，与滴定剂的浓度无关
+
+\subsection{氧还滴定的指示剂}%
+\label{sub:氧还滴定的指示剂}
+\begin{notation}
+    配位滴定指示剂：金属指示剂（铬黑T）
+\end{notation}
+氧还滴定共五类指示剂：
+\begin{description}
+    \item[自身指示剂] 滴定剂或被测物本身有颜色，滴定产物无色或浅色，使用本身颜色的变化指示
+    \item [特殊指示剂] 物质本身不具有氧化还原性，但可以和氧化还原电对形成有色配合物
+    \item [氧化还原指示剂] 自身为弱氧化剂或还原剂：$\underset{\text{颜色1}}{\text{In}_\text{Ox}}+n\mathrm{e}^{-}\ce{<=>[][]}\underset{\text{颜色2}}{\text{In}_\text{Red}}$
+    \item [外指示剂] 本身具有氧化还原性，但能与标准溶液或与被测溶液反应，不能加入溶液中，在化学计量点附近取出一些被滴定溶液在外界与指示剂反应
+    \item [不可逆指示剂] 与微过量标准溶液作用，会发生不可逆的颜色变化
+    
+\end{description}
+\begin{eg}
+第一类：高锰酸钾$\underset{\text{粉红色}}{\ce{MnO_4-}} \to \underset{\text{无色}}{\ce{Mn_2+}}$ 
+
+碘量法：$\underset{\text{浅黄色}}{\ce{I_2}}\to \underset{\text{无色}}{\ce{I-}}$
+
+优点：无需选择指示剂
+\end{eg}
+\begin{eg}
+    第二类：淀粉+单质碘$\to \ce{I_3-}$ ：显蓝色，可逆，碘量法常用
+\end{eg}
+\begin{notation}
+    第三类：电对电位使用能斯特方程计算，计算可得理论变色点：
+    \[
+        \frac{c_{\ln (\text{O})}}{c_{\ln (\text{R})}}=1
+    .\]理论变色范围：\[
+        \varphi=\varphi_{\ln (\text{O})/\ln (\text{R})}^{\ominus'} \pm \frac{0.059}{n}
+    .\]
+    常见指示剂变色电位和颜色：P94
+\end{notation}
+\begin{eg}
+    第四类：重氮化滴定法，使用碘化钾+淀粉糊指示
+\end{eg}
+\begin{notation}
+    第五类：只能在滴定终点时滴入指示
+    \begin{eg}
+        在溴酸钾中滴入甲基红或甲基橙，单质溴会破坏指示剂
+    \end{eg}
+\end{notation}
+\subsection{氧还滴定的终点误差}%
+\label{sub:氧还滴定的终点误差}
+误差的产生：EP(End Point)和SP(化学计量点)不一致
+\begin{notation}
+    林邦误差公式：
+    \[
+        TE\left( \% \right)=\frac{[\ce{Ox_1}]_{\text{sp}}-[\ce{Red_2}]_{\text{sp}}}{c_{\text{sp}}}\times 100\%
+    .\]
+\end{notation}
+\subsection{氧还滴定预处理}%
+\label{sub:氧还滴定预处理}
+\begin{notation}
+    将待测物质转化为可配滴定价态的过程
+\end{notation}
+\begin{eg}
+重铬酸钾滴定二价铁：将所有Fe先转换为Fe(II)
+\end{eg}
+要求：
+\begin{itemize}
+    \item 迅速、定量、完全转换为目标价态
+    \item 选择性好，不生成干扰物质
+    \item 过量处理物质易于除去
+\end{itemize}
+\subsection{常用的氧还滴定法}%
+\label{sub:常用的氧还滴定法}
+\subsubsection*{碘量法}%
+\label{subsub:碘量法}
+使用$\ce{I_2}$ 的弱氧化性和$\ce{I-}$ 的中等还原性
+
+半反应：\[
+    \ce{I_2 +2e-} \ce{<=>[][]} \ce{I-} \quad \varphi_{\ce{I_2 /I-}}^{\ominus'} =0.535V
+.\]
+原理：\[
+    \ce{I_2 +I-}\ce{<=>[][]}\ce{I_3-}
+.\]
+直接碘量法/碘滴定法：使用碘单质作为滴定剂，利用氧化性，要求$\varphi^{\ominus'} <\varphi_{\ce{I_2 /I-}}^{\ominus'} $ ，可以测定：$\ce{S^2-, Sn^2+, AsO_2^-, S_2O_3^2-, VC}$等；酸度要求：弱酸碱性(pH<9)或中性，强酸下发生氧化反应，强碱性下发生歧化反应
+\begin{eg}
+VC的滴定：碱性条件下VC极易氧化，因此使用HAc提供的弱酸性；使用淀粉指示
+
+$\ce{Na_2SO_3}$ 的测定：基本反应：\[
+    \begin{cases}
+        \ce{I_2 +2e-}\ce{<=>[][]}\ce{2I-}\\
+        \ce{SO_3^2- +H_2O - 2e-}\ce{<=>[][]}\ce{SO_4^2- +2H+}
+    \end{cases}
+.\]
+\end{eg}
+间接碘量法/滴定碘法：
+\begin{itemize}
+    \item 测定物质为氧化性物质，$\varphi^{\ominus'} >\varphi_{\ce{I_2 /I-}}^{\ominus'} $ ，产生定量的$\ce{I_2}$ ，又称置换碘量法
+    \item 测定物质为还原性物质时，加入定量且过量的$\ce{I_2}$ ，测定剩余的$\ce{I_2}$，属于返滴定法，称为剩余碘量法
+\end{itemize}
+\begin{notation}
+药典规定，使用$\ce{Na_2S_2O_3}$ 滴定间接滴定法中产生的$\ce{I_2}$，反应为：\[
+    \ce{I_2 +2S_2O_3^2-} \ce{<=>[][]}\ce{2I- +S_4O_6^2-}
+.\]
+可以测定大部分氧化还原物质
+\end{notation}
+\begin{notation}
+    间接碘量法无法在强酸性中使用，碱性条件下无论是强碱性还是弱碱性都不可以：硫代硫酸钠会在碱性条件下和碘发生副反应
+\end{notation}
+\begin{eg}
+    漂白粉中有效成分次氯酸钙的测定（置换碘量法）
+
+    剩余碘量法测定葡萄糖的含量
+\end{eg}
+\begin{notation}
+碘量法误差的两大来源：碘挥发、碘离子被空气氧化
+
+解决方法：
+\begin{enumerate}
+    \item 防止碘挥发：
+        \begin{itemize}
+            \item 加入过量的KI，使$\ce{I_2}$ 生成$\ce{I_3-}$ 
+            \item 在室温中滴定
+            \item 使用碘量瓶，水封瓶口，快滴慢摇
+        \end{itemize}
+    \item 防止氧化：
+        \begin{itemize}
+            \item 降低酸度
+            \item 防止阳关直射
+            \item 使用碘量瓶，降低溶解氧的含量
+        \end{itemize}
+\end{enumerate}
+\end{notation}
+\begin{notation}
+    碘量法的指示剂：
+    \begin{description}
+        \item[自身指示剂] 在$\ce{CCl_4}$ 中为紫红色
+        \item [淀粉] $\ce{I_3 }+\text{直链可溶淀粉}\ce{<=>[][]}\text{深蓝色吸附物}$
+    \end{description}
+    注意事项：
+    \begin{itemize}
+        \item \begin{description}
+            \item[直接碘量法] 滴定前加入，终点为蓝色，30秒不变色即可
+            \item [间接碘量法] 只能在临近终点时加入，通过碘的自身指示大概判断，终点时蓝色褪去，5秒不变蓝即可
+        \end{description}
+        \item 不推荐加热
+        \item 控制酸度：pH<2时成为糊精
+        \item 淀粉质量控制：使用直链淀粉，加入防腐剂
+        
+    \end{itemize}
+\end{notation}

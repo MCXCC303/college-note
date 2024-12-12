@@ -19,10 +19,17 @@
     \marginpar{\small\textsf{\text{#2}}}
 }
 
+\newcommand{\learn}[2]{
+    \def\learn{Learn #1}%
+    \subsection*{\learn}
+    \marginpar{\small\textsf{\text{#2}}}
+}
+
 %───────────────────%
 % Document Settings %
 %───────────────────%
 \documentclass[10pt,a4paper]{article}
+% \documentclass[10pt,twocolumn,a4paper]{article}
 
 %─────────────────%
 % Package Imports %
@@ -38,6 +45,7 @@
 \usepackage[]{fancyhdr}
 \usepackage[]{float}
 \usepackage[]{geometry}
+% \usepackage[bottom=2.0cm,top=2.0cm,left=1.7cm,right=1.7cm]{geometry}
 \usepackage[]{graphicx}
 \usepackage[]{hyperref}
 \usepackage[]{import}

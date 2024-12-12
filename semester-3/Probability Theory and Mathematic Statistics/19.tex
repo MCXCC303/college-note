@@ -7,7 +7,7 @@
     非参数假设检验：住房面积和家庭生活幸福感的关系，学历程度和年均收入的关系；非参数假设检验的两个变量独立
 \end{notation}
 \begin{eg}
-    规定工业废水中$\text{Cr(VI)}$ 排放浓度不超过0.5，即$c_\text{Cr(VI)}\le 0.5$，设$X$ 为工业废水有害物质排放浓度总体，抽取16份废水$X_1,X_2,\ldots ,X_{16}$，测得物质浓度$\overline{x}=0.52,s^2 =0.09$，假设该物质浓度分布为$X\sim N\left( \mu,\sigma^2  \right)$ ，求排放浓度是否符合规定（$\alpha=0.5$）
+    规定工业废水中$\text{Cr(VI)}$ 排放浓度不超过0.5，即$c_\text{Cr(VI)}\le 0.5$，设$X$ 为工业废水有害物质排放浓度总体，抽取16份废水$X_1,X_2,\ldots ,X_{16}$，测得物质浓度$\overline{x}=0.52,s^2 =0.09$，假设该物质浓度分布为$X\sim N\left( \mu,\sigma^2  \right)$ ，求排放浓度是否符合规定（$\alpha=0.05$）
 \end{eg}
 解：\[
     \overline{X}=\frac{1}{16}\sum_{i=1}^{16} X_{i}\quad S^2 =\frac{1}{15}\sum_{i=1}^{16} \left( X_{i}-\overline{X} \right)^2 
@@ -34,8 +34,8 @@
 查表得$t_{0.95}\left( 15 \right)=1.753$ ，判断：$\overline{x}=0.52,s=0.3$ ，带入原式得：$\frac{\overline{x}-0.5}{s /4}=\frac{0.52-0.5}{0.3 /4}<1.753$ ，因此并未落在拒绝域中，接受原假设$H_0$
 
 下结论：认为$t\not\in \mathscr{X}_0$ ，因此不拒绝原假设$H_0$ ，\textbf{在显著性水平}$\bm{\alpha}=0.05$\textbf{下，可以认为该区域有害物质排放浓度符合规定}
-\subsubsection*{假设检验的两类错误}%
-\label{subsub:假设检验的两类错误}
+\subsection{假设检验的两类错误}%
+\label{sub:假设检验的两类错误}
 假设$H_0$ 正确，可以认为$H_0$ 正确或错误，类似二分类问题
 \begin{table}[htpb]
     \centering
