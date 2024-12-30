@@ -1,0 +1,165 @@
+\lecture{14}{12.17}
+\section{沉淀滴定法和重量分析法}%
+\label{sec:沉淀滴定法和重量分析法}
+\subsection{沉淀平衡}%
+\label{sub:沉淀平衡}
+\[
+    \text{\ce{MA}}(s) \ce{<=>[][]}\text{\ce{MA}}(a.q.) \ce{<=>[][]} \ce{M+ +A-}
+.\]
+$\circ$ 第一步：固体转移至液相
+\begin{notation}
+    固有溶解度$S^{0}$ ：从固相转移到液相的溶解度，或一分子状态存在的活度\[
+        S^{0}=\frac{\alpha_{\text{\ce{MA}}\left( a.q. \right)}}{\alpha_{\text{\ce{MA}}\left( s \right)}}
+    .\]
+    一定温度下$\alpha_{\text{\ce{MA}}\left( s \right)}=1$ ，即$S^{0}=\alpha_{\text{\ce{MA}}\left( a.q. \right)}$
+\end{notation}
+\begin{notation}
+    温度一定，沉淀的固有溶解度是一个常数($10^{-6}\sim 10^{-9}$ mol/L)
+\end{notation}
+$\circ$ 第二步：离子平衡
+\begin{notation}
+    $K_\text{ap}$ ：活度积\[
+        K_\text{ap}=a_{\ce{M+}}\cdot a_{\ce{A-}}
+    .\]
+    当温度一定时$K_\text{ap}$ 为常数\[
+        K_\text{ap}=[\ce{M+}]\cdot \gamma_{\ce{M+}}\cdot [\ce{A-}]\cdot \gamma_{\ce{A-}}
+    .\]
+    转换得：\[
+        \frac{K_\text{ap}}{\gamma_{\ce{M+}}\gamma_{\ce{A-}}}=K_\text{sp}
+    .\]
+    $K_\text{sp}$ 即为溶度积，一般情况下，由于难溶性盐的溶解度极小，即$\gamma\approx 1$ ，因此$K_\text{ap}\approx K_\text{sp}$
+\end{notation}
+\begin{notation}
+    沉淀的溶解度$S$ ：水相分子态+水相离子态$=S^{0}+c_{\ce{M+}}$ ，由于$S^{0}$ 很小，可以忽略不计
+
+    对于$\ce{MA}$ 型沉淀：\[
+        S=[\ce{M+}]=[\ce{A-}]=\sqrt{K_\text{sp}}=\sqrt{\frac{K_\text{ap}}{\gamma_{\ce{M+}}\gamma_{\ce{A-}}}} 
+    .\]
+    对于任意型沉淀$M_mA_n$ ：由于$K_\text{sp}=[M^{n+}]^{m}\cdot [A^{m+}]^{n}=m^{m}\cdot n^{n}\cdot S^{m+n}$，有以下结论：\[
+        S=\frac{[\ce{M+}]}{m}=\frac{[\ce{A-}]}{n}\quad S=\sqrt[m+n]{\frac{K_\text{sp}}{m^{m}\cdot n^{n}}}
+    .\]
+\end{notation}
+\subsection{条件溶度积}%
+\label{sub:条件溶度积}
+当有副反应存在：$K_\text{sp}'>K_\text{sp}$
+
+此时对于$\ce{MA}$ 型沉淀：$S=\sqrt{K_\text{sp}'} =\sqrt{K_\text{sp}\cdot \alpha_{\ce{M}}\cdot \alpha_A}$
+\subsection{影响沉淀溶解平衡的因素}%
+\label{sub:影响沉淀溶解平衡的因素}
+\begin{itemize}
+    \item 同离子效应
+    \item 酸效应
+    \item 配位效应
+    \item 盐效应
+    \item \ldots 
+\end{itemize}
+\subsubsection*{同离子效应}%
+\label{subsub:同离子效应}
+\begin{defi}
+    沉淀达到平衡时向溶液中加入\textbf{构晶离子}，可以降低溶解度
+\end{defi}
+\begin{eg}
+    用$\ce{BaSO_4}$ 重量法测定$\ce{SO_4^{2-}}$ 时，用$\ce{BaCl_2}$ 沉淀，计算等量和过量0.01mol/L $\ce{Ba^{2+}}$ 时在200mL溶液中$\ce{BaSO_4}$ 沉淀的溶解损失
+\end{eg}
+\subsubsection*{酸效应}%
+\label{subsub:酸效应}
+\begin{defi}
+溶液pH对溶解度的影响：$S=\sqrt{K_\text{sp}'}=\sqrt{K_\text{sp}\cdot \alpha_\text{H}}$
+\end{defi}
+\begin{eg}
+    草酸存在时$CaC_2O_4$ 沉淀平衡将向沉淀溶解移动：\[
+        \ce{CaC_2O_4 \ce{<=>[][]}Ca^{2+} +C_2O_4^{2-}}
+    .\]
+\end{eg}
+\begin{notation}
+    酸度对弱酸型或多元酸型沉淀溶解度影响较大
+\end{notation}
+\subsubsection*{配位效应}%
+\label{subsub:配位效应}
+\begin{defi}
+    配位剂与构晶离子形成配合物，使平衡朝溶解方向移动
+\end{defi}
+\begin{eg}
+    $Ag+$ 和 $Cl-$ 配位：
+    \begin{align*}
+        \ce{AgCl &\ce{<=>[][]}Ag+ +Cl-}\\
+        \ce{AgCl + Cl- &\ce{<=>[][]} AgCl_2^{-}}\\
+                       &\ldots 
+    .\end{align*}
+    在该过程中：一开始由沉淀反应的同离子效应主导，过量的$Cl-$ 后以配位效应主导
+\end{eg}
+\begin{notation}
+    配位效应与$S$ 和$K_\text{sp}$ 有关
+\end{notation}
+\subsubsection*{盐效应}%
+\label{subsub:盐效应}
+\begin{defi}
+当溶液中有大量其他离子（尤其是高价态电解质）存在：活度系数$\gamma$ 降低，由：\[
+    K_\text{sp}=\frac{K_\text{ap}}{\gamma_{\ce{M^{n+}}}\cdot \gamma_{\ce{A^{m-}}}}
+.\]
+使得$K_\text{sp}$ 增大，即溶解度$S$ 增大
+\end{defi}
+\subsubsection*{其他因素}%
+\label{subsub:其他因素}
+\begin{description}
+    \item [温度$T$] 显然当温度增大时溶解度增大（溶解损失增大）
+    \item [溶剂极性] 溶剂极性越小，溶解度越小（如在乙醇中析出沉淀）
+    \item [颗粒大小] 同种沉淀颗粒越大溶解度越小（与溶解时间相关较大）
+    \item [胶体] 形成胶体时为“胶溶”状态（可以穿过滤纸），因此溶解度增大（可以加入电解质破坏）
+    \item [水解] 溶解度增大：$\ce{Fe^{3+} + 3H_2O \ce{<=>[][]} Fe(OH)_3 +3H+}$
+\end{description}
+\subsection{沉淀滴定法}%
+\label{sub:沉淀滴定法}
+\begin{defi}
+    以沉淀反应为基础的滴定分析方法
+\end{defi}
+适用条件：
+\begin{enumerate}
+    \item 恒定组成
+    \item 溶解度小
+    \item 快速沉淀
+    \item 适当的指示终点方法
+    \item 沉淀的\textbf{吸附现象}不会引起显著的误差
+\end{enumerate}
+\begin{notation}
+    吸附现象：沉淀作为细小颗粒可能吸附其他颗粒从而改变沉淀质量
+\end{notation}
+同时满足以上条件的反应非常少，符合的案例：
+\begin{notation}
+    催眠药：异戊巴比妥，小剂量产生镇静作用，大剂量催眠、麻醉、昏厥等作用
+
+    根据中国药典2020版，测定异戊巴比妥使用银量法（使用$\ce{AgNO_3}$ 沉淀）
+\end{notation}
+\begin{eg}
+    银量法：\[
+        \ce{Ag+ +X- \ce{<=>[][]} AgX \downarrow}
+    .\]
+    其中$\ce{X=Cl, Br, I, CN, SCN}\ldots $，与碘量法类似，银量法也有直接法和间接法（直接滴定、返滴定）
+\end{eg}
+\begin{notation}
+    滴定曲线：加入的沉淀剂的体积$V$为横坐标，溶液中金属离子浓度或阴离子浓度的负对数pX绘制
+\end{notation}
+\subsubsection*{银量法基本原理}%
+\label{subsub:银量法基本原理}
+\begin{eg}
+    使用0.1M $\ce{AgNO_3}$ 滴定 20.00mL 的0.1M NaCl：
+
+    滴定开始前：$[\ce{Cl-}]=0.1$ 即$\text{pCl}=1$ 
+
+    滴定至化学计量点前：\[
+        [\ce{Cl-}]=\frac{\left( 20.00-V \right)\times 10^{-3}\times 0.1}{\left( 20.00+V \right)\times 10^{-3}}
+    .\] 
+    化学计量点时：$\text{pAg}+\text{pCl}=\frac{1}{2}\text{p}K_\text{sp}$
+
+    化学计量点后： \[
+        [\ce{Ag+}]=\frac{V\times 10^{-3}\times 0.1}{\left( 20.00+V \right)\times 10^{-3}}
+    .\]
+    绘制出的曲线：两种离子在化学计量点相交，完全对称
+\begin{figure}[ht]
+    \centering
+    \incfig{沉淀反应滴定曲线}
+    \caption{沉淀反应滴定曲线}
+    \label{fig:沉淀反应滴定曲线}
+\end{figure}
+\end{eg}
+

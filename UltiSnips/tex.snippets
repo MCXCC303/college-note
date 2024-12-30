@@ -645,7 +645,7 @@ snippet ... "ldots" iA
 \ldots 
 endsnippet
 
-snippet --- "hline" iA
+snippet '--- ' "hline" irA
 \hline
 $0
 endsnippet
@@ -916,8 +916,8 @@ snippet \ominus' "\ominus" iA
 {\ominus'} 
 endsnippet
 
-context "math()"
-snippet celc "Celcius" iA
+priority 10000
+snippet clss "Celcius" iA
 ^\circ\text{C}
 endsnippet
 
@@ -1105,13 +1105,21 @@ endsnippet
 #───────────────────#
 # Chemistry Symbols #
 #───────────────────#
-context "math()"
 priority 200
 snippet cmf "Chemfig Environment" wA
 \chemfig{${1:${VISUAL}}}
 endsnippet
 
-context "math()"
+snippet cg "Chemfig Scheme" wA
+\schemestart 
+${1:${VISUAL}}
+\schemestop
+endsnippet
+
+snippet --> "Chemfig Arrow" wA
+\arrow{${1:->}[$2][$3]}[${4:angle},${5:len rate}]
+endsnippet
+
 snippet mhe "mhchem Environment" wA
 \ce{${1:${VISUAL}}}
 endsnippet

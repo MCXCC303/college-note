@@ -1,0 +1,158 @@
+\lecture{15}{12.24}
+\textit{Review:}
+
+\textbf{沉淀反应}：定量分析
+
+\textbf{溶解平衡：}与溶解度$S$ ，活度积$K_\text{ap}$ ，溶度积$K_\text{sp}$ ，条件溶度积$K_\text{sp}'$ 有关；影响因素有\textbf{同离子效应、酸效应、配位效应、盐效应}，其中只有同离子效应降低溶解度
+
+\textbf{银量法：}滴定曲线相交并对称，$c_x$ 和$K_\text{sp}$ 越大，滴定突越范围$\Delta \text{p}X$ 越大
+
+\subsection{银量法指示终点的方法}%
+\label{sub:银量法指示终点的方法}
+\begin{itemize}
+    \item 铬酸钾指示剂法（莫尔法）
+    \item 铁铵钒指示剂法
+    \item 吸附指示剂法    
+\end{itemize}
+\subsubsection*{铬酸钾指示剂法}%
+\label{subsub:铬酸钾指示剂法}
+\begin{notation}
+铬酸钾指示剂法：铬酸钾为黄色，使用时只能用银离子做滴定剂滴定$Cl-$ 和$Br-$ ，主反应：\[
+    \begin{cases}
+        \text{终点前：}\ce{Ag+ +Cl- = AgCl\downarrow} &K_\text{sp}=1.8\times 10^{-10}\\ 
+        \text{终点时：}\ce{2Ag+ +CrO_4^2- = Ag_2CrO_4\downarrow} &K_\text{sp}=1.2\times 10^{-12}
+    \end{cases}
+.\]
+易得氯离子浓度与铬酸根浓度相等时，通过\[
+    S=\sqrt[m+n]{\frac{K_\text{sp}}{m^{m}\cdot n^{n}}}
+.\]
+计算可得氯化银先沉淀
+\end{notation}
+\begin{notation}
+    铬酸钾指示剂需要适量：过量时终点提前（$S_{\ce{Ag_2CrO_4}}$ 所需的银离子减少），同时铬酸根本身的黄色也会影响；计算得100 mL被滴定液一般使用1-2 mL指示剂，必要时做空白校正
+
+    酸度规定：中性或弱碱性（pH=6.5-10.5），酸性条件下形成铬酸，碱性条件下形成氧化银沉淀
+
+    不能加入如铵盐等可以与阴离子形成配合物的离子
+
+    滴定时需\textbf{剧烈震摇}
+
+    干扰离子有： \begin{itemize}
+        \item 沉淀离子：$\ce{PO_4^3-, CO_3^2-, S^2-, Ba^2+, Pb^2+,}\ldots $
+        \item 有色离子：$\ce{Fe^{3+}, Cu^{2+},} \ldots $
+        \item 易水解的离子：$\ce{Sn^{2+}, Al^{3+}, }\ldots $
+    \end{itemize}
+    应用范围：\begin{itemize}
+        \item 滴定$\ce{Cl-,Br-,CN-}$ 
+        \item 不能滴定$\ce{I-, SCN-}$ （$\ce{AgI, AgSCN}$ 对$\ce{I-, SCN-}$ 有强吸附性）
+        \item 用$\ce{Cl-}$ 滴定$\ce{Ag+}$ ：返滴定（用于$\ce{I-, SCN-}$ 等的滴定）
+    \end{itemize}
+\end{notation}
+\begin{eg}
+铬酸钾指示剂的应用：复方氯化钠滴眼液中氯化钠的滴定
+\end{eg}
+\subsubsection*{铁铵钒指示剂法}%
+\label{subsub:铁铵钒指示剂法}
+\begin{notation}
+    使用$\ce{SCN-}$ 直接滴定$\ce{Ag+}$ \[
+        \begin{cases}
+            \ce{Ag+ +SCN- =AgSCN\downarrow} \text{ 白色}\\
+            \ce{Fe^3+ +SCN- =Fe(SCN)^{2+}} \text{ 红色}\\
+        \end{cases}
+    .\]
+    使用$\ce{NH_4Fe(SO_4)_2\cdot}\ce{12H_2O}$ 指示
+\end{notation}
+
+滴定条件：\begin{itemize}
+    \item 在$0.1\sim 1\text{mol/L }\ce{HNO_3}$介质中进行
+    \item 终点时$c_{\ce{Fe^3+}}\le 0.015\text{mol/L}$
+    \item 充分震摇，降低沉淀附着银离子
+    \item 预先去除干扰物质：强氧化剂、N的氧化物、铜盐、汞盐等
+    \item 滴定$\ce{I-}$ 时，加入过量$\ce{AgNO_3}$ 再加入指示剂
+    \item 滴定$\ce{Cl-}$ 时，注意沉淀转化
+\end{itemize}
+\begin{notation}
+    $\ce{Cl-}$ 的沉淀转化：到终点时用力震摇，会发现红色消失，发生了沉淀转化；解决方法：\begin{itemize}
+        \item 过滤
+        \item 加入硝基苯
+        \item 加入过量$\ce{Fe^3+}$
+    \end{itemize}
+\end{notation}
+\begin{eg}
+    林旦的测定：有机氯
+\end{eg}
+\subsubsection*{吸附指示剂法}%
+\label{subsub:吸附指示剂法}
+指示剂被吸附前后的颜色不一样
+\begin{notation}
+    指示剂：荧光黄\[
+        HFIn \ce{<=>[][]} H+ +FIn-\text{（黄绿色）}
+    .\]
+\end{notation}
+\begin{eg}
+    $Ag+$ 滴定$Cl-$ 时，不过量时溶液中含$Cl-$ ，与荧光黄离子产生静电排斥，不吸附，呈黄绿色；过量时$Ag+$ 与荧光黄离子可以吸附，呈粉红色
+\end{eg}
+滴定条件：
+\begin{itemize}
+    \item 加入糊精保护胶体
+    \item 溶液pH有利于吸附
+    \item AgX吸附能力要略大于对指示剂的吸附能力
+    \item 避光
+\end{itemize}
+应用范围：卤素离子，硫氰根离子，硫酸根离子，银离子，\textbf{不包含氰根离子}
+\begin{notation}
+    一般指示剂离子和滴定剂的电荷相反，与被测离子相同
+\end{notation}
+\begin{eg}
+    单硝酸异山梨酯氯化钠注射液的含量测定，氯化琥珀胆碱注射液的含量测定
+\end{eg}
+\subsection{重量分析法}%
+\label{sub:重量分析法}
+\begin{defi}
+    用适当方法将试样中的待测组分与其他组分分离，然后称重测定组分含量
+\end{defi}
+按分离方法分类：\begin{itemize}
+    \item 沉淀重量法
+    \item 挥发重量法
+    \item 萃取法
+\end{itemize}
+\begin{notation}
+    沉淀重量法的特点：准确度高，不需要特殊仪器和设备；繁琐费时
+
+    操作过程：$\text{试样}\to \text{溶解}\to \text{沉淀}\to \text{过滤洗涤}\to \text{烘干灼烧}\to \text{称重}$
+\end{notation}
+\subsubsection*{沉淀重量法}%
+\label{subsub:沉淀重量法}
+\begin{eg}
+测定$SO_4^2-$ 的含量：使用$BaCl_2$ 沉淀得到沉淀形式的$BaSO_4$，过滤时使用定量滤纸（无灰滤纸：灼烧后产生的灰量$<0.2\text{mg}$ 灰分/张），得到纯净沉淀，灼烧后得到称量形式的$BaSO_4$ 后称量
+\end{eg}
+\begin{notation}
+    沉淀形式和称量形式可以不一样
+    \begin{eg}
+        沉淀形式：$Al(OH)3$ ；称量形式：$Al_2O_3$
+    \end{eg}
+    对沉淀形式的要求：沉淀要完全且溶解度必须要小，沉淀需要纯净，容易过滤和洗涤，易于转化为称量形式
+
+    对称量形式的要求：组成固定，称重形式稳定（不吸收水、$CO_2$ 等），摩尔质量尽可能大
+
+    对沉淀剂的要求：选择性好，易挥发、易灼烧除去
+\end{notation}
+\begin{notation}
+沉淀形态：
+\begin{table}[htpb]
+    \centering
+    \caption{沉淀形态}
+    \label{tab:沉淀形态}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    类别 & 颗粒直径 & 特性 & 示例 \\
+    \hline
+晶型沉淀 & 0.1-1 $\mu$m & 颗粒大、排列规则、紧密，易于过滤 &  \\
+\hline
+无定形沉淀 &  &  &  \\
+\hline
+凝乳状沉淀 &  &  &  \\
+\hline
+    \end{tabular}
+\end{table}
+\end{notation}

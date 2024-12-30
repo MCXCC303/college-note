@@ -28,8 +28,8 @@
 %───────────────────%
 % Document Settings %
 %───────────────────%
-\documentclass[10pt,a4paper]{article}
-% \documentclass[10pt,twocolumn,a4paper]{article}
+% \documentclass[10pt,a4paper]{article}
+\documentclass[10pt,twocolumn,a4paper]{article}
 
 %─────────────────%
 % Package Imports %
@@ -45,7 +45,6 @@
 \usepackage[]{fancyhdr}
 \usepackage[]{float}
 \usepackage[]{geometry}
-% \usepackage[bottom=2.0cm,top=2.0cm,left=1.7cm,right=1.7cm]{geometry}
 \usepackage[]{graphicx}
 \usepackage[]{hyperref}
 \usepackage[]{import}
@@ -78,12 +77,18 @@
     \import{./figures/}{#2.pdf_tex}
 }
 
+%───────────────%
+% Page Settings %
+%───────────────%
+\geometry{left=2.0cm,right=2.0cm,top=1.7cm,bottom=1.7cm}
+% \addtolength{\parskip}{-1mm}
+% \addtolength{\parindent}{-2mm}
+
 %────────────────%
 % Fancy Settings %
 %────────────────%
 \fancypagestyle{CustomStyle}{%
     \fancyhf{}
-    \setlength{\headheight}{14.49998pt}
     \fancyhead[R]{\thepage}
     \fancyhead[L]{\lecturer: \className}
     \fancyfoot[C]{\@lecture}
@@ -227,9 +232,3 @@
 \author{Lecture by \lecturer\\Note by \noter}
 \pagestyle{CustomStyle}
 
-%────────────────────────────────%
-% Page Settings (set when print) %
-%────────────────────────────────%
-% \addtolength{\parskip}{-1mm}
-% \addtolength{\parindent}{-2mm}
-% \geometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm}

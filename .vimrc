@@ -34,6 +34,10 @@ Plug 'honza/vim-snippets'
 " vim-fugitive
 Plug 'tpope/vim-fugitive'
 
+" fzf.vim
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 " vim-markdown
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
@@ -85,6 +89,9 @@ let &t_EI="\e[1 q"
 
 " Searching
 highlight Search ctermfg=NONE ctermbg=235
+
+" fzf.vim
+let g:fzf_vim = {}
 
 "—————————”
 " Key Map “
