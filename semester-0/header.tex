@@ -50,6 +50,7 @@
 \usepackage[]{multirow}
 \usepackage[]{pdfpages}
 \usepackage[]{pgfplots}
+\usepackage[]{silence}
 \usepackage[]{stmaryrd}
 \usepackage[]{tabu}
 \usepackage[]{tcolorbox}
@@ -65,6 +66,8 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[notransparent]{svg}
 \usepackage[version=4]{mhchem}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Some font}
 
 %───────────────────%
 % Inkscape Settings %
@@ -208,7 +211,7 @@
 %────────────%
 % Beginnings %
 %────────────%
-\title{\textbf{Part III-B: \className}}
+\title{\textbf{Part \term: \className}}
 \author{Lecture by \lecturer\\Note by \noter}
 \pagestyle{CustomStyle}
 %────────────────────────────────%

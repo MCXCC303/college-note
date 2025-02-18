@@ -151,6 +151,11 @@ snippet [] "[]" iA
 endsnippet
 
 context "math()"
+snippet vert "Vert" iA
+\left\lVert \bm{${1:x}} \right\rVert${2:_{${3:2}}}
+endsnippet
+
+context "math()"
 snippet ceil "ceil" iA
 \left\lceil $1 \right\rceil
 endsnippet
@@ -792,6 +797,11 @@ snippet star "*" iA
 endsnippet
 
 context "math()"
+snippet top "x^T" iA
+^\top 
+endsnippet
+
+context "math()"
 snippet R0+ "R0+" iA
 \\R_0^+
 endsnippet
@@ -1067,6 +1077,11 @@ endsnippet
 context "math()"
 snippet cov "Covariance" iA
 \mathrm{cov}(${1:X},${2:Y})
+endsnippet
+
+context "math()"
+snippet diag "eigendecomposition" iA
+\mathrm{diag}(\bm{${1:x}})
 endsnippet
 
 snippet tbf "\textbf{}" iA

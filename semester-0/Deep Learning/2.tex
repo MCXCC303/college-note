@@ -1,0 +1,109 @@
+\learn{2}{01.30}
+\begin{notation}
+    $L^2 $ 范数可以写为$\left\lVert \bm{x} \right\rVert _2$ ，也可以简写为$\left\lVert \bm{x} \right\rVert$
+\end{notation}
+\begin{notation}
+    $L^{1}$ 范数常用于区分0值和距离0很近的值，使用$L^{2}$ 范数，距离太近几乎没有区别
+\end{notation}
+\begin{defi}
+    最大范数：$p\to \infty $ 时影响范数的最大因素为最大值：\[
+        \left\lVert \bm{x} \right\rVert_\infty = \max_{i}\left| x_{i} \right|
+    .\]
+\end{defi}
+\begin{eg}
+    \textbf{Frobenius范数：}使用范数衡量矩阵的大小，类似于$L^2 $ 范数的计算：
+    \[
+        \left\lVert \bm{A} \right\rVert_F = \sqrt{\sum_{i,j}^{} A_{i,j}^2 }
+    .\]
+\end{eg}
+\begin{eg}
+    使用范数表示向量的内积：\[
+        \bm{x}^\top \bm{y}=\left\lVert \bm{x} \right\rVert\cdot \left\lVert y \right\rVert\cos\theta
+    .\]
+    即：\[
+        \bm{x}\cdot \bm{y}=xy\cos\theta
+    .\]
+\end{eg}
+\subsection{特殊的矩阵和向量}%
+\label{sub:特殊的矩阵和向量}
+\begin{eg}
+    对角矩阵，用$\bm{D}$ 表示，除主对角线上的元素其他的元素均为零：
+    \[
+        \bm{D}=\begin{bmatrix}
+            a_{1,1} & 0 & \cdots & 0\\
+            0 & a_{2,2} & \cdots  & 0\\
+            \vdots & \vdots & \ddots & \vdots\\
+            0 & 0 & \cdots & a_{n,n}
+        \end{bmatrix}
+    .\]
+    \begin{notation}
+        对角矩阵不一定是方阵，非方阵超出方阵的部分全部为0
+    \end{notation}
+\end{eg}
+\begin{defi}
+    对角转换diag：$\mathrm{diag}(\bm{v})$ 将$\bm{v}$ 中的元素放入对角矩阵中
+\end{defi}
+对角转换有以下性质：
+\begin{itemize}
+    \item $\mathrm{diag}(\bm{v})\bm{x}=\bm{v}\odot\bm{x}$
+    \item $\mathrm{diag}(\bm{v})^{-1}=\mathrm{diag}(\begin{bmatrix}
+            \frac{1}{\bm{v_1}} & \ldots  & \frac{1}{\bm{v_{n}}}\\
+    \end{bmatrix}^\top )$
+\end{itemize}
+\begin{eg}
+    对称矩阵：$\bm{A} = \bm{A}^\top $ ，常用于某些不依赖参数顺序的双参数函数，交换$i,j$ 后结果不变
+\end{eg}
+\begin{eg}
+    单位向量：范数为1的向量，即：$\left\lVert \bm{x} \right\rVert_{n}=1$
+\end{eg}
+\begin{eg}
+    向量的正交：$\bm{x}^\top \bm{y}=0$ ，代表着$\left\lVert x \right\rVert_{n}$ 和$\left\lVert y \right\rVert_{n}$ 都不为零时$\theta=\frac{\pi}{2}$
+
+    标准正交：$\theta=\frac{\pi}{2}$ 且$\left\lVert \bm{x} \right\rVert_{n}=\left\lVert \bm{y} \right\rVert_{n}=1$
+\end{eg}
+\begin{eg}
+    正交矩阵：行向量和列向量都分别标准正交，有以下性质：\[
+        \bm{A}^\top \bm{A}=\bm{A}\bm{A}^\top =\bm{I}\Rightarrow \bm{A}^{-1}=\bm{A}^\top 
+    .\]
+    可得：正交矩阵求逆非常容易，可以用来求解线性方程组
+\end{eg}
+\subsection{特征分解}%
+\label{sub:特征分解}
+\begin{defi}
+    特征向量和特征值：\[
+        \bm{A}\bm{x}=\lambda\bm{x}
+    .\]
+    则$\lambda$ 为$\bm{A}$ 的特征值，$\bm{x}$ 为$\bm{A}$ 的一个（右）特征向量
+    \[
+        \bm{x}^\top \bm{A}=\lambda\bm{x}^\top 
+    .\]
+    称$\bm{x}$ 为左特征向量
+\end{defi}
+\begin{defi}
+    特征分解：如果$\bm{A}$ 有$n$ 个线性无关的特征向量$\left\{ \bm{v}^{\left( 1 \right)},\ldots ,\bm{v}^{\left( n \right)} \right\}$ ，对应$n$ 个特征值$\left\{ \lambda_1,\ldots ,\lambda_{n} \right\}$ ，将特征向量（列向量）排列为一个矩阵$\bm{V}=\begin{bmatrix}
+        \bm{v}^{(1)} & \ldots & \bm{v}^{(n)}\\
+    \end{bmatrix}$，并将特征值排列为一个向量$\bm{\lambda}=\begin{bmatrix}
+        \lambda_1 & \ldots & \lambda_{n}
+    \end{bmatrix}^\top $，则：\[
+        \bm{A}=\bm{V}\mathrm{diag}(\bm{\lambda})\bm{V}^{-1}
+    .\]
+\end{defi}
+特征向量、值、分解的性质：
+\begin{itemize}
+    \item $\bm{A}$ 对$\bm{x}$ 变换相当于对$\bm{x}$ 缩放$\lambda$ 倍
+    \item $\bm{v}$ 是$\bm{A}$ 的特征向量，则$c\bm{v}$ 也是，且特征值一样
+    \item 实对称矩阵一定可以分解为实特征向量和实特征值，即$\bm{A}=\bm{Q\Lambda Q}^\top $
+\end{itemize}
+\begin{notation}
+    实对称矩阵的分解：\[
+        \bm{A}=\bm{Q\Lambda Q}^\top  
+    .\]
+    其中$\bm{Q}$ 为$\bm{A}$ 的特征向量$\bm{v}^{(i)}$组成的\textbf{正交矩阵}，$\bm{\Lambda}$ 为对角矩阵，且$\Lambda_{i,i}=\lambda_{i}$ 所对应的特征向量是$\bm{Q}$ 的第$i$ 个列向量$\bm{Q}_{:,i}$
+\end{notation}
+使用$\bm{A}$ 进行矩阵乘法可以看作是：将空间各自沿$\bm{v}^{\left( i \right)}$ 延展$\lambda_{i}$ 倍
+\begin{figure}[ht]
+    \centering
+    \incfig{实对称矩阵的乘法}
+    \caption{实对称矩阵的乘法}
+    \label{fig:实对称矩阵的乘法}
+\end{figure}

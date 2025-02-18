@@ -1,2 +1,65 @@
-\learn{1}{12.01}
+\learn{1}{01.28}
+\section{线性代数复习}%
+\label{sec:线性代数复习}
+\begin{defi}
+    张量：多维数组或多维立方体（二维为矩阵，一维为向量，零维为常量），用字体不同的粗体表示：\textbf{\textsf{A}}
 
+    对比：矩阵$\bm{A}$，张量\textbf{\textsf{A}}
+\end{defi}
+\begin{defi}
+    向量：一般指列向量，转置后为横向量
+\end{defi}
+\begin{eg}
+    $\bm{x}=\left( 1,2,3 \right)^\top=\begin{bmatrix}
+        1\\
+        2\\
+        3
+    \end{bmatrix}$，转置后：$\bm{x}^\top=\begin{bmatrix}
+    1 & 2 & 3\\
+    \end{bmatrix}$
+\end{eg}
+\begin{defi}
+    矩阵乘法：左矩阵的行遍历右矩阵的列
+\end{defi}
+\begin{eg}
+    两个向量的点乘（内积）：$\bm{x}\cdot \bm{y}=\bm{x}^\top\bm{y}$，如下图：
+\begin{figure}[ht]
+    \centering
+    \incfig[0.6]{点积}
+    \caption{点积}
+    \label{fig:点积}
+\end{figure}
+
+同理，两个向量的外积：$\bm{x}\times \bm{y}=\bm{x}\bm{y}^\top $ ，如下图：
+\begin{figure}[ht]
+    \centering
+    \incfig[0.6]{外积}
+    \caption{外积}
+    \label{fig:外积}
+\end{figure}
+\end{eg}
+\begin{defi}
+    广播：把向量转置后加到矩阵的每一行
+\end{defi}
+\begin{eg}
+    \begin{align*}
+        &\bm{A}&+&\bm{b}&=&\bm{C}\\
+        \Rightarrow& \begin{bmatrix}
+            a_{11} & a_{12} & a_{13}\\
+            a_{21} & a_{22} & a_{23}
+        \end{bmatrix} &+& \begin{bmatrix}
+            b_1 & b_2 & b_3
+        \end{bmatrix}^\top &=& \begin{bmatrix}
+            a_{11}+b_1 & a_{12}+b_2 & a_{13}+b_3\\
+            a_{21}+b_1 & a_{22}+b_2 & a_{23}+b_3
+        \end{bmatrix}
+    .\end{align*}
+\end{eg}
+\begin{defi}
+    范数：曼哈顿距离$\Rightarrow $ 欧氏距离$\Rightarrow \ldots $，$L^p$ 范数形如：\[
+        \left\lVert \bm{x} \right\rVert_{p} = \left( \sum_{i} \left| x_{i} \right|^p \right)^\frac{1}{p}
+    .\]
+\end{defi}
+\begin{eg}
+    曼哈顿距离：$L^1:\left\lVert \bm{x} \right\rVert_{1} = \sum_{i}^{} \left| x_{i} \right|$ ，欧几里得距离：$L^2:\left\lVert \bm{x} \right\rVert_{2} = \sqrt{\sum_{i}^{} x_{i}^2 }$
+\end{eg}

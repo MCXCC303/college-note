@@ -1,0 +1,66 @@
+\learn{3}{01.31}
+\begin{notation}
+    $\bm{x}^\top \bm{Ax}$ 表示二次型或者二次方程（$\bm{x}$ 为二维向量），如：
+    \begin{align*}
+        \bm{x} &=\begin{bmatrix}
+            x_1\\
+            x_2
+        \end{bmatrix}\quad \bm{A}=\begin{bmatrix}
+        a & b\\
+        b & c
+        \end{bmatrix}\\
+        \bm{x}^\top \bm{Ax}&= \begin{bmatrix}
+            x_1 & x_2\\
+        \end{bmatrix}\begin{bmatrix}
+            a & b\\
+            b & c
+        \end{bmatrix}\begin{bmatrix}
+            x_1\\
+            x_2
+        \end{bmatrix} \\
+        &= \begin{bmatrix}
+            x_1a+x_2b & x_1b+x_2c\\
+        \end{bmatrix}\begin{bmatrix}
+            x_1\\
+            x_2
+        \end{bmatrix} \\
+        &= ax_1^2 +2bx_1x_2+cx_2^2
+    .\end{align*}
+\end{notation}
+\begin{defi}
+    所有特征值都是非负数的矩阵为\textbf{半正定}矩阵，对于半正定矩阵有：\[
+        \forall \bm{x},\bm{x}^\top \bm{A}\bm{x}\ge 0
+    .\]
+    对于正定矩阵（$A_{i,j}>0$）有：\[
+        \bm{x}^\top \bm{Ax}=0\Rightarrow \bm{x}=\bm{0}
+    .\]
+\end{defi}
+\begin{notation}
+    当$\bm{x}$ 是$\bm{A}$ 的某个特征向量$\bm{v}$ 时，由于：\[
+        \bm{Av}=\lambda\bm{v}
+    .\]
+    且$\bm{x}=\bm{v}=\begin{bmatrix}
+        x_1 & x_2\\
+    \end{bmatrix}^\top $ ，二次型可以写为：$f=\bm{v}^\top \bm{Av}$，带入得：
+    \begin{align*}
+        f&= \bm{v}^\top \bm{Av} \\
+        &= \bm{v}^\top \lambda\bm{v} \\
+        &= \lambda\bm{v}^\top \bm{v} \\
+        &= \lambda\left( x_1^2 +x_2^2  \right)
+    .\end{align*}
+    如果限定$\left\lVert \bm{x} \right\rVert_{2}=1$ ，即$x_1^2 +x_2^2 =1$ ，则$f=\lambda$ ，即$\max\left( f \right)=\max\left( \lambda \right),\min\left( f \right)=\min\left( \lambda \right)$
+\end{notation}
+\subsection{奇异值分解}%
+\label{sub:奇异值分解}
+除特征分解外，还有一种分解叫做奇异值分解，将一个实对称矩阵分解为\textbf{奇异向量}和\textbf{奇异值}
+\begin{notation}
+    特征分解：$\bm{A}=\bm{V}\mathrm{diag}(\bm{\lambda})\bm{V}^{-1}$
+\end{notation}
+\begin{defi}
+    奇异值分解（SVD）：\[
+        \bm{A}=\bm{UDV}^\top \quad \text{or} \quad \bm{A}=\bm{U\Sigma V}^\top 
+    .\]
+\end{defi}
+\begin{notation}
+    每个实数矩阵都有一个奇异值分解
+\end{notation}
