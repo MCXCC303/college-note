@@ -284,13 +284,13 @@ endsnippet
 priority 200
 context "math()"
 snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta)' "ln" rwA
-\\`!p snip.rv = match.group(1)`
+\\`!p snip.rv = match.group(1)+' '`
 endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(sin|cos|arccot|cot|csc|ln|log|lg|perp|min|max)' "ln" rwA
-\\`!p snip.rv = match.group(1)`
+snippet '(?<!\\)(sin|cos|cot|csc|ln|log|lg|perp|min|max)' "ln" rwA
+\\`!p snip.rv = match.group(1)+' '`
 endsnippet
 
 #────────────────────#
@@ -305,10 +305,18 @@ else:
 `$2
 endsnippet
 
+priority 100
 snippet dm "Math" wA
 \[
 	${1:${VISUAL}}
 .\]
+endsnippet
+
+priority 200
+snippet bdm "Boxed Math" wA
+\[\boxed{
+	${1:${VISUAL}}
+.}\]
 endsnippet
 
 snippet beg "begin{} / end{}" bA
@@ -717,6 +725,11 @@ snippet sum "sum" w
 endsnippet
 
 context "math()"
+snippet sumi "sum in i" wA
+\sum_{i}${1:f(i)}
+endsnippet
+
+context "math()"
 snippet taylor "taylor" w
 \sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1
 endsnippet
@@ -741,9 +754,16 @@ snippet dfx "df/dx" wA
 \frac{\mathrm{d}${1:F(x)}}{\mathrm{d}${2:x}}
 endsnippet
 
+priority 100
 context "math()"
 snippet part "partial V(x)" w
 \frac{\partial ${1:V}}{\partial ${2:x}}
+endsnippet
+
+priority 300
+context "math()"
+snippet ppart "2nd partial V(x,y)" iA
+\frac{\partial^2 ${1:V(x,y)}}{\partial ${2:x}${3:\partial ${4:y}}}
 endsnippet
 
 context "math()"
@@ -825,7 +845,7 @@ endsnippet
 priority 100
 context "math()"
 snippet int "simple integral" wA
-\int
+\int 
 endsnippet
 
 priority 300
@@ -837,7 +857,13 @@ endsnippet
 priority 300
 context "math()"
 snippet iint "Multi Integral" wA
-\underset{${1:D}}{\iint} {\left(${2:${VISUAL:f(x,y)}}\right)} \mathrm{d}${3:x} \mathrm{d}${4:y}
+\iint\limits_{${1:D}}${2:D_1} {\left(${3:${VISUAL:f(x,y)}}\right)} \mathrm{d}${4:x} \mathrm{d}${5:y}
+endsnippet
+
+priority 300
+context "math()"
+snippet oint "Route Integral" wA
+\oint\limits_{${1:C}} {${2:${VISUAL:f(x)}}} \mathrm{d}${3:x}
 endsnippet
 
 priority 100
@@ -1150,4 +1176,72 @@ snippet /=\ "Reversible arrow" iA
 \ce{<=>[${1:Upper Text}][${2:Lower Text}]}
 endsnippet
 
-# vim:ft=snippets
+context "math()"
+snippet 'd([a-zA-Z]*)([HUSGC])' "D_rH/D_fH/D_cH/D_S/D_G/D_U/D_C_p" riA
+\Delta_\text{`!p snip.rv = match.group(1)`}`!p snip.rv = match.group(2)`${1:_{${2:\text{m}}}${3:^\ominus}} 
+endsnippet
+
+priority 300
+context "math()"
+snippet (part "(partial V(x))_{a,b,c...}" iA
+\left(\frac{\partial ${1:V}}{\partial ${2:x}}\right)_{${3:T,p,n_\text{${4:A}}}}
+endsnippet
+
+context "math()"
+snippet nrt "nRT" iA
+nRT 
+endsnippet
+
+context "math()"
+snippet '(\d*)(ke|kj|mol|kpa|jkm|liter|jou)' "Chemical Units" irA
+`!p snip.rv = match.group(1)`\ce{`!p
+unit = match.group(2)
+if unit == 'kj':
+	snip.rv = 'kJ'
+elif unit == 'kpa':
+	snip.rv = 'kPa'
+elif unit == 'ke':
+	snip.rv = 'K'
+elif unit == 'liter':
+	snip.rv = 'L'
+elif unit == 'jou':
+	snip.rv = 'J'
+elif unit == 'jkm':
+	snip.rv = 'J*K^{-1}*mol^{-1}'
+else:
+	snip.rv = unit
+`}
+endsnippet
+
+snippet '(cm|m|dm)(-?_?\d*)M' "cm/dm^3/m^3" irA
+`!p 
+unit = match.group(1)
+snip.rv = f'\ce{{{unit}'
+power = match.group(2)
+if power is None or power == '_1':
+	snip.rv += '}'
+else:
+	if power[0] == '-':
+		snip.rv += f'}}^{{{power}}}'
+	else:
+		snip.rv += f'}}^{{{power[1:]}}}'
+`
+endsnippet
+
+context "math()"
+snippet 'J}(m|k)' "kJ/mol kJ/K J/K J/mol" irA
+`!p 
+unit_la = match.group(1)
+if unit_la == 'm':
+	snip.rv = "J*mol^{-1}}"
+if unit_la == 'k':
+	snip.rv = "J*K^{-1}}"
+`
+endsnippet
+
+context "math()"
+snippet 'color:(.+)' "text color" ir
+\textcolor{${1:`!p snip.rv = match.group(1)`}}{${2:${VISUAL}}}
+endsnippet
+
+

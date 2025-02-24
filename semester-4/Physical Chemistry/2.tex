@@ -1,0 +1,682 @@
+\lecture{2}{02.20}
+\section*{预习1}%
+\label{sec:预习1}
+物理化学研究的内容：热力学、动力学；热力学研究内容：物体的宏观性质和之间的关系（理想气体）、研究对象和所处环境的能量交换和能量转化（气体做功）、方向和限度（活化能、反应限度）；动力学研究内容：反应速率、反应机理
+\begin{eg}
+    \[
+        \ce{2H_2+O_2=2H_2O} 
+    .\]
+    反应机理的研究为动力学的研究内容
+\end{eg}
+物理化学的研究方法：
+\begin{itemize}
+    \item 物理实验、量子力学（物理现象的变化）
+    \item 数学演绎法
+    
+\end{itemize}
+\begin{eg}
+    普通方法：氧弹量热计、电导率测量
+
+    量子力学方法：计算键长、键角、键能、电荷分布、相互作用力
+
+    数学方法：普适条件的普遍规律$\xrightarrow[]{\text{限制条件}}$ 特定条件的特定规律
+\end{eg}
+用的最多的数学公式：
+\begin{itemize}
+    \item $Z=f\left( X,Y \right)$ ：多元函数
+    \item $\mathrm{d}Z=\left(\frac{\partial Z}{\partial X}\right)_{Y}\mathrm{d}X+\left(\frac{\partial Z}{\partial Y}\right)_{X}\mathrm{d}Y$ ：函数$Z$ 的全微分展开式，其中：$\mathrm{d}Z$ 表示$Z$ 的微观变化，$\Delta Z$ 表示$Z$ 的宏观变化，偏微分$\left(\frac{\partial Z}{\partial X}\right)_{Y}$ 表示$Y$ 恒定时$Z$ 随$X$ 的变化率
+    \item $\left(\frac{\left(\frac{\partial Z}{\partial X}\right)_{Y}}{\partial Y}\right)_{X} = \left(\frac{\left(\frac{\partial Z}{\partial Y}\right)_{X}}{\partial X}\right)_{Y}$ ，即：$\frac{\partial^2 Z}{\partial X\partial Y} = \frac{\partial^2 Z}{\partial Y\partial X}$ ：欧拉倒易关系
+\end{itemize}
+\begin{notation}
+    全微分的意义：$X$ 的变化对$Z$ 变化的贡献+$Y$ 的变化对$Z$ 变化的贡献
+\end{notation}
+\subsection*{热力学第一定律}%
+\label{sub:热力学第一定律}
+\subsubsection*{基本概念：}%
+\label{subsub:基本概念：}
+系统的分类：
+\begin{itemize}
+    \item 敞开系统：物质交换+能量交换
+    \item 封闭系统：能量交换
+    \item 孤立系统：无交换
+    
+\end{itemize}
+状态的定义：
+\begin{defi}
+    系统所有的性质都确定，称处于一个状态
+\end{defi}
+\begin{notation}
+    \textbf{热力学平衡状态}：系统所有性质都不变，且\textbf{与环境隔离后仍然不变}
+\end{notation}
+\begin{question}
+    铜柱左右分别是热源和冷源，以铜棒为系统，是否处于热力学平衡状态？
+\end{question}
+\begin{sol}
+    不是：移开热源后状态发生变化
+\end{sol}
+如果将热冷源全部视为系统的部分，即可以看作热力学平衡状态
+\begin{defi}
+    \textbf{状态函数}：在物理中看作一种\textbf{系统的性质}
+\end{defi}
+分为两类：\textbf{广度性质（容量性质）}：与物质的量成正比
+\begin{eg}
+    体积/质量与物质的量成正比
+\end{eg}
+\textbf{强度性质}：与物质的量无关
+\begin{eg}
+    密度、摩尔质量与物质的量无关
+\end{eg}
+\begin{question}
+一个系统有多少性质？如何描述这些性质？
+\end{question}
+\begin{sol}
+    无限性质。可以使用状态函数描述
+\end{sol}
+状态函数的特点：
+\begin{itemize}
+    \item 数学特点：状态函数的微分是全微分
+    \item 物理特点：不同性质之间有关系，少数性质确定后即可以确定其他所有性质，称这些性质为\textbf{独立性质}
+    
+\end{itemize}
+\begin{eg}
+$pV=nRT$ ：对于氢气的系统，给定物质的量后，如果体积和压力确定，则温度确定
+\end{eg}
+对于一个系统，如果确定两个独立变量即可确定所有性质，称这个系统为\textbf{双变量系统}
+\subsubsection*{过程与途径}%
+\label{subsub:过程与途径}
+\begin{defi}
+    过程：从某一个状态变化到另一个状态
+
+    途径：完成这个变化的具体方式；\textbf{一般不区分过程和途径}
+\end{defi}
+\begin{defi}
+    状态的详细定义：初态=始态，末态=终态
+\end{defi}
+过程的分类（按始末态差异）：
+\begin{itemize}
+    \item 简单物理过程：温度、压力、体积的变化
+    \item 复杂物理过程：相变
+    \item 化学过程
+\end{itemize}
+（按过程本身特点）：
+\begin{itemize}
+    \item 恒温过程：$T_1=T_2=T_\text{env}=C$ ，始终不变
+    \item 恒压过程：$p_1=p_2=p_\text{env}=C$ ，始终不变
+    \item 定温过程：$T_1=T_2$，过程的温度可以变化
+    \item 恒容过程：$V$ 始终不变
+    \item 绝热过程：系统与环境教化的热为0
+    \item 循环过程：始态和终态不变，但过程可以变化
+\end{itemize}
+\begin{eg}
+在保温杯内进行的反应近似为绝热过程
+\end{eg}
+\begin{defi}
+    中间态：在过程中的一个中间状态
+\end{defi}
+\begin{eg}
+    例1：A过程从300K直接到400K,B过程从300K到250K,再从250K到400K；
+
+    对这两个状态求温度变化：
+    \[
+        \text{A: }\Delta T = \int_{300\text{K}}^{400\text{K}} \mathrm{d}T = 100\text{K} \quad \text{B: }\Delta T = \int_{300\text{K}}^{250\text{K}}  \mathrm{d}T + \int_{250\text{K}}^{400\text{K}}  \mathrm{d}T = 100\text{K}
+    .\]
+    即\textbf{状态函数的变化只与始末态有关，与过程无关}
+\end{eg}
+\subsubsection*{热与功}%
+\label{subsub:热与功}
+\begin{defi}
+热：由于温度差异导致的系统和环境之间的\textbf{交换}能量，用$Q$表示，从环境中吸热，符号为正，向环境放热符号为负
+
+功：除去热之外交换的其他所有的能量为功，用$W$ 表示，向环境输出功符号为负
+\end{defi}
+\begin{question}
+    “一瓶氢气有100kJ的热”是否正确？
+\end{question}
+\begin{sol}
+    不正确：没有向环境中交换能量，热不是系统的性质，应表示为：“一瓶氢气在经历某一过程后，向环境释放了100kJ的热”，即$Q=-100\ce{kJ}$
+\end{sol}
+宏观的热量和功使用$Q$ 和$W$ 表示，微观的热量和功使用$\delta Q$ 和$\delta W$ 表示；相对比的，宏观的温度\textbf{变化}用$\Delta T$ 表示，微观的温度\textbf{变化}用$\mathrm{d}T$ 表示（热和功不是状态函数，温度是状态函数）
+\begin{question}
+    一个容器的导热隔板左右有200K和250K的氢气，左右两部分最终的温度相等，以整个容器为系统，左右两边交换的能量是什么？
+\end{question}
+\begin{sol}
+    首先排除热：左右两边交换的能量并不涉及与环境的能量交换，是\textbf{内能}
+\end{sol}
+\begin{defi}
+    \textbf{途径函数}（过程量）：与过程密切相关的函数
+\end{defi}
+功和热与过程密切相关，因此是过程量
+\begin{eg}
+    用烤箱加热馒头，以馒头为系统，$Q>0,W=0$ ；而用微波炉加热时，是微波做功，$Q=0,W>0$ ；这两个过程的始末态一致，但功和热不一致
+\end{eg}
+\subsubsection*{热力学能}%
+\label{subsub:热力学能}
+\begin{question}
+    静止在0海拔地面的物体有没有能量？
+\end{question}
+这些能量蕴含在系统内部，称为热力学能或内能（$U$）
+\begin{defi}
+    内能或热力学能（$U$）：蕴含在系统内部的能量，单位J或kJ
+\end{defi}
+内能来源于基本粒子的热运动：即动能+势能；内能是系统的性质（广度性质，与物质的量成正比），因此\textbf{内能是状态函数}
+\begin{notation}
+    内能无绝对值，一般只研究内能的变化
+\end{notation}
+如何描述双变量系统的内能，有一些可能的表示方法：
+\begin{itemize}
+    \item $U=f\left( T,p \right)$
+    \item $U=f\left( T,V \right)$
+    \item $U=f\left( T,X \right)$
+    \item \ldots 
+    
+\end{itemize}
+原则：
+\begin{itemize}
+    \item 尽量选用熟悉的量表述
+    \item 全微分展开后的函数为熟悉的函数
+    
+\end{itemize}
+\begin{eg}
+    如果用$T,p$ 表示： \[
+        \mathrm{d}U=\left(\frac{\partial U}{\partial T}\right)_{p}\mathrm{d}T + \left(\frac{\partial U}{\partial p}\right)_{T}\mathrm{d}p
+    .\]
+    其中：$\left(\frac{\partial U}{\partial T}\right)_{p}$ 和$\left(\frac{\partial U}{\partial p}\right)_{T}$ 的意义并不明确
+
+    如果用$T,V$ 表示：
+    \[
+        \mathrm{d}U = \left(\frac{\partial U}{\partial T}\right)_{V}\mathrm{d}T + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V
+    .\]
+    其中$\left(\frac{\partial U}{\partial T}\right)_{V}$ 和$\left(\frac{\partial U}{\partial V}\right)_{T}$ 是已知的性质，后续介绍
+\end{eg}
+全微分展开的作用：
+\begin{eg}
+$\mathrm{d}U$ 代表内能的变化量，是热力学极其重要的一个变量；宏观的内能变化量记为$\Delta U$ ，通过对上式积分：\[
+    \Delta U = \int_{T_1}^{T_2} \left(\frac{\partial U}{\partial T}\right)_{V} \mathrm{d}T + \int_{V_1}^{V_2} \left(\frac{\partial U}{\partial V}\right)_{T} \mathrm{d}V
+.\]
+可以求得$\Delta U$
+\end{eg}
+\subsubsection*{第一定律的表达}%
+\label{subsub:第一定律的表达}
+\begin{notation}
+    第一类永动机不符合热力学第一定律，不可能被制造出来
+\end{notation}
+热力学第一定律即能量守恒定律：
+\begin{defi}
+    能量不能凭空产生，也不能无故消失，只是从一个物体转移到另一个物体或从一种形式转化为另一种形式，能量总值不变
+\end{defi}
+\begin{notation}
+    能量守恒定律是公理，是普适性定律
+\end{notation}
+将能量守恒定律转化为数学表达：
+
+对于一个系统，从初始态$U_1$转为末态$U_2$，在过程中吸热$Q$ ，得到做功$W$ ，则：\[
+    U_2=U_1+Q+W\Rightarrow U_2-U_1=Q+W
+.\]
+转为宏观表达和微观表达：\[
+    \begin{cases}
+        \Delta U = Q+W\\
+        \mathrm{d}U = \delta Q+\delta W
+    \end{cases}
+.\]
+应用：可以通过测量$Q$ 和$W$ 来测定一个系统的内能变化
+\begin{notation}
+    热力学第一定律数学公式的使用条件：\textbf{非敞开系统}，数学公式在推导时加入了一个条件，即系统和环境之间无\textbf{物质}交换
+\end{notation}
+\begin{eg}
+    同例1：如果A过程的热和功很难测量，但B的两个过程每一步的热和功很容易求出来，则可以测量B每一个过程的热和功，然后依次求出每个过程的内能变化量，合并后即为A的内能变化量
+\end{eg}
+\subsubsection*{求解功}%
+\label{subsub:求解功}
+\begin{itemize}
+    \item 功的分类
+    \item 体积功的计算通式
+    \item 常见过程的体积功的计算
+    \item 理想气体恒温可逆过程
+\end{itemize}
+功的分类：体积功和非体积功
+\begin{defi}
+    体积功$W$：系统在\textbf{外界压力}下，由于\textbf{体积变化}所产生的功
+\end{defi}
+\begin{eg}
+    蒸汽机：气体膨胀，推动活塞产生功即为体积功
+\end{eg}
+非体积功$W'$的种类更加复杂，但暂时不做了解：
+\begin{itemize}
+    \item 电功：电磁炉加热
+    \item 表面功：加湿器在产生水雾过程中，水的表面积增大，即为加湿器对水做了表面功
+    \item 光功：太阳能板
+    \item 轴功：水泵抽高水，功的来源是轴的转动
+\end{itemize}
+体积功的计算：
+
+需要借用一个模型（图 \ref{fig:体积功经典模型}）：容器中有氢气，用一个活塞分隔，如果氢气的压强$p$大于外部压强$p_\text{env}$，则氢气会克服外界压力膨胀
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{体积功经典模型}
+    \caption{体积功经典模型}
+    \label{fig:体积功经典模型}
+\end{figure}
+
+设开始后一段时间氢气推动活塞前进了$\mathrm{d}x$ 的距离，且已知外界压强$p_\text{env}$ 和活塞的横截面积为$A$ ，计算这一过程的体积功：
+\begin{sol}
+    由于系统推动活塞只移动$\mathrm{d}x$，则使用$\delta W$ 表示做功；向外推动即为做负功，由功的定义：
+    \[
+        W = -\int F\mathrm{d}x \Rightarrow \delta W = -F\mathrm{d}x = -p_\text{env}\cdot A\cdot \mathrm{d}x
+    .\]
+    由于$A \cdot \mathrm{d}x$即为变化的体积$\mathrm{d}V$，带入可得： \[
+        \delta W = -p_\text{env}\mathrm{d}V
+    .\]
+    积分可得：\[
+        \boxed{W = -\int p_\text{env}\mathrm{d}V = -\int_{V_1}^{V_2} p_\text{env} \mathrm{d}V
+    .}\]
+\end{sol}
+\begin{notation}
+    \begin{itemize}
+        \item 该公式\textbf{无条件限制}
+        \item 被积函数永远都是外界压力$p_\text{env}$；只有当系统压力恒等于外界压力时才可以使用系统压力$p$
+        \item 符号为负
+    \end{itemize}
+\end{notation}
+\begin{question}
+    对于压缩是否可用？
+\end{question}
+当外界压力$p_\text{env}$ 大于氢气压力$p$ 时，环境对系统做功，推导过程类似，符号无需改变：$V_1>V_2$ ，积分后$W>0$，因此该公式无条件限制
+
+\textit{常见过程的体积功计算：}
+\begin{notation}
+    恒外压过程（数学演绎法，条件为恒外压）：$p_\text{env}=C$ ，则带入后：\[
+        W=\int-p_\text{env}\mathrm{d}V = -p_\text{env}\int \mathrm{d}V = -p_\text{env}\Delta V
+    .\]
+
+    恒压过程：$p_\text{env}=p=C$ ，带入：\[
+        W = -p \int \mathrm{d}V = -p\Delta V
+    .\]
+
+    自由膨胀过程：外界压力$p_\text{env}=0$ ，由于被积函数为0，则体积功$W=0$ 
+
+    恒容过程：$\Delta V=0$ ，则$W = 0$
+
+    \textbf{理想气体恒温可逆膨胀过程：}\[
+        W = -nRT \ln \frac{V_2}{V_1}
+    .\]
+\end{notation}
+\subsubsection*{理想气体恒温可逆膨胀过程}%
+\label{subsub:理想气体恒温可逆膨胀过程}
+前提：
+\begin{itemize}
+    \item 恒温
+    \item 理想气体
+    \item \textbf{可逆过程}
+\end{itemize}
+\begin{question}
+什么是可逆过程？什么是可逆膨胀？
+\end{question}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{理想气体恒温可逆膨胀模型}
+    \caption{理想气体恒温可逆膨胀模型}
+    \label{fig:理想气体恒温可逆膨胀模型}
+\end{figure}
+如果系统压力$p$ 大于环境压力$p_\text{env}$，则开始膨胀
+
+可逆的条件：
+\begin{itemize}
+    \item 活塞无质量，无摩擦
+    \item 系统压力比环境压力大一个无穷小量，即$p_\text{env} = p-\mathrm{d}p$，也可以说是$p_\text{env}=p$
+    
+\end{itemize}
+可逆膨胀的另一个称法：在\textbf{力学平衡}下完成的膨胀
+
+可逆过程的特点：
+\begin{itemize}
+    \item 推助力无限小
+    \item 力学平衡
+    \item \textbf{永远进行不完}
+\end{itemize}
+体积功计算：基本公式：\[
+    W = \int_{V_1}^{V_2} -p_\text{env} \mathrm{d}V
+.\]
+加限制条件（可逆：$p_\text{env}=p$）：\[
+    W = -\int p\mathrm{d}V = -p \int \mathrm{d}V = -P\Delta V
+.\]
+这个推导\textbf{并不正确}，因为系统压力并非一个恒定的值，正确推导如下：使用理想气体的条件：\[
+    pV=nRT \Rightarrow p=\frac{nRT }{V}
+.\] 带入$W = -\int p\mathrm{d}V$：\[
+    W = -\int_{V_1}^{V_2} \frac{nRT }{V} \mathrm{d}V = -nRT \int_{V_1}^{V_2} \frac{1}{V} \mathrm{d}V = -nRT \left( \ln V_2-\ln V_1 \right)
+.\]即：\[\boxed{
+    W = -nRT \ln \frac{V_2}{V_1}
+.}\]
+\begin{question}
+    为什么要研究理想气体恒温可逆过程？
+\end{question}
+理想气体恒温可逆过程的特点：
+\begin{eg}
+    从不可逆的恒温过程入手：如图 \ref{fig:不可逆恒温过程}，假设有一个气缸内有一定量的理想气体，在恒温环境中；初始系统的压力为$3p_0$ ，初始体积为$V_0$ ，为了平衡系统的压力，在外部施加$3p_0$ 的压力；对于A过程，将外部压力改为$p_0$ ，计算末态的状态。
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.7]{不可逆恒温过程}
+    \caption{不可逆恒温过程}
+    \label{fig:不可逆恒温过程}
+\end{figure}
+
+    系统的压力和体积的乘积$3p_0V_0 = nRT $ ，将初始态和末态相比可得$p_1 =p_0, V_1 = 3V_0$，由于将压力变为$p_0$ 后外部压力恒定，使用$W=-p_\text{env}\Delta V$ 计算：\[
+        W = -p_0\left( 3V_0-V_0 \right) = -2p_0V_0 = -0.677nRT 
+    .\]
+    可以把体积功用图像的形式表示出来，其中由理想气体方程有：$p=\frac{1}{V}$：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{a过程的体积功}
+    \caption{A过程的体积功}
+    \label{fig:a过程的体积功}
+\end{figure}
+
+体积功的计算中$p_0$ 对应的是末态到原点$p$ 坐标的变化长度，而体积的变化则是$V_0$ 到$3V_0$ 的线段长度，则体积功如图 \ref{fig:a过程的体积功}
+
+对于B过程，先将压力转为$2p_0$ ，稳定后再转为$p_0$，同理可得中间态的状态为$2p_0,1.5V_0$，这个过程也可以用图像展示，如图 \ref{fig:b过程的体积功}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{b过程的体积功}
+    \caption{B过程的体积功}
+    \label{fig:b过程的体积功}
+\end{figure}
+
+很明显功并不与A过程一致，因为\textbf{功是一个过程量}
+
+计算$W_1$ ：\[
+    W_1 = -2p_0\cdot \left( 1.5V_0-V_0 \right) = -p_0V_0 = -0.333nRT 
+.\]
+计算$W_2$ ：\[
+    W_2 = -p_0\cdot \left( 3V_0-1.5V_0 \right) = -0.5nRT 
+.\]
+即：\[
+    W = W_1 + W_2 = -0.833nRT 
+.\]
+可得：系统通过两次膨胀对环境做工比一次膨胀多，如果将膨胀分为无限次：相当于将施加$2p_0$ 的物体换为可以施加$2p_0$ 压力的面粉，缓慢去除所有的面粉，可以将这个过程看作连续，记为C过程：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{c过程的体积功}
+    \caption{C过程的体积功}
+    \label{fig:c过程的体积功}
+\end{figure}
+
+可以将这个过程近似看作理想气体恒温可逆过程，则 \[
+    W_C = -nRT \ln \frac{3V_0}{V_0} \approx -1.10nRT 
+.\]
+\end{eg}
+相反的，对于压缩过程，即环境对系统做功，只需要把图像的初态和末态交换，\textbf{功的大小使用末态的压强计算}，以A过程为例：设压缩过程为A'，如图：
+\begin{figure}[ht]
+    \centering
+    \incfig[0.5]{a'过程的体积功}
+    \caption{A'过程的体积功 }
+    \label{fig:a'过程的体积功}
+\end{figure}
+
+计算可得$W' = 6p_0V_0 = 2nRT $，结合膨胀过程A可得：先膨胀再压缩，系统得到了$2nRT -0.667nRT = 1.333nRT $ 的功
+
+同理，B'过程如图：
+\begin{figure}[ht]
+    \centering
+    \incfig[0.5]{b'过程的体积功}
+    \caption{B'过程的体积功}
+    \label{fig:b'过程的体积功}
+\end{figure}
+
+计算$W_{B'}$ ：$W_{B'} = 2p_0\cdot 1.5V_0+3p_0\cdot 0.5V_0 = 4.5p_0V_0 = 1.5nRT $，即系统获得了$1.5nRT -0.833nRT =0.667nRT $
+
+同理可得，C'过程和C过程的功是相等的，说明如果一个系统从初态到末态和从末态到初态都是恒温可逆膨胀和压缩，则系统和环境之间没有功的交换，是一个循环过程（状态函数不变，内能也不变），因此也没有热的交换
+
+总结恒温可逆过程的特点：
+\begin{itemize}
+    \item 膨胀：系统对环境做功最多
+    \item 压缩：环境对系统做功最少
+    \item 循环后系统和环境之间没有能量交换
+\end{itemize}
+\subsubsection*{热的求解}%
+\label{subsub:热的求解}
+回顾：\[
+    \Delta U = Q+W\quad \mathrm{d}U = \delta Q + \delta W
+.\]
+上一节已经学会了体积功的求解
+
+对于功的求解：
+\begin{itemize}
+    \item 恒容热
+    \item 恒压热
+    \item 两种热的求解
+\end{itemize}
+首先回顾：热是一个途径/过程的性质，是\textbf{过程函数}而非状态函数；热的种类根据途径的种类而变化，因此热的种类非常多
+
+在实验室中最常见的过程是恒容过程和恒压过程
+\begin{defi}
+    恒容热$Q_V$ ：系统发生恒容过程与环境交换的热
+\end{defi}
+\begin{question}
+交换的这部分热量和哪些性质有关系？
+\end{question}
+首先回顾热力学第一定律：$\Delta U = Q+U$ ，由于恒容，体积功$W=0$ ，则$\Delta U = Q$ ，即：\[
+    Q_{V}=\Delta U
+.\]
+即恒容热在数值上等于系统的内能变
+\begin{eg}
+    刚性容器中氢气吸热温度升高，这一过程的吸热称为恒容热，数值上等于这一过程中的内能变化
+\end{eg}
+再来看看恒压热：
+\begin{defi}
+    恒压热$Q_{p}$ ：在恒压过程中的系统和环境交换的热
+\end{defi}
+\begin{eg}
+在一个带活塞的容器中发生的过程可以看作恒压过程：恒压下$1\ce{m}^{3}$ 的氢气膨胀为$2\ce{m}^{3}$ ，再压缩为$1\ce{m}^{3}$，这个过程中交换的热即为恒压热
+\end{eg}
+函数关系式推导：以第一定律为基础$\Delta U = Q+W$ ，由于恒压，体积功$W=-p\Delta V$ ，带入即得：\[
+    Q_{p}=\Delta U+p\Delta V
+.\]
+由于$p$ 是一个常数，则可以写为：\[
+    Q_{p}=\Delta U + \Delta\left( pV \right) = \Delta\left( U+pV \right)
+.\]
+即：恒压热等于$U+pV$ 的变化，由于这个变量出现过于频繁，且一定是一个状态函数，因此给这个变量起了一个名字，令$U+pV=H$ ，即\textbf{焓}，而$Q_{p}=\Delta_\text{}H $也被称为\textbf{焓变}
+\begin{notation}
+    焓的物理意义：没有意义（乐）
+
+    焓变的物理意义：$\Delta_\text{}H=Q_{p} $ 即恒压过程的热效应，即：\textbf{恒压热在数值上等于系统的焓变}
+\end{notation}
+将焓的定义转换：\[
+    H=U+pV=U+nRT 
+.\]
+其中$U,n,T$ 都是系统的广度性质，因此焓也是状态函数，且可以用$T,p$ 来描述，即：\[
+    H=f\left( T,p \right)
+.\]
+回忆独立变量描述状态函数：第一个原则，独立变量必须易于测量；第二个原则，全微分后的两个偏微分函数需要是熟悉的物理量。对焓进行全微分展开：\[
+    \mathrm{d}H= \left(\frac{\partial H}{\partial T}\right)_{p}\mathrm{d}T+\left(\frac{\partial H}{\partial p}\right)_{T}\mathrm{d}p
+.\]
+其中：$\left(\frac{\partial H}{\partial T}\right)_{p}$ 这个偏微分为：焓在压力不变的情况下随温度的变化率，后面的同理，这两个偏微分函数在后面提及。
+
+\begin{notation}
+恒压热$Q_{p}$ 和恒容热$Q_{V}$ 都是过程量（热），比较容易量出来，是一个求其他状态函数的入手点，如求内能变化量$\Delta_\text{}U $ 可以求一个恒容过程的热变化，由$\Delta_\text{}U =Q_{V} $ 即可；求一个恒压过程的焓变：$\Delta_\text{}H = Q_{p} $ 即可
+\end{notation}
+\subsubsection*{热容}%
+\label{subsub:热容}
+回忆：初中物理学过热容$C$ 
+\begin{eg}
+    有一些300K的水，求将其升温到400K需要的热量（反之同理）
+\end{eg}
+\begin{defi}
+    热容：某一个系统升高单位温度时吸收的热量，单位为$\ce{J*K^{-1}}$或$\ce{kJ*K^{-1}}$ ，即：\[\boxed{
+        C = \frac{\delta Q}{dT}
+    .}\]
+\end{defi}
+此处使用微小温度和热量变化来定义热容。不同的过程热容是不一样的，因为不同的过程$\delta Q$ 的值一般不一样，因此常见的热容有两种：$C_{V}$ 和$C_{p}$，即恒压和恒容
+\begin{defi}
+    恒容热容$C_{V}$ ：\[
+        C_{V} = \frac{\delta Q_{V}}{\mathrm{d}T}
+    .\]
+    一般还会使用\textbf{恒容摩尔热容}：\[
+        C_{V,m} = \frac{1}{n}\cdot \frac{\delta Q_{V}}{\mathrm{d}T}
+    .\]
+    单位为$\ce{J*K^{-1}*mol^{-1}}$
+\end{defi}
+摩尔热效应可以写作：$Q_{V,m} = \frac{Q_{V}}{n}$ ，因此也可以将恒容摩尔热容写作：\[
+    C_{V,m} = \frac{\delta Q_{V,m}}{\mathrm{d}T}
+.\]
+由于$Q_{V}$ 是途径函数，而$T$ 是状态函数，尝试将$C$ 的所有变量转为状态函数，由于$Q_{V}=\Delta U$：\[
+    C_{V} = \frac{\delta Q_{V}}{\mathrm{d}T} = \frac{\mathrm{d}U}{\mathrm{d}T} = \left(\frac{\partial U}{\partial T}\right)_{V}
+.\]
+\begin{notation}
+    为什么要加一个偏微分：这个过程是一个恒容过程，因此要限制体积不变
+\end{notation}
+这里可以发现：$C_{V} = \left(\frac{\partial U}{\partial T}\right)_{V}$ 是在最开始对内容求偏微分的一部分，即：\[
+    \mathrm{d}U = \textcolor{red}{\left(\frac{\partial U}{\partial T}\right)_{V}}\mathrm{d}T + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V = C_{V}\mathrm{d}T + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V
+.\]
+通过热容对恒容过程的内能变求解，由于$C_{V} = \left(\frac{\partial U}{\partial T}\right)_{V}\Rightarrow \mathrm{d}U = C_{V}\mathrm{d}T$，或者由于$\mathrm{d}V=0$ ，带入全微分可得$\left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V = 0$：\[
+    \mathrm{d}U = \delta Q_{V} = C_{V}\mathrm{d}T = nC_{V,m}\mathrm{d}T
+.\]
+对两边积分：\[
+    \Delta_\text{}U = Q_{V} = \int_{T_1}^{T_2} C_{V} \mathrm{d}T = \int_{T_1}^{T_2} nC_{V,m} \mathrm{d}T
+.\]
+因此，原来测定内能变需要测量热量，现在只需要知道恒容热容之后积分求解即可
+
+同上，恒压热容$C_{p}$ 可以写为：\[
+    C_{p} = \frac{\delta Q_{p}}{\mathrm{d}T}
+.\]
+恒压摩尔热容：\[
+    C_{p,m} = \frac{1}{n}\cdot \frac{\delta Q_{p}}{\mathrm{d}T}
+.\]
+同样的，将$C_{p}$ 转为状态函数：由于$Q_{p} = \Delta_\text{}H $ ，即：$\delta Q_{p} = \mathrm{d}H$ ，带入：\[
+    C_{p} = \frac{\delta Q_{p}}{\mathrm{d}T} = \frac{\mathrm{d}H}{\mathrm{d}T} = \left(\frac{\partial H}{\partial T}\right)_{p}
+.\]
+同样的，$C_{p} = \left(\frac{\partial H}{\partial T}\right)_{p}$ 也是之前见过的，对焓求全微分：\[
+    \mathrm{d}H = \textcolor{red}{\left(\frac{\partial H}{\partial T}\right)_{p}}\mathrm{d}T + \left(\frac{\partial H}{\partial p}\right)_{T}\mathrm{d}p = C_{p}\mathrm{d}T + \left(\frac{\partial H}{\partial p}\right)_{T}\mathrm{d}p
+\]
+或： \[
+    \mathrm{d}H = nC_{p,m}\mathrm{d}T + \left(\frac{\partial H}{\partial p}\right)_{T}\mathrm{d}p
+.\]
+求一个恒压过程的焓变：\[
+    \mathrm{d}H = \delta Q_{p} = C_{p}\mathrm{d}T + 0\text{（压力的变化为0）}
+.\]
+积分后：\[\boxed{
+    \Delta_\text{}H = Q_{p} = \int_{T_1}^{T_2} C_{p} \mathrm{d}T = \int_{T_1}^{T_2} nC_{p,m} \mathrm{d}T
+.}\]
+即只需知道$C_{p}$ 即可求一个恒压过程的焓变/恒压热
+\begin{question}
+    总结上述两个过程：\[
+        \begin{cases}
+            \Delta_\text{}U = \int C_{V} \mathrm{d}T\\
+            \Delta_\text{}H = \int C_{p} \mathrm{d}T
+        \end{cases}
+    .\]
+    这两个公式有对应的恒容/恒压条件，如果这个过程不是恒容/压过程，能否使用这些公式？以下列出一个可能的过程：
+
+    过程1和过程2的始末态为：$300\ce{K},1\ce{m}^{3}\Rightarrow 400\ce{K},1\ce{m}^{3}$ ，但过程2有一个中间态$500\ce{K},2\ce{m}^{3}$ ，使得过程2不是一个恒容/恒压过程
+\end{question}
+事实上，可以使用恒容/恒压公式求过程2的内能变，因为内能是一个状态函数，与过程无关。同理，只要初态压力等于末态压力，也可以用公式2求解中间态压力不恒定的过程
+\begin{question}
+如果始末态的体积、压力、温度都不一样，能否使用这两个公式求解？
+\end{question}
+肯定不行，但是可以使用全微分展开式求解。虽然有一项并不是熟知的变量，但是只要求得被积函数，依然可以求解。
+\begin{align*}
+    \mathrm{d}U = C_{V}\mathrm{d}T + \textcolor{blue}{\left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V}\\
+    \mathrm{d}H = C_{p}\mathrm{d}T + \textcolor{blue}{\left(\frac{\partial H}{\partial p}\right)_{T}\mathrm{d}p}
+.\end{align*}
+这两个偏微分如何求以后再提。
+
+\begin{notation}
+    热容的特点：
+    \begin{itemize}
+        \item 热容是一个状态函数，因为组成热容的$U,T,p$ 都是状态函数
+        \item 热容是广度性质，会随系统物质的量变化
+        \item 摩尔热容不随系统物质的量变化，是强度性质
+        
+    \end{itemize}
+\end{notation}
+如何描述热容：由之前的双参数系统表示：\[
+    C_{V} = f\left( T,V \right)\quad C_{p}=f\left( T,p \right)
+.\]
+\begin{notation}
+    温度、体积对恒容热容的影响不同：温度对恒容热容的影响极大，但体积影响很小；同理，压力对恒压热容的影响不大。因此一般可以忽略体积和压力对热容的影响，一般认为只有温度影响热容
+\end{notation}
+\begin{notation}
+    一般对于摩尔热容，将其写为以下形式：\[
+        C_{p,m} = a+bT+cT^2 +dT^3 +\ldots 
+    .\]
+    如果已知$a,b,c,d\ldots $ 的值就可以通过积分求焓变、内能变：\[
+        \Delta_\text{}H = \int_{T_1}^{T_2} n\left( a+bT+cT^2 +dT^3 +\ldots  \right) \mathrm{d}T 
+    .\]
+    缺点是计算不够方便，为了足够方便，提出一个概念\textbf{平均摩尔热容}
+\end{notation}
+\begin{defi}
+    平均摩尔热容：在一定温度范围内热容的平均值
+\end{defi}
+\begin{eg}
+    \[
+        \overline{C_{p,m}} = \frac{Q_{p}}{n\left( T_2-T_1 \right)} = \frac{\Delta_\text{}H }{n\left( T_2-T_1 \right)}
+    .\]
+\end{eg}
+平时的计算一般使用平均摩尔热容计算，由于$T_1,T_2,n$ 都是常数，可以直接提到积分外计算
+\begin{notation}
+    平均摩尔热容在不同温度区间的数值不一样
+\end{notation}
+一般来说，求一个热容是使用一个曲线进行回归计算。但是如果要求恒容和恒压摩尔热容的关系需要做更多的实验并绘图，太麻烦。因此来求一求恒容和恒压摩尔热容之间的关系。
+
+将两式相减：
+\begin{align*}
+    C_{p}-C_{V} &= \left(\frac{\partial H}{\partial T}\right)_{p}-\left(\frac{\partial U}{\partial T}\right)_{V}\\
+    &= \left(\frac{\partial \left( U+pV \right)}{\partial T}\right)_{p}-\left(\frac{\partial U}{\partial T}\right)_{V} \\
+    &= \textcolor{red}{\left(\frac{\partial U}{\partial T}\right)_{p}}+p\textcolor{blue}{\left(\frac{\partial V}{\partial T}\right)_{p}}-\left(\frac{\partial U}{\partial T}\right)_{V}
+.\end{align*}
+\begin{notation}
+    判断一个公式能不能用：看物理量能不能测量得到
+\end{notation}
+首先看$\left(\frac{\partial U}{\partial T}\right)_{V}$ ，已知$C_{V} = \left(\frac{\partial U}{\partial T}\right)_{V}$ ；然后$\left(\frac{\partial V}{\partial T}\right)_{p}$ ，其实是在说体积随温度的变化，即\textbf{热膨胀}，这个量并不难测；最后，对于$\left(\frac{\partial U}{\partial T}\right)_{p}$ ，这个变量并不知道有什么用。
+
+想办法把$\left(\frac{\partial U}{\partial T}\right)_{p}$ 凑成一些能用的变量：首先，这个式子没办法使用；已知在$U$ 的全微分展开中：\[
+    \mathrm{d}U = C_{V}\mathrm{d}T + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V
+.\]
+同时出现了$U,T,p$ ，因此，尝试在恒压的条件下，两端同时除以$\mathrm{d}T$，可得：\[
+    \left(\frac{\partial U}{\partial T}\right)_{p} = C_{V} + \left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}
+.\]
+（由于压力不变，$\frac{\mathrm{d}V}{\mathrm{d}T}$ 需要加上压力条件，即变为：$\left(\frac{\partial V}{\partial T}\right)_{p}$，这个方法极常用）
+
+将这个式子带入上面的不能用的式子：
+\begin{align*}
+    C_{p}-C_{V} &= C_{V} + \left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}+p\left(\frac{\partial V}{\partial T}\right)_{p}-C_{V}\\
+    &= \left(\frac{\partial V}{\partial T}\right)_{p}\left( \left(\frac{\partial U}{\partial V}\right)_{T}+p \right)
+.\end{align*}
+再来看看这个公式能不能用：热膨胀之前已经提到过，另一个偏微分式$\left(\frac{\partial U}{\partial V}\right)_{T}$ 在使用恒容热容对内能求解中出现过，即：\[
+    \mathrm{d}U = C_{V}\mathrm{d}T + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V
+.\]
+这个式子代表温度恒定，内能和体积的关系，内能来源于分子的动能和势能总和。温度的定义也可以是分子热运动的能量体现，温度不变代表分子的动能不变，则内能只能和分子之间的作用势能有关。因此这个式子体现的是分子之间相互作用有关，体积越大分子距离越大，作用力越小。这个物理量还有一个名字叫做\textbf{内压}。
+\begin{notation}
+    这个式子的单位是帕斯卡$\ce{Pa}$
+\end{notation}
+至此，所有在内能求解中的式子都已知。
+\begin{notation}
+    凑微分是一个极其重要的方法
+\end{notation}
+\begin{eg}
+    对以下式子操作：保持$T$ 不变，等式两边同除以$\mathrm{d}V$ ：\[
+        \mathrm{d}U = C_{V}dT + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V
+    .\]
+\end{eg}
+\[
+    \left(\frac{\partial U}{\partial V}\right)_{T} = C_{V}\textcolor{red}{\left(\frac{\partial T}{\partial V}\right)_{T}} + \left(\frac{\partial U}{\partial V}\right)_{T} = \left(\frac{\partial U}{\partial V}\right)_{T}
+.\]
+红色式子由于$\mathrm{d}T=0$ 因此为0
+\begin{eg}
+    同样式子，压力不变，同除以$\mathrm{d}T$
+\end{eg}
+\[
+    \left(\frac{\partial U}{\partial T}\right)_{p} = C_{V} + \left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}
+.\]
+小练习：对焓变的全微分展开：
+\begin{itemize}
+    \item 保持$T$ 不变，同除以$\mathrm{d}p$
+    \item 保持$V$ 不变，同除以$\mathrm{d}T$
+    
+\end{itemize}
+\begin{sol}
+    1. \[
+        \left(\frac{\partial H}{\partial p}\right)_{T} = 0+\left(\frac{\partial H}{\partial p}\right)_{T}
+    .\]
+    2. \[
+        \left(\frac{\partial H}{\partial T}\right)_{V} = C_{p} + \left(\frac{\partial H}{\partial p}\right)_{T}\left(\frac{\partial p}{\partial T}\right)_{V}
+    .\]
+\end{sol}

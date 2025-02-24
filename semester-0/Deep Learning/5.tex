@@ -1,0 +1,35 @@
+\learn{5}{02.18}
+\subsubsection*{奇异值分解的各部分来源}%
+\label{subsub:奇异值分解的各部分来源}
+假设任意$m\times n$矩阵$\bm{A}$
+
+\textit{1. 求出两个对称矩阵}
+
+由于：$\left( \bm{A}^\top \bm{A} \right)^\top =\bm{A}\bm{A}^\top $，即这两个矩阵（\textbf{方阵}）都是对称的，令$\bm{S}_L:m\times m=\bm{A}\bm{A}^\top ,\bm{S}_R:n\times n=\bm{A}^\top \bm{A}$ ，提取出两个对称矩阵的特征向量组：\[
+    \bm{S}_L\Rightarrow \begin{bmatrix}
+        \bm{u_1} & \bm{u_2} & \ldots \bm{u_{m}}
+    \end{bmatrix}=\bm{U}\quad \bm{S}_R \Rightarrow \begin{bmatrix}
+        \bm{v_1} & \bm{v_2} & \ldots \bm{v_{n}}\\
+    \end{bmatrix}=\bm{V}
+.\]
+如果求出$\bm{S}_L$ 和$\bm{S}_R$ 的特征值，并顺序排列，若$m>n$ ，则会有：$\bm{S}_L$ 的前$n$ 个特征值与$\bm{S}_R$ 的$n$ 个特征值一一对应，$\bm{S}_L$ 的剩余特征值都为0
+\begin{notation}
+    $\bm{A}$ 的\textbf{非零奇异值的平方}是$\bm{A}^\top \bm{A}$ 或$\bm{A}\bm{A}^\top $ 的特征值
+\end{notation}
+对非0的特征值开根号即为奇异值，即：$\lambda_{i}=\sigma_{i}^2 $
+\begin{notation}
+    $\bm{\Sigma}$中的奇异值为非负值，且按照降序排列，即： \[
+        \sigma_1\ge \sigma_2\ge \ldots \ge \sigma_{r}>0
+    .\]
+    其中：\[
+        \bm{\Sigma} = \begin{bmatrix}
+            \sigma_1 & 0 & \cdots & 0\\
+            0 & \sigma_2 & \cdots & 0\\
+            \vdots & \vdots & \ddots & \vdots \\
+            0 & 0 & \cdots & \sigma_{r}
+        \end{bmatrix}
+    .\]
+\end{notation}
+\subsection{Moore-Penrose伪逆}%
+\label{sub:Moore-Penrose伪逆}
+
