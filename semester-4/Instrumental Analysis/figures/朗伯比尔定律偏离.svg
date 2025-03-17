@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="120mm"
+   viewBox="0 0 240 120"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="朗伯比尔定律偏离.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4500439"
+     inkscape:cx="641.35989"
+     inkscape:cy="264.47475"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     width="200mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1246"
+     inkscape:window-height="718"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="mm"
+       spacingx="10"
+       spacingy="10"
+       empspacing="4"
+       dotted="false"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-177)">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1;marker-end:url(#DartArrow)"
+       d="m 79.558019,286.35902 v -94.7246"
+       id="path1" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1;marker-end:url(#DartArrow)"
+       d="M 71.043447,279.17485 H 183.59543"
+       id="path2" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.499999;stroke-miterlimit:3.9;stroke-dasharray:1, 2"
+       id="path4"
+       cx="97.77327"
+       cy="263.92535"
+       r="1.7295221" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.499999;stroke-miterlimit:3.9;stroke-dasharray:1, 2"
+       id="path4-3"
+       cx="103.5941"
+       cy="253.07744"
+       r="1.7295221" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.499999;stroke-miterlimit:3.9;stroke-dasharray:1, 2"
+       id="path4-6"
+       cx="117.61702"
+       cy="242.75868"
+       r="1.7295221" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.499999;stroke-miterlimit:3.9;stroke-dasharray:1, 2"
+       id="path4-7"
+       cx="127.93577"
+       cy="231.64619"
+       r="1.7295221" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.499999;stroke-miterlimit:3.9;stroke-dasharray:1, 2"
+       id="path4-5"
+       cx="141.42952"
+       cy="221.59203"
+       r="1.7295221" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 83.549224,275.18364 164.75798,196.71186"
+       id="path7"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.081383"
+       y="188.17537"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:1.006"
+         x="84.081383"
+         y="188.17537">$A$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="164.49004"
+       y="273.45041"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="stroke-width:1.006"
+         x="164.49004"
+         y="273.45041">$c$ or $l$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="65.987923"
+       y="287.42331"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="stroke-width:1.006"
+         x="65.987923"
+         y="287.42331">$O$</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1,2;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 151.62902,209.29644 c 0,0 15.50959,-12.59014 33.5737,-5.47398"
+       id="path3" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1,2;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 145.24273,215.3178 c 0,0 15.69205,-15.50958 2.37205,-29.92438"
+       id="path5" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="146.51997"
+       y="225.35342"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="stroke-width:1.006"
+         x="146.51997"
+         y="225.35342">偏离</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1;marker-end:url(#marker9)"
+       d="m 175.7145,204.55233 c 4.74411,12.59014 -4.74411,14.41479 -4.74411,14.41479"
+       id="path8" />
+  </g>
+</svg>

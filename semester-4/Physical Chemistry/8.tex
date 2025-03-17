@@ -1,0 +1,116 @@
+\lecture{8}{03.12}
+回顾：
+\begin{notation}
+    克劳修斯描述热力学第二定律：不可能把热从低温物体传到高温物体而不引起其他变化
+
+    Kelvin描述：不可能从单一热源取出热使之完全变为功而不损失其他能量
+\end{notation}
+\begin{notation}
+    卡诺定理：可逆热机的效率最大
+\end{notation}
+卡诺循环引入：\[
+    \eta_{I} \le \eta_R
+.\]
+将可逆循环和不可逆循环定量区分开
+\begin{notation}
+可以通过将任意一个可逆循环切割为无数个小的卡诺循环
+\end{notation}
+由\begin{equation}
+    \label{eq:nwq}
+    \eta = \frac{-W}{Q_{h}} = 1-\frac{T_c}{T_{h}}
+\end{equation}
+结合两个效率可得：
+\begin{equation}
+    \label{eq:qt}
+    \frac{Q_c}{T_c} + \frac{Q_{h}}{T_{h}} = 0
+\end{equation}
+当无限个循环时：\begin{equation}
+    \label{eq:ointqt}
+    \oint\limits_{R} {\frac{\delta Q_R}{T}} = 0
+\end{equation}
+这个式子被克劳修斯定义为\textbf{熵}：
+\[
+    S = \frac{Q_R}{T}
+.\]
+\begin{eg}
+    把任意一个可逆循环拆分为两个过程：\[
+        \int_{A}^{B} \left(\frac{\delta Q}{T}\right)_{R_1} = \int_{B}^{A} \left(\frac{\delta Q}{T}\right)_{R_2}
+    .\]
+    即定义为：\[
+        \Delta_\text{}S = S_{B} -S_A = \int_{A}^{B} \left(\frac{\delta Q}{T}\right)_{R}
+    .\]
+    多个过程合成：\[
+        \Delta_\text{}S = \sum_{i}\left(\frac{\delta Q_{i}}{T_{i}}\right)_{R}
+    .\]
+    微小变化：\[
+        \mathrm{d}S = \left(\frac{\delta Q}{T}\right)_{R}
+    .\]
+\end{eg}
+如果过程不可逆，则：\[
+    \oint\limits_{R} {\frac{\delta Q}{T}} \le 0
+.\]
+\begin{notation}
+    克劳修斯不等式：\begin{equation}
+        \label{eq:cla}
+        \Delta_1^2 S \ge \int_{1}^{2} \frac{\delta Q}{T}\quad \text{or}\quad \mathrm{d}S \ge \frac{\delta Q}{T}
+    \end{equation}
+    熵增原理的表达：\textbf{隔离系统的熵不可能减小}，即：\[
+        \Delta_\text{}S_{\text{隔离}} = \Delta_\text{}S_{\text{系统}} + \Delta_\text{}S_{\text{环境}} \ge 0
+    .\]
+    同时可以认为$\Delta_\text{}S > 0 $，即不可逆过程为\textbf{自发过程}，利用隔离系统的熵变化来判断反应的方向又称为\textbf{熵判据}
+\end{notation}
+\subsection{熵变的计算}%
+\label{sub:熵变的计算}
+\textbf{熵是系统的状态函数}，与过程的可逆与否无关。基本计算式：\[
+    \Delta_\text{}S_{\text{e}} = \int_{A}^{B} \frac{\delta Q}{T} 
+.\]
+环境熵变的计算：
+\begin{notation}
+    由于环境很大，可认为处于热力学平衡，吸热和放热可以看作可逆，和系统的放热、吸热相反
+\end{notation}
+\[
+    \Delta_\text{}S_{\text{e}} = -\frac{Q_\text{real}}{T_\text{e}} 
+.\]
+\begin{notation}
+    单纯的状态变化过程包括：
+    \begin{enumerate}
+        \item 理想气体定温：$\Delta T = 0$
+        \item 简单变温：$\Delta p$ 或$\Delta V$ 为0
+        \item 理想气体的$p,V,T$ 均变化
+        \item 理想气体混合
+    \end{enumerate}
+\end{notation}
+\subsubsection*{理想气体定温过程熵变}%
+\label{subsub*:理想气体定温过程熵变}
+由于$\Delta_\text{}U =0,\Delta_\text{}H=0,Q_R = -W_R$，带入熵变计算式：\[
+    \Delta_\text{}S = \frac{Q_R}{T} = \frac{-W_{\max }}{T} = \frac{\int_{V_1}^{V_2} p \mathrm{d}V}{T} = \frac{\int_{V_1}^{V_2} \frac{nRT }{V}  \mathrm{d}V}{T} 
+.\]
+\subsubsection*{简单变温过程熵变}%
+\label{subsub*:简单变温过程熵变}
+对于定压热容，由于$\delta Q = C\mathrm{d}T$，因此：\[
+    \mathrm{d}S = \frac{C\mathrm{d}T}{T}
+.\]
+积分可得：\[
+    \Delta_\text{}S = \int_{T_1}^{T_2} \frac{C_{p}}{T} \mathrm{d}T 
+.\]
+同理定容：\[
+    \Delta_\text{}S = \int_{T_1}^{T_2} \frac{C_{V}}{T} \mathrm{d}T 
+.\]
+如果$C$ 为常数，可以写为：
+\begin{align*}
+    \Delta_\text{}S = \overline{C_{p}}\ln \frac{T_2}{T_1} =n \overline{C_{p,m}}\ln \frac{T_2}{T_1}\\
+    \Delta_\text{}S = \overline{C_{V}}\ln \frac{T_2}{T_1} =n \overline{C_{V,m}}\ln \frac{T_2}{T_1}
+.\end{align*}
+当$T_2>T_1$ 时$\Delta_\text{}S>0 $
+\subsubsection*{\textit{pVT}都变化}%
+\label{subsub*:-textit-pVT-都变化}
+过程：\[
+    \text{A}\left( p_1,V_1,T_1 \right) \implies \text{B}\left( p_2,V_2,T_2 \right)
+.\]
+分为两步进行：等温可逆+等压可逆或等温可逆+等容可逆。
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{三变量的变化图}
+    \caption{三变量的变化图}
+    \label{fig:三变量的变化图}
+\end{figure}

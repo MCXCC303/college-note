@@ -56,12 +56,12 @@ endsnippet
 
 snippet ssb "sub sub section" w
 \subsubsection${2:*}{${1:sub sub title}}%
-\label{subsub:${3:${1/\W+/-/g}}}
+\label{subsub*:${3:${1/\W+/-/g}}}
 endsnippet
 
 snippet sb "sub sub section" w
 \subsubsection${2:*}{${1:${VISUAL}}}%
-\label{subsub:${3:${1/\W+/-/g}}}
+\label{subsub*:${3:${1/\W+/-/g}}}
 endsnippet
 
 # snippet template "Basic template" b
@@ -275,22 +275,40 @@ endsnippet
 
 priority 1000
 context "math()"
-snippet '([A-Za-z])([a-zA-Z])\2' "sub i/j/m/n/..." wrA
+snippet '([A-Za-z])([a-zA-Z])\2' "sub i/j/m/n/..." rwA
 `!p
 snip.rv = match.group(1) + "_{" + match.group(2) + '}'
 `
 endsnippet
 
-priority 200
+priority 300
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta)' "ln" rwA
-\\`!p snip.rv = match.group(1)+' '`
+snippet 'arc' "arccos" rwA
+\arc 
+endsnippet
+
+priority 300
+context "math()"
+snippet '(?<=\\)arc (sin|cos|tan|cot|csc|sec)' "arcsin/..." rwA
+arc`!p snip.rv = match.group(1)+' '`
 endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(sin|cos|cot|csc|ln|log|lg|perp|min|max)' "ln" rwA
+snippet '(?<!\\)(sin|cos|cot|csc|ln|log|lg|perp|min|max|arg|pi|zeta)' "ln" rwA
 \\`!p snip.rv = match.group(1)+' '`
+endsnippet
+
+priority 300
+context "math()"
+snippet 'ag(min|max)' "argmin argmax" rwA
+\underset{(${1:a,b,...})}{\arg\\${2:`!p snip.rv = match.group(1)`}} 
+endsnippet
+
+priority 10000
+context "math()"
+snippet 'rm([^{].*)' "mathrm" iwr
+\mathrm{${1:`!p snip.rv = match.group(1) `}}
 endsnippet
 
 #────────────────────#
@@ -366,15 +384,22 @@ endsnippet
 context "math()"
 snippet pmat "pmat" iA
 \begin{pmatrix}
-	$1\\\\
+	$1\\\\$2
 \end{pmatrix}
 endsnippet
 
 context "math()"
 snippet bmat "bmat" iA
 \begin{bmatrix}
-	$1\\\\
+	$1\\\\$2
 \end{bmatrix}
+endsnippet
+
+context "math()"
+snippet vmat "vmat" iA
+\begin{vmatrix}
+	$1\\\\$2
+\end{vmatrix}
 endsnippet
 
 snippet table "Table environment" b
@@ -563,7 +588,7 @@ endsnippet
 #─────────────────#
 priority 10
 context "math()"
-snippet "bar" "Long bar" riA
+snippet bar "Long bar" iA
 \overline{$1}
 endsnippet
 
@@ -587,19 +612,19 @@ endsnippet
 
 priority 10
 context "math()"
-snippet "bm" "Bold Math" ri
+snippet bm "Bold Math" w
 \bm{${1:${VISUAL}}}
 endsnippet
 
 priority 100
 context "math()"
-snippet "([a-zA-Z])bm" "Bold Math" ri
+snippet "([a-zA-Z])bm" "Bold Math" riA
 \bm{`!p snip.rv=match.group(1)`}
 endsnippet
 
 priority 10
 context "math()"
-snippet "hat" "hat" riA
+snippet hat "hat" w
 \hat{${1:${VISUAL}}}
 endsnippet
 
@@ -609,16 +634,28 @@ snippet "([a-zA-Z])hat" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 
-priority 10
+priority 10000
 context "math()"
-snippet "til" "widetilde" riA
+snippet til "til" w
 \widetilde{${1:${VISUAL}}}
 endsnippet
 
 priority 100
 context "math()"
-snippet "([A-Za-z])til" "widetilde" riA
+snippet "([A-Za-z])til" "widetilde" rwA
 \widetilde{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10000
+context "math()"
+snippet trace "Tr(a)" w
+\mathrm{${1:\bm{${2:A}}}}
+endsnippet
+
+priority 100
+context "math()"
+snippet "([A-Za-z])trace" "Tr(A)" rwA
+\mathrm{Tr}\bm{${1:`!p snip.rv = match.group(1)`}}
 endsnippet
 
 #────────────────#
@@ -667,14 +704,16 @@ snippet qd "space in math" iA
 \quad 
 endsnippet
 
-snippet hs "space in math" w
+snippet hs "space in math" i
 \hspace{${1:0.5cm}}
 endsnippet
 
+priority 200
 snippet -=> "implies" A
 \implies 
 endsnippet
 
+priority 100
 snippet => "Right arrow" iA
 \Rightarrow 
 endsnippet
@@ -685,7 +724,7 @@ endsnippet
 
 priority 2000
 context "math()"
-snippet iff "iff" Ai
+snippet iff "iff" iA
 \iff 
 endsnippet
 
@@ -720,12 +759,12 @@ snippet conj "conjugate" iA
 endsnippet
 
 context "math()"
-snippet sum "sum" w
+snippet sum "sum" i
 \sum_{i=${1:1}}^{${2:n}} ${3:f(i)}
 endsnippet
 
 context "math()"
-snippet sumi "sum in i" wA
+snippet sumi "sum in i" iA
 \sum_{i}${1:f(i)}
 endsnippet
 
@@ -750,7 +789,7 @@ snippet prod "product" w
 endsnippet
 
 context "math()"
-snippet dfx "df/dx" wA
+snippet dfx "df/dx" iA
 \frac{\mathrm{d}${1:F(x)}}{\mathrm{d}${2:x}}
 endsnippet
 
@@ -794,6 +833,11 @@ endsnippet
 context "math()"
 snippet __ "subscript" iA
 _{$1}
+endsnippet
+
+context "math()"
+snippet ^^ "upscript" iA
+^{$1}
 endsnippet
 
 context "math()"
@@ -844,25 +888,25 @@ endsnippet
 
 priority 100
 context "math()"
-snippet int "simple integral" wA
+snippet int "simple integral" iA
 \int 
 endsnippet
 
 priority 300
 context "math()"
-snippet dint "integral" wA
+snippet dint "integral" iA
 \int_{${1:-\infty}}^{${2:+\infty}} ${3:${VISUAL}} \mathrm{d}
 endsnippet
 
 priority 300
 context "math()"
-snippet iint "Multi Integral" wA
+snippet iint "Multi Integral" iA
 \iint\limits_{${1:D}}${2:D_1} {\left(${3:${VISUAL:f(x,y)}}\right)} \mathrm{d}${4:x} \mathrm{d}${5:y}
 endsnippet
 
 priority 300
 context "math()"
-snippet oint "Route Integral" wA
+snippet oint "Route Integral" iA
 \oint\limits_{${1:C}} {${2:${VISUAL:f(x)}}} \mathrm{d}${3:x}
 endsnippet
 
@@ -881,6 +925,12 @@ endsnippet
 context "math()"
 snippet !> "mapsto" iA
 \mapsto 
+endsnippet
+
+priority 3000
+context "math()"
+snippet occ "propto" iA
+\propto
 endsnippet
 
 context "math()"
@@ -991,6 +1041,7 @@ snippet || "mid" iA
 \mid 
 endsnippet
 
+priority 2000
 context "math()"
 snippet cc "subset" iA
 \subset 
@@ -1147,7 +1198,7 @@ endsnippet
 # Chemistry Symbols #
 #───────────────────#
 priority 200
-snippet cmf "Chemfig Environment" wA
+snippet cmf "Chemfig Environment" iA
 \chemfig{${1:${VISUAL}}}
 endsnippet
 
@@ -1157,11 +1208,11 @@ ${1:${VISUAL}}
 \schemestop
 endsnippet
 
-snippet --> "Chemfig Arrow" wA
+snippet --> "Chemfig Arrow" iA
 \arrow{${1:->}[$2][$3]}[${4:angle},${5:len rate}]
 endsnippet
 
-snippet mhe "mhchem Environment" wA
+snippet mhe "mhchem Environment" iA
 \ce{${1:${VISUAL}}}
 endsnippet
 
@@ -1193,7 +1244,7 @@ nRT
 endsnippet
 
 context "math()"
-snippet '(\d*)(ke|kj|mol|kpa|jkm|liter|jou)' "Chemical Units" irA
+snippet '(\d*)(ke|kj|mol|kpa|jkm|liter|jou|hz|js)' "Chemical Units" irA
 `!p snip.rv = match.group(1)`\ce{`!p
 unit = match.group(2)
 if unit == 'kj':
@@ -1208,6 +1259,10 @@ elif unit == 'jou':
 	snip.rv = 'J'
 elif unit == 'jkm':
 	snip.rv = 'J*K^{-1}*mol^{-1}'
+elif unit == 'hz':
+	snip.rv = 'Hz'
+elif unit == 'hz':
+	snip.rv = 'J*s^{-1}'
 else:
 	snip.rv = unit
 `}
@@ -1244,4 +1299,12 @@ snippet 'color:(.+)' "text color" ir
 \textcolor{${1:`!p snip.rv = match.group(1)`}}{${2:${VISUAL}}}
 endsnippet
 
-
+context "math()"
+snippet '(sld|gas|liq|res|solid)' "status" irA
+(`!p 
+status = match.group(1)
+if status == 'res':
+	snip.rv = "a.q."
+else:
+	snip.rv = f"{status[0]}"`)
+endsnippet

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="120mm"
+   viewBox="0 0 240 120"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="氨基酸的基本结构通式.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.99437388"
+     inkscape:cx="283.59554"
+     inkscape:cy="182.02409"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     width="200mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="2480"
+     inkscape:window-height="1477"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="mm"
+       spacingx="10"
+       spacingy="10"
+       empspacing="4"
+       dotted="false"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-177)">
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 97.917562,207.33316 C 118.67183,239.2628 118.67183,239.2628 118.67183,239.2628"
+       id="path11" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-miterlimit:3.9;fill-opacity:1"
+       id="path2"
+       cx="98.183647"
+       cy="206.80099"
+       r="3.7251246" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 122.39695,240.06104 23.41507,26.60803"
+       id="path14" />
+    <circle
+       style="fill:#31a2ff;stroke:#000000;stroke-width:1;stroke-miterlimit:3.9;fill-opacity:1"
+       id="path5"
+       cx="146.7433"
+       cy="266.00388"
+       r="8.6476107" />
+    <circle
+       style="fill:#fbff31;stroke:#000000;stroke-width:1;stroke-miterlimit:3.9"
+       id="path1"
+       cx="120"
+       cy="237"
+       r="7.1841693" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="104.30349"
+       y="204.1402"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="stroke-width:1.006"
+         x="104.30349"
+         y="204.1402">H</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="166.56628"
+       y="224.62837"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="stroke-width:1.006"
+         x="166.56628"
+         y="224.62837">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="130.64545"
+       y="241.39143"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="stroke-width:1.006"
+         x="130.64545"
+         y="241.39143">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="101.90878"
+       y="281.83566"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         style="stroke-width:1.006"
+         x="101.90878"
+         y="281.83566">NH$_3$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="159.11604"
+       y="272.25674"
+       id="text11"><tspan
+         sodipodi:role="line"
+         id="tspan11"
+         style="stroke-width:1.006"
+         x="159.11604"
+         y="272.25674">COOH</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 121.86479,237.40024 152.19795,221.7015"
+       id="path12"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:#656565;stroke:#000000;stroke-width:1;stroke-miterlimit:3.9;fill-opacity:1"
+       id="path3"
+       cx="151.53276"
+       cy="221.30237"
+       r="9.9780121" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 118.40575,240.06104 94.458516,266.40299"
+       id="path13" />
+    <circle
+       style="fill:#31f2ff;stroke:#000000;stroke-width:1;stroke-miterlimit:3.9;fill-opacity:1"
+       id="path4"
+       r="12.904896"
+       cy="264.1413"
+       cx="94.325478" />
+  </g>
+</svg>

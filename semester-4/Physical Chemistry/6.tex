@@ -1,0 +1,118 @@
+\lecture{6}{03.05}
+\subsection{恒压热容和恒容热容的差}%
+\label{sub:恒压热容和恒容热容的差}
+\begin{align*}
+    C_{p}-C_{V} &= \left(\frac{\partial U}{\partial T}\right)_{p} - \left(\frac{\partial U}{\partial T}\right)_{V} \\
+    &= \left[ \left(\frac{\partial U}{\partial V}\right)_{T}+p \right]\left(\frac{\partial V}{\partial T}\right)_{p} \quad \left( H=U+pV \right)\\
+    &= 0\quad \left( \text{固体} \right)\\
+    \text{or: }&= nR \quad \left( \text{理想气体} \right)\\
+    \text{or: }C_{p,m}-C_{V,m} &= R 
+.\end{align*}
+\begin{notation}
+在常温下，$C_{p}$ 和$C_{V}$ 都为常数
+\end{notation}
+\begin{eg}
+证明：\[
+    \left(\frac{\partial U}{\partial T}\right)_{p} = C_{p} - p\left(\frac{\partial V}{\partial T}\right)_{p}
+.\]
+\end{eg}
+\subsection{定温过程}%
+\label{sub:定温过程}
+对于定温过程：$\Delta_\text{}U =0,\Delta_\text{}H=0, \Delta T =0 ,W=-Q$
+
+前面有证明，气体做的最大功：\[
+    Q_R = -W_R = nRT \ln \frac{V_2}{V_1} = nRT \ln \frac{p_1}{p_2}
+.\]
+对于不可逆过程：$Q_R = -W_R \neq 0$
+\subsection{绝热过程}%
+\label{sub:绝热过程}
+在绝热过程，$Q=0$ ，即$\mathrm{d}U = \delta W$ ，积分：\[
+    \delta W = -p_\text{e}\mathrm{d}V = -p\mathrm{d}V = -\frac{nRT }{V}\mathrm{d}V
+.\]
+又因为：$\delta W = \mathrm{d}U = C_{V}\mathrm{d}T$ ，即：\[
+    -\frac{nRT }{V}\mathrm{d}V = C_{V}\mathrm{d}T \quad -\frac{nR}{V}\mathrm{d}V = \frac{C_{V}}{T}\mathrm{d}T
+.\]积分后可得：\[
+    W = \int \frac{nR }{V} \mathrm{d}V = \int -\frac{C_{V}}{T} \mathrm{d}T = nR \ln \frac{V_2}{V_1}
+.\]
+由于$C_{p}-C_{V} = nR$ （理想气体），带入后：\[
+    \left( C_{p}-C_{V} \right)\ln \frac{V_2}{V_1}=C_{V}\ln \frac{T_1}{T_2}
+.\]
+令$C_{p}/C_{V}=\gamma$，写为：
+\[
+    \left( \gamma-1 \right)\ln \frac{V_2}{V_1} = \ln \frac{T_1}{T_2}
+.\]
+即：\[
+    T_1V_1^{\gamma-1} = T_2V_2^{\gamma-1}
+.\]
+即得到一个常数$K$：
+\begin{equation}
+    \label{eq:TV-K}
+    TV^{\gamma-1} = K
+\end{equation}
+如果带入$T=\frac{pV}{nR}$ 可以得到另一个常数$K'=KnR$：
+\begin{equation}
+    \label{eq:pV-K'}
+    pV^{\gamma} = K'
+\end{equation}
+带入$V=\frac{nRT }{p}$ 得到另一个常数$K''=\frac{K}{n^{\gamma-1}R^{\gamma-1}}$：
+\begin{equation}
+    \label{eq:Tp-K''}
+    T^{\gamma}p^{1-\gamma}=K''
+\end{equation}
+绝热和定温的比较：\textbf{等温可逆过程做的功大于绝热可逆过程}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{绝热可逆和等温可逆比较}
+    \caption{绝热可逆和等温可逆比较}
+    \label{fig:绝热可逆和等温可逆比较}
+\end{figure}
+\section{热效应}%
+\label{sec:热效应}
+\subsection{定容和定压热效应}%
+\label{sub:定容和定压热效应}
+\begin{eg}
+    从反应物到产物，温度和压力都变化（$\Delta_\text{r}H_1 $），可以设计一个等温等容（$\Delta_\text{r}U_2, \Delta_\text{r}H_2  $）的过程，然后在通过等压（$\Delta_\text{}H_3 $）的过程达到末态
+\end{eg}
+这一过程：\[
+    \Delta_\text{r}H_1 = \Delta_\text{r}H_2 + \Delta_\text{}H_3 = \Delta_\text{r}U_2 + \Delta\left( pV \right)_2 + \Delta_\text{}H_3    
+.\]
+对于理想气体，恒温过程3的$\Delta_\text{}H_3=0 $ ，且固体和液体的$\Delta_\text{}H_3 $ 都可以忽略，则：
+\begin{equation}
+    \label{eq:Qp->QV}
+    Q_{p} = Q_{V} + \left( \Delta n_\text{gas} \right)RT
+\end{equation}
+\begin{eg}
+    298.2K时1mol正庚烷至于量热计中燃烧，测得定容反应热为$-4.807\times 10^{6}\ce{J}$ ，求定压反应热
+\end{eg}
+注意此时正庚烷为液体，\textbf{反应的总气体变化量为4mol}
+\subsection{热化学方程式}%
+\label{sub:热化学方程式}
+\begin{defi}
+    表示化学反应和热效应的化学方程式
+\end{defi}
+如：\[
+    \ce{H_2}\left( \text{g},p^\ominus \right) + \ce{I_2}\left( \text{g},p^\ominus \right) = \ce{2HI}\left( \text{g},p^\ominus \right) \Delta_\text{r}H_{\text{m}}^\ominus
+.\]
+\begin{notation}
+    反应进度：\[
+        \sum_{\text{B}} \nu_\text{B}\text{B} = 0
+    .\]
+    则：\[
+        \xi = \frac{\Delta n_\text{B}}{\nu_\text{B}} \quad \mathrm{d}\xi = \frac{\mathrm{d}n_\text{B}}{\nu_\text{B}}
+    .\]
+    计算反应进度：找到一个成分的$\Delta n_\text{B}$ ，找到这个成分的反应系数$\nu_\text{B}$ ，计算$\xi = \frac{\Delta n_\text{B}}{\nu_\text{B}}$
+\end{notation}
+易得：同一个反应的不同成分的反应进度是一样的
+\subsection{赫斯定律}%
+\label{sub:赫斯定律}
+又名\textbf{反应热加成定律} 
+\begin{defi}
+    反应的热效应只与反应的始态和末态有关，与途径无关。
+\end{defi}
+若一个反应是两个反应式的代数和时，其\textbf{反应热也为两个反应热的代数和}，可以看作是两个反应分步进行
+\subsection{反应热}%
+\label{sub:反应热}
+定义标准态：$p^\ominus=100\ce{kPa}$，固体/液体为纯固体/纯液体，气体为纯气体或混合气体，注意\textbf{并没有确定标准温度}，但常见的温度为$T=298.15\ce{K}=25^\circ\text{C}$
+\subsubsection*{生成热}%
+\label{subsub*:生成热}
+元素的单质（最稳定单质）化合成单一化合物1mol的反应物的焓变，记为$\Delta_\text{f}H_{\text{m}}^\ominus $，可查表

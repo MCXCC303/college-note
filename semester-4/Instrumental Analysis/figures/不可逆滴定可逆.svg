@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="120mm"
+   viewBox="0 0 240 120"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="不可逆滴定可逆.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="DartArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.99437388"
+     inkscape:cx="283.59554"
+     inkscape:cy="182.02409"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     width="200mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="2480"
+     inkscape:window-height="1477"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="mm"
+       spacingx="10"
+       spacingy="10"
+       empspacing="4"
+       dotted="false"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-177)">
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#DartArrow);stop-color:#000000"
+       d="M 42.054449,287.90191 V 198.23283"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#DartArrow);stop-color:#000000"
+       d="m 25.044486,275.39612 c 171.355714,0 171.355714,0 171.355714,0"
+       id="path3" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="191.8577"
+       y="283.91071"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="stroke-width:1.006"
+         x="191.8577"
+         y="283.91071">$V$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="45.779579"
+       y="196.63634"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="stroke-width:1.006"
+         x="45.779579"
+         y="196.63634">$\varphi$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="26.887865"
+       y="284.44284"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="stroke-width:1.006"
+         x="26.887865"
+         y="284.44284">$O$</tspan></text>
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       d="m 120.5892,275.3498 c 0,0 -25.248728,-24.20668 -46.830138,-36.98516 C 53.536958,226.39102 42.361578,228.25358 42.361578,228.25358"
+       id="path4"
+       sodipodi:nodetypes="csc" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:3.9"
+       id="circle4"
+       cx="120.05478"
+       cy="275.61588"
+       r="2.3947229" />
+  </g>
+</svg>

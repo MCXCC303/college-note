@@ -1,0 +1,105 @@
+\lecture{5}{02.28}
+回顾：可逆恒温压缩、膨胀过程
+\begin{eg}
+    1mol乙醇在沸点351.5K下蒸发为气体，求这个过程的做功
+\end{eg}
+\begin{sol}
+    由$pV=nRT $ ：$pV=1\times 351.5\times 8.314$ ，由于一开始$V=0$ ，因此\[
+        W = -p\Delta V = -p\left( V-0 \right)=-pV = -2.92\ce{kJ}
+    .\]
+\end{sol}
+\subsection{热力学第一定律}%
+\label{sub:热力学第一定律}
+热力学第一定律有经验叙述和数学形式
+\begin{notation}
+    三位奠基人：焦耳、迈耶、亥姆霍兹
+\end{notation}
+文字表达：能量守恒定律，热力学能、热、功可以相互转换，总能量不变
+
+系统总能量通常有三部分：整体运动的动能、在外力场中的位能、热力学能（内能），热力学能包含了系统中的一切能量，系统热力学能的绝对值无法测定，改变值只与始末态有关
+
+数学表达：\[
+    \Delta_\text{}U = Q+W \quad \mathrm{d}U = \delta Q + \delta W
+.\]
+热力学能的单位为焦耳
+\subsubsection*{定压热}%
+\label{subsub*:定压热}
+用$Q_{p}$ 表示，将热力学第一定律改写：
+\begin{align*}
+    \Delta_\text{}U &= Q_{p}-p_\text{e}\left( V_2-V_1 \right)\\
+    U_2-U_1&= Q_{p}-p_2V_2+p_1V_1 \\
+    Q_{p} &= \left( U_2+p_2V_2 \right)-\left( U_1+p_1V_1 \right)
+.\end{align*}
+记$U+pV=H$ ，则：
+\begin{equation}
+    \label{eq:定压热}
+    Q_{p} = \Delta_\text{}H \quad W= 0 \quad p_1=p_2=p_\text{e} 
+\end{equation}
+\begin{eg}
+    100kPa,1173K下，1mol $\ce{CaCO_3}\text{(s)}$ 分解为$\ce{CaO}\text{(s)}$ 和$\ce{CO_2}\text{(g)}$ ，吸热178kJ，求$W,Q,\Delta_\text{}U ,\Delta_\text{}H $
+\end{eg}
+\begin{sol}
+    由于压力恒定，即$Q_{p} = 178\ce{kJ}$ ，且$W=-p_\text{e}V = -nRT = -9.75\ce{kJ}$ ，$\Delta_\text{}H = Q_{p} = 178\ce{kJ} $ ，$\Delta_\text{}U = Q_{p} + W = 178-9.75 =168.25\ce{kJ}$
+\end{sol}
+\section{热容}%
+\label{sec:热容}
+平均热容$\overline{C}$ ：\[
+    \overline{C} = \frac{Q}{T_2-T_1} = \frac{Q}{\Delta T}
+.\]
+
+比热容：物质的数量为1kg
+
+摩尔热容：物质的数量为1mol
+
+不同物质有不同的比热容和摩尔热容，比热容值是一个强度性质，但和物质状态有关
+\subsection{定容热容}%
+\label{sub:定容热容}
+\begin{equation}
+    \label{eq:定容热容}
+    C_{V} = \frac{\delta Q}{\mathrm{d}T} = \left(\frac{\partial U}{\partial T}\right)_{p} \quad \left( Q_{V} = \Delta_\text{}U  \right) 
+\end{equation}
+移项后积分：\[
+    \delta Q = C_{V}\mathrm{d}T \implies \Delta_\text{}U  = \int_{T_1}^{T_2} C_{V} \mathrm{d}T
+.\]
+如果使用摩尔热容也可以使用：\[
+    \Delta_\text{}U = \int_{T_1}^{T_2} nC_{V,m} \mathrm{d}T 
+.\]
+如果在温度范围内$C_{V,m}$ 为常数，则：\[
+    \Delta_\text{}U = nC_{V,m}\left( T_1-T_2 \right) 
+.\]
+\subsection{定压热容}%
+\label{sub:定压热容}
+\begin{equation}
+    \label{eq:定压热容}
+    C_{p} = \frac{\delta Q_{p}}{\mathrm{d}T} = \left(\frac{\partial H}{\partial T}\right)_{p}
+\end{equation}
+同理：\[
+    \Delta_\text{}H = \int_{T_1}^{T_2} C_{p} \mathrm{d}T = n \int_{T_1}^{T_2} C_{p,m} \mathrm{d}T 
+.\]
+热容有一个常用的经验公式：
+\begin{equation}
+    \label{eq:热容的经验公式}
+    C_{p,m} = a+bT+cT^2 +\ldots 
+\end{equation}
+通过查找热力学数据表可以得到$a,b,c\ldots $ 的值，再积分会方便很多
+\subsection{热力学第一定律应用}%
+\label{sub:热力学第一定律应用}
+\begin{notation}
+    焦耳实验：理想气体扩散到真空。
+    \[
+        \textcolor{red}{\mathrm{d}U} = \left(\frac{\partial U}{\partial T}\right)_{V}\textcolor{red}{\mathrm{d}T} + \left(\frac{\partial U}{\partial V}\right)_{T}\textcolor{blue}{\mathrm{d}V}
+    .\]
+    两个部分为0,而$\mathrm{d}V \neq 0$ ，因此必有
+    \begin{equation}
+        \label{eq:焦耳实验内压}
+        \left(\frac{\partial U}{\partial V}\right)_{T}=0
+    \end{equation}
+    即理想气体的内压为0，如果$U = f\left( T,p \right)$ ，同样有：
+    \begin{equation}
+        \label{eq:焦耳实验热效应}
+        \left(\frac{\partial U}{\partial p}\right)_{T} = 0
+    \end{equation}
+    即理想气体的内能只与温度有关：$U = f\left( T \right)$
+
+    事实上，焦耳实验在当时是不准确的。只有当气体接近理想气体时这些结论才成立，而这个实验的结果事实上有十分微小的温度变化
+\end{notation}

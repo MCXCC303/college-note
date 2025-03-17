@@ -1,0 +1,81 @@
+%% Creator: Inkscape 1.4 (e7c3feb100, 2024-10-09), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file '振动弛豫、内转换和荧光.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{680.31496063bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{振动弛豫、内转换和荧光.pdf}}%
+    \put(0.12273254,0.23689213){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.2045279,0.22588285){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.35584218,0.20268561){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{振动弛豫、内转换和荧光.pdf}}%
+    \put(0.48816576,0.2272054){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{振动弛豫、内转换和荧光.pdf}}%
+    \put(0.65573521,0.22586784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{振动弛豫、内转换和荧光.pdf}}%
+    \put(0.8288168,0.22615306){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}...\end{tabular}}}}%
+    \put(0.03605268,0.38800653){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S_2$\end{tabular}}}}%
+    \put(0.45257626,0.44707158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S_1$\end{tabular}}}}%
+    \put(0.63437386,0.39260902){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$T_1$\end{tabular}}}}%
+    \put(0.85989494,0.44093494){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$T_2$\end{tabular}}}}%
+    \put(0.039121,0.06583354){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S_0$\end{tabular}}}}%
+    \put(0.05829796,0.2330567){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}激发\end{tabular}}}}%
+    \put(0.23549309,0.18473078){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}荧光\end{tabular}}}}%
+    \put(0.28679094,0.39797859){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}内转换\end{tabular}}}}%
+    \put(0.54002317,0.33814653){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}体系间跨越\end{tabular}}}}%
+    \put(0.66505699,0.18319658){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}磷光\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{振动弛豫、内转换和荧光.pdf}}%
+    \put(0.58834915,0.08577766){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}振动弛豫\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{振动弛豫、内转换和荧光.pdf}}%
+    \put(0.57684294,0.18626493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}外转换\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

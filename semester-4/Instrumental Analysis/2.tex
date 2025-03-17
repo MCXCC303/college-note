@@ -1,0 +1,157 @@
+\lecture{2}{02.28}
+\section{电位法和永停滴定法}%
+\label{sec:电位法和永停滴定法}
+\subsection{化学电池}%
+\label{sub:化学电池}
+\begin{notation}
+    相接电位：由于带电质点的迁移形成的电荷层，金属和溶液之间一共3层：双电层（金属表面）、致密层、扩散层
+\end{notation}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{化学电池的相接电位}
+    \caption{化学电池的相接电位}
+    \label{fig:化学电池的相接电位}
+\end{figure}
+\begin{notation}
+    液接电位：在组成不同或组成相同而浓度不同的溶液之间的离子交换形成的电荷层
+\end{notation}
+\subsection{指示电极和参比电极}%
+\label{sub:指示电极和参比电极}
+\begin{defi}
+    指示电极：电极电位随被测离子的活度变化而变化
+
+    参比电极：电极电位不随被测离子的活度变化而变化
+\end{defi}
+指示电极的要求：符合能斯特方程，响应快，结构简单
+\begin{notation}
+    金属基电极：第一种，基于电子转移反应的一类电极；第二种，金属-金属难溶盐；常用于金属离子的测定。第三种，惰性金属电极（铂族金属）
+\end{notation}
+\begin{notation}
+    膜电极：气敏电极、酶电极（葡萄糖和葡萄糖氧化酶$\to $ 葡萄糖酸+双氧水）
+\end{notation}
+参比电极：
+\begin{notation}
+    最常见的参比电极：饱和甘汞电极
+\end{notation}
+\subsection{电位滴定法}%
+\label{sub:电位滴定法}
+手动滴定的缺点：
+\begin{itemize}
+    \item 指示剂
+    \item 主观性强
+    \item 速度慢
+    \item 现象不明显
+\end{itemize}
+自动滴定的优势：
+\begin{itemize}
+    \item 快速准确
+    \item 数据一致性好
+    \item 不需要指示剂
+\end{itemize}
+\begin{defi}
+电位滴定法：根据电池电动势的变化来判断终点
+\end{defi}
+需要使用：参比电极、指示电极、电子电位计、滴定仪
+
+电位滴定法的原理：在指示电极中被测离子的浓度不断变化，指示电极的电位符合能斯特方程，在终点附近引起电极电位的突越。\textbf{使用原电池原理}
+\begin{equation}
+    \varphi = \varphi^\ominus -\frac{2.303RT}{nF}\log \frac{C_1}{C_2} 
+\end{equation}
+终点的确定方法：
+\begin{notation}
+    $E\sim V$曲线法（图 \ref{fig:e-v曲线}）：最常见的滴定曲线
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{e-v曲线}
+    \caption{E-V曲线}
+    \label{fig:e-v曲线}
+\end{figure}
+\end{notation}
+\begin{notation}
+$\frac{\Delta E}{\Delta V}\sim \overline{V}$ 曲线法，或一阶微分法（图 \ref{fig:一阶微分法}）：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{一阶微分法}
+    \caption{一阶微分法}
+    \label{fig:一阶微分法}
+\end{figure}
+\end{notation}
+\begin{notation}
+    二阶微分法或$\frac{\Delta^2 E}{\Delta^2 V}\sim V$ 法（图 \ref{fig:二阶微分法}）
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{二阶微分法}
+    \caption{二阶微分法}
+    \label{fig:二阶微分法}
+\end{figure}
+\end{notation}
+\subsection{永停滴定法}%
+\label{sub:永停滴定法}
+把两个相同的指示电极插入待测溶液中，加一个小电压，根据电流的变化特性确定终点，\textbf{使用电解池原理}
+\begin{notation}
+    可逆电对：加一个小电压可以产生电解作用，当氧化态和还原态浓度一致时电流最大，不一致时电流取决于低浓度的物质
+\end{notation}
+\begin{notation}
+    不可逆电对：施加电压时不电解，只在阳极发生氧还反应
+
+    如硫代硫酸根$\ce{S_4O_{6}^{2-}}/\ce{S_2O_3^{2-}}$
+\end{notation}
+使用永停滴定法的三种变化曲线：
+\begin{notation}
+    可逆电对滴定不可逆电对（图 \ref{fig:可逆滴定不可逆}）：一开始不可逆电对存在，无电流，终点后可逆电对产生电流
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{可逆滴定不可逆}
+    \caption{可逆滴定不可逆}
+    \label{fig:可逆滴定不可逆}
+\end{figure}
+\end{notation}
+\begin{notation}
+    不可逆电对滴定可逆电对（图 \ref{fig:可逆滴定可逆}）：一开始有电流，随不可逆电对滴入电流减小，终点后无电流
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{不可逆滴定可逆}
+    \caption{不可逆滴定可逆}
+    \label{fig:不可逆滴定可逆}
+\end{figure}
+\end{notation}
+\begin{notation}
+    可逆滴定可逆（图 \ref{fig:可逆滴定可逆}）：电流随滴定先增大后减小，在化学计量点处最小，然后增大
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{可逆滴定可逆}
+    \caption{可逆滴定可逆}
+    \label{fig:可逆滴定可逆}
+\end{figure}
+\end{notation}
+作业：P140：1,2,7,8
+\section{紫外-可见分光光度法}%
+\label{sec:紫外-可见分光光度法}
+掌握波数、波长、频率、光子能量的换算，掌握朗伯-比尔定律
+\begin{defi}
+    光学分析法：检测物质受能量激发后产生的电磁辐射或与物质相互作用后产生的信号变化来获得物质的组成
+
+    光谱分析法：物质和外界能量相互作用时内部产生能级跃迁，记录有能级跃迁产生的辐射能强度随波长发生的变化，得到的谱图称为波谱或光谱。强度取决于光子和分子的相互作用强度
+\end{defi}
+复习物理内容：
+\begin{notation}
+    电磁辐射和电磁波的波动性：使用波长$\lambda$，频率$\nu$，波数$\sigma = \frac{1}{\lambda}=\frac{\nu}{c}$
+\end{notation}
+波长越长、波数越小、频率越低，\textbf{能量越小}
+\begin{notation}
+    普朗克认为能量是量子化的，能量的最小单位是光子，使用$E$ 表示
+\end{notation}
+\[
+    E = h\nu =h \frac{c}{\lambda}=hc\sigma
+.\]
+其中$h$ 为普朗克常数，$h =6.62607015 \times 10^{-34}\ce{J*s^{-1}}$
+\subsection{光谱分析分类}%
+\label{sub:光谱分析分类}
+按照作用粒子的类型：分子光谱、原子光谱
+
+按照能级跃迁的方向：吸收光谱、发射光谱（必须先吸收能量）、散射光谱
+\begin{notation}
+    原子光谱：测定气态原子外层或内层的能级跃迁产生的光谱，是\textbf{线状光谱}
+
+    分子光谱：测定分子内部发生的量子化的能级之间的跃迁，是\textbf{带状光谱}
+\end{notation}

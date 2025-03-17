@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="120mm"
+   viewBox="0 0 240 120"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="化学电池的相接电位.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path8-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8-63"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path8-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path8-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Dart arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path8-7" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.73469"
+     inkscape:cx="219.83083"
+     inkscape:cy="102.6859"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     width="200mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1246"
+     inkscape:window-height="718"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="mm"
+       spacingx="10"
+       spacingy="10"
+       empspacing="4"
+       dotted="false"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-177)">
+    <path
+       id="rect1"
+       style="opacity:1;vector-effect:none;fill:#9d9d9d;fill-rule:evenodd;stroke-miterlimit:3.9;stop-color:#000000;stop-opacity:1"
+       d="m 86.210028,203.60803 v 72.63993 m 0,0 H 67.584404 v -72.63993 h 18.625624"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       id="rect2"
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-miterlimit:3.9;stop-color:#000000;stop-opacity:1;stroke-dasharray:3,3;stroke-dashoffset:0"
+       d="m 83.465582,203.60803 h 67.052238 v 72.63993 H 83.465582 Z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3,3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 104.90151,203.60803 v 72.63993"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 129.08189,203.60803 v 72.63993"
+       style="vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-miterlimit:3.9;stop-color:#000000;stroke-dasharray:3,3;stroke-dashoffset:0"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="78.222725"
+       y="209.44691"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="stroke-width:1.006"
+         x="78.222725"
+         y="209.44691">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="78.222717"
+       y="219.54192"
+       id="text2-3"><tspan
+         sodipodi:role="line"
+         id="tspan2-6"
+         style="stroke-width:1.006"
+         x="78.222717"
+         y="219.54192">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="78.222717"
+       y="229.63692"
+       id="text2-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan2-6-5"
+         style="stroke-width:1.006"
+         x="78.222717"
+         y="229.63692">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="78.222717"
+       y="239.7319"
+       id="text2-3-3"><tspan
+         sodipodi:role="line"
+         id="tspan2-6-56"
+         style="stroke-width:1.006"
+         x="78.222717"
+         y="239.7319">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="78.222717"
+       y="249.8269"
+       id="text2-3-2"><tspan
+         sodipodi:role="line"
+         id="tspan2-6-9"
+         style="stroke-width:1.006"
+         x="78.222717"
+         y="249.8269">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="78.222725"
+       y="259.92191"
+       id="text2-3-1"><tspan
+         sodipodi:role="line"
+         id="tspan2-6-2"
+         style="stroke-width:1.006"
+         x="78.222725"
+         y="259.92191">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="78.222725"
+       y="270.01691"
+       id="text2-3-70"><tspan
+         sodipodi:role="line"
+         id="tspan2-6-93"
+         style="stroke-width:1.006"
+         x="78.222725"
+         y="270.01691">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="209.77658"
+       id="text2-3-7-6"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="209.77658"
+         id="tspan3">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="217.48257"
+       id="text2-3-7-6-6"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="217.48257"
+         id="tspan3-2">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="225.18857"
+       id="text2-3-7-6-61"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="225.18857"
+         id="tspan3-8">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="232.89455"
+       id="text2-3-7-6-7"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="232.89455"
+         id="tspan3-9">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="240.60054"
+       id="text2-3-7-6-2"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="240.60054"
+         id="tspan3-0">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="248.30653"
+       id="text2-3-7-6-23"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="248.30653"
+         id="tspan3-7">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="256.01251"
+       id="text2-3-7-6-5"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="256.01251"
+         id="tspan3-92">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="263.71851"
+       id="text2-3-7-6-28"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="263.71851"
+         id="tspan3-97">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="84.571411"
+       y="271.4245"
+       id="text2-3-7-6-3"><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.006"
+         x="84.571411"
+         y="271.4245"
+         id="tspan3-6">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="67.869308"
+       y="284.83197"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="stroke-width:1.006"
+         x="67.869308"
+         y="284.83197">双电层</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#DartArrow);stop-color:#000000;stop-opacity:1"
+       d="m 100.56629,211.78479 h 14.02727"
+       id="path4" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#DartArrow-1);stop-color:#000000"
+       d="m 100.56629,224.41724 h 14.02727"
+       id="path4-9" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#DartArrow-3);stop-color:#000000"
+       d="m 100.56629,237.04968 h 14.02727"
+       id="path4-94" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#DartArrow-7);stop-color:#000000"
+       d="m 100.56629,249.68213 h 14.02727"
+       id="path4-4" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#DartArrow-5);stop-color:#000000"
+       d="m 100.56629,262.31458 h 14.02727"
+       id="path4-3" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="86.076424"
+       y="200.31554"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="stroke-width:1.006"
+         x="86.076424"
+         y="200.31554">致密层</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="105.98381"
+       y="284.82578"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="stroke-width:1.006"
+         x="105.98381"
+         y="284.82578">扩散层</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="128.93752"
+       y="200.33723"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="stroke-width:1.006"
+         x="128.93752"
+         y="200.33723">外界溶液</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker8);stop-color:#000000;stop-opacity:1"
+       d="m 110.14077,214.40605 h -7.93462"
+       id="path7" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker8-6);stop-color:#000000"
+       d="m 110.14076,226.86443 h -7.93462"
+       id="path7-0" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker8-63);stop-color:#000000"
+       d="m 110.14076,239.32281 h -7.93462"
+       id="path7-06" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker8-1);stop-color:#000000"
+       d="m 110.14076,251.7812 h -7.93462"
+       id="path7-5" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker8-4);stop-color:#000000"
+       d="m 110.14076,264.23958 h -7.93462"
+       id="path7-6" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="42.365185"
+       y="200.25964"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:1.006"
+         x="42.365185"
+         y="200.25964">金属表层</tspan></text>
+  </g>
+</svg>

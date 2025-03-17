@@ -1,0 +1,181 @@
+\lecture{3}{02.26}
+\subsection{引言}%
+\label{sub:引言}
+第一类永动机，发电机：能量的来源是什么？
+
+热力学研究内容：
+\begin{itemize}
+    \item 定义
+    \item 研究内容：方向和限度、能量效应、宏观和微观的联系
+    \item 理论基础：第一、第二定律
+\end{itemize}
+物理化学常用严格的数理逻辑推理方法，只研究大量例子组成系统的宏观性质，不需要知道物质的微观结构和反应机理，只研究可能性和限度，不涉及时间、细节
+
+热力学的作用：
+\begin{eg}
+    石墨加压（15000个大气压）可以转为金刚石，这是一个相变过程
+\end{eg}
+通过计算反应限度可以预测一个反应是否能够进行，计算药物制剂辅料是否能够稳定存在，利用相变来提取中药成分
+\subsection{系统和环境}%
+\label{sub:系统和环境}
+\begin{defi}
+    系统：一部分与其他物质分开的研究对象
+\end{defi}
+\begin{defi}
+    环境：与系统密切相关、有相互作用条件或影响的部分
+\end{defi}
+系统可以分为三类：
+\begin{itemize}
+    \item 敞开系统（物质+能量交换，经典热力学不研究）
+    \item 封闭系统（只有能量交换，研究最多）
+    \item 孤立系统/隔离系统（无交换）
+    
+\end{itemize}
+有时可以把系统和影响所涉及的环境一起作为孤立系统来考虑（小环境$\Rightarrow $ 大环境），对于这个孤立系统的熵：\[
+    \Delta_\text{}S_{\text{iso}} = \Delta_\text{}S_{\text{sys}} + \Delta_\text{}S_{\text{env}}   
+.\]
+这个在热力学第二定律再提。
+\subsection{系统的性质}%
+\label{sub:系统的性质}
+\begin{defi}
+    性质：能描述系统状态的物理量
+\end{defi}
+分为广度性质（与物质量成正比，如质量、体积）和强度性质（与物质的量无关，如温度、密度）
+\begin{notation}
+    广度性质有加和性，强度性质无加和性，且\[
+        \text{广度性质}\times \text{强度性质}=\text{广度性质}
+    .\]
+\end{notation}
+\begin{eg}
+    \[
+        \rho = \frac{m}{V}
+    .\]
+    其中：$m,V$ 均为广度性质，$\rho$ 为强度
+\end{eg}
+如果一个系统的性质不随时间而改变，称系统处于热力学平衡态
+\subsection{状态函数}%
+\label{sub:状态函数}
+\begin{defi}
+    状态：系统一切性质的综合表现
+\end{defi}
+当系统处于某一个确定的状态时，性质有一个确定的值；当系统的一个性质发生变化，系统的状态也发生变化，成单值对应的关系（状态函数）。
+
+系统的性质之间有关联，如$pV=nRT $ ，因此不需要罗列所有的状态
+
+\begin{defi}
+    状态函数：系统的性质都是状态函数
+\end{defi}
+一般容易测定的为状态变量，不易测定的为状态函数
+\begin{notation}
+    状态函数的变化\textbf{仅取决于系统的始态和终态}，状态函数的微小变化为\textbf{全微分}，状态函数的集合（和、差、积、商）也是状态函数
+\end{notation}
+\begin{eg}
+    若$z=f\left( x,y \right)$ ，则对$z$ 全微分：\[
+        \mathrm{d}z = \left(\frac{\partial z}{\partial x}\right)_{y}\mathrm{d}x + \left(\frac{\partial z}{\partial y}\right)_{x}\mathrm{d}y
+    .\]
+    如果体积描述为$V=f\left( T,p \right)$ ，则：\[
+        \mathrm{d}V = \left(\frac{\partial V}{\partial T}\right)_{p}\mathrm{d}T + \left(\frac{\partial V}{\partial p}\right)_{T}\mathrm{d}p
+    .\]
+\end{eg}
+\subsection{状态方程}%
+\label{sub:状态方程}
+\begin{defi}
+    状态方程：系统状态函数之间的定量关系式
+\end{defi}
+\begin{eg}
+     \[
+        T = f\left( p,V \right)\quad V = f\left( T,p \right)\quad \ldots 
+    .\]
+\end{eg}
+\subsection{过程和途径}%
+\label{sub:过程和途径}
+\begin{defi}
+    过程：系统状态发生的一切变化
+\end{defi}
+常见的变化过程见lecture 2
+\begin{defi}
+    途径：某一过程的具体步骤
+\end{defi}
+\begin{eg}
+    始态：$273\ce{K}, 1\times 10^{5}\ce{Pa}$，终态：$373\ce{K}, 5\times 10^{5}\ce{Pa}$，其中还有两种途径，经历两种中间态：
+
+    1. 第一步定温：$273\ce{K}, 5\times 10^{5}\ce{Pa}$ 
+
+    2. 第一步定压：$373\ce{K}, 1\times 10^{5}\ce{Pa}$
+\end{eg}
+\subsection{热和功}%
+\label{sub:热和功}
+\begin{defi}
+    热和功：系统的状态变化时与环境交换和传递能量的形式
+
+    热：系统和环境之间的温度差引起的能量交换
+    
+    功：除了热以外就是功
+\end{defi}
+系统吸热：$Q>0$ ，系统放热：$Q<0$
+
+系统对环境做功：$W<0$ ，环境对系统做功：$W>0$
+
+功的计算：\[
+    \delta W = F_\text{广义} \cdot \mathrm{d}x_\text{广义}
+.\]
+
+如何计算体积功：
+如果$p_\text{sys}-p_\text{env}=\mathscr{O}\left( p \right)$，活塞移动$\mathrm{d}l$，则系统对环境做的体积功：\[
+    \sigma W = -F\mathrm{d}l = -p_\text{e}A\mathrm{d}l = -p_\text{e}\mathrm{d}V
+.\]
+积分后：\[
+    W = -p_\text{e}\int_{V_1}^{V_2} \mathrm{d}V = -p\Delta V
+.\]
+\begin{notation}
+    自由膨胀：$p_\text{e}=0$
+\end{notation}
+\subsection{功的过程}%
+\label{sub:功的过程}
+\begin{eg}
+    自由膨胀：$p_\text{e}=0$ ，则：$W=-p_\text{e}\Delta V = 0$
+\end{eg}
+非自由膨胀：由于$pV=nRT $ ，可得：$V = \frac{nRT }{p}$
+
+假如始态：$4\ce{kPa}, V_1$ ，在外压变化后终态：$p_\text{e}=1\ce{kPa}, V_2$ ，在外压变化后，系统缓慢膨胀到末态，则：\[
+    W_1 = -p_\text{e}\left( V_2-V_1 \right)
+.\]
+如果在中间加入一个中间态：$p_\text{e}=2\ce{kPa}, V'$ ：\[
+    W_2 = -p_\text{e}'\left( V'-V_1 \right)-p_\text{e}\left( V_2-V' \right)
+.\]
+如果继续增加中间态的数量，逐渐把$V\left( p \right) = \frac{nRT }{p}$ 填满，即：\[
+    W = -\int_{V_1}^{V_2} p \mathrm{d}V = -\int_{V_1}^{V_2} \frac{nRT }{V} \mathrm{d}V = -nRT \ln \frac{V_2}{V_1}
+.\]
+这个过程称为可逆膨胀或准静态膨胀
+
+压缩同理，由于每次压缩的$p_\text{e}>p_\text{sys}$ ，因此做功比膨胀的做功大,但是积分后准静态压缩的做功达到最小，和准静态膨胀一致
+\subsection{可逆过程}%
+\label{sub:可逆过程}
+体系可以恢复到原始状态，如标准气体恒温可逆膨胀
+
+由热力学第一定律：\[
+    \Delta_\text{}U = Q+W 
+.\]
+因为$W=0$ ，$\Delta_\text{}U = 0 $ ，同样$Q=0$ 
+\begin{eg}
+    在298K时，2mol  $\ce{O_2}$ 的体积为$1.8\times 10^{-2}\ce{m}^{3}$ ，在恒温下经历以下过程：
+    \begin{itemize}
+        \item 自由膨胀
+        \item 抗外压$100\ce{kPa}$ 膨胀
+        \item 可逆膨胀
+        
+    \end{itemize}
+    到$5\times 10^{-2}\ce{m}^{3}$ ，求做功
+\end{eg}
+\begin{sol}
+    1. 自由膨胀：$W=0$ 
+
+    2. $p_\text{e}=100\ce{kPa}$ ：\[
+        W = -p_\text{e}\Delta V = -100\ce{kPa}\times (3.2\times 10^{-2})\ce{m}^{3} = -3.2\ce{kJ}
+    .\]
+
+    3. \[
+        W = -nRT \ln \frac{V_2}{V_1} = -2\times 8.314\ce{J*K^{-1}*mol^{-1}} \times 298\ce{K} \times \ln \frac{(5\times 10^{-2}) \ce{m}^{3}}{(1.8\times 10^{-2}) \ce{m}^{3}} \approx -5062\ce{J}
+    .\]
+\end{sol} 
+

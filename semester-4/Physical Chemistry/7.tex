@@ -1,0 +1,120 @@
+\lecture{7}{03.07}
+常用表示：
+\[
+    \Delta_\text{f}H_{\text{m}}^\ominus \text{（物质、相态、温度）}
+.\]
+\begin{notation}
+    生成焓是一个相对值（相对于稳定单质的焓），最稳定的单质标准摩尔生成焓为0
+\end{notation}
+使用标准摩尔生成焓计算热效应：
+\begin{eg}
+    从始态$M\left( T,p^\ominus \right)$ 到终态$g\ce{G}+h\ce{H}\left( T,p^\ominus \right)$，通过一个中间态$a\ce{A}+d \ce{D}\left( T,p^\ominus \right)$
+\end{eg}
+任意一个反应的标准摩尔焓变$\Delta_\text{r}H_{\text{m}}^\ominus $ 等于产物的标准摩尔生成焓乘反应系数后求和，即：\[
+    \Delta_\text{r}H_{\text{m}}^\ominus = -\sum_\text{B}^{} \nu_\text{B}\Delta_\text{f}H_{\text{m}}^\ominus 
+.\]
+\subsection{燃烧热}%
+\label{sub:燃烧热}
+定义：在$p^\ominus,T$的标准状态，1 mol物质完全燃烧的定压反应热成为标准摩尔燃烧焓，表示为$\Delta_\text{c}H_{\text{m}}^\ominus $，要求燃烧后变为\textbf{最稳定的产物}
+
+同理，从始态到终态，经过中间态，一个燃烧反应的反应热：\[
+    \Delta_\text{r}H_{\text{m}}^\ominus = \sum_\text{B}^{} \nu_\text{B}\Delta_\text{c}H_{\text{m}}^\ominus 
+.\]
+\subsection{溶解热}%
+\label{sub:溶解热}
+定温定压，一定量的物质溶于一定量的溶剂中所产生的热效应
+\begin{eg}
+    NaOH溶解放热
+\end{eg}
+原理为晶体晶格的破坏、电离等产生的能量。溶解热使用$\Delta_\text{s}H_{\text{m}} $或$\Delta_\text{sol}H_{\text{m}} $ 表示，注意此时\textbf{可以不是标准状态}
+\begin{defi}
+摩尔积分溶解热：记为：\[
+    \Delta_\text{isol}H_{\text{m}} = \frac{\Delta_\text{isol}H_{}}{n_\text{B}}
+.\]
+
+摩尔微分溶解热：朝大量水中放入溶质的热量，即对溶解热求导\[
+    \Delta_\text{dsol}H_{\text{m}} = \left(\frac{\partial H}{\partial n_\text{B}}\right)_{T,p,n_\text{B}} 
+.\]
+\end{defi}
+\subsection{基尔霍夫定律}%
+\label{sub:基尔霍夫定律}
+\begin{equation}
+    \label{eq:基尔霍夫定律}
+    \left(\frac{\partial \Delta_\text{}H }{\partial T}\right)_{p} = \Delta C_{p}
+\end{equation}
+作业：$\text{P}_{33},6. \text{P}_{34}, 6. \text{P}_{35}, 10. \text{P}_{36}, 27. \text{P}_{37}, 31$, 3月21日之前提交
+\section{热力学第二定律}%
+\label{sec:热力学第二定律}
+学习重点：
+\begin{itemize}
+    \item 第二定律
+    \item 卡诺循环
+    \item 熵
+    \item 克劳修斯不等式
+    \item 吉布斯自由能
+    \item \ldots 
+    
+\end{itemize}
+\begin{notation}
+    热力学第二定律的特点：
+    \begin{itemize}
+        \item 只考虑变化前后
+        \item 只考虑可能性
+        
+    \end{itemize}
+\end{notation}
+\subsection{第二定律}%
+\label{sub:第二定律}
+目标：\textbf{判断各种自发过程的方向和限度}
+\begin{defi}
+    自发过程：无需外力作用，任其自然发生的过程
+\end{defi}
+焦耳实验在完成后发现：气体不能自发地回到原来的瓶中，因此这个过程是不可逆的。自发过程的共同特征为\textbf{不可逆性}。任何自发变化的逆过程都是不能自动进行的。
+\begin{notation}
+\textbf{第二类永动机不可能造成}。
+
+第二类永动机：从单一热源吸热使其完全变为功而不留下任何影响
+\end{notation}
+\subsection{卡诺循环、卡诺定律}%
+\label{sub:卡诺循环，卡诺定律}
+卡诺将热机理想化，设计一个4步可逆过程组成的循环：
+\begin{itemize}
+    \item 等温膨胀
+    \item 绝热膨胀
+    \item 等温压缩
+    \item 绝热压缩
+\end{itemize}
+卡诺指出：
+\begin{itemize}
+    \item 热机必须有2个热源
+    \item 效率与介质无关
+    \item 效率有极限值
+    \item 可逆卡诺热机的效率最高
+\end{itemize}
+\begin{eg}
+    汽车发动机：4冲程活塞发动机
+\end{eg}
+克劳修斯看了这个循环，绘制了一个图像：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{卡诺循环}
+    \caption{卡诺循环}
+    \label{fig:卡诺循环}
+\end{figure}
+
+循环方向：A $\to $ B $\to $ C $\to $ D
+
+回忆：等温可逆的做功：曲线下的部分\[
+    W = nRT \ln \frac{V_2}{V_1}
+.\]
+
+绝热可逆：对$C_{V}$ 积分：\[
+    W = \int_{T_1}^{T_2} C_{V} \mathrm{d}T
+.\]
+\subsubsection*{热机效率}%
+\label{subsub*:热机效率}
+    克劳修斯如何推出熵的：由$W = nR\left( T_{h}-T_c \right)\ln \frac{V_1}{V_2}$，要求热机的效率：
+    \[
+        \eta = \frac{-W}{Q_{h}} = \frac{-nR\left( T_{h}-T_c \right)\ln \frac{V_1}{V_2}}{-nRT_{h}\ln \frac{V_1}{V_2}} = 1-\frac{T_{c}}{T_h}
+    .\]
+即热机的效率与两热源的温度有关，温差越大，效率越大

@@ -1,0 +1,121 @@
+\lecture{9}{03.14}
+\subsection{化学反应的熵变}%
+\label{sub:化学反应的熵变}
+\subsection{熵的物理意义}%
+\label{sub:熵的物理意义}
+1. 能斯特：\[
+    \lim_{T \to 0} -\left(\frac{\partial \Delta G}{\partial T}\right)_{p} = \lim_{T \to 0} \left( \Delta S \right)_T = 0
+.\]
+
+2. 热力学第三定律：0K时任何纯物质完美晶体的熵为0
+\begin{notation}
+    完美晶体：晶体中的质点排列只有一种方式
+\end{notation}
+\section{自由能}%
+\label{sec:自由能}
+\subsection{亥姆霍兹自由能}%
+\label{sub:亥姆霍兹自由能}
+\begin{defi}
+    由热力学第一定律：\[
+        \delta Q = \mathrm{d}U -\delta W
+    .\]
+    由克劳修斯不等式：\[
+        \mathrm{d}S \ge \frac{\delta Q}{T}
+    .\]
+    带入：\[
+        \mathrm{d}S \ge \frac{\mathrm{d}U - \delta W}{T} \implies T\mathrm{d}S -\mathrm{d}U \ge -\delta W
+    .\]
+    即：\[
+        \mathrm{d}\left( U-TS \right)\le \delta W \Rightarrow -\mathrm{d}\left( U-TS \right) \le -\delta W
+    .\]
+    定义亥姆霍兹自由能\[\boxed{
+        A = U-TS
+    .}\] 
+    则：\[
+        \begin{cases}
+            -\mathrm{d}A \ge -\delta W\\
+            -\Delta A \ge -W
+        \end{cases}
+    .\]
+    此时反应可以自发进行
+\end{defi}
+在定温定容的过程中$W=0$ ，则判断：\[
+    -\Delta A \ge 0
+.\]
+即：$\Delta A\le 0$ 时反应自动发生。使用$T,V$ 一定$A$ 的判断方法称为亥姆霍兹自由能判据
+\subsection{吉布斯自由能}%
+\label{sub:吉布斯自由能}
+\begin{defi}
+    由热力学第二定律：\[
+        \delta Q = \mathrm{d}U -\delta W
+    .\]
+    同亥姆霍兹自由能，结合体积功$\mathrm{d}\left( p_\text{e}V \right)$ 和非体积功$W'$ 得到：\[
+        -\mathrm{d}\left( U-TS \right) \ge -\delta W' + \mathrm{d}\left( p_\text{e}V \right)
+    .\]
+    即：
+    \[
+        -\mathrm{d}\left( U+p_\text{e}V-TS \right) \ge -\delta W'
+    .\]
+    记\[\boxed{
+        U+p_\text{e}V-TS=H-TS=G
+    .}\]
+    为吉布斯自由能，即当：\[
+        \begin{cases}
+            -\mathrm{d}G \ge -\delta W'\\
+            \Delta G \le W'
+        \end{cases}
+    .\]
+    时反应自动进行
+\end{defi}
+$G$ 为状态函数，只与始末态有关；吉布斯自由能可以通过可逆过程计算。
+\begin{notation}
+    在定温定容的条件下$W'=0$，即当
+    \[\boxed{
+        \Delta G \le 0
+    .}\]
+    时反应自动发生，且在定温定压和非体积功为0的条件下$\mathrm{d}G>0$ 的反应不可能发生
+\end{notation}
+使用$G$ 代替$S$ 判断的理由：一个系统下：\[
+    -\frac{\Delta G_\text{sys}}{T} = -\frac{\Delta H_\text{sys}}{T}+\Delta_\text{}S_{\text{sys}} 
+.\]
+当$W'=0$ 时代表：\[
+    \Delta_\text{}H_{\text{sys}} = Q_{p} = -Q_\text{env} 
+.\]
+带入：\[
+    -\frac{\Delta_\text{}H_{\text{env}} }{T} = \frac{-Q_{p}}{T} = \frac{Q_\text{env}}{T} = \Delta_\text{}S_\text{env} 
+.\]
+即：\[
+    -\frac{\Delta_\text{}G_{\text{env}} }{T} = \Delta_\text{}S_{\text{env}} + \Delta_\text{}S_{\text{sys}} = \Delta_\text{}S_{\text{iso}} \Rightarrow \Delta_\text{}G_{\text{sys}} = -T\Delta_\text{}S_\text{iso}
+.\]
+因此可以使用$\Delta_\text{}G_\text{sys} $ 来代替$\Delta_\text{}S_{\text{iso}} $ 来判断
+\begin{notation}
+    由于\[
+        G = U + p_\text{e}V -TS\quad A = U-TS
+    .\]
+    因此$G$ 也可以定义为$A+p_\text{e}V$
+\end{notation}
+\subsection{吉布斯自由能变的计算}%
+\label{sub:吉布斯自由能变的计算}
+\subsubsection*{定温过程}%
+\label{subsub*:定温过程}
+仅有体积功$p_\text{e}\mathrm{d}V$ ，则：\[
+    T\mathrm{d}S = \delta Q_\text{R} = \mathrm{d}U -\delta W_\text{R} = \mathrm{d}U + p_\text{e}\mathrm{d}V
+.\]
+对$G$ 微分：\[
+    \mathrm{d}G = \mathrm{d}U + \mathrm{d}\left( p_\text{e}V \right) - \mathrm{d}\left( TS \right) = \mathrm{d}U +V\mathrm{d}p_\text{e} + p_\text{e}\mathrm{d}V -T\mathrm{d}S -S\mathrm{d}T
+.\]
+即：$\mathrm{d}U = T\mathrm{d}S -p_\text{e}\mathrm{d}V$ ，带入$\mathrm{d}G = \mathrm{d}U +p_\text{e}\mathrm{d}V + V\mathrm{d}p_\text{e} -T\mathrm{d}S -S\mathrm{d}T$ 得到：\[
+    \mathrm{d}G = -S\mathrm{d}T + V\mathrm{d}p_\text{e}
+.\]
+由于是等温过程，$\mathrm{d}T = 0$ ，积分：\[
+    \mathrm{d}G = V\mathrm{d}p_\text{e} = \frac{nRT }{p_\text{e}}\mathrm{d}p_\text{e} \implies \Delta G = \int_{p_1}^{p_2} V\mathrm{d}p_\text{e} = nRT \ln \frac{p_2}{p_1}
+.\]
+即：\[\boxed{
+    \begin{cases}
+    \Delta_\text{}G = nRT \ln \frac{p_2}{p_1} \\
+    \Delta A = -nRT \ln \frac{V_2}{V_1}
+    \end{cases}
+.}\]
+\subsubsection*{凝聚态自由能变}%
+\label{subsub*:凝聚态自由能变}
+

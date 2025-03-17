@@ -1,0 +1,104 @@
+\lecture{4}{02.27}
+\section*{预习2}%
+\label{sec*:预习2}
+回忆：热力学第一定律的数学表达：
+\begin{equation}
+    \label{eq:热力学第一定律}
+    \Delta_\text{}U = Q+W 
+\end{equation}
+前面已经完成了对$Q_{p},Q_{V},W$ 的求解，这一节进入热力学第一定律在不同环境的应用
+
+\begin{notation}
+    回顾：
+    \begin{align*}
+        \mathrm{d}U &= C_{V}\mathrm{d}T + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V\\
+        \mathrm{d}H &= C_{p}\mathrm{d}T + \left(\frac{\partial H}{\partial p}\right)_{T}\mathrm{d}p
+    .\end{align*}
+    使用条件：只要能用$T,V$ 表达$U$ ，能用$T,p$ 表示$H$ 即可使用（双变量系统）
+\end{notation}
+\begin{notation}
+    回顾：
+    \begin{align*}
+        \Delta_\text{}U &= \int_{T_1}^{T_2} C_{V} \mathrm{d}T \\
+        \Delta_\text{}H &= \int_{T_1}^{T_2} C_{p} \mathrm{d}T 
+    .\end{align*}
+    第一个公式是上面的公式的一个限制：$dV=0$ ，使用条件为气液固的恒容过程（初态和末态的体积相等即可：定容）；第二个公式同理，使用条件为恒压过程（初态和末态的压力相等：定压）
+\end{notation}
+除此之外还提到了一个概念：内压\[
+    \left(\frac{\partial U}{\partial V}\right)_{T}
+.\]
+且在理想气体的条件下内压为0：
+\begin{equation}
+    \label{eq:理想气体内压为0}
+    \left(\frac{\partial U}{\partial V}\right)_{T} = 0\quad \text{理想气体} 
+\end{equation}
+从数学表达来看表示温度恒定时，内能随体积的变化率；由于内能和分子的动能和势能有关，因为恒温即动能不变，即体积的变化导致了分子间势能的变化。这个量数值越大，表示分子间作用力越大
+
+热力学第一定律可以用于：
+\begin{itemize}
+    \item 理想气体
+    \item 相变
+    \item 化学反应
+    \item 真实气体
+    \item \ldots 
+\end{itemize}
+回顾：理想气体：分子之间无相对作用且没有体积，符合$pV=nRT $ 
+\begin{notation}
+    1843年焦耳进行了焦耳实验：两个容器，一个有100kPa的氢气，另一个是真空，整个装置置于水中，温度为$T_1$ ，将两个容器融合，得到一个均一的氢气系统，水温变为$T_2$ 
+
+    焦耳记录了水温度的变化，发现温度没有变化，意味着$Q=0$，这个过程可以看为是自由膨胀过程，则 $W=0$ ，因此$\Delta_\text{}U = Q+W=0 $。
+
+    系统的内能不变，但是体积发生变化，由于$U=f\left( T,V \right)$ ，可以得出对于理想气体$U= f\left( T \right) $，即理想气体的内能与体积无关
+
+    焦耳做了多种试验，发现温度都不变，直到换为氯气，温度发生了变化。由于氯气的分子间相互作用和氯气的分子大小都大于氢气，不能看作理想气体
+\end{notation}
+从数学角度，理想气体的内能与体积无关：\[
+    \mathrm{d}U = C_{V}\mathrm{d}T + \left(\frac{\partial U}{\partial V}\right)_{T}\mathrm{d}V
+.\]
+由于分子之间无相互作用，因此内压为0，即：\[\boxed{
+    \mathrm{d}U = C_{V}\mathrm{d}T
+.}\]
+积分后：\[
+.\]
+\begin{equation}
+    \label{eq:使用恒容热容计算内能变}
+    \Delta_\text{}U = \int_{T_1}^{T_2} C_{V} \mathrm{d}T 
+\end{equation}
+这个公式的使用条件：气液固的定容过程或\textbf{理想气体的任意过程}
+
+在理想气体的条件下，焓只是温度的函数$H=f\left( T \right)$。
+
+由于焓的定义：$H=U+pV=U+nRT $，由于$U+nRT $ 都只和温度有关，因此$H=f\left( T \right)$，即：\[
+    \mathrm{d}H = C_{p}\mathrm{d}T + \left(\frac{\partial H}{\partial p}\right)_{T}\mathrm{d}p \implies \mathrm{d}H = C_{p}\mathrm{d}T
+.\]
+即：
+\begin{equation}
+    \label{eq:h/p_t=0}
+    \left(\frac{\partial H}{\partial p}\right)_{T}=0
+\end{equation}
+
+再来看热容$C_{V},C_{p}$ ：前面提到，热容是$T,V$ 的函数，在理想气体的条件下是否只和温度有关？来证明一下：
+
+只需要证明$\left(\frac{\partial C_{V}}{\partial V}\right)_{T}=0$ ，即热容和体积无关，带入恒容热容的定义：
+\[
+    \left(\frac{\partial C_{V}}{\partial V}\right)_{T} = \left(\frac{\left(\frac{\partial U}{\partial T}\right)_{V}}{\partial V}\right)_{T}
+.\]
+事实上可以看作：\[
+    \frac{\partial^2 U}{\partial T\partial V}
+.\]
+由欧拉倒易关系：\[
+    \left(\frac{\partial C_{V}}{\partial V}\right)_{T} = \left(\frac{\textcolor{red}{\left(\frac{\partial U}{\partial V}\right)_{T}}}{\partial T}\right)_{V}
+.\]
+注意到红色部分为\textbf{内压}，而前面等式\ref{eq:理想气体内压为0}已得\textbf{理想气体的内压为0}，因此$\left(\frac{\partial C_{V}}{\partial V}\right)_{T}=0$ ，恒压热容同理，即热容只与温度有关
+\begin{sol}
+    由恒压热容的定义：\[
+        C_{p} = \left(\frac{\partial H}{\partial T}\right)_{p}
+    .\]
+    要证明$\left(\frac{\partial C_{p}}{\partial p}\right)_{T}=0$ ，带入：\[
+        \left(\frac{\partial C_{p}}{\partial p}\right)_{T} = \left(\frac{\left(\frac{\partial H}{\partial T}\right)_{p}}{\partial p}\right)_{T} = \left(\frac{\textcolor{red}{\left(\frac{\partial H}{\partial p}\right)_{T}}}{\partial T}\right)_{p}
+    .\]
+    前面等式\ref{eq:h/p_t=0}已经提到这一部分为0，因此
+    \begin{equation}
+        \left(\frac{\partial C_{p}}{\partial p}\right)_{T}=0
+    \end{equation}
+\end{sol}

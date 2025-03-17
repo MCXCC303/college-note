@@ -1,0 +1,92 @@
+\learn{6}{03.14}
+简单来说，伪逆是扩展到非方阵的矩阵的逆，正常的逆：\[
+    \bm{Ax} = \bm{y} \implies \bm{x} = \bm{A}^{-1}\bm{y}
+.\]
+\begin{defi}
+    伪逆的定义：\[
+        \bm{A}^{+} = \lim_{\alpha \searrow 0} \left( \bm{A}^\top \bm{A}+\alpha \bm{I} \right)^{-1}\bm{A}^\top 
+    .\]
+    实际的计算方法：\[
+        \bm{A}^{+}=\bm{V}\bm{D}^{+}\bm{U}^\top\quad  \text{or} \quad \bm{A}^{+}=\bm{V}\bm{\Sigma}^{+}\bm{U}^\top
+    .\]
+    其中的矩阵通过SVD而得：\[
+        \bm{A} = \bm{U}\bm{\Sigma}\bm{V}^\top 
+    .\]
+\end{defi}
+当$\bm{A}\in \mathbb{R}^{m \times n}$ 中$m<n$ 时最常用该方法求解线性方程组；当$m>n$ 时方程组可能没有解，但是伪逆依然可以解出一个$\bm{x}_0$ ，且这个解最贴合原方程，即：\[
+    \left\lVert \bm{Ax}_0-\bm{y} \right\rVert_{2} = \min \left\lVert \bm{Ax}-\bm{y} \right\rVert_{2}
+.\]
+当$m=n$ 时求解与使用正常逆求解一致。
+\subsection{迹}%
+\label{sub:迹}
+\begin{notation}
+迹即对角线求和：\[
+    \mathrm{Tr}\bm{A} = \sum_{i}A_{i,i}
+.\]
+\end{notation}
+迹运算可以用来表示Frobenius范数。回顾Frobenius范数：\[
+    \left\lVert \bm{A} \right\rVert_{F} = \sqrt{\sum_{i,j}^{} A_{i,j}^2 }
+.\]
+设$\bm{A}\in \mathbb{R}^{m \times n}$，由于：
+\begin{align*}
+    \bm{A}\bm{A}^\top = \begin{bmatrix}
+        A_{11} & A_{12} & \cdots & A_{1n}\\
+        A_{21} & \ddots &   &  \\
+        \vdots &  & \ddots & \\
+        A_{m1} &  &  & A_{mn}
+    \end{bmatrix}\begin{bmatrix}
+        A_{11} & A_{21} & \cdots & A_{m1}\\
+        A_{12} & \ddots &   &  \\
+        \vdots &  & \ddots & \\
+        A_{1n} &  &  & A_{mn}
+    \end{bmatrix} \\
+    = \begin{bmatrix}
+        A_{11}^2 +A_{12}^2 +\ldots +A_{1n}^2 & & & \\
+         & A_{21}^2 +A_{22}^2 +\ldots +A_{2n}^2 & &  \\
+         & & \ddots & \\
+         & & & A_{m1}^2 + A_{m2}^2 +\ldots +A_{mn}^2 
+    \end{bmatrix}\\
+    \implies \mathrm{Tr}\bm{A} = \sum_{i}^{} \sum_{j} A_{ij}^2 
+.\end{align*}
+\begin{notation}
+    迹运算的性质：\textbf{轮换对称}，即：\[
+        \mathrm{Tr}\left( \bm{AB\textcolor{red}{C}} \right) = \mathrm{Tr}\left( \bm{\textcolor{red}{C}AB} \right) = \mathrm{Tr}\left( \bm{B\textcolor{red}{C}A} \right)
+    .\]
+    并且如果矩阵的形状改变，如$\bm{A}\in \mathbb{R}^{m \times n},\bm{B}\in \mathbb{R}^{n \times m}$ ，相乘后$\bm{AB} \in \mathbb{R}^{m \times m}$ 而$\bm{BA} \in \mathbb{R}^{n \times n}$ ，但是$\mathrm{Tr}\left( \bm{AB} \right) = \mathrm{Tr}\left( \bm{BA} \right)$ 仍然成立。
+
+    拓展到多个矩阵相乘：\[
+        \mathrm{Tr}\left( \prod_{i=1}^{n} \bm{F}^{(i)} \right) = \mathrm{Tr} \left( \bm{F}^{(n)}\prod_{i=1}^{n-1} \bm{F}^{(i)} \right)
+    .\]
+\end{notation}
+\begin{notation}
+    \[
+        a = \mathrm{Tr}\left( a \right)
+    .\]
+\end{notation}
+\subsection{行列式}%
+\label{sub:行列式}
+代表一个矩阵内列向量围成的空间大小，如：\[
+    \bm{A}\in \mathbb{R}^{2\times 2} = \begin{bmatrix}
+        A_{11} & A_{12}\\
+        A_{21} & A_{22}
+    \end{bmatrix}
+.\]
+代表二维空间中由$\begin{bmatrix}
+    A_{11} & A_{21}\\
+\end{bmatrix}^\top $ 和$\begin{bmatrix}
+    A_{12} & A_{22}\\
+\end{bmatrix}^\top $ 所围成的空间大小（所围成的平行四边形大小）
+\begin{notation}
+    如果行列式为0,说明该线性空间至少朝一个维度坍缩了（3维$\to $ 2维～0维）
+\end{notation}
+\subsection{主成分分析}%
+\label{sub:主成分分析}
+假设有一组二维数据，这些数据有一个比较明显的走向，因此我们希望将这个明显的走向体现出来，而忽略其他的部分来实现数据的压缩。通过找到数据中心并旋转坐标系来拟合一个损失最小的坍缩方向。
+\begin{figure}[ht!]
+    \centering
+    \incfig[]{主成分分析图示}
+    \caption{主成分分析图示}
+    \label{fig:主成分分析图示}
+\end{figure}
+
+其中，$x'$ 为数据的\textbf{主成分}

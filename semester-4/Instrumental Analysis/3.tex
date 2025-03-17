@@ -1,0 +1,108 @@
+\lecture{3}{03.04}
+\begin{notation}
+    不涉及原子内部的能级跃迁的分析方法称为非光谱分析，如X射线单晶衍射、反射分析
+\end{notation}
+按照吸收或发射光的分类：
+\begin{itemize}
+    \item 吸收光谱：光子被原子吸收，产生了能级跃迁
+    \item 发射光谱：原子发生能级跃迁，产生一定波长的光
+    \item 散射光谱：光子与介质之间产生碰撞，光直接反射的部分称为\textbf{瑞利散射}，改变了频率后再被散射出来的部分称为\textbf{拉曼散射}
+\end{itemize}
+常见的几种跃迁方式：
+\begin{notation}
+    $\sigma\to \sigma^\star $ 跃迁：碳碳单键中的电子由$\sigma$ 成键轨道跃迁到$\sigma^\star $ 反键轨道，吸收峰在紫外区，能量极高
+\end{notation}
+\begin{notation}
+    $\pi \to \pi ^\star $ 跃迁：碳碳双键上的电子跃迁到双键的反键轨道，摩尔吸光系数较大，即$\varepsilon>10^{4}$ ，为强吸收，如果是共轭双键吸收更强，能量需求越小
+\end{notation}
+\begin{notation}
+    $n\to \pi ^\star $跃迁：含有羟基、氨基、卤素原子、硫原子等杂原子，吸收峰为紫外光，吸收较强
+\end{notation}
+\begin{notation}
+    $n\to \sigma^\star $跃迁：含杂原子的双键，吸收较弱，吸收近紫外光（200-400$\mu$m）
+\end{notation}
+常见术语：
+\begin{defi}
+    透光率：\[
+        T = \frac{I_\text{t}}{I_0}\times 100\%
+    .\]
+    其中：\[
+        I_0 = I_\text{t} + I_\text{a} + I_\text{r}
+    .\]
+    $I_\text{t}$ 为透过光，$I_\text{a}$ 为吸收光，$I_\text{r}$为反射光
+\end{defi}
+当$T=0$，代表光全部吸收
+\begin{defi}
+    吸光度：\[
+        A = \lg \frac{1}{T} = -\lg T = \lg \frac{I_0}{I_\text{t}}
+    .\]
+    即：\[
+        T = 10^{-A}
+    .\]
+    当$T = 0$ 时，$A = +\infty $
+\end{defi}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{吸收光谱示意图}
+    \caption{吸收光谱示意图}
+    \label{fig:吸收光谱示意图}
+\end{figure}
+\begin{notation}
+    助色团：一些含有$n$ 电子的饱和集团，如羟基、氨基、亚胺等，本身没有生色功能，当与生色团相连时发生$n-\pi $ 共轭来增强生色团的颜色
+\end{notation}
+\begin{defi}
+    红移：或长移，由于结构改变使得吸收峰向长波长方向改变
+\end{defi}
+同理有蓝移、增色（上移）、减色（下移）
+
+强吸收：$\varepsilon_\text{max}>10^{4}$
+\subsection{吸收带与分子结构的关系}%
+\label{sub:吸收带与分子结构的关系}
+\begin{defi}
+    R带：基团带，由$n\to \pi^\star $ 跃迁产生的吸收带，杂原子的不饱和集团，溶剂极性增强发生蓝移，弱吸收
+
+    K带：共轭带，由$\pi \to \pi ^\star $ 的跃迁产生，波长较短，强吸收，共轭增强发生红移
+
+    B带：芳香带，又称苯的多重吸收带，在极性溶剂中精细结构转为宽峰，在256nm附近，弱吸收
+
+    E带：芳香不饱和带，由$\pi \to \pi ^\star $ 产生，共两个峰：吸收峰为180nm和200nm，均为强吸收
+\end{defi}
+还有一种是无机物的电子转移：
+\begin{notation}
+    电荷转移吸收带：同时具有配位体和受体的分子在吸收外来辐射后，电子从给体跃迁到受体，强吸收，可以用于定量分析，\textbf{发生在分子内部，需要光照}
+\end{notation}
+\begin{defi}
+    简并轨道：过渡元素的d和f轨道
+\end{defi}
+当与配位体配合时，轨道的简并解除，发生能级分裂，轨道如果有没有填充电子的位置，低轨道的电子会吸收能量跃迁到更高的d和f轨道，产生吸收光谱
+\subsection{影响吸收带的主要因素}%
+\label{sub:影响吸收带的主要因素}
+影响形状或位置：
+\begin{itemize}
+    \item 结构
+    \item 状态
+    \item 温度
+    \item 溶剂极性
+    
+\end{itemize}
+影响吸收带强度：
+\begin{itemize}
+    \item 能级差
+    \item 空间位置
+    
+\end{itemize}
+\begin{notation}
+    共轭效应：当$\pi $ 电子共轭增大，如1-3二丁烯，两个$\pi $ 轨道会形成能量一高一低的两个轨道$\pi_1,\pi_2$，同样$\pi ^\star $ 会形成两个轨道$\pi ^\star_3, \pi ^\star_4$，导致$\lambda_\text{max}$ 红移，吸光系数$\varepsilon_\text{max}$ 增大
+\end{notation}
+\begin{eg}
+    萘$\to $ 蒽$\to $ 四并苯$\to $
+\end{eg}
+\begin{notation}
+    超共轭效应：$\sigma$ 电子不受屏蔽效应的离域作用，类似共轭效应
+
+    位阻效应：空间阻碍使得共轭体系破坏，$\lambda_\text{max}$ 蓝移，$\varepsilon_\text{max}$ 减小
+\end{notation}
+\begin{notation}
+    跨环效应：一些$\beta,\gamma$中由于空间结构可以发生$\pi \to \pi ^\star $ ，使得不在同一个平面的两个不饱和键可以发生共轭，强吸收
+\end{notation}
+

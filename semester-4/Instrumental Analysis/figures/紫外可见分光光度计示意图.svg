@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="240mm"
+   height="120mm"
+   viewBox="0 0 240 120"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="紫外可见分光光度计示意图.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2546202"
+     inkscape:cx="231.94271"
+     inkscape:cy="195.27823"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     width="200mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="2480"
+     inkscape:window-height="1477"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="mm"
+       spacingx="10"
+       spacingy="10"
+       empspacing="4"
+       dotted="false"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-177)">
+    <circle
+       style="fill:#85ffc9;stroke:#000000;stroke-width:1;stroke-miterlimit:3.9;stroke-dasharray:none"
+       id="path1"
+       cx="46.500629"
+       cy="234.46677"
+       r="6.8538342" />
+    <g
+       id="g8"
+       transform="translate(-0.63266163,-7.1701648)">
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 81.402458,229.93268 -8.224602,26.78267 h 17.081865 z"
+         id="path6" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#85ffff;fill-opacity:1;stroke:none;stroke-width:0.801563;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 77.691653,244.07196 3.710805,-12.11617 3.94014,11.85256 c 2.167078,6.51891 3.946438,11.97119 3.954134,12.11618 0.01095,0.20631 -1.652121,0.26361 -7.650945,0.26361 h -7.66494 z"
+         id="path8" />
+    </g>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#fbff31;fill-opacity:1;stroke:none;stroke-width:0.801563;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 172.71661,244.27301 v -1.4762 h 2.64351 c 2.61435,0 2.64092,0.005 2.40812,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51497 0.2328,0.43499 0.20623,0.43984 -2.40812,0.43984 h -2.64351 v -2.4252 -2.4252 h 3.06529 c 3.04189,0 3.06349,0.003 2.82989,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51498 0.2336,0.43647 0.212,0.43983 -2.82989,0.43983 h -3.06529 v -2.4252 -2.4252 h 3.06529 c 3.04189,0 3.06349,0.003 2.82989,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51498 0.2336,0.43647 0.212,0.43983 -2.82989,0.43983 h -3.06529 v -2.4252 -2.4252 h 2.64351 c 2.61435,0 2.64092,0.005 2.40812,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51498 0.2328,0.43498 0.20623,0.43983 -2.40812,0.43983 h -2.64351 v -1.05443 -1.05444 h 10.64981 10.6498 v 10.6498 10.64981 h -10.6498 -10.64981 z"
+       id="path9" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 53.143574,226.76938 H 178.19969"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 56.095995,232.04156 H 179.04324"
+       id="path3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 56.095995,237.31374 H 179.04324"
+       id="path4"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 53.143574,242.58592 H 178.19969"
+       id="path5"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="rect8"
+       style="opacity:1;vector-effect:none;fill:none;fill-rule:evenodd;stroke:#000000;stroke-miterlimit:3.9;stop-color:#000000;stop-opacity:1"
+       d="m 142.55975,221.07542 v 29.10243 h -14.55122 v -29.10243"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect9"
+       width="22.56493"
+       height="22.56493"
+       x="172.08394"
+       y="223.81696" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="36.483486"
+       y="254.60649"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="stroke-width:1.006"
+         x="36.483486"
+         y="254.60649">光源</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="71.490761"
+       y="260.30045"
+       id="text10"><tspan
+         sodipodi:role="line"
+         id="tspan10"
+         style="stroke-width:1.006"
+         x="71.490761"
+         y="260.30045">单色器</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="126.11054"
+       y="260.51132"
+       id="text11"><tspan
+         sodipodi:role="line"
+         id="tspan11"
+         style="stroke-width:1.006"
+         x="126.11054"
+         y="260.51132">吸收池</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
+       x="174.19283"
+       y="255.45003"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="stroke-width:1.006"
+         x="174.19283"
+         y="255.45003">检测器</tspan></text>
+  </g>
+</svg>

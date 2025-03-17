@@ -1,0 +1,66 @@
+\lecture{6}{03.14}
+第一种：无干扰，a的最大吸光度b不吸收
+
+第二种：a干扰b，b不干扰a；先解出a
+
+第三种：相互干扰；通过计算分光光度法，利用吸光度的加和性来测定
+
+解方程：
+\[
+    \begin{cases}
+        A_1^{a+b} = A_1^{a}+A_1^{b}\\
+        A_2^{a+b} = A_2^{a}+A_2^{b}
+    \end{cases}
+.\]
+第二个方法：等吸收双波长法：在吸收峰两侧选择一对吸光度相等的点，其中一个点落在另一个吸收峰的垂线上：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{等吸收双波长}
+    \caption{等吸收双波长}
+    \label{fig:等吸收双波长}
+\end{figure}
+
+计算：\[
+    A_1^{b} = A_2^{b}\quad \Delta A = A_2-A_1 = \left( A_2^{a}+A_2^{b} \right)-\left( A_1^{a}-A_1^{b} \right) = A_2^{a}-A_1^{a}
+.\]
+\section{荧光分析法}%
+\label{sec:荧光分析法}
+\subsection{概述}%
+\label{sub:概述}
+\begin{defi}
+    发射光谱：处于激发态的原子离子或分子返回基态发出的能量
+\end{defi}
+分子发光：能量以辐射的方式释放
+\begin{notation}
+    按激发模式分为：\textbf{光致发光、生物发光、化学发光}
+\end{notation}
+光致发光分为\textbf{荧光和磷光}，分子荧光分析法通过荧光的位置强度测定物质含量和鉴定
+\subsection{特点}%
+\label{sub:特点}
+\begin{itemize}
+    \item 灵敏度高：检出限极低，比UV-vis还低3个数量级
+    \item 选择性好
+    \item 线性范围宽
+    \item 有强荧光的物质不多，应用范围窄，大多用于生物物质
+\end{itemize}
+\subsection{分子荧光的产生}%
+\label{sub:分子荧光的产生}
+基态原子吸收光能处于激发态$\left( S_1,S_2 \right)$,返回基态时通过辐射跃迁和无辐射跃迁释放能量，如图：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{基态分子激发态}
+    \caption{基态分子激发态}
+    \label{fig:基态分子激发态}
+\end{figure}
+\subsubsection*{电子能级的多重性}%
+\label{subsub*:电子能级的多重性}
+受到激发后，电子的自旋方向不变，称为激发单重态，记为$S_{n}$；激发后自旋方向改变，成为三重态，称为激发三重态，记为$T_{n}$ ，一般比$S_{n}$ 的能量低
+
+激发单重态的分子平均寿命短，三重态的较长。单重态激发到三重态为禁阻跃迁，进入的几率较小
+
+\begin{figure}[ht!]
+    \centering
+    \incfig[]{振动弛豫、内转换和荧光}
+    \caption{振动弛豫、内转换和荧光}
+    \label{fig:振动弛豫、内转换和荧光}
+\end{figure}

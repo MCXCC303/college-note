@@ -1,0 +1,121 @@
+\learn{9}{03.06}
+\subsection{回归}%
+\label{sub:回归}
+简单来说，回归通过一系列\textbf{离散}的点，估计出一个\textbf{连续}的关系。回归的种类：
+\begin{itemize}
+    \item 线性回归：使用线性函数$f\left( x_{i} \right)=w x_{i}+b$
+    \item 对数几率回归：本质是一种分类算法，通过引入sigmoid函数来确定哪些数据被激活
+    \item 多项式回归：通过$y=\beta_0+\beta_1x+\beta_2x^2 +\ldots +\beta x^{n}+\varepsilon$ 来拟合数据
+    \item 岭回归
+    \item 套索回归
+    \item \ldots
+\end{itemize}
+sigmoid函数：\[
+    \sigma\left( z \right) = \frac{1}{1+e^{-z}}
+.\]
+图像如下：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{sigmoid函数}
+    \caption{sigmoid函数}
+    \label{fig:sigmoid函数}
+\end{figure}
+
+这个函数对应的回归模型为：
+\begin{align*}
+    P\left( y=1\mid \bm{x} \right)&=\sigma\left( \bm{\theta}^\top \bm{x} \right) = \frac{1}{1+e^{-\bm{\theta^\top}\bm{x}}}\\
+    P\left( y=0\mid \bm{x} \right) &= 1-P\left( y=1\mid \bm{x} \right)
+.\end{align*}
+首先来看线性回归，有一个数据集合如下：
+\[
+    D = \left\{ \left( \bm{x_1},y_1 \right),\left( \bm{x_2},y_2 \right),\ldots \left( \bm{x_{n}},y_{n} \right) \right\}
+.\]
+其中集合中元素的第一个参数为一个$m$ 维向量，即：\[
+    \bm{x}_i = \begin{bmatrix}
+        x_{i}^{(1)}&x_{i}^{(2)}&x_{i}^{(3)}\ldots x_{i}^{(m)}\\
+    \end{bmatrix}^\top 
+.\]
+首先考虑一维向量，即常数，这个计算就是常见的线性回归计算，使用最小二乘法，求出$w,b$并拟合为以下表达式：\[
+    f\left( x_{i} \right) = w x_{i} + b
+.\]
+如果输入为多维向量，如三维向量，那么由于向量需要通过点乘得到常数，因此$w$ 成为一个向量，即：
+\[
+    f\left( \bm{x}_i \right) = \bm{w}^\top \bm{x}_i+b+\varepsilon_{i}
+.\]
+这里有一个误差项，表示回归所不能解释的部分（常常看作一个$\mathbb{E}_{\varepsilon_{i}\sim p}=0$的高斯噪声），一般不考虑，因此也写为：\[
+    f\left( \bm{x}_i \right) \approx \bm{w}^\top \bm{x}_i+b
+.\]
+归类到多维后，称$\bm{w}\in \mathbb{R}^{m}$ 为模型的\textbf{权重向量}。回归中常用MSE来评价性能，求解$\bm{w}$ 和$b$ 一般使用\textbf{最小二乘法}，过程如下：
+\begin{proof}
+    回顾残差平方和：\[
+        \text{RSS} = \sum_{i=1}^{n} \left( y_{i}-\hat{y_{i}} \right)^2 
+    .\]
+    把$\hat{y_{i}}$ 换为$f\left( \bm{x}_i \right)$写出这个回归的均方误差表达：\begin{equation}
+        \label{eq:RSS-f(x)}
+    E_{\left( \bm{w}, b \right)} = \underset{\left( \bm{w},b \right)}{\arg \min } \sum_{i=1}^{m} \left( f\left( \bm{x}_i \right)-y_{i}  \right)^2 = \underset{(\bm{w},b)}{\arg\min} \sum_{i=1}^{m} \left( \bm{w}^\top \bm{x}_i+b-y_{i} \right)^2 
+    \end{equation}
+    这里$\arg \min $ 的意思是通过取一组$\bm{w},b$的值使得表达式最小，严格定义上，这个式子所代表的过程就称为线性回归。求一个二元函数$E_{\left( \bm{w},b \right)}=\sum_{i=1}^{m} \left( \bm{w}^\top \bm{x}_i+b-y_{i} \right)^2 $的最小值，由于向量内积的性质$\bm{w}^\top \bm{x}_i=\bm{x}_i^\top \bm{w}$也可以写为：\[
+        E = \sum_{i=1}^{m} \left( \bm{x}_i^\top \bm{w} +b-y_{i}\right)^2 
+    .\]
+    这个式子可以直接求偏导来计算最小值，但是为了机器运算方便，尽量转化为矩阵运算。平方和很容易让人想到$L^2 $ 范数，或者Frobenius范数。观察可得，这里的平方和可以拆成$y$ 和$\bm{x}_i^\top \bm{w}+b$两部分。记住$\bm{x}_i$ 和$\bm{w}$都是列向量，这里为了统一输入，即输入的矩阵不含变量，给每一个$\bm{x}_i$ 的末端加上一个1，给$\bm{w}$ 的末端加上一个$b$ ，这样做之后两个向量变成下列形式：
+    \begin{align*}
+        \bm{\widetilde{x}}_i = \begin{bmatrix}
+            \bm{x}_i^\top & 1\\
+        \end{bmatrix}^\top =\begin{bmatrix}
+            x_{i}^{(1)}\\
+            x_{i}^{(2)}\\
+            \vdots\\
+            x_{i}^{(n)}\\
+            1
+        \end{bmatrix}\\
+        \bm{\widetilde{w}} = \begin{bmatrix}
+            \bm{w}^\top & b\\
+        \end{bmatrix}^\top  = \begin{bmatrix}
+            w_1\\
+            w_2\\
+            \vdots\\
+            w_{n}\\
+            b
+        \end{bmatrix}
+    .\end{align*}
+    将所有的$\bm{\widetilde{x}}_i$横向合并，记为$\bm{X}$ ，形如：\[
+        \bm{X} = \begin{bmatrix}
+            \bm{\widetilde{x_1}}^\top \\
+            \bm{\widetilde{x_2}}^\top \\
+            \vdots\\
+            \bm{\widetilde{x_m}}^\top \\
+        \end{bmatrix} = \begin{bmatrix}
+        \bm{x_1}^\top &1\\
+        \bm{x_2}^\top &1\\
+        \vdots&\vdots\\
+        \bm{x_m}^\top &1\\
+        \end{bmatrix} \quad \bm{X} \in \mathbb{R}^{m \times \left( n+1 \right)}
+    .\]
+    带回$E_{\left( \bm{w},b \right)}$ 后可以把两个参数整合为一个，同时由于所有的$\bm{\widetilde{x}}_i$在$\bm{X}$ 中，计算发现：\[
+        E_{\bm{\widetilde{w}}} = \left( \bm{X}\bm{\widetilde{w}} -\bm{y}\right)^2 = \left\lVert \bm{y} - \bm{X}\bm{\widetilde{w}} \right\rVert_{2}^{2}
+    .\]
+    想要求一个函数的最小值还可以用梯度法，即$\nabla f=0$时$f$ 可能取得一个极值（在这里就是求导），对于$E_{\bm{\widetilde{w}}}$，对$\bm{\widetilde{w}}$ 求梯度：\[
+        \nabla _{\bm{\widetilde{w}}}E_{\left( \bm{\widetilde{w}} \right)} = \frac{\partial E_{\bm{\widetilde{w}}}}{\partial \bm{\widetilde{w}}}
+    .\]
+    这里有一些小细节，首先将$E$ 展开为内积形式：
+    \begin{align*}
+        E &= \left( \bm{y}-\bm{X}\bm{\widetilde{w}} \right)^\top\left( \bm{y}-\bm{X}\bm{\widetilde{w}} \right) = \left( \bm{y}^\top -\bm{\widetilde{w}}^\top \bm{X}^\top  \right) \left( \bm{y}-\bm{X}\bm{\widetilde{w}} \right)\\
+          &= \bm{y}^\top \bm{y}-2\bm{\widetilde{w}}^\top \bm{X}^\top \bm{y} + \bm{\widetilde{w}}^\top \bm{X}^\top \bm{X}\bm{\widetilde{w}}
+    .\end{align*}
+    此处注意：$2\bm{\widetilde{w}}^\top \bm{X}^\top \bm{y}$ 是一个\textbf{标量}，因此对其求转置仍为其本身，即：
+    \begin{align*}
+        E &= \bm{y}^\top \bm{y} - 2\bm{\widetilde{w}}^\top \bm{X}^\top \bm{y} + \bm{\widetilde{w}}^\top \bm{X}^\top \bm{X}\bm{\widetilde{w}}\\
+        &= \bm{y}^\top \bm{y} -2\bm{y}^\top \bm{\widetilde{w}}\bm{X} + \bm{\widetilde{w}}^\top \bm{X}^\top \bm{X} \bm{\widetilde{w}}
+    .\end{align*}
+    引入两个对矩阵求导的公式：\begin{equation}
+        \label{eq:xTAAT}
+        \frac{\partial }{\partial \bm{x}}\bm{x}^\top \bm{A} = \bm{A}^\top
+    \end{equation}
+    \begin{equation}
+        \label{eq:xTAx2Ax}
+        \frac{\partial }{\partial \bm{x}} \bm{x}^\top \bm{Ax} = 2\bm{Ax} \text{(对称矩阵)}
+    \end{equation}
+    对于第一个公式，令$\bm{A}=\bm{X}^\top \bm{y}$ ，可以解得\[
+        \frac{\partial }{\partial \bm{\widetilde{w}}} 2\bm{\widetilde{w}}^\top \bm{X}^\top \bm{y} = 
+    .\]对于
+\end{proof}
