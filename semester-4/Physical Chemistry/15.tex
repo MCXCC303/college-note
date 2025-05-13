@@ -1,0 +1,50 @@
+\lecture{15}{04.09}
+\subsection{温度对K的影响}%
+\label{sub:温度对K的影响}
+由Gibbs-Helmheltz公式：
+\[
+    \frac{\mathrm{d}\ln K_{p}^\ominus}{\mathrm{d}T} = \frac{\Delta_\text{f}H_{m}^\ominus }{RT^2 }
+.\]
+设在一定区间内$\Delta_\text{f}H_{m}^\ominus $与温度无关，积分：\[
+    \int_{K_{p}^\ominus\left( T_1 \right)}^{K_{p}^\ominus\left( T_2 \right)}  \mathrm{d}\ln K_{p}^\ominus = \frac{\Delta_\text{r}H_{m}^\ominus }{R}\int_{T_1}^{T_2} \frac{1}{T_1^2 } \mathrm{d}T
+.\]
+不定积分为：
+\[
+    \ln K_{p}^\ominus = -\frac{\Delta_\text{r}H_{m}^\ominus }{RT}+C
+.\]
+定积分为：
+\[\boxed{
+    \ln \frac{K_{p}^\ominus\left( T_2 \right)}{K_{p}^\ominus\left( T_1 \right)} = \frac{\Delta_\text{r}H_{m}^\ominus }{R} \left( \frac{1}{T_1}-\frac{1}{T_2} \right)
+.}\]
+\subsection{压力对G的影响}%
+\label{sub:压力对G的影响}
+根据基本关系式：\[
+    \left(\frac{\partial G}{\partial p}\right)_{T} = V
+.\]
+得：\[
+    \left(\frac{\partial \Delta_\text{f}G_{m}}{\partial p}\right)_{T} = \Delta_\text{r}V_{m}
+.\]
+凝聚相反应$\Delta V$ 变化很小，视为常数积分：\[
+    \int_{\Delta_\text{r}G_{m,1} }^{\Delta_\text{r}G_{m,2} }  \mathrm{d}\Delta_\text{r}G_{m} = \int_{p_1}^{p_2}  \mathrm{d}p \cdot \Delta_\text{r}V_{m}
+.\]
+即：
+\[\boxed{
+    \Delta_\text{r}G_{m,2} - \Delta_\text{r}G_{m,1} = \Delta_\text{r}V_{m}\left( p_2-p_1 \right) 
+.}\]
+\section{相平衡}%
+\label{sec:相平衡}
+重点：
+\begin{itemize}
+    \item 相律
+    \item 单组分
+    \item 完全互溶双液系统
+\end{itemize}
+\subsection{相律}%
+\label{sub:相律}
+\begin{defi}
+    系统内部物理和化学性质完全均匀的部分：相
+\end{defi}
+使用$\Phi$ 表示一个系统中的相的个数
+\begin{notation}
+    液体可以一相、两相、三相混合，每种固体各为一个相（除固体溶液），不论有多少气体，只有一个气相
+\end{notation}

@@ -765,7 +765,7 @@ endsnippet
 
 context "math()"
 snippet sumi "sum in i" iA
-\sum_{i}${1:f(i)}
+\sum_{${1:i}}${2:f(i)}
 endsnippet
 
 context "math()"
@@ -994,7 +994,12 @@ endsnippet
 
 context "math()"
 snippet o-- "\ominus" iA
-^\ominus
+${1:^}\ominus
+endsnippet
+
+context "math()"
+snippet o++ "\oplus" iA
+${1:^}\oplus
 endsnippet
 
 context "math()"
@@ -1003,7 +1008,7 @@ snippet \ominus' "\ominus" iA
 endsnippet
 
 priority 10000
-snippet clss "Celcius" iA
+snippet clss "celcius" iA
 ^\circ\text{C}
 endsnippet
 
@@ -1228,8 +1233,8 @@ snippet /=\ "Reversible arrow" iA
 endsnippet
 
 context "math()"
-snippet 'd([a-zA-Z]*)([HUSGC])' "D_rH/D_fH/D_cH/D_S/D_G/D_U/D_C_p" riA
-\Delta_\text{`!p snip.rv = match.group(1)`}`!p snip.rv = match.group(2)`${1:_{${2:\text{m}}}${3:^\ominus}} 
+snippet 'd([a-zA-Z]*)([HUSGCV])' "D_rH/D_fH/D_cH/D_S/D_G/D_U/D_V/D_C_p" riA
+\Delta_\text{`!p snip.rv = match.group(1)`}`!p snip.rv = match.group(2)`${1:_{${2:m}}${3:^\ominus}} 
 endsnippet
 
 priority 300
@@ -1244,7 +1249,7 @@ nRT
 endsnippet
 
 context "math()"
-snippet '(\d*)(ke|kj|mol|kpa|jkm|liter|jou|hz|js)' "Chemical Units" irA
+snippet '(\d*)(ke|kj|kg|mol|kpa|jkm|liter|jou|hz|mL|sml)' "Chemical Units" irA
 `!p snip.rv = match.group(1)`\ce{`!p
 unit = match.group(2)
 if unit == 'kj':
@@ -1261,8 +1266,8 @@ elif unit == 'jkm':
 	snip.rv = 'J*K^{-1}*mol^{-1}'
 elif unit == 'hz':
 	snip.rv = 'Hz'
-elif unit == 'hz':
-	snip.rv = 'J*s^{-1}'
+elif unit == 'sml':
+	snip.rv = 'S*m^2*mol^{-1}' 
 else:
 	snip.rv = unit
 `}
@@ -1304,7 +1309,7 @@ snippet '(sld|gas|liq|res|solid)' "status" irA
 (`!p 
 status = match.group(1)
 if status == 'res':
-	snip.rv = "a.q."
+	snip.rv = "aq"
 else:
 	snip.rv = f"{status[0]}"`)
 endsnippet

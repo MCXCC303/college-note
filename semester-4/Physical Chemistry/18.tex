@@ -1,0 +1,119 @@
+\lecture{18}{04.23}
+本章作业：
+\begin{itemize}
+    \item P148. 1, 3
+    \item 绘制水的相图
+\end{itemize}
+5月9日提交。
+\section{电化学}%
+\label{sec:电化学}
+研究内容包含电解和电池
+\begin{notation}
+    重点：
+    \begin{itemize}
+        \item 电解质溶液的电导和测定
+        \item 可逆电池
+        \item 标准氢电极
+    \end{itemize}
+\end{notation}
+\subsection{电解质溶液的导电机理}%
+\label{sub:电解质溶液的导电机理}
+\begin{defi}
+    导体：能导电的物质
+\end{defi}
+分为两类：电子导体和离子导体；电子导体的导电由自由电子定向运动产生，温度升高电阻升高；离子导体通过正负离子反方向移动而导电，温度升高电阻下降
+\begin{notation}
+    能实现电解质溶液连续导电的装置称为电化学装置，包含原电池和电解池；装置由电极和电解质溶液组成，电极上的得失电子反应来源于溶液的电荷转移
+\end{notation}
+电池的电极为\textbf{阴极、阳极}，电解的电极为\textbf{正极、负极}
+\begin{notation}
+    电势高的电极为正极，电流从正极流向负极，电子由负极流向正极
+
+    阴极发生还原反应，（阳离子）得到电子；阳极发生氧化反应，（阴离子）失去电子
+\end{notation}
+\begin{eg}
+    电解$\ce{CuCl_2}$ ：
+    \begin{align*}
+        \oplus:& \ce{2Cl-}-\ce{2e-} \to \ce{Cl_2}\\
+        \ominus:& \ce{Cu^2+}+\ce{2e-} \to \ce{Cu}
+    .\end{align*}
+\end{eg}
+\subsubsection{法拉第定律}%
+\label{ssub:法拉第定律}
+\begin{itemize}
+    \item 在电极界面上发生化学变化物质的质量与通入的电荷量成正比：$m\propto Q$ 
+    \item 当相同的电量通过不同电解质时，各电极上析出（或溶解）的物质的质量与其化学当量（$M/z$）成正比。
+\end{itemize}
+法拉第常数：$F=96485$，或约为$F\approx 96500$，代表1mol电子的总电荷量。可以由元电荷$e$ 和阿伏伽德罗常数$N_\text{A}$ 直接计算：
+\[
+    F = e\cdot N_\text{A}
+.\]
+
+如果在电解池中发生： \[
+    \ce{M^{Z+}} + Z\ce{e-} \to M
+.\]
+在阴极上生成$n\ce{mol}$金属M所需电子数量为$N =n\cdot N_\text{A}Z$ ，转移的电荷量为： \[
+    Q = N\cdot e
+.\]
+带入法拉第常数：$e = \frac{F}{N_\text{A}}$ \[
+    Q = nZF
+.\]
+即发生$n\ce{mol}$ 反应：
+\[
+    n = \frac{Q}{ZF}
+.\]
+为法拉第电解定律的数学表达式，由于$I = \frac{\mathrm{d}Q}{\mathrm{d}t}\Rightarrow Q = \int_{0}^{t} I \mathrm{d}t$，当电流恒定时$Q = It$ ，即：\[
+    It = nZF
+.\]
+\subsubsection{离子电迁移}%
+\label{ssub:离子电迁移}
+假定电化学装置的阴阳极之间有假想的A, B平面，在通电时会有离子迁移过A, B平面，物质的量变化与迁移速率有关
+\[
+    \frac{\Delta n_{+}}{\Delta n_{-}} = \frac{Q_+}{Q_-} = \frac{r_{+}}{r_{-}}
+.\]
+\subsubsection{离子迁移数}%
+\label{ssub:离子迁移数}
+\begin{defi}
+在电解质溶液中，某种离子所承担的电流占总电流的比例
+\[
+    t_i = \frac{I_i}{I_\text{total}} \implies t_+ = \frac{Q_+}{Q_++Q_-}\quad t_- = \frac{Q_-}{Q_++Q_-}
+.\]
+\end{defi}
+\[
+    t_++t_- = 1
+.\]
+\subsection{电导、电导率}%
+\label{sub:电导、电导率}
+\begin{defi}
+    电导：电阻的倒数\[
+        R = \frac{V}{I} = \frac{1}{L} \implies L = \frac{I}{V}
+    .\]
+    单位：西门子
+\end{defi}
+\begin{defi}
+    电导率：电阻率$\rho$ 的倒数\[
+        \kappa = \frac{1}{\rho} = \frac{1}{R}\cdot \frac{l}{A} = L\cdot \frac{l}{A}
+    .\]
+\end{defi}
+\begin{defi}
+    摩尔电导率：在相距为单位距离的两个平行电导电极之间放置含有1mol电解质溶液，此时溶液所具有的电导称为摩尔电导率\[
+        \Lambda_{m} = \kappa V_{m} = \frac{\kappa}{c}
+    .\]
+    其中，$V_{m}$ 是含有1mol电解质溶液的体积，$c$ 为电解质溶液的浓度；摩尔电导率的单位为$\ce{S*m^2*mol^{-1}}$
+\end{defi}
+\subsubsection{电导、摩尔电导和浓度的关系}%
+\label{ssub*:电导、摩尔电导和浓度的关系}
+\begin{notation}
+    电导率：
+
+强电解质：电导率随浓度增加而升高，到达一定程度后，电导率降低
+
+中性：升高但不能太高（饱和）
+
+弱电解质：与浓度没有明显关联
+\end{notation}
+\begin{notation}
+    在无限稀释后，强电解质的摩尔电导率趋近一个极限值，称为无限稀释时的摩尔电导率$\Lambda_{m}^{\infty }$ ；科尔劳施发现：\[
+        \Lambda_{m} = \Lambda_{m}^{\infty } -A\sqrt{c}
+    .\]
+\end{notation}

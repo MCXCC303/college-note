@@ -1,0 +1,80 @@
+\lecture{15}{04.22}
+两种弛豫是NMR信号维持的要素：
+\begin{itemize}
+    \item 自旋-晶格弛豫
+    \item 自旋-自旋弛豫
+\end{itemize}
+\subsubsection*{自旋-晶格弛豫}%
+\label{subsub*:自旋-晶格弛豫}
+处于高能态的核自旋体系将能量传递给\textbf{周围环境}，又称\textbf{纵向弛豫}
+\begin{notation}
+    半衰期用$T_1$ 表示，液体的$T_1$ 一般较短，固体的$T_1$ 通常较长
+\end{notation}
+\subsubsection*{自旋-自旋弛豫}%
+\label{subsub*:自旋-自旋弛豫}
+处于高能态的核自旋体系将能量传递给\textbf{邻近低能态同类磁性核}，又称\textbf{横向弛豫}
+\begin{notation}
+    半衰期用$T_2$ 表示，一般气体和液体试样的$T_2\approx 1\text{s}$ ，固体试样$T_2\approx 10^{-4}\sim 10^{-5}$
+\end{notation}
+\subsection{核磁共振仪}%
+\label{sub:核磁共振仪}
+分类：
+\begin{itemize}
+    \item 连续波核磁共振仪
+    \item 脉冲傅里叶变换共振仪
+\end{itemize}
+\begin{notation}
+    连续波核磁共振仪：有磁铁、射频发生器、射频接收器、扫场线圈，样品管
+
+    使用Helmholtz线圈来制作扫场线圈，可以通过直流电的强度来调整磁场的强度
+\end{notation}
+固定照射频率、改变磁场强度的称为\textbf{扫场}；固定磁场强度，改变照射频率的称为\textbf{扫频}
+\begin{notation}
+    脉冲傅里叶变换共振仪：用一个强的射频，以脉冲方式使系统偏离平衡，系统在弛豫时会释放信号，幅度随时间衰减，称为\textbf{自由感应衰减信号}或FID，再通过傅里叶变换转为频谱图
+\end{notation}
+\subsection{溶剂和试样测定}%
+\label{sub:溶剂和试样测定}
+主要考虑：
+\begin{itemize}
+    \item 试样溶解度
+    \item 是否产生干扰信号
+    
+\end{itemize}
+\begin{eg}
+氢谱常用\textbf{氘代试剂}
+\end{eg}
+\subsection{化学位移}%
+\label{sub:化学位移}
+根据$\nu_0=\nu$ ：$\ce{^1H}$ 在1.4092T时只吸收60MHz的电磁波，但是实验发现不同化学环境的氢核所吸收的频率有差异，数量级在10ppm下
+\subsubsection*{屏蔽效应}%
+\label{subsub*:屏蔽效应}
+原子核感受到的磁场强度比实际施加的磁场更低，原因是核外电子绕核旋转产生与磁场方向相反的感应磁场，抵消一部分磁场
+
+由于屏蔽作用，实际受到的场强：\[
+    H = H_0-\sigma H_0 = \left( 1-\sigma \right)H_0
+.\] 
+称$\sigma$ 为屏蔽常数，带回计算进动频率：
+\[
+    \nu = \frac{\gamma}{2\pi }\left( 1-\sigma \right)H_0
+.\]
+使用扫频时，NMR信号出现在低频区；使用扫场时，NMR信号出现在高频区，即：\textbf{右端为高场低频、左端为低场高频}
+
+\begin{notation}
+    由于屏蔽效应的存在，不同化学环境的氢核的共振频率不同，称这种现象为\textbf{化学位移}$\delta$，一般定义四甲基硅烷的氢原子的化学位移为参考
+\end{notation}
+扫场：
+\[
+    \delta = \frac{H_\text{标准}-H_\text{样品}}{H_\text{标准}}\times 10^{6}\left( \text{ppm} \right)
+.\]
+扫频：
+\[
+    \delta = \frac{\nu_\text{样品}-\nu_\text{标准}}{\nu_\text{标准}}\times 10^{6}\left( \text{ppm} \right)
+.\]
+\subsection{化学位移的影响因素}%
+\label{sub:化学位移的影响因素}
+\begin{itemize}
+    \item 局部屏蔽效应
+    \item 溶剂效应
+    \item 去屏蔽效应
+    \item 电负性：越大，化学位移越大
+\end{itemize}

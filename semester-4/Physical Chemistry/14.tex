@@ -1,0 +1,130 @@
+\lecture{14}{04.02}
+\section{化学平衡}%
+\label{sec:化学平衡}
+重点：
+\begin{itemize}
+    \item 化学反应等温方程式
+    \item 平衡常数
+    \item 反应限度
+    \item 计算$\Delta_\text{r}G_{m}^\ominus $
+    \item 反应偶合
+\end{itemize}
+\subsection{化学平衡的条件}%
+\label{sub:化学平衡的条件}
+\begin{defi}
+    反应进度：$\xi = \frac{\Delta n_\text{B}}{\nu_\text{B}}$
+\end{defi}
+对于任意一个封闭体系发生的化学反应，系统不做非膨胀功，反应为：\[
+    a\ce{A}+d \ce{D}\ce{<=>[][]}g\ce{G}+h\ce{H}
+.\]
+由\[\boxed{
+    \mathrm{d}G = -S\mathrm{d}T + V\mathrm{d}p + \sum_{\text{B}}\mu_\text{B}\mathrm{d}n_\text{B}
+.}\]
+得：\[
+    \left(\frac{\partial G}{\partial \xi}\right)_{T,p} = \sum_{\text{B}}\nu_\text{B}\mu_\text{B}
+.\]
+当$\xi=1\ce{mol}$ 时：
+\[
+    \left( \Delta_\text{r}G_{m}  \right)\left.\right|_{T,p}^{} = \sum_{\text{B}}\nu_\text{B}\mu_\text{B}
+.\]
+\begin{notation}
+    适用于：1. 等温等压，2. 反应中化学势不变
+\end{notation}
+\begin{notation}
+    由上：使用以下三种条件判断等价：
+    \[
+        \left.\left( \Delta_\text{r}G_{m} \right)\right|_{T,p}^{}\quad \sum_{\text{B}}\nu_\text{B}\mu_\text{B} \quad \left(\frac{\partial G}{\partial \xi}\right)_{T,p}
+    .\]
+    当：
+    \begin{enumerate}
+        \item $\Delta_\text{r}G_{m} <0$时，反应向右进行
+        \item $\Delta_\text{r}G_{m} >0$ 时：反应向左进行
+        \item $\Delta_\text{r}G_{m} =0$ 时反应平衡
+    \end{enumerate}
+\end{notation}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{系统吉布斯自由能和反应进度的关系}
+    \caption{系统吉布斯自由能和反应进度的关系}
+    \label{fig:系统吉布斯自由能和反应进度的关系}
+\end{figure}
+\subsection{等温方程式}%
+\label{sub:等温方程式}
+回顾：
+\[\boxed{
+    \mu_\text{B}\left( T,p \right) = \mu_\text{B}^\ominus\left( T,p^\ominus \right) + RT\ln \frac{p_\text{B}}{p^\ominus}
+.}\]
+由于$\Delta_\text{r}G_{m} =\sum_{\text{B}}\nu_\text{B}\mu_\text{B}$ ，带入：
+\begin{align*}
+    \Delta_\text{r}G_{m} &= \sum_{\text{B}}\left( \mu^\ominus\left( T,p^\ominus \right) +RT\ln \frac{p_\text{B}}{p^\ominus}\right)\nu_\text{B} \\
+    &= \sum_{\text{B}}\mu_\text{B}^\ominus\left( T,p^\ominus \right)\nu_\text{B} + \sum_{\text{B}}\left( RT\ln \frac{p_\text{B}}{p^\ominus} \right)\nu_\text{B}
+.\end{align*}
+由定义\[\boxed{
+    \sum_{\text{B}}\mu_\text{B}^\ominus\left( T,p \right)\nu_\text{B} = \Delta_\text{r}G_{m}^\ominus 
+.}\]
+则原式：
+\begin{align*}
+    \Delta_\text{r}G_{m} &= \Delta_\text{r}G_{m}^\ominus + \sum_{\text{B}}RT\ln \frac{p_\text{B}}{p^\ominus}\\
+    &= \Delta_\text{r}G_{m}^\ominus +RT\ln \frac{\left( \frac{p_\text{G}}{p^\ominus} \right)^{g}\left( \frac{p_\text{H}}{p^\ominus} \right)^{h}}{\left( \frac{p_\text{A}}{p^\ominus} \right)^{a}\left( \frac{p_\text{D}}{p^\ominus} \right)^{d}} \\
+    &= \Delta_\text{r}G_{m}^\ominus +RT\ln Q_{p}
+.\end{align*}
+称$Q_{p}$ 为压力商，可以通过求各物质的逸度$f$ 来算。当平衡时，$\Delta_\text{r}G_{m} = 0 $ ，则：\[
+    \Delta_\text{r}G_{m}^\ominus \left( T \right)= -RT\ln K^\ominus
+.\]
+称$K^\ominus$ 为平衡常数。$K^\ominus = K^\ominus\left( T \right)$，且为无量纲量
+\subsection{平衡常数表示法}%
+\label{sub:平衡常数表示法}
+\subsubsection*{理想气体反应}%
+\label{subsub*:理想气体反应}
+物质的量分数表示：\[
+    K_{x} = \frac{x_\text{G}^{g}x_\text{H}^{h}\ldots }{x_\text{A}^{a}x_\text{D}^{d}\ldots } = \prod_{\text{B}}^{} x_\text{B}^{\nu_{\text{B}}}
+.\]
+\subsubsection*{实际气体}%
+\label{subsub*:实际气体}
+使用逸度代替：\[
+    K_{f}^\ominus = K_{p}^\ominus\cdot K_{\gamma}
+.\]
+仅了解
+\subsubsection*{复相化学反应}%
+\label{subsub*:复相化学反应}
+\begin{eg}
+     \[
+        \ce{CaCO_3(s)}=\ce{CaO(s)}+\ce{CO_2(g)}
+    .\]
+\end{eg}
+\[
+    K^\ominus = \left( \frac{p_\text{\ce{CO2}}}{p^\ominus} \right)_{\ce{eq.}}^{}
+.\]
+\begin{notation}
+    分解压力
+\end{notation}
+\subsection{反应限度计算}%
+\label{sub:反应限度计算}
+\begin{notation}
+    平衡转化率：\[
+        n_\text{trans} = \frac{n_\text{dis}}{n_\text{org}}\times 100\%
+    .\]
+\end{notation}
+\subsection{标准反应的自由能计算}%
+\label{sub:标准反应的自由能计算}
+已知：\[
+    \Delta_\text{r}G_{m}^\ominus \left( T \right) = -RT\ln K^\ominus
+.\]\ldots 
+\begin{notation}
+    近似估计反应的可能性：
+    \[
+        \left( \Delta_\text{r}G_{m}  \right)_{T,p} = \Delta_\text{r}G_{m}^\ominus +RT\ln Q_{a}
+    .\]
+    当$\Delta_\text{r}G_{m}^\ominus >42\ce{kJ*mol^{-1}}$ 时反应不太可能正向进行。
+\end{notation}
+其他计算方法：
+\begin{notation}
+    根据公式：\[
+        \Delta_\text{r}G_{m}^\ominus = \Delta_\text{r}H_{m}^\ominus -T\Delta_\text{r}S_{m}^\ominus 
+    .\]
+\end{notation}
+\begin{notation}
+    通过已知的$\Delta_\text{r}G_{m}^\ominus $通过吉布斯亥姆霍兹公式计算
+\end{notation}
+
+

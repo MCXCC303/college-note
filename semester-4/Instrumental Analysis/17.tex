@@ -1,0 +1,78 @@
+\lecture{17}{05.06}
+\section{质谱法}%
+\label{sec:质谱法}
+\begin{notation}
+    结构分析四大谱系：NMR,IR,MS,UV
+\end{notation}
+\subsection{质谱定义}%
+\label{sub:质谱定义}
+使用高速电子流击碎样品，通过带电粒子在磁场中的运动来控制不同碎片的运动距离
+\begin{notation}
+    质谱是物理分析法，通过与GC和HPLC混用可以测定复杂的混合物组成
+\end{notation}
+\begin{notation}
+    质谱是唯一可以给出分子量并确定分子式的分析方法
+\end{notation}
+质谱的应用范围广（有机/无机），灵敏度高（常用量约1mg），分析速度快（最快千分之一秒），可以实现色谱-质谱共线联用
+\subsection{质谱测定过程}%
+\label{sub:质谱测定过程}
+进样$\to $ 离子化$\to $ 质量分析器$\to $ 检测器$\to $ 输出
+\subsubsection{真空系统}%
+\label{ssub*:真空系统}
+包含样品导入系统、离子源、质量分析器、检测器，真空度需要尽量高，否则会导致氧气烧坏离子源的灯丝、高压放电等
+\subsubsection{样品导入系统}%
+\label{ssub*:样品导入系统}
+在不降低真空度的条件下将样品导入到离子源中
+\subsubsection{电离源}%
+\label{ssub*:电离源}
+有硬电离和软电离两种，作用是使样品转为离子
+
+3.1. 电子轰击源：产生电子流将试样轰击，失去电子并断开化学键变为离子碎片：
+\begin{align*}
+    \ce{M + e-} &\to \ce{M^{+.} + 2e-}\\
+    \ce{M^{+.} + n e-} &\to \ce{(A + B + C + \ldots )^{m+} + k e-}
+.\end{align*}
+可以通过调节电子的能量来控制电离的强度，一般使用70eV
+\begin{notation}
+    EI（电子轰击）源会生成大量碎片离子，不适合难挥发、热不稳定的化合物
+\end{notation}
+3.2. 在样品被轰击之前使用\textbf{高压反应气}稀释，称为CI源
+\begin{eg}
+    反应气分子受到轰击：\[
+        \ce{CH_4 + e- \to CH_4^{+.} + 2e- }\quad \ce{CH_4 + 2e- \to CH_3^{+} + H+}
+    .\]
+    轰击后的离子可以两两反应，反应后的离子与样品反应生成准分子离子，其中会生成$M+1$ 的碎片离子
+\end{eg}
+3.3. 快原子轰击源FAB：使用快速氩离子和热的氩原子交换电荷生成快速氩原子，通过氩气快原子轰击样品使其失去电子
+\begin{notation}
+    FAB是一种软电离方法，适用于热不稳定、大分子量、强极性分子、生物分子、配合物等的分析
+\end{notation}
+3.4. 基质辅助激光解析电离源MALDI：利用脉冲式激光照射样品使其电离
+\subsubsection{质量分析器}%
+\label{ssub*:质量分析器}
+将离子按照质核比$m / z$ 分开
+\begin{notation}
+    质量分析器的类型：
+    \begin{itemize}
+        \item 磁质量分析器
+        \item 四级杆质量分析器
+        \item 飞行时间质量分析器
+        \item \ldots 
+    \end{itemize}
+\end{notation}
+4.1. 磁质量分析器：最简单的分析器，如图所示
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{磁质量分析器}
+    \caption{磁质量分析器}
+    \label{fig:磁质量分析器}
+\end{figure}
+\begin{notation}
+    易得：\[
+        m / z = \frac{H^2 R^2 }{2V} \Rightarrow R = \frac{1.41}{H}\times \sqrt{\frac{mV}{z}}
+    .\]
+    当$H,V$ 一定时，离子的质荷比越大，偏移（离子色散）越大
+\end{notation}
+4.2. 双聚焦质量分析器：通过先加一个电场来加速离子，达到了能量和方向上的聚焦，分辨率极高但价格昂贵
+
+4.3. 四极杆质量分析器QMF：有四根平行的金属管，加速离子通过四极杆中间的小孔，不符合要求$m / z$ 的离子撞击到四极杆而被滤除

@@ -1,0 +1,106 @@
+\lecture{9}{03.25}
+\section{红外吸收光谱法}%
+\label{sec:红外吸收光谱法}
+\begin{notation}
+    振动能级+转动能级跃迁，又称分子振动转动光谱
+\end{notation}
+红外分为3个区域，能量由高到低：
+\begin{itemize}
+    \item 近红外区：$0.76\sim 2.5\mu \text{m}$
+    \item 中红外区：$2.5\sim 25\mu \text{m}$，最适合进行红外光谱的定性、定量和结构分析
+    \item 远红外区：$25\mu \text{m}$ 以上
+\end{itemize}
+红外吸收光谱一般使用$T-\lambda$ 或$T-\sigma$ 曲线绘制，常用的$\sigma\in [400,4000]\text{cm}^{-1}$
+\begin{notation}
+    除了单原子和同核分子（如Ne, He, $\ce{O_2}$, $\ce{H_2}$）等之外，几乎所有的化合物在红外光谱区域均有吸收；除了光学异构体、某些高分子量的高聚物和在分子量只有微小差别的化合物外，\textbf{凡是具有结构不同的两个化合物，红外光谱一定不同}
+\end{notation}
+物质吸收辐射的两个条件：
+\begin{itemize}
+    \item 红外辐射的能量与分子的振动能级相同
+    \item 分子振动时，必须伴随瞬时偶极矩的变化，即$\Delta\mu\neq 0$
+\end{itemize}
+\subsection{红外吸收光谱产生过程}%
+\label{sub:红外吸收光谱产生过程}
+当一定$\lambda$ 的光照射分子时，若分子中某个基团振动频率与其一致，二者产生共振或\textbf{振动偶合}，此时光的能量通过分子偶极矩变化传递给分子，使分子的基团吸收能量，分子跃迁
+\begin{notation}
+    常用术语：
+    \begin{description}
+        \item[基频峰] $v=0$ 跃迁到$v=1$ 时产生的吸收峰
+        \item [倍频峰]$v=0$ 到$v=2$ 或$v=3$ 等，分别称为第二倍频、第三倍频等
+        \item [和频峰、差频峰]形如$v_1+v_2$ 的称为和频峰，反之为差频峰
+        \item [泛频峰]倍频、和频和差频统称为泛频
+    \end{description}
+\end{notation}
+\begin{question}
+    分子基团的振动是怎么样的？振动频率取决于什么？
+\end{question}
+\subsection{化学键力常数}%
+\label{sub:化学键力常数}
+ \[
+    \sigma_{\ce{C#C}}>\sigma_{\ce{C=C}}>\sigma_{\ce{C-C}}
+.\]
+\textbf{化学键力常数越大，折合相对原子质量越小，化学键的振动频率越大}，伸缩振动基频峰的波数越大
+\begin{equation}
+    \label{eq:vbar}
+    \overline{v} = \frac{1}{2\pi c}\sqrt{\frac{k}{\mu}}
+\end{equation}
+\subsection{两类基本振动形式}%
+\label{sub:两类基本振动形式}
+\subsubsection*{伸缩振动}%
+\label{subsub*:伸缩振动}
+键长变化、键角不变，原子沿建州方向伸缩，分为对称和反对称两种
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{反对称伸缩振动}
+    \caption{反对称伸缩振动}
+    \label{fig:反对称伸缩振动}
+\end{figure}
+\subsubsection*{变形振动}%
+\label{subsub*:变形振动}
+分为面内和面外，面内的形式有：
+\begin{itemize}
+    \item 剪式振动$\delta$
+    \item 平面摆动振动$\rho$
+\end{itemize}
+面外振动的形势有：
+\begin{itemize}
+    \item 非平面摇摆振动$\omega$
+    \item 扭曲运动$\tau$
+\end{itemize}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{变形振动}
+    \caption{变形振动}
+    \label{fig:变形振动}
+\end{figure}
+\subsection{峰数}%
+\label{sub:峰数}
+\begin{notation}
+    振动自由度$f$ ：\[
+        f = 3N \text{（运动自由度)}-\text{平动自由度}-\text{转动自由度}
+    .\]
+    其中线性分子（平动自由度2, 转动自由度3）为：\[
+        f = 3N-5
+    .\]
+    非线性分子（平动自由度3, 转动自由度3）：\[
+        f = 3N-6
+    .\]
+\end{notation}
+\begin{eg}
+    水分子是非线性分子，$f=3N-6=3$ ，说明水分子有3种基本的振动形式；而二氧化碳为线性分子，$f = 3N-4=4$ ，但是二氧化碳的吸收峰一般只能看到2个峰
+\end{eg}
+某些振动无法看到的原因：
+\begin{itemize}
+    \item 峰的简并，仪器分辨率不足无法观测到，如$\beta_{\ce{C=O}}\approx \gamma_{C=O}\approx 666\text{cm}^{-1}$
+    \item 非红外活性振动，如$\nu^{s}_{\ce{C=O}}=1340\text{cm}^{-1}$
+    
+\end{itemize}
+\begin{notation}
+    Fermi共振：某一个振动的基频和另一个振动的倍频或和频接近时，由于相互作用而\textbf{在该基频峰附近出现两个吸收带}
+\end{notation}
+\begin{notation}
+    振动偶合：两个化学键的振动频率相等或接近时，基频吸收峰\textbf{分裂为两个频率相差较大的吸收峰}
+\end{notation}
+\begin{eg}
+    酸酐在羰基的吸收峰出现两个吸收峰，并且$\Delta\sigma\approx 60\text{cm}^{-1}$
+\end{eg}

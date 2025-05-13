@@ -1,0 +1,76 @@
+\lecture{8}{03.21}
+荧光强度：\[
+    F=\varphi_\text{f}\times I_\text{a} = \varphi_{\text{f}}\left( I_0-I_\text{t} \right)
+.\]
+其中$\varphi_\text{f}$ 为荧光效率，$I_\text{a}$ 为吸收光强，$I_0$ 为激发光强，$I_\text{t}$ 为透过光强
+\begin{notation}
+    当浓度低时，$A\le 0.05$ ，近似处理为：$F=2.3\varphi_\text{f}I_0\varepsilon lc = Kc$，即：\[
+        F\propto c\quad \varepsilon lc\le 0.05
+    .\]
+\end{notation}
+\subsection{散射光的影响}%
+\label{sub:散射光的影响}
+\begin{notation}
+    瑞利光：光子和物质发生弹性碰撞，不发生能量交换，$\lambda_\text{入射}=\lambda_\text{散射}$
+\end{notation}
+\begin{notation}
+    拉曼光：非弹性碰撞，$\lambda_\text{入射}\neq \lambda_\text{散射}$
+\end{notation}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{拉曼散射}
+    \caption{拉曼散射}
+    \label{fig:拉曼散射}
+\end{figure}
+拉曼光对结果干扰较大，干扰主要来自溶剂，更换溶剂或选择特定的激发波长可以消除拉曼光干扰
+\begin{eg}
+    硫酸奎宁在320nm和350nm下激发，荧光峰均为448nm；在350nm下水的拉曼散射为400nm，在320nm下为360nm，如果拉曼散射峰不包括在荧光峰内或相差非常大，可以忽略；如果影响比较大会造成荧光峰偏移，需要选择拉曼散射离荧光峰比较远的激发波长
+\end{eg}
+溶剂的拉曼散射波长可以查表得到
+\subsection{定量方法测定荧光}%
+\label{sub:定量方法测定荧光}
+使用标准曲线法：
+\begin{notation}
+    配置一系列标准浓度试样测定荧光强度，绘制$F-c$ 标准曲线，通过回归求出在$c_{x}$ 时的荧光强度$F_{x}$
+\end{notation}
+使用比较法：
+\begin{notation}
+    在线性范围内，测定标准品和试样的荧光强度比较，\textbf{需要使用同一台仪器}
+\end{notation}
+\subsubsection*{非荧光物质间接测定}%
+\label{subsub*:非荧光物质间接测定}
+1. 利用化学反应将非荧光物质转为能用于测定的荧光物质
+
+2. \textbf{荧光猝灭法}
+\begin{notation}
+    非荧光物质具有可猝灭某个荧光化合物的荧光的作用时，可以通过：\textbf{测定荧光化合物荧光强度的降低来测定非荧光物质的浓度} 
+\end{notation}
+\begin{eg}
+    $\ce{F^-}, \ce{S^{2-}}, \ce{Fe^{3+}}$
+\end{eg}
+\subsection{荧光分光光度计的结构}%
+\label{sub:荧光分光光度计的结构}
+光源（通常为汞灯或氙灯）$\to $ 激发单色器（可以选择激发光波长）$\to $ 样品池$\to $ 发射单色器（可以过滤发射光波长）$\to $ 检测器、记录器
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{荧光分光光度计图示}
+    \caption{荧光分光光度计图示}
+    \label{fig:荧光分光光度计图示}
+\end{figure}
+\begin{notation}
+    提高激发光强可以增大荧光强度，从而\textbf{提高测定灵敏度}
+\end{notation}
+\subsection{时间分辨荧光}%
+\label{sub:时间分辨荧光}
+镧系元素等的荧光时间较短，可以结合一个有机复合物将能量传递给这些元素
+\subsection{本章重点}%
+\label{sub:本章重点}
+1. 图\ref{fig:振动弛豫、内转换和荧光}
+
+2. 荧光量子效率
+
+3. 与分子结构的效应（什么分子的荧光强度大：共轭体系、给电子）‘
+
+4. 环境影响：溶剂极性、pH、温度
+
+5. 拉曼散射

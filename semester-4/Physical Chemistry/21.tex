@@ -1,0 +1,55 @@
+\lecture{21}{05.07}
+\section{化学动力学}%
+\label{sec:化学动力学}
+化学反应速率：
+\[
+    v = \frac{\mathrm{d}[\text{R/P}]}{\mathrm{d}t}
+.\]
+反应进度：
+\[
+    \mathrm{d}\xi = \frac{\mathrm{d}n_\text{B}}{\nu_\text{B}}
+.\]
+\begin{notation}
+    $\nu_\text{B}$ 为化学计量数
+\end{notation}
+转化速率：
+\[
+    \gamma = \frac{\mathrm{d}\xi}{\mathrm{d}t} = \frac{1}{\nu_\text{B}}\frac{\mathrm{d}n_\text{B}}{\mathrm{d}t}
+.\]
+反应速率（定容反应）：
+\begin{align*}
+    r &= \frac{1}{V}\frac{\mathrm{d}\xi}{\mathrm{d}t} \\
+    &= \frac{1}{\nu_\text{B}}\frac{\mathrm{d}n_\text{B} / V}{\mathrm{d}t} \\
+    &= \frac{1}{\nu_\text{B}}\frac{\mathrm{d}c_\text{B}}{\mathrm{d}t} = \frac{1}{\nu_\text{B}}\frac{\mathrm{d}[\text{B}]}{\mathrm{d}t}
+.\end{align*}
+当反应为$\ce{a R \to b P}$ 时：
+\begin{align*}
+    r &= \frac{1}{a}\frac{\mathrm{d}[\text{R}]}{\mathrm{d}t} \\
+      &= \frac{1}{b}\frac{\mathrm{d}[\text{R}]}{\mathrm{d}t}
+.\end{align*}
+\begin{defi}
+    基元反应：由反应物微粒一步直接生成产物的反应
+
+    一个反应要经过若干个基元反应才能完成，动力学上称其为反应机理
+\end{defi}
+    已知的基元反应的分子数只有1,2,3
+\begin{eg}
+    酯化反应：1分子乙酸和一分子乙醇参加反应
+\end{eg}
+反应速率方程：$r = f\left( c \right)$ （微分式），$c = f\left( t \right) = \int r \mathrm{d}t$ （积分式）
+\begin{notation}
+    对于基元反应\[
+        \ce{A + 2D \to G}
+    .\]
+    其速率为：
+    \[
+        r = kc_\text{A}c_\text{D}^2 
+    .\]
+    其中$k$ 为反应速率常数，与反应浓度无关，与反应条件有关；对特定的反应$k$ 为定值
+\end{notation}
+\subsection{阿伦尼乌斯公式}%
+\label{sub:阿伦尼乌斯公式}
+\[
+    k = A\mathrm{e}^{-\frac{E_\text{a}}{RT}}
+.\]
+其中$E_\text{a}$ 为反应的活化能

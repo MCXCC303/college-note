@@ -1,0 +1,111 @@
+\lecture{11}{03.21}
+\section{多组分系统热力学}%
+\label{sec:多组分系统热力学}
+主要内容：
+\begin{itemize}
+    \item \textbf{偏摩尔量}
+    \item \textbf{化学势}
+    \item \textbf{稀溶液中的两个经验定律}
+    \item 稀溶液的依数性
+    \item 分配定律
+\end{itemize}
+\begin{eg}
+    冰面撒盐加速溶解，乙醚萃取青蒿素，可乐气泡打开时释放
+\end{eg}
+\subsection{混合物}%
+\label{sub:混合物}
+\begin{notation}
+    溶液：含有一种以上组分的固相或液相
+\end{notation}
+本章考虑\textbf{非电解质溶液}。溶液中如果含有极少的溶质，称为稀溶液，表示为$\infty $
+\begin{notation}
+    基本的浓度计算：\[
+        c_\text{B} = \frac{n_\text{B}}{V}
+    .\]
+    单位：$\ce{mol}\cdot \ce{m}^{3}$，可以表示为$c_\text{B}$ 或[B]
+\end{notation}
+\begin{notation}
+    质量摩尔浓度：\[
+        m_\text{B} = \frac{n_\text{B}}{m\left( \text{A} \right)}
+    .\]
+    其中B为溶质，A为溶剂，可以表示$m_\text{B}$ 或$b_\text{B}$ ，单位为$\ce{mol}\cdot \text{kg}^{-1}$；可以使用称量法计算
+\end{notation}
+常用的其他浓度表示：
+\begin{itemize}
+    \item 摩尔分数：$x_\text{B}\% = \frac{x_\text{B}}{\sum_{A}^{} x_\text{A}}$
+    \item \ldots 
+\end{itemize}
+单组分系统的广度性质具有\textbf{加和性}
+\begin{eg}
+    1mol单组分B的体积为$V_\text{B}$ ，则2mol单组分B的体积为$2V_\text{B}$
+\end{eg}
+\subsection{偏摩尔量}%
+\label{sub:偏摩尔量}
+不符合严格的加和性的部分
+\begin{eg}
+    在$25^\circ\text{C}, 100\ce{kPa}$时：
+    \begin{itemize}
+        \item 100mL水+100mL乙醇=192mL
+        \item 150mL水+50mL乙醇=195mL
+        \item 50mL水+150mL乙醇=193mL
+    \end{itemize}
+\end{eg}
+即：
+\begin{align*}
+    n_\text{A}+n_\text{B} &= n_\text{A}+n_\text{B}\\
+    n_\text{A}V^\star_{m,\text{A}} + n_\text{B}V^\star_{m,\text{B}} &\neq  V_1+V_2
+.\end{align*}
+实验发现，在混合体积为1:1时这个差值$\Delta V = \left( V_1+V_2 \right)-\left( nV^\star_{m,\text{A}}+nV^\star_{m,\text{B}} \right)$ 达到最大
+\begin{notation}
+    同是1mol物质，在混合物中对体积的贡献不等于单独存在时对体积的贡献
+\end{notation}
+Lewis定义偏摩尔体积$V_\text{B}$ ：混合物总体积随B组分物质的量的变化率\[
+    \mathrm{d}V = \left(\frac{\partial V}{\partial T}\right)_{p,n_\text{B};n_\text{C}\ldots }\mathrm{d}T + \left(\frac{\partial V}{\partial p}\right)_{T,n_\text{B},n_\text{C}\ldots }+\left(\frac{\partial V}{\partial n_\text{B}}\right)_{T,p,n_\text{C};n_\text{D}\ldots }\mathrm{d}n_\text{B}+\left(\frac{\partial V}{\partial n_\text{C}}\right)_{T,p,n_\text{B};n_\text{D}\ldots }\mathrm{d}n_\text{C}+\ldots 
+.\]
+则定义\[\boxed{
+    V_\text{B}=\left(\frac{\partial V}{\partial n_\text{B}}\right)_{T,p,n_\text{C};n_\text{D}\ldots }
+.}\]
+\begin{notation}
+    偏摩尔体积的物理意义为：在一定温度、压力下，1mol组分B在确定组成的混合物中对体积的贡献值。一般认为$V_\text{B}\neq V^\star_{m,\text{B}}$
+\end{notation}
+同理，对于多组分系统的$V,U,H,S,A,G$ 等其他性质，其中任意一个广延性质都可以写为：$X = f\left( T,p,n_\text{B},n_\text{C}\ldots  \right)$；定义：\[
+\mathrm{d}X = \left(\frac{\partial X}{\partial T}\right)_{p,\ldots }\mathrm{d}T+\left(\frac{\partial X}{\partial p}\right)_{T,\ldots }\mathrm{d}p+\left(\frac{\partial X}{\partial n_\text{B}}\right)_{T,p,\ldots }\mathrm{d}n_\text{B}+\left(\frac{\partial X}{\partial n_\text{C}}\right)_{T,p,n_\text{B},\ldots}\mathrm{d}n_\text{C}+\ldots 
+.\]
+则定义：\[\boxed{
+    X_\text{B} = \left(\frac{\partial X}{\partial n_\text{B}}\right)_{T,p,n_\text{C};\ldots }
+.}\]
+也可以令$n_\text{C}$ 为所有其他组分，定义为：\begin{equation}
+    \label{eq:偏摩尔量}
+    \boxed{
+        X_\text{B} = \left(\frac{\partial X}{\partial n_\text{B}}\right)_{T,p,n_\text{C}}
+    .}
+\end{equation}
+\begin{eg}
+    偏摩尔焓：
+    \[
+        H_\text{B} = \left(\frac{\partial H}{\partial n_\text{B}}\right)_{T,p,n_\text{C}}
+    .\]
+\end{eg}
+\begin{notation}
+    必须强调恒$T,p$ 条件，即：\[
+        U_\text{B}\neq \left(\frac{\partial U}{\partial n_\text{B}}\right)_{T,\textcolor{red}{V},n_\text{C}}
+    .\]
+\end{notation}
+偏摩尔量带入微分式得：\[
+    \mathrm{d}X = \left(\frac{\partial X}{\partial T}\right)_{p,n_\text{B},n_\text{C}} + \left(\frac{\partial X}{\partial p}\right)_{T,n_\text{B},n_\text{C}}+X_\text{B}\mathrm{d}n_\text{B}+X_\text{C}\mathrm{d}n_\text{C}+\ldots 
+.\]
+如果恒压恒温（即$\mathrm{d}T=\mathrm{d}p=0$），则：\[\boxed{
+    \mathrm{d}X_{T,p} = \sum_{B}^{} X_\text{B}\mathrm{d}n_\text{B}
+.}\]
+积分后：\[\boxed{
+    X_{T,p} = \sum_{B}^{} X_B\cdot n_\text{B}
+.}\]
+\begin{notation}
+    对这个公式求全微分：
+    \[
+        \mathrm{d}X = \sum_{\text{B}}^{} X_\text{B}\mathrm{d}n_\text{B} + \sum_{\text{B}}^{} n_\text{B}\mathrm{d}X_\text{B}
+    .\]
+    吉布斯-杜亥姆方程：\[
+        \sum_{\text{B}}n_\text{B}\mathrm{d}X_\text{B} = 0 \Rightarrow \sum_{\text{B}}x_\text{B}\mathrm{d}X_\text{B} =0
+    .\]
+\end{notation}

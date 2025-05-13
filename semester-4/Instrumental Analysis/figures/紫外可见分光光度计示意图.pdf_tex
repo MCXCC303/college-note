@@ -54,9 +54,9 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{紫外可见分光光度计示意图.pdf}}%
-    \put(0.15201453,0.17663962){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}光源\end{tabular}}}}%
-    \put(0.29787817,0.15291481){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}单色器\end{tabular}}}}%
-    \put(0.52546059,0.15203616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}吸收池\end{tabular}}}}%
-    \put(0.72580344,0.17312489){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}检测器\end{tabular}}}}%
+    \put(0.03575738,0.14909159){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}光源\end{tabular}}}}%
+    \put(0.23790329,0.11621246){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}单色器\end{tabular}}}}%
+    \put(0.55329959,0.11499481){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}吸收池\end{tabular}}}}%
+    \put(0.83094584,0.14422073){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}检测器\end{tabular}}}}%
   \end{picture}%
 \endgroup%

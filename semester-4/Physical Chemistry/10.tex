@@ -1,0 +1,102 @@
+\lecture{10}{03.19}
+\begin{notation}
+    体积不随压力改变而改变的系统：凝聚态系统
+\end{notation}
+\subsubsection*{相变过程}%
+\label{subsub*:相变过程}
+可逆相变：$\Delta_\text{}G = 0 $ 
+
+不可逆相变：非相变可逆过程$\to $ 相变$\to $ 非相变可逆过程
+\subsubsection*{吉布斯-亥姆霍兹公式}%
+\label{subsub*:吉布斯-亥姆霍兹公式}
+微分式：
+\[
+    \left(\frac{\partial \left( \Delta_\text{}G / T  \right)}{\partial T}\right)_{p} = -\frac{\Delta_\text{}H }{T^2 }
+.\]
+积分式：
+\[
+    \Delta_{T} \left( \frac{\Delta_\text{}G\left( T \right) }{T} \right) = \Delta_\text{}H \Delta\left( \frac{1}{T} \right)
+.\]
+即：
+\begin{equation}
+    \label{eq:gdt=hd1/t}\boxed{
+    \frac{\Delta_\text{}G\left( T_2 \right) }{T_2} - \frac{\Delta_\text{}G \left( T_1 \right) }{T_1} = \Delta_\text{}H \left( \frac{1}{T_2} - \frac{1}{T_1} \right) 
+}
+\end{equation}
+\section{热力学关系式}%
+\label{sec:热力学关系式}
+\subsection{热力学基本方程}%
+\label{sub:热力学基本方程}
+\begin{equation}
+    \label{eq:htsvp}
+    \mathrm{d}H = T\mathrm{d}S + V\mathrm{d}p
+\end{equation}
+\begin{equation}
+    \label{eq:utspv}
+    \mathrm{d}U = T\mathrm{d}S - p\mathrm{d}V
+\end{equation}
+\begin{equation}
+    \label{eq:astpv}
+    \mathrm{d}A = -S\mathrm{d}T - p\mathrm{d}V
+\end{equation}
+\begin{equation}
+    \label{eq:gstvp}
+    \mathrm{d}G = -S\mathrm{d}T + V\mathrm{d}p
+\end{equation}
+由以下三个基本关系式得出：
+\begin{align*}
+    H&= U+pV \\
+    G&= H-TS \\
+    A&= U-TS
+.\end{align*}
+\begin{notation}
+    推导：由等式\ref{eq:utspv}和等式\ref{eq:htsvp}：\[
+        T = \left(\frac{\partial U}{\partial S}\right)_{V} = \left(\frac{\partial H}{\partial S}\right)_{p}
+    .\]
+    由等式\ref{eq:utspv}和等式\ref{eq:astpv}：
+    \[
+        p = -\left(\frac{\partial U}{\partial V}\right)_{S} = \left(\frac{\partial A}{\partial V}\right)_{T}
+    .\]
+    由等式\ref{eq:htsvp}和等式\ref{eq:gstvp}：\[
+        V = \left(\frac{\partial H}{\partial p}\right)_{S} = \left(\frac{\partial G}{\partial p}\right)_{T}
+    .\]
+    由等式\ref{eq:astpv}和等式\ref{eq:gstvp}：
+    \[
+        S = -\left(\frac{\partial A}{\partial T}\right)_{V} = -\left(\frac{\partial G}{\partial T}\right)_{p}
+    .\]
+\end{notation}
+\subsection{麦克斯韦方程组}%
+\label{sub:麦克斯韦方程组}
+\begin{notation}
+根据全微分：
+\begin{equation}
+    \label{eq:full_deriv}
+    \mathrm{d}z = \left(\frac{\partial z}{\partial x}\right)_{y}\mathrm{d}x + \left(\frac{\partial z}{\partial y}\right)_{x}\mathrm{d}y = M\mathrm{d}x + N\mathrm{d}y
+\end{equation}
+可得$M,N$ 也是$x,y$ 的函数，再次偏导：\[
+   \left(\frac{\partial M}{\partial y}\right)_{x} = \frac{\partial^2 z}{\partial x\partial y}\quad \left(\frac{\partial N}{\partial x}\right)_{y} = \frac{\partial^2 z}{\partial x\partial y}
+.\]
+即二阶偏微分与次序无关：\begin{equation}
+    \label{eq:myx=nxy}\boxed{
+    \left(\frac{\partial M}{\partial y}\right)_{x} = \left(\frac{\partial N}{\partial x}\right)_{y}
+}
+\end{equation}
+
+\end{notation}
+将等式\ref{eq:myx=nxy}应用于四个状态函数基本关系即得到\textbf{麦克斯韦方程组}\ref{eq:tvs=-psv},\ref{eq:tps=vsp},\ref{eq:svt=ptv},\ref{eq:spt=vtp}：
+\begin{equation}
+    \label{eq:tvs=-psv}
+    \mathrm{d}U = T\mathrm{d}S -p\mathrm{d}V \implies \left(\frac{\partial T}{\partial V}\right)_{S} = -\left(\frac{\partial p}{\partial S}\right)_{V}
+\end{equation}
+\begin{equation}
+    \label{eq:tps=vsp}
+    \mathrm{d}H = T\mathrm{d}S + V\mathrm{d}p \implies \left(\frac{\partial T}{\partial p}\right)_{S} = \left(\frac{\partial V}{\partial S}\right)_{p}
+\end{equation}
+\begin{equation}
+    \label{eq:svt=ptv}
+    \mathrm{d}A = -S\mathrm{d}T-p\mathrm{d}V \implies \left(\frac{\partial S}{\partial V}\right)_{T} = \left(\frac{\partial p}{\partial T}\right)_{V}
+\end{equation}
+\begin{equation}
+    \label{eq:spt=vtp}
+    \mathrm{d}G = -S\mathrm{d}T -V\mathrm{d}p \implies \left(\frac{\partial S}{\partial p}\right)_{T}=-\left(\frac{\partial V}{\partial T}\right)_{p}
+\end{equation}

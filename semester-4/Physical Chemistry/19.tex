@@ -1,0 +1,160 @@
+\lecture{19}{04.25}
+\begin{notation}
+    科尔劳施发现：在很稀的溶液中，强电解质的摩尔电导率与浓度的平方根呈线性关系，$A$ 在一定温度下为常数；可以通过实验不断降低溶液的浓度来回归$\Lambda_{m}^{\infty }$
+\end{notation}
+对于弱电解质不符合该公式，科尔劳施提出离子独立移动定律
+\subsubsection{离子独立移动定律}%
+\label{ssub*:离子独立移动定律}
+\begin{defi}
+    在无限稀释的溶液中，每种离子的$\Lambda_{m}^{\infty }$ 是独立移动的，不受其他离子的影响
+\end{defi}
+\begin{eg}
+    A,B物质有相同的阴离子，测定得到$\Lambda_{m_\text{A}}^{\infty }-\Lambda_{m_\text{B}}^{\infty }=C$
+\end{eg}
+在无限稀释时，每一种离子都是独立移动的，不受其他离子影响，每一种离子对$\Lambda_{m}^{\infty }$ 有恒定的贡献
+\begin{equation}
+    \label{eq:kolhrausch}
+    \Lambda_{m}^{\infty } = \Lambda_{m,+}^{\infty }+\Lambda_{m,-}^{\infty }
+\end{equation}
+根据该定律：在无限稀释的HCl和HAc中，$\Lambda_{m}^{\infty }\left( \ce{H+} \right)$ 为常数，即将弱电解质转为强电解质的加和
+\begin{eg}
+    对于弱电解质HAc，可以转为HCl、KAc、KCl的组合：
+    \[
+        \Lambda_{m}^{\infty } \left( \ce{HAc} \right) = \Lambda_{m}^{\infty }\left( \ce{HCl} \right)+\Lambda_{m}^{\infty }\left( \ce{KAc} \right)-\Lambda_{m}^{\infty }\left( \ce{KCl} \right)
+    .\]
+\end{eg}
+\subsubsection{检验水的纯度}%
+\label{ssub*:检验水的纯度}
+纯水本身有微弱的电离，使用标准数据计算得：\[
+    \Lambda_{m}^{\infty }\left( \ce{H_2O} \right) = 5.5\times 10^{-6}\ce{S*m^{-1}}
+.\]
+当水的电导率$\Lambda<1\times 10^{-4}$ 时就可以认为是较纯的水，称为\textbf{电导水}；普通蒸馏水的电导率为$1\times 10^{-3}\ce{S*m^{-1}}$
+\subsubsection{弱电解质的解离度和解离常数}%
+\label{ssub*:弱电解质的解离度和解离常数}
+\begin{notation}
+    在无限稀释弱电解质溶液中，可以认为弱电解质能全部解离；一定浓度下的若电解质的$\Lambda_{m}$ 除了与浓度有关外，还与\textbf{电解质的解离程度}有关
+\end{notation}
+\begin{defi}
+    解离度：\[
+        \alpha = \frac{\Lambda_{m}}{\Lambda_{m}^{\infty }}
+    .\]
+\end{defi}
+\subsubsection{测定难溶盐的溶解度}%
+\label{ssub*:测定难溶盐的溶解度}
+对于难溶盐饱和溶液，由于浓度极低，可以认为$\Lambda_{m} \approx \Lambda_{m}^{\infty }$，此时水的电导率不能忽略，即：\[
+    \kappa\left( \ce{AB} \right) = \kappa\left( \ce{AB(aq)} \right)-\kappa\left( \ce{H_2O} \right)
+.\]
+计算摩尔电导率：\[
+    \Lambda_{m} = \frac{\kappa\left( \ce{AB(aq)} \right)-\kappa\left( \ce{H_2O} \right)}{c}
+.\]
+\subsection{强电解质溶液的活度（因子）}%
+\label{sub:强电解质溶液的活度（因子）}
+对任意强电解质：
+\begin{align*}
+    a &= a_-^{v_-}+a_+^{v_+}\\
+    \gamma &= \gamma_-^{v_-}+\gamma_+^{v_+}\\
+    m &= m_-^{v_-}+m_+^{v_+}
+.\end{align*}
+\begin{notation}
+    德拜-休克尔极限定理：\[
+        \ln \gamma_\text{B} = -AZ_+\left| Z_- \right|\sqrt{I}
+    .\]
+\end{notation}
+\subsection{可逆电池}%
+\label{sub:可逆电池}
+热力学与电化学的桥梁：\begin{equation}
+    \label{eq:drgmtpzef}
+    \left( \Delta_\text{r}G_{m} \right)_{T,p} = -zEF
+\end{equation}
+可以计算化学能转变为电能的最高限度
+\begin{notation}
+    可逆电池的条件：
+    \begin{itemize}
+        \item 化学反应可逆
+        \item 能量转换可逆（充放电时电流无穷小保证化学反应在无限接近平衡态反应）
+        \item 其他过程可逆（离子迁移等）
+    \end{itemize}
+\end{notation}
+可逆电池书写的方式：
+\begin{enumerate}
+    \item 左边：氧化作用的负极
+    \item 右边：还原作用的正极
+    \item |：相界面
+    \item ||：盐桥
+    \item ,:两种溶液的接界面
+    \item 注明物态（压力、浓度、温度，默认为$298.15\ce{K}, p^\ominus$）
+\end{enumerate}
+\begin{eg}
+    铜锌原电池：\[
+        \ce{Zn(s)} | \ce{ZnSO_4}\left( a_1 \right)\text{||}\ce{CuSO_4}\left( a_2 \right) | \ce{Cu(s)}
+    .\]
+\end{eg}
+\begin{eg}
+    将反应设计为电池：\[
+        \ce{Zn(s)}+\ce{H_2SO_4(aq)}\to \ce{H_2}\left( p_{\ce{H_2}} \right) + \ce{ZnSO_4(aq)}
+    .\]
+    易得Zn(s)为负极，选用Pt(s)为正极：
+    \[
+        \ce{Zn(s)} | \ce{ZnSO_4(aq)} \text{||}\ce{H_2SO_4(aq)} | \ce{H_2}\left( p_{\ce{H_2}} \right) | \ce{Pt(s)}
+    .\]
+\end{eg}
+\begin{eg}
+    写出电池中的化学反应：
+    \begin{align*}
+        &\ce{Zn(s)} | \ce{ZnSO_4}\text{||}\ce{HCl}|\ce{AgCl(s)}|\ce{Ag(s)}\\
+        \Rightarrow &\begin{cases}
+            \oplus&: \ce{Zn(s)}\to \ce{Zn^2+}+\ce{2e-}\\
+            \ominus&: \ce{2AgCl(s)}+\ce{2e-}\to \ce{2Ag(s)}+\ce{2Cl-}
+        \end{cases}\\
+            \Rightarrow &\ce{Zn(s)}+\ce{2AgCl(s)}\to \ce{2Ag(s)}+\ce{2Cl-}+\ce{Zn^2+}
+    .\end{align*}
+    如果作电解池：\[
+        \ce{Zn^2}+\ce{2Ag(s)} + \ce{2Cl-} \to \ce{2AgCl(s)}+\ce{Zn(s)}
+    .\]
+    即二者成可逆反应
+\end{eg}
+\subsubsection{可逆电极}%
+\label{ssub*:可逆电极}
+\begin{enumerate}
+    \item 第一类电极
+        \begin{itemize}
+            \item 金属阳离子电极
+            \item 氢电极
+            \item 氧电极
+            \item \ldots 
+        \end{itemize}
+    \item 第二类电极：金属-难溶盐电极
+    \item 第三类电极：氧化还原电极
+    \item 第四类电极：气体电极和离子选择性电极
+\end{enumerate}
+电化学和热化学的两座桥梁：
+\begin{align*}
+    \left( \Delta_\text{r}G  \right)_{T,p,R} &= -nEF\\
+    \left( \Delta_\text{r}G_{m}  \right)_{T,p,R} &= -\frac{-nEF}{\xi} = -zEF
+.\end{align*}
+\subsection{可逆电池热力学}%
+\label{sub:可逆电池热力学}
+\subsubsection{计算熵变和可逆热效应}%
+\label{ssub*:计算熵变和可逆热效应}
+已知等式\ref{eq:drgmtpzef}，由基本表达式：
+\begin{align*}
+    \mathrm{d}G &= S\mathrm{d}T + V\mathrm{d}p \\
+    \left(\frac{\partial G}{\partial T}\right)_{p} &= S \\
+    \left(\frac{\partial -zEF}{\partial T}\right)_{p} &= \Delta_\text{r}S_{m} 
+.\end{align*}
+\begin{align*}
+    \Delta_\text{r}S_{m} &= zF\left(\frac{\partial E}{\partial T}\right)_{p}\\
+    \Delta_\text{r}H_{m} &= \Delta_\text{r}G_{m} + T\Delta_\text{r}S_{m} = -zEF + zFT\left(\frac{\partial E}{\partial T}\right)_{p}  
+.\end{align*}
+\subsubsection{电池电动势能斯特方程}%
+\label{ssub*:电池电动势能斯特方程}
+对反应：\[
+    a\text{A}\left( a_\text{A} \right) + d \text{D}\left( a_\text{D} \right) \to g\text{G}\left( a_\text{G} \right) + h\text{H}\left( a_\text{H} \right)
+.\]
+由于：\[
+    \Delta_\text{r}G_{m} = \Delta_\text{r}G_{m}^\ominus  + RT\ln \prod_{\text{B}}^{} a_\text{B}^{\nu_\text{B}}
+.\]
+两边同除以$-zF$ ，由于$\Delta_\text{r}G_{m} = -zEF $ ，可得能斯特方程：
+\[
+    E = E^\ominus - \frac{RT}{zF}\ln \frac{a^{g}_\text{G}\cdot a^{h}_\text{H}}{a^{a}_\text{A}\cdot a^{d}_\text{D}}
+.\]

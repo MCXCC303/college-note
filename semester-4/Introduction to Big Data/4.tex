@@ -1,0 +1,46 @@
+\lecture{4}{03.21}
+\begin{notation}
+    数据脱敏的方法：\textbf{数据替换、无效化、随机化、偏移和取整、对称加密、平均值}
+\end{notation}
+\subsection{常用数据库}%
+\label{sub:常用数据库}
+NewSQL、NoSQL：速度快，扩展性好，数据模型多，云计算集成
+
+HDFS、GFS：分布式，规模大
+\section{数据挖掘和机器学习}%
+\label{sec:数据挖掘和机器学习}
+包括：\textbf{聚类、分类、神经网络等方法}
+\subsection{分类算法}%
+\label{sub:分类算法}
+使用已有的样本预测新样本的所属类别
+\begin{eg}
+    邮件分类为垃圾邮件；患者诊断为患病
+\end{eg}
+常用算法：朴素贝叶斯、逻辑回归、\textbf{决策树}、随机森林、支持向量机；使用有监督学习（标记样本）
+\subsubsection*{决策树}%
+\label{subsub*:决策树}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{决策树示例}
+    \caption{决策树示例}
+    \label{fig:决策树示例}
+\end{figure}
+\subsection{聚类算法}%
+\label{sub:聚类算法}
+无监督学习（不标记样本），有\textbf{划分聚类、层次聚类、基于密度聚类、基于网格聚类}；要求根据k个数据划分，每个簇至少有一个数据，每个数据有且仅属于一个簇
+\subsubsection*{\textit{K}-均值聚类}%
+\label{subsub*:K-均值聚类}
+首先随机从数据点中取k个数据作为初始中心，确定分类为k组数据
+
+\subsubsection*{回归分析}%
+\label{subsub*:回归分析}
+\[
+    \bm{w} = \left( \bm{X}^\top \bm{X} \right)^{-1}\bm{X}^\top \bm{y}
+.\]
+\subsubsection*{关联规则}%
+\label{subsub*:关联规则}
+\subsubsection*{人工神经网络}%
+\label{subsub*:人工神经网络}
+简称神经网络（Neural Network），有多种分支，如卷积神经网络CNN
+
+一个神经元至少包含三个部分：输入、计算、输出。输入到神经元的数据首先会通过权重调整，然后传入神经元；传出时需要经过非线性函数对输出归一化

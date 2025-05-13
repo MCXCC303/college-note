@@ -1,0 +1,64 @@
+\lecture{12}{03.26}
+\begin{notation}
+    吉布斯-杜亥姆公式的应用：
+    \[
+        x_\text{B}\mathrm{d}X_\text{B} = -x_\text{C}\mathrm{d}X_\text{C}
+    .\]
+    即微小变化下，一部分的偏摩尔量增大，另一组分的偏摩尔量一定减小
+\end{notation}
+混合物或溶液中同一组分不同偏摩尔量之间的关系与纯物质各摩尔量之间的关系相同
+\begin{eg}
+    由于$H_\text{B} = U_\text{B}+pV_\text{B}$ ，$A_\text{B} = U_\text{B}-TS_\text{B}$ ，则：
+    \[
+        G_\text{B} = H_\text{B}-TS_\text{B}=\textcolor{blue}{U_\text{B}+pV_\text{B}-TS_\text{B}} = A_\text{B}+pV_\text{B}
+    .\]
+    即：\[
+        \left(\frac{\partial G_\text{B}}{\partial p}\right)_{T,n_\text{B}} = V_\text{B}\quad \left(\frac{\partial G_\text{B}}{\partial T}\right)_{p,n_\text{B}} = -S_\text{B}
+    .\]
+\end{eg}
+\subsection{化学势}%
+\label{sub:化学势}
+\begin{defi}
+    保持特征变量和除$n_\text{B}$ 以外其他组分不变，某个热力学函数随其物质的量$n_\text{B}$ 的变化率称为化学势
+    \begin{equation}
+        \label{eq:muB}
+        \mu_\text{B} = G_{\text{B},m} = \left(\frac{\partial G}{\partial n_\text{B}}\right)_{T,p,n_{i\neq \text{B}}}
+    \end{equation}
+\end{defi}
+广义化学势的定义：由四个热力学基本关系：
+\begin{align*}
+    \mathrm{d}U = T\mathrm{d}S -p\mathrm{d}V &\quad \mathrm{d}H = T\mathrm{d}S + V\mathrm{d}p \\
+    \mathrm{d}A = -S\mathrm{d}T -p\mathrm{d}V &\quad \mathrm{d}G = -S\mathrm{d}T+V\mathrm{d}p
+.\end{align*}
+带入等式\ref{eq:muB}：
+\begin{align*}
+    \mu_\text{B} &= \left(\frac{\partial U}{\partial n_\text{B}}\right)_{S,V,n_{i\neq \text{B}}} = \left(\frac{\partial H}{\partial n_\text{B}}\right)_{S,p,n_{i\neq \text{B}}} \\
+    &= \left(\frac{\partial A}{\partial n_\text{B}}\right)_{T,V,n_{i\neq \text{B}}} = \left(\frac{\partial G}{\partial n_\text{B}}\right)_{T,p,n_{i\neq \text{B}}}
+.\end{align*}
+\subsubsection*{化学势判据}%
+\label{subsub*:化学势判据}
+等温等压非体积功为0
+\[
+    \sum_{B}\mu_\text{B}\mathrm{d}n_\text{B}\ge 0
+.\]
+在相平衡中，两个相中的化学势相等时达到平衡
+\begin{notation}
+    在恒温恒压下，考虑多组分系统$\alpha,\beta$ ，组分B有$\mathrm{d}n_\text{B}$ 从$\alpha$ 转移到$\beta$ ，该组分必然从化学势高的一相转移到化学势低的一相。
+\end{notation}
+\subsubsection*{化学平衡中的应用}%
+\label{subsub*:化学平衡中的应用}
+\begin{notation}
+    拉乌尔定律：定温稀溶液中，溶解的蒸汽压等于纯溶剂的蒸汽压乘溶剂的摩尔分数
+    \[
+        p_\text{B} = p_\text{B}^\star \cdot x_\text{B}
+    .\]
+\end{notation}
+\begin{notation}
+    亨利定律：
+    \begin{align*}
+        p_\text{B} &= k_x x_\text{B}\\
+        p_\text{B} &= k_m m_\text{B}\\
+        p_\text{B} &= k_c c_\text{B}
+    .\end{align*}
+    其中$k$ 为亨利系数，各不相同
+\end{notation}

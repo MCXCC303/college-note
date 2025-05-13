@@ -1,0 +1,89 @@
+\lecture{13}{03.28}
+回顾：
+\[
+    \mu\left( T,p \right) = \mu^\ominus\left( T,p^\ominus \right)+RT\ln \frac{p}{p^\ominus}
+.\]
+\[
+    \mu_{\ce{B(l)}}\left( T,p \right) = \mu^\ominus_{\ce{B(l)}}\left( T \right)+RT\ln x_\text{B}
+.\]
+其中$\mu^\ominus_{\ce{B(l)}}$ 一般已知
+\begin{itemize}
+    \item 对于单组分的理想气体，$p_\text{B} = p$ ；
+    \item 对于多组分的混合理想气体，$p_\text{B} = p_\text{总}\cdot x_\text{B}$ ；
+    \item 对于实际气体，$p_\text{B} = f_\text{B}$ （逸度）；
+    \item 对于\textbf{理想液态化合物}：$p_\text{B} = p_\text{B}^\star \cdot x_\text{B}$
+\end{itemize}
+即：\[
+    \mu_\text{B}\left( T,p \right) = \mu_\text{B}^\star \left( T,p^\ominus \right)+RT\ln \frac{p_\text{B}^\star x_\text{B}}{p^\ominus}
+.\]
+\begin{notation}
+    理想稀溶液：在一定的温度、压强和浓度的范围内，溶剂服从拉乌尔定律，溶质服从亨利定律
+
+    溶质B的化学势（摩尔分数）：由于$p_\text{B} = k_{x}\cdot x_\text{B}$ ，带入：\[
+        \mu_\text{B}\left( T,p \right) = \mu_{\ce{B(g)}}\left( T,p \right) = \mu_\text{B}^\ominus\left( T \right)+RT\ln \frac{p_\text{B}}{p^\ominus}
+    .\]
+    得：\[
+        \mu_\text{B}\left( T,p \right) = \mu_\text{B}^\ominus\left( T \right) + RT\ln \frac{k_{x}}{p^\ominus}+RT\ln x_\text{B} = \mu_\text{B}^\star \left( T,p \right)+RT\ln x_\text{B}
+    .\]
+\end{notation}
+不同的浓度表达方式：
+\begin{align*}
+    \mu_\text{B} &= \mu_\text{B}^\star \left( T,p \right)+RT\ln x_\text{B} \\
+    &= \mu_\text{B}^\square\left( T,p \right)+RT\ln \frac{m_\text{B}}{m^\ominus} \\
+    &= \mu_\text{B}^\triangle\left( T,p \right)+RT\ln \frac{c_\text{B}}{c^\ominus}
+.\end{align*}
+\begin{notation}
+    活度： \[
+        \alpha_{x,\text{B}} = \gamma_{x,\text{B}}\cdot x_\text{B}
+    .\]
+    称$\gamma_{x,\text{B}}$ 为活度系数，可以表示任意组分中的化学势：\[
+        \mu_\text{B}\left( T,p \right) = \mu_\text{B}^\star \left( T,p^\ominus \right) + RT\ln \alpha_{x,\text{B}}
+    .\]
+    带入其他的浓度表达：
+    \begin{align*}
+        \mu_\text{B}\left( T,p \right) &= \mu_\text{B}^\star \left( T,p^\ominus \right) + RT\ln \alpha_{x,\text{B}}\\
+        \mu_\text{B}\left( T,p \right) &= \mu_\text{B}^\square \left( T,p^\ominus \right) + RT\ln \alpha_{m,\text{B}} \\
+        \mu_\text{B}\left( T,p \right) &= \mu_\text{B}^\triangle \left( T,p^\ominus \right) + RT\ln \alpha_{c,\text{B}}
+    .\end{align*}
+\end{notation}
+\subsection{稀溶液的依数性}%
+\label{sub:稀溶液的依数性}
+\begin{defi}
+    依数性：在溶剂中加入非挥发性溶质后，使得溶液的沸点升高、凝固点降低及渗透压等性质
+\end{defi}
+\subsubsection*{蒸汽压下降}%
+\label{subsub*:蒸汽压下降}
+溶剂中溶剂的蒸汽压$p_\text{A}$ 低于同温度下纯溶剂的饱和蒸汽压$p_\text{A}^\star $ 称为蒸汽压下降
+\subsubsection*{凝固点降低}%
+\label{subsub*:凝固点降低}
+在大气压力下，纯物质固态和液态的蒸汽压相等，固液两相平衡共存时的温度称为凝固点
+
+对于稀溶液：\[
+    \mu_\text{A} = \mu_\text{A}^\star +RT\ln x_\text{A}\quad \left(\frac{\partial \mu_\text{B}}{\partial T}\right)_{p,n_{i}} = -S_{\text{B},m}
+.\]
+结合：\[
+    -S_{\ce{A(l)},m}\mathrm{d}T+\frac{RT}{x_\text{A}}\mathrm{d}x_\text{A}=-S_{\ce{A(s),m}}\mathrm{d}T \implies \ldots 
+.\]
+得到：\[\boxed{
+    \Delta T_\text{f} = k_\text{f}m_\text{B}
+.}\]
+为\textbf{稀溶液凝固点降低公式}，即浓度越大，凝固点降低的越多
+\subsubsection*{沸点升高}%
+\label{subsub*:沸点升高}
+\textbf{压强越小，沸点越低；压强越大，沸点越高}
+\subsubsection*{渗透压}%
+\label{subsub*:渗透压}
+使用\textbf{半透膜}
+\begin{notation}
+    纯水的化学势大于溶液中的化学势
+\end{notation}
+\subsection{分配定律}%
+\label{sub:分配定律}
+定温定压下，溶质同时可以溶解在两种互不相溶的溶剂中，该溶质在两相中的浓度比值为定值：\[
+    K = \frac{m_\text{B}\left( \alpha \right)}{m_\text{B}\left( \beta \right)} = \frac{c_\text{B}\left( \alpha \right)}{c_\text{B}\left( \beta \right)}
+.\]
+可以利用分配定律来进行萃取：
+\[
+    W_\text{萃取} = W\left[ 1-\left( \frac{KV_1}{KV_1+V_2} \right)^{n} \right]
+.\]
+其中$W$ 为原溶质的质量，$V_1$ 为溶液体积，$V_2$ 为萃取剂体积，得到：\textbf{萃取次数越大，得到的萃取物越多}

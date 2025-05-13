@@ -1,0 +1,125 @@
+\lecture{14}{04.18}
+\begin{notation}
+在石墨炉原子化中，使用特征质量表示：
+\[
+    m_0 = m_{x} \times \frac{0.0044}{A} = C_{x} \times V_{x} \times \frac{0.0044}{A}
+.\]
+\end{notation}
+\textbf{特征浓度或特征质量越小，方法越灵敏}
+\begin{notation}
+    检出限（LOD）：在给定的条件下和某一置信度下，可被检测出的最小浓度或最小质量
+    \begin{align*}
+        D_{c} &= \frac{c_{x}}{A}\cdot 3\sigma\\
+        D_{m} &= \frac{m_{x}}{A}\cdot 3\sigma = \frac{c_{x}v_{x}}{A}\cdot 3\sigma
+    .\end{align*}
+\end{notation}
+\section{核磁共振波谱法}%
+\label{sec:核磁共振波谱法}
+\begin{defi}
+    核磁共振：在外磁场的作用下，具有磁矩的原子核存在不同能级，当用一定频率的射频照射分子时，会引起原子核自旋能级的跃迁，产生核磁共振
+\end{defi}
+核磁共振波谱提供化学位移、耦合常数、信号强度比等数据
+\begin{notation}
+    $\ce{^{13}C}$ 的天然丰度较低，样本中的C中$\ce{^{13}C}$ 含量不到1\%
+\end{notation}
+\begin{notation}
+    $\ce{^{13}C}$-NMR用于判断分子中的碳原子数、基团和不同种类的碳原子，常常与$\ce{^{1}H}$-NMR配合使用
+\end{notation}
+\subsection{核磁共振波谱法基本原理}%
+\label{sub:核磁共振波谱法基本原理}
+1. 自旋：
+\begin{notation}
+    质量数和电荷数都是偶数的和为偶-偶核，\textbf{自旋量子数为0}，因此在磁场中核磁矩为0, 不产生NMR信号
+\end{notation}
+\begin{eg}
+    $\ce{^{12}_{6}C}$，$\ce{^{16}_{8}O}$
+\end{eg}
+\begin{notation}
+    偶-奇核：质量数为偶数，电荷数为奇数；$I=1,2,3\ldots $ ，可以将原子核的核电分布看作一个椭圆体，有自旋现象
+\end{notation}
+\begin{notation}
+    奇-奇核：质量数为奇数，电荷数可以为奇数，也可以为偶数
+    \[
+        I = \frac{1}{2}, \frac{3}{2}, \frac{5}{2}\ldots \text{（半整数）}
+    .\]
+    一般研究$I=\frac{1}{2}$ ，如$\ce{^{^1}H}$ 、$\ce{^{13}C}$ 等
+\end{notation}
+\begin{notation}
+    核磁矩$\mu$ ：原子核有自旋现象，因此有自旋角动量$P$ :
+    \[
+        P = \frac{h}{2\pi }\sqrt{I\left( I+1 \right)}
+    .\]
+    其中$h$ 为普朗克常数，因此自旋量子数$I\neq 0$ 的都有自旋角动量
+
+    核磁矩的方向服从\textbf{右手法则}：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{核磁矩右手法则}
+    \caption{核磁矩右手法则}
+    \label{fig:核磁矩右手法则}
+\end{figure}
+\end{notation}
+\begin{notation}
+如果将原子核置于磁场中，核磁矩可以有不同的排列，共$2I+1$ 个取向；以磁量子数$m$ 来表示每一种取向，则：\[
+    m = I, I-1, I-2, \ldots, -I+1, -I
+.\]
+\end{notation}
+\begin{eg}
+    当$I = \frac{1}{2}$ 时：共有2个取向， 即：$m = I, I-1 = -\frac{1}{2},\frac{1}{2}$，如图：
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{氢原子核磁矩取向}
+    \caption{氢原子核磁矩取向}
+    \label{fig:氢原子核磁矩取向}
+\end{figure}
+\end{eg}
+\begin{notation}
+    核磁矩在磁场$Z$ 轴方向的分量取决于角动量在$Z$ 轴上的分量：\[
+        P_Z = \frac{h}{2\pi m}\quad \mu = \gamma P
+    .\]
+    带入得到：\[
+        \mu_Z = \frac{h\gamma}{2\pi m}
+    .\]
+    核磁矩的能量：\[
+        E = -\mu_Z H_0 = -m\gamma \frac{h}{2\pi }H_0
+    .\]
+    其中$m$ 为取向，不同取向的核能级不同，取向越低，能量越高，带入常用的$m = \frac{1}{2}, -\frac{1}{2}$：
+    \begin{align*}
+        E_{-\frac{1}{2}} &= -\left( -\frac{1}{2} \right)\gamma \frac{h}{2\pi }H_0\\
+    E_{\frac{1}{2}} &= -\left( \frac{1}{2} \right)\gamma \frac{h}{2\pi }
+    .\end{align*}
+    计算二者的能级差：\[
+        \Delta E = E_2-E_1 = \frac{h\gamma}{2\pi}H_0
+    .\]
+    即二者的能级差随$H_0$ 增大而增大，这个现象称为\textbf{能级分裂}
+\begin{figure}[ht!]
+    \centering
+    \incfig[0.5]{能级分裂示意图}
+    \caption{能级分裂示意图}
+    \label{fig:能级分裂示意图}
+\end{figure}
+\end{notation}
+\begin{notation}
+    进动频率$\nu$ ：和磁场$H_0$ 、磁旋比$\gamma$ 相关，使用Larmor方程：
+    \[
+        \nu = \frac{\gamma}{2\pi } H_0
+    .\]
+    共振吸收：$\nu_0 = \frac{\gamma}{2\pi }H_0=\Delta E$ ，需要满足$\nu_0=\nu$ 才能实现共振吸收
+    \begin{eg}
+        对$\ce{^{1}}H$ 在$H_0=1.4092T$ 的磁场中，进动频率为60MHz,因此吸收$\nu_0=60\text{MHz}$
+    \end{eg}
+\end{notation}
+\begin{notation}
+    量子力学\textbf{选律}决定只有$\Delta m = \pm 1$ 的能级跃迁才能发生。
+\end{notation}
+\begin{notation}
+    自旋弛豫：基态核数$n_{-}$ 与激发态核数$n_{+}$ 的比例服从Boltzmann分布：\[
+    \frac{n_{-}}{n_{+}} = \mathrm{e}^{-\frac{\Delta E}{kT}} = \mathrm{e}^{-\frac{rhH_0}{2\pi kT}}
+    .\]
+    带入$m = \frac{1}{2}, -\frac{1}{2}$ 计算得到：\[
+        \frac{n_{-\frac{1}{2}}}{n_{\frac{1}{2}}} \approx 0.9999
+    .\]
+\end{notation}
+\begin{notation}
+    在理论上，在不断施加磁场时，不断产生高能级，没有低能级原子后不再产生信号，称为\textbf{饱和}；在实际上由于弛豫，会不断产生新的低能级原子，共振信号不会消失
+\end{notation}

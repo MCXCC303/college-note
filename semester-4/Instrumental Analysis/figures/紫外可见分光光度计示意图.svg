@@ -46,8 +46,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2546202"
-     inkscape:cx="231.94271"
-     inkscape:cy="195.27823"
+     inkscape:cx="238.31913"
+     inkscape:cy="195.27822"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -92,14 +92,14 @@
      id="layer1"
      transform="translate(0,-177)">
     <circle
-       style="fill:#85ffc9;stroke:#000000;stroke-width:1;stroke-miterlimit:3.9;stroke-dasharray:none"
+       style="fill:#85ffc9;stroke:#000000;stroke-width:1.38586;stroke-miterlimit:3.9;stroke-dasharray:none"
        id="path1"
-       cx="46.500629"
-       cy="234.46677"
-       r="6.8538342" />
+       cx="22.464083"
+       cy="233.30728"
+       r="9.4984226" />
     <g
        id="g8"
-       transform="translate(-0.63266163,-7.1701648)">
+       transform="matrix(1.3858554,0,0,1.3858554,-42.855841,-101.56657)">
       <path
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
          d="m 81.402458,229.93268 -8.224602,26.78267 h 17.081865 z"
@@ -110,84 +110,84 @@
          id="path8" />
     </g>
     <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#fbff31;fill-opacity:1;stroke:none;stroke-width:0.801563;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 172.71661,244.27301 v -1.4762 h 2.64351 c 2.61435,0 2.64092,0.005 2.40812,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51497 0.2328,0.43499 0.20623,0.43984 -2.40812,0.43984 h -2.64351 v -2.4252 -2.4252 h 3.06529 c 3.04189,0 3.06349,0.003 2.82989,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51498 0.2336,0.43647 0.212,0.43983 -2.82989,0.43983 h -3.06529 v -2.4252 -2.4252 h 3.06529 c 3.04189,0 3.06349,0.003 2.82989,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51498 0.2336,0.43647 0.212,0.43983 -2.82989,0.43983 h -3.06529 v -2.4252 -2.4252 h 2.64351 c 2.61435,0 2.64092,0.005 2.40812,0.43983 -0.12947,0.24191 -0.20158,0.47365 -0.16025,0.51498 0.12272,0.12272 3.12234,-0.99717 3.12234,-1.1657 0,-0.16853 -2.99962,-1.28842 -3.12234,-1.1657 -0.0413,0.0413 0.0308,0.27306 0.16025,0.51498 0.2328,0.43498 0.20623,0.43983 -2.40812,0.43983 h -2.64351 v -1.05443 -1.05444 h 10.64981 10.6498 v 10.6498 10.64981 h -10.6498 -10.64981 z"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#fbff31;fill-opacity:1;stroke:none;stroke-width:1.11085;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 197.38118,246.8973 v -2.04579 h 3.66352 c 3.62311,0 3.65993,0.007 3.33731,0.60954 -0.17943,0.33525 -0.27936,0.65641 -0.22209,0.71368 0.17008,0.17008 4.32712,-1.38193 4.32712,-1.61549 0,-0.23356 -4.15704,-1.78556 -4.32712,-1.61549 -0.0572,0.0572 0.0427,0.37842 0.22209,0.71367 0.32262,0.60284 0.2858,0.60956 -3.33731,0.60956 h -3.66352 v -3.36098 -3.36097 h 4.24805 c 4.21562,0 4.24555,0.004 3.92182,0.60954 -0.17943,0.33525 -0.27937,0.65641 -0.22209,0.71368 0.17007,0.17008 4.32711,-1.38193 4.32711,-1.61549 0,-0.23356 -4.15704,-1.78556 -4.32711,-1.61549 -0.0572,0.0572 0.0427,0.37842 0.22209,0.71369 0.32373,0.60488 0.2938,0.60954 -3.92182,0.60954 h -4.24805 v -3.36098 -3.36097 h 4.24805 c 4.21562,0 4.24555,0.004 3.92182,0.60954 -0.17943,0.33525 -0.27937,0.65641 -0.22209,0.71369 0.17007,0.17007 4.32711,-1.38194 4.32711,-1.6155 0,-0.23355 -4.15704,-1.78556 -4.32711,-1.61549 -0.0572,0.0572 0.0427,0.37842 0.22209,0.71369 0.32373,0.60488 0.2938,0.60954 -3.92182,0.60954 h -4.24805 v -3.36098 -3.36097 h 3.66352 c 3.62311,0 3.65993,0.007 3.33731,0.60954 -0.17943,0.33525 -0.27936,0.65641 -0.22209,0.71369 0.17008,0.17007 4.32712,-1.38194 4.32712,-1.61549 0,-0.23356 -4.15704,-1.78557 -4.32712,-1.6155 -0.0572,0.0572 0.0427,0.37843 0.22209,0.71369 0.32262,0.60282 0.2858,0.60954 -3.33731,0.60954 h -3.66352 v -1.46129 -1.4613 h 14.7591 14.75908 v 14.75909 14.75909 h -14.75908 -14.7591 z"
        id="path9" />
     <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
-       d="M 53.143574,226.76938 H 178.19969"
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.554342;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 31.670244,222.63981 H 204.97993"
        id="path2"
        sodipodi:nodetypes="cc" />
     <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
-       d="M 56.095995,232.04156 H 179.04324"
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.554342;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 35.761873,229.94628 H 206.14897"
        id="path3"
        sodipodi:nodetypes="cc" />
     <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
-       d="M 56.095995,237.31374 H 179.04324"
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.554342;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 35.761873,237.25276 H 206.14897"
        id="path4"
        sodipodi:nodetypes="cc" />
     <path
-       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
-       d="M 53.143574,242.58592 H 178.19969"
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.554342;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 31.670244,244.55924 H 204.97993"
        id="path5"
        sodipodi:nodetypes="cc" />
     <path
        id="rect8"
-       style="opacity:1;vector-effect:none;fill:none;fill-rule:evenodd;stroke:#000000;stroke-miterlimit:3.9;stop-color:#000000;stop-opacity:1"
-       d="m 142.55975,221.07542 v 29.10243 h -14.55122 v -29.10243"
+       style="opacity:1;vector-effect:none;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.38586;stroke-miterlimit:3.9;stop-color:#000000;stop-opacity:1"
+       d="m 155.58813,214.7488 v 40.33176 H 135.42225 V 214.7488"
        sodipodi:nodetypes="cccc" />
     <rect
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.38586;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        id="rect9"
-       width="22.56493"
-       height="22.56493"
-       x="172.08394"
-       y="223.81696" />
+       width="31.27173"
+       height="31.27173"
+       x="196.50438"
+       y="218.54817" />
     <text
        xml:space="preserve"
-       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
-       x="36.483486"
-       y="254.60649"
+       style="font-size:8.80018px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.39417;-inkscape-stroke:none;stop-color:#000000"
+       x="8.5817709"
+       y="261.21802"
        id="text9"><tspan
          sodipodi:role="line"
          id="tspan9"
-         style="stroke-width:1.006"
-         x="36.483486"
-         y="254.60649">光源</tspan></text>
+         style="stroke-width:1.39417"
+         x="8.5817709"
+         y="261.21802">光源</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
-       x="71.490761"
-       y="260.30045"
+       style="font-size:8.80018px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.39417;-inkscape-stroke:none;stop-color:#000000"
+       x="57.09679"
+       y="269.10901"
        id="text10"><tspan
          sodipodi:role="line"
          id="tspan10"
-         style="stroke-width:1.006"
-         x="71.490761"
-         y="260.30045">单色器</tspan></text>
+         style="stroke-width:1.39417"
+         x="57.09679"
+         y="269.10901">单色器</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
-       x="126.11054"
-       y="260.51132"
+       style="font-size:8.80018px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.39417;-inkscape-stroke:none;stop-color:#000000"
+       x="132.7919"
+       y="269.40125"
        id="text11"><tspan
          sodipodi:role="line"
          id="tspan11"
-         style="stroke-width:1.006"
-         x="126.11054"
-         y="260.51132">吸收池</tspan></text>
+         style="stroke-width:1.39417"
+         x="132.7919"
+         y="269.40125">吸收池</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:6.35px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.006;-inkscape-stroke:none;stop-color:#000000"
-       x="174.19283"
-       y="255.45003"
+       style="font-size:8.80018px;line-height:normal;font-family:'JetBrainsMono Nerd Font Mono';-inkscape-font-specification:'JetBrainsMono Nerd Font Mono';text-decoration-color:#000000;fill:#000000;stroke-width:1.39417;-inkscape-stroke:none;stop-color:#000000"
+       x="199.427"
+       y="262.38702"
        id="text12"><tspan
          sodipodi:role="line"
          id="tspan12"
-         style="stroke-width:1.006"
-         x="174.19283"
-         y="255.45003">检测器</tspan></text>
+         style="stroke-width:1.39417"
+         x="199.427"
+         y="262.38702">检测器</tspan></text>
   </g>
 </svg>
